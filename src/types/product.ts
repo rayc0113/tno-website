@@ -3,16 +3,27 @@ export interface ProductSpec {
   value: string;
 }
 
+export interface ProductSpecRow {
+  typeImage: string;
+  model: string;
+  thickness: string;
+  fireClass: string;
+  soundReduction: string;
+  weight: string;
+}
+
 export interface Product {
   slug: string;
   name: string;
   category: string;
   shortDescription: string;
   description: string;
-  coverImage: string;
+  coverImage?: string;
   images: string[];
   specs: ProductSpec[];
+  specRows?: ProductSpecRow[];
   features: string[];
+  systemDescription?: string;
   applications: string[];
   publishedAt: string;
   isPublished: boolean;

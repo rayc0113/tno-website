@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getProductBySlug, getAllProductSlugs, getProductSummaries } from "@/content/products";
+import { notFound } from "next/navigation";
+import {
+  getProductBySlug,
+  getAllProductSlugs,
+} from "@/content/products";
+import ProductImageGallery from "@/components/product/ProductImageGallery";
+import Button from "@/components/ui/Button";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -24,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${product.name}｜TNO 欣展船舶`,
       description: product.shortDescription,
-      images: [{ url: product.coverImage, alt: product.name }],
+      images: [{ url: product.coverImage ?? product.images[0], alt: product.name }],
     },
   };
 }
@@ -33,10 +38,6 @@ export default async function ProductDetailPage({ params }: Props) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) notFound();
-
-  const relatedProducts = getProductSummaries()
-    .filter((p) => p.slug !== slug && p.category === product.category)
-    .slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -56,132 +57,187 @@ export default async function ProductDetailPage({ params }: Props) {
       />
 
       {/* Breadcrumb */}
-      <section className="py-6 bg-[#0A1520] border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-sm text-white/40">
-            <Link href="/" className="hover:text-white transition-colors">首頁</Link>
-            <span className="mx-2">/</span>
-            <Link href="/product" className="hover:text-white transition-colors">精選產品</Link>
-            <span className="mx-2">/</span>
-            <span className="text-white/70">{product.name}</span>
+      <div className="bg-white border-b border-surface pt-[70px]">
+        <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-4 py-4">
+          <nav className="text-sm text-body flex items-center gap-2">
+            <Link href="/" className="hover:text-brand transition-colors">
+              首頁
+            </Link>
+            <span className="text-muted">/</span>
+            <Link href="/product" className="hover:text-brand transition-colors">
+              產品
+            </Link>
+            <span className="text-muted">/</span>
+            <span className="text-muted">{product.name}</span>
           </nav>
         </div>
-      </section>
+      </div>
 
       {/* Product Detail */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Images */}
-            <div>
-              <div className="relative h-80 lg:h-96 rounded-lg overflow-hidden bg-white/5 mb-4">
-                <Image
-                  src={product.coverImage}
-                  alt={product.name}
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="grid grid-cols-3 gap-3">
-                {product.images.map((img, i) => (
-                  <div key={i} className="relative h-24 rounded overflow-hidden bg-white/5">
-                    <Image src={img} alt={`${product.name} ${i + 1}`} fill className="object-cover" />
-                  </div>
-                ))}
-              </div>
-            </div>
+      <section className="bg-white pt-[40px] pb-[80px]">
+        <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
 
-            {/* Info */}
-            <div>
-              <span className="text-xs text-[#4DA3D4] block mb-2">{product.category}</span>
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">{product.name}</h1>
-              <p className="text-white/70 leading-relaxed mb-8">{product.description}</p>
+            {/* Image Gallery */}
+            <ProductImageGallery
+              images={product.images}
+              productName={product.name}
+            />
 
-              {/* Features */}
-              <div className="mb-8">
-                <h2 className="text-lg font-semibold mb-3">產品特點</h2>
-                <ul className="space-y-2">
-                  {product.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-3 text-white/80 text-sm">
-                      <span className="w-1.5 h-1.5 bg-[#4DA3D4] rounded-full flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+            {/* Product Info */}
+            <div className="flex flex-col gap-7">
+              {/* Category + Title + Description */}
+              <div>
+                <p className="text-body text-[16px] mb-1">{product.category}</p>
+                <h1 className="text-[32px] font-bold text-title leading-tight mb-4">
+                  {product.name}
+                </h1>
+                <p className="text-body text-[16px] leading-relaxed">
+                  {product.description}
+                </p>
               </div>
 
-              {/* Applications */}
-              <div className="mb-8">
-                <h2 className="text-lg font-semibold mb-3">適用場景</h2>
-                <div className="flex flex-wrap gap-2">
-                  {product.applications.map((app) => (
-                    <span
-                      key={app}
-                      className="bg-white/10 text-white/70 text-xs px-3 py-1 rounded-full"
-                    >
-                      {app}
-                    </span>
-                  ))}
+              {/* 產品優勢 */}
+              {product.features.length > 0 && (
+                <div>
+                  <h2 className="text-brand font-extrabold text-[20px] mb-3">
+                    產品優勢
+                  </h2>
+                  <ul className="space-y-2">
+                    {product.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="text-title text-[16px] leading-relaxed"
+                      >
+                        • {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              )}
 
-              <Link
-                href="/contact"
-                className="bg-[#1E6FBA] hover:bg-[#1a5f9e] text-white font-medium px-8 py-3 rounded inline-block transition-colors duration-200"
-              >
-                詢問此產品
-              </Link>
+              {/* 系統結構 */}
+              {product.systemDescription && (
+                <div>
+                  <h2 className="text-brand font-extrabold text-[20px] mb-3">
+                    系統結構
+                  </h2>
+                  <div className="flex flex-col gap-4">
+                    {product.systemDescription.split("\n\n").map((para, i) => (
+                      <p key={i} className="text-title text-[16px] leading-relaxed">
+                        {para}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* 應用場景 */}
+              {product.applications.length > 0 && (
+                <div>
+                  <h2 className="text-brand font-extrabold text-[20px] mb-3">
+                    應用場景
+                  </h2>
+                  <ul className="space-y-2">
+                    {product.applications.map((app) => (
+                      <li
+                        key={app}
+                        className="text-title text-[16px] leading-relaxed"
+                      >
+                        • {app}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
 
       {/* Specs Table */}
-      <section className="py-12 bg-[#0A1520]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold mb-6">技術規格</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <tbody>
-                {product.specs.map((spec) => (
-                  <tr key={spec.label} className="border-b border-white/10">
-                    <td className="py-3 pr-8 text-white/50 w-40">{spec.label}</td>
-                    <td className="py-3 text-white/90">{spec.value}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Related Products */}
-      {relatedProducts.length > 0 && (
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold mb-8">相關產品</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {relatedProducts.map((p) => (
-                <Link
-                  key={p.slug}
-                  href={`/product/${p.slug}`}
-                  className="group block bg-white/5 border border-white/10 rounded-lg overflow-hidden hover:border-[#4DA3D4]/40 transition-colors duration-200"
-                >
-                  <div className="relative h-40 bg-white/5">
-                    <Image src={p.coverImage} alt={p.name} fill className="object-cover" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-medium group-hover:text-[#4DA3D4] transition-colors duration-200">
-                      {p.name}
-                    </h3>
-                  </div>
-                </Link>
-              ))}
+      {(product.specRows ?? product.specs).length > 0 && (
+        <section className="bg-white pb-[80px]">
+          <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-4">
+            <div className="border-t border-surface mb-10" />
+            <h2 className="text-brand font-extrabold text-[20px] mb-6">
+              詳細規格
+            </h2>
+            <div className="overflow-x-auto border border-[#dedede]">
+              {product.specRows ? (
+                <table className="w-full border-collapse text-center">
+                  <thead>
+                    <tr className="bg-[#f4f5f8]">
+                      <th className="border border-[#dedede] px-4 py-3 text-[14px] font-semibold text-[#68728b] w-[280px]">類型</th>
+                      <th className="border border-[#dedede] px-4 py-3 text-[14px] font-semibold text-[#68728b]">型號</th>
+                      <th className="border border-[#dedede] px-4 py-3 text-[14px] font-semibold text-[#68728b]">厚度</th>
+                      <th className="border border-[#dedede] px-4 py-3 text-[14px] font-semibold text-[#68728b]">防火等級</th>
+                      <th className="border border-[#dedede] px-4 py-3 text-[14px] font-semibold text-[#68728b]">隔音係數</th>
+                      <th className="border border-[#dedede] px-4 py-3 text-[14px] font-semibold text-[#68728b]">重量</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.specRows.map((row) => (
+                      <tr key={row.model} className="bg-white">
+                        <td className="border border-[#dedede] w-[280px] p-0 overflow-hidden">
+                          <Image
+                            src={row.typeImage}
+                            alt={row.model}
+                            width={280}
+                            height={140}
+                            style={{ width: "100%", height: "auto", display: "block" }}
+                          />
+                        </td>
+                        <td className="border border-[#dedede] px-4 py-5 text-[16px] font-semibold text-title whitespace-nowrap">{row.model}</td>
+                        <td className="border border-[#dedede] px-4 py-5 text-[16px] font-semibold text-title">{row.thickness}</td>
+                        <td className="border border-[#dedede] px-4 py-5 text-[16px] font-semibold text-title">{row.fireClass}</td>
+                        <td className="border border-[#dedede] px-4 py-5 text-[16px] font-semibold text-title">{row.soundReduction}</td>
+                        <td className="border border-[#dedede] px-4 py-5 text-[16px] font-semibold text-title whitespace-nowrap">{row.weight}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              ) : (
+                <table className="w-full border-collapse text-left">
+                  <thead>
+                    <tr className="bg-[#f4f5f8]">
+                      <th className="border border-[#dedede] px-5 py-3 text-[14px] font-semibold text-[#68728b]">規格項目</th>
+                      <th className="border border-[#dedede] px-5 py-3 text-[14px] font-semibold text-[#68728b]">數值 / 說明</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.specs.map((spec) => (
+                      <tr key={spec.label} className="bg-white">
+                        <td className="border border-[#dedede] px-5 py-4 text-[14px] font-semibold text-[#68728b] w-[200px]">{spec.label}</td>
+                        <td className="border border-[#dedede] px-5 py-4 text-[16px] font-semibold text-title">{spec.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
             </div>
           </div>
         </section>
       )}
+
+      {/* Product CTA */}
+      <section className="bg-white pb-[80px]">
+        <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-4">
+          <div className="border-t border-surface pt-[60px] flex flex-col items-center text-center">
+            <h2 className="text-title font-semibold text-[24px] leading-relaxed mb-6">
+              想了解此產品如何幫助您的專案？
+            </h2>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <Button href="/contact" variant="primary" showArrow={false}>
+                聯絡我們
+              </Button>
+              <Button href="/case" variant="secondary" showArrow={false}>
+                查看相關案例
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

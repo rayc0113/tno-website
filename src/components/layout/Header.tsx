@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/service", label: "服務" },
@@ -15,6 +16,8 @@ const navLinks = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const forceWhite = /^\/product\/.+/.test(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -22,14 +25,15 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const textColor = scrolled ? "text-title" : "text-white";
-  const hoverBg = scrolled ? "hover:bg-surface" : "hover:bg-white/10";
-  const iconStroke = scrolled ? "var(--color-title)" : "white";
+  const isWhite = forceWhite || scrolled;
+  const textColor = isWhite ? "text-title" : "text-white";
+  const hoverBg = isWhite ? "hover:bg-surface" : "hover:bg-white/10";
+  const iconStroke = isWhite ? "var(--color-title)" : "white";
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/70 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isWhite ? "bg-white/70 backdrop-blur-md shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="w-full px-[60px]">
@@ -42,7 +46,7 @@ export default function Header() {
               width={134}
               height={54}
               className="h-7 w-auto transition-all duration-300"
-              style={scrolled ? {} : { filter: "brightness(0) invert(1)" }}
+              style={isWhite ? {} : { filter: "brightness(0) invert(1)" }}
               priority
             />
           </Link>

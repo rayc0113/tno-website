@@ -4,7 +4,7 @@ import ArrowIcon from "./ArrowIcon";
 interface ButtonProps {
   href: string;
   children: React.ReactNode;
-  variant?: "primary" | "outline" | "white";
+  variant?: "primary" | "outline" | "white" | "secondary";
   showArrow?: boolean;
   className?: string;
 }
@@ -28,6 +28,7 @@ export default function Button({
     primary: "bg-brand hover:bg-brand-hover text-white",
     outline: "border border-white/60 text-white hover:bg-white/10",
     white: "bg-white text-brand-deep hover:bg-white/90",
+    secondary: "border border-brand text-brand bg-white hover:bg-surface",
   };
 
   return (

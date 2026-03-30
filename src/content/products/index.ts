@@ -8,13 +8,21 @@
  */
 
 import type { Product, ProductSummary } from "@/types/product";
+import wallPanel from "./wall-panel";
+import ceilingPanel from "./ceiling-panel";
+import glassWool from "./glass-wool";
+import ceramicWool from "./ceramic-wool";
 import metalPartition from "./metal-partition";
 import thermalInsulation from "./thermal-insulation";
 import stainlessKitchen from "./stainless-kitchen";
 import airCabinet from "./air-cabinet";
 
-// ✅ 在此新增產品
+// ✅ 在此新增產品（新產品放最前面）
 export const allProducts: Product[] = [
+  wallPanel,
+  ceilingPanel,
+  glassWool,
+  ceramicWool,
   metalPartition,
   thermalInsulation,
   stainlessKitchen,
@@ -30,12 +38,12 @@ export function getProductBySlug(slug: string): Product | undefined {
 }
 
 export function getProductSummaries(): ProductSummary[] {
-  return getPublishedProducts().map(({ slug, name, category, shortDescription, coverImage }) => ({
+  return getPublishedProducts().map(({ slug, name, category, shortDescription, coverImage, images }) => ({
     slug,
     name,
     category,
     shortDescription,
-    coverImage,
+    coverImage: coverImage ?? images[0],
   }));
 }
 
