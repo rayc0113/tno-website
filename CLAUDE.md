@@ -202,6 +202,15 @@ public/images/
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | 正式網域（影響 sitemap / canonical / OG） |
 
+## Git 工作流程
+
+當使用者要求「上 git」、「commit」或類似指示，執行順序為：
+1. `git add` 相關檔案
+2. `git commit` 附上說明
+3. `git push` 同步到 GitHub
+
+每次 commit 後務必接著 push，確保本機與 GitHub 保持同步。
+
 ## 常用指令
 
 ```bash
