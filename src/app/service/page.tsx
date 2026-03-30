@@ -71,10 +71,10 @@ export default function ServicePage() {
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 to-transparent z-[1]" />
         <div className="absolute inset-0 bg-black/30 z-[1]" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-[60px] h-full flex flex-col justify-center">
-          <h1 className="text-[56px] font-bold leading-tight text-white mb-4 max-w-[771px]">
+          <h1 className="text-[60px] font-extrabold leading-[75px] text-white mb-4 max-w-[771px]">
             我們的服務
           </h1>
-          <p className="text-white/80 text-[18px] leading-[30px] max-w-[722px]">
+          <p className="text-white text-[20px] leading-[30px] max-w-[722px]">
             每一個專案背後，都是安全與信任的承諾。<br />
             欣展從設計到製造，提供全方位的一站式服務。
           </p>

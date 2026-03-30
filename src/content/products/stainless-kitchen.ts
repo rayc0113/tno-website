@@ -28,7 +28,7 @@ const stainlessKitchen: Product = {
   ],
   applications: ["商業貨輪廚房", "客輪餐廚設備", "遊艇廚具", "軍艦船廚系統"],
   publishedAt: "2024-02-01",
-  isPublished: true,
+  isPublished: false,
 };
 
 export default stainlessKitchen;

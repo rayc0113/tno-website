@@ -28,7 +28,7 @@ const thermalInsulation: Product = {
   ],
   applications: ["船艙壁板與天花板", "機艙隔熱", "管路與設備包覆", "甲板隔熱"],
   publishedAt: "2024-01-15",
-  isPublished: true,
+  isPublished: false,
 };
 
 export default thermalInsulation;

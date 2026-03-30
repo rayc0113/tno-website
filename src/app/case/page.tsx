@@ -16,17 +16,22 @@ export default function CaseListPage() {
 
   return (
     <>
-      {/* Page Header */}
-      <section className="py-24 bg-[#0A1520]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="text-sm text-white/40 mb-6">
-            <Link href="/" className="hover:text-white transition-colors">首頁</Link>
-            <span className="mx-2">/</span>
-            <span className="text-white/70">成功案例</span>
-          </nav>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">成功案例</h1>
-          <p className="text-white/60 text-lg max-w-2xl">
-            每一個案例都代表著我們對品質的承諾，見證欣展與客戶共同創造的成果。
+      {/* Hero */}
+      <section className="relative h-[560px] overflow-hidden bg-black">
+        <Image
+          src="/images/home/hero.jpg"
+          alt="TNO 欣展實績案例"
+          fill
+          className="object-cover opacity-50"
+          priority
+        />
+        <div className="relative z-10 max-w-[1400px] mx-auto px-[60px] h-full flex flex-col justify-center">
+          <h1 className="text-[60px] font-extrabold leading-[75px] text-white mb-4 max-w-[771px]">
+            實績案例
+          </h1>
+          <p className="text-white text-[20px] leading-[30px] max-w-[722px]">
+            每一個案例都代表著我們對品質的承諾，<br />
+            見證欣展與客戶共同創造的成果。
           </p>
         </div>
       </section>

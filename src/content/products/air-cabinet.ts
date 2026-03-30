@@ -28,7 +28,7 @@ const airCabinet: Product = {
   ],
   applications: ["船舶氣動控制系統", "壓縮空氣管路過濾", "甲板機械氣源處理", "機艙設備氣源供應"],
   publishedAt: "2024-02-15",
-  isPublished: true,
+  isPublished: false,
 };
 
 export default airCabinet;

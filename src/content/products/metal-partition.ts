@@ -28,7 +28,7 @@ const metalPartition: Product = {
   ],
   applications: ["船員艙房隔間", "走廊隔間", "公共區域隔間", "機艙防火隔間"],
   publishedAt: "2024-01-01",
-  isPublished: true,
+  isPublished: false,
 };
 
 export default metalPartition;
