@@ -154,6 +154,8 @@ public/images/
 | `navy` | `#002044` | 深底色 |
 | `page` | `#f7f8fa` | 頁面底色 |
 | `surface` | `#ecf0f6` | 卡片底色 |
+| `sky` | `#bee0ff` | About 頁信念 section 裝飾卡片 |
+| `sky-light` | `#ddf3ff` | About 頁專業 section 裝飾卡片 |
 
 ### 色彩
 - 主背景：`#0B1929`

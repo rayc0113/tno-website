@@ -8,7 +8,7 @@ import HomeProducts from "@/components/home/HomeProducts";
 import HomeWhyChoose from "@/components/home/HomeWhyChoose";
 import HomeCases from "@/components/home/HomeCases";
 import HomeBrandCTA from "@/components/home/HomeBrandCTA";
-import HomeContactCTA from "@/components/home/HomeContactCTA";
+import ContactCTA from "@/components/ContactCTA";
 
 export const metadata: Metadata = {
   title: "TNO 欣展｜船舶裝修全方位領導品牌",
@@ -30,7 +30,7 @@ export default function HomePage() {
       <HomeWhyChoose />
       <HomeCases cases={cases} />
       <HomeBrandCTA />
-      <HomeContactCTA />
+      <ContactCTA />
     </>
   );
 }
