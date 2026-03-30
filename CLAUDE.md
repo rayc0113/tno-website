@@ -137,6 +137,24 @@ public/images/
 
 ## 設計規範
 
+### Tailwind Design Token 規則
+
+**顏色一律使用 `src/app/globals.css` 的 `@theme` token，禁止直接寫死 hex 值。**
+遇到現有 token 無法覆蓋的新顏色，才在 `globals.css` 新增 token，並更新 CLAUDE.md 的色彩表。
+
+| Token | 值 | 用途 |
+|---|---|---|
+| `brand` | `#0c74b5` | 按鈕主色 |
+| `brand-hover` | `#0a62a0` | 按鈕 hover |
+| `brand-deep` | `#1E6FBA` | 品牌藍（標籤、漸層起點） |
+| `brand-light` | `#4DA3D4` | 輔助藍（漸層終點） |
+| `title` | `#2e3b5d` | 標題文字 |
+| `body` | `#4b5f7a` | 內文 |
+| `muted` | `#7e7e7e` | 次要文字 |
+| `navy` | `#002044` | 深底色 |
+| `page` | `#f7f8fa` | 頁面底色 |
+| `surface` | `#ecf0f6` | 卡片底色 |
+
 ### 色彩
 - 主背景：`#0B1929`
 - 深底色：`#071018`
