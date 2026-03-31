@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Suspense } from "react";
 import { getProductSummaries, getAllCategories } from "@/content/products";
 import ProductGrid from "@/components/product/ProductGrid";
 
@@ -38,7 +39,9 @@ export default function ProductListPage() {
       {/* Products Section */}
       <section className="bg-page py-[100px]">
         <div className="max-w-[1700px] mx-auto px-[60px]">
-          <ProductGrid products={products} categories={categories} />
+          <Suspense>
+            <ProductGrid products={products} categories={categories} />
+          </Suspense>
         </div>
       </section>
     </>

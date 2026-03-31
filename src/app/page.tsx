@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getProductSummaries } from "@/content/products";
+import { getHomeFeaturedProducts } from "@/content/products";
 import { getCaseSummaries } from "@/content/cases";
 import HomeHero from "@/components/home/HomeHero";
 import HomeCertifications from "@/components/home/HomeCertifications";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const products = getProductSummaries();
+  const products = getHomeFeaturedProducts();
   const cases = getCaseSummaries();
 
   return (

@@ -3,7 +3,7 @@ import type { Product } from "@/types/product";
 const glassWool: Product = {
   slug: "glass-wool",
   name: "玻璃棉",
-  category: "隔熱材料",
+  category: "隔熱絕緣材",
   shortDescription:
     "通過國際船級社認證的船用玻璃棉，優異的隔熱與隔音性能，廣泛應用於船艙壁板與管路包覆。",
   description:

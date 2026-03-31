@@ -16,17 +16,28 @@ import metalPartition from "./metal-partition";
 import thermalInsulation from "./thermal-insulation";
 import stainlessKitchen from "./stainless-kitchen";
 import airCabinet from "./air-cabinet";
+import puFoam from "./pu-foam";
+import timber from "./timber";
+import rudderShaftSystem from "./rudder-shaft-system";
+import deckFittings from "./deck-fittings";
+import anchorFittings from "./anchor-fittings";
 
-// ✅ 在此新增產品（新產品放最前面）
 export const allProducts: Product[] = [
+  // 分類順序決定篩選列左至右的排列
   wallPanel,
   ceilingPanel,
+  thermalInsulation,
   glassWool,
   ceramicWool,
-  metalPartition,
-  thermalInsulation,
   stainlessKitchen,
+  puFoam,
+  timber,
+  rudderShaftSystem,
+  deckFittings,
+  anchorFittings,
   airCabinet,
+  // 未發布（不影響分類順序）
+  metalPartition,
 ];
 
 export function getPublishedProducts(): Product[] {
@@ -44,7 +55,29 @@ export function getProductSummaries(): ProductSummary[] {
     category,
     shortDescription,
     coverImage: coverImage ?? images[0],
+    listImage: coverImage ?? images[0],
   }));
+}
+
+const HOME_FEATURED_SLUGS = [
+  "metal-partition",
+  "thermal-insulation",
+  "stainless-kitchen",
+  "air-cabinet",
+];
+
+export function getHomeFeaturedProducts(): ProductSummary[] {
+  return HOME_FEATURED_SLUGS
+    .map((slug) => allProducts.find((p) => p.slug === slug))
+    .filter((p): p is Product => p !== undefined)
+    .map(({ slug, name, category, shortDescription, coverImage, images }) => ({
+      slug,
+      name,
+      category,
+      shortDescription,
+      coverImage: coverImage ?? images[0],
+      listImage: images[0],
+    }));
 }
 
 export function getAllProductSlugs(): string[] {

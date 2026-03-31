@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Suspense } from "react";
 import { getCaseSummaries, getAllCaseCategories } from "@/content/cases";
 import CaseGrid from "@/components/case/CaseGrid";
 
@@ -39,7 +40,9 @@ export default function CaseListPage() {
       {/* Cases Section */}
       <section className="bg-page py-[100px]">
         <div className="max-w-[1700px] mx-auto px-[60px]">
-          <CaseGrid cases={cases} categories={categories} />
+          <Suspense>
+            <CaseGrid cases={cases} categories={categories} />
+          </Suspense>
         </div>
       </section>
     </>

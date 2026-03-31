@@ -2,13 +2,13 @@ import type { CaseProject } from "@/types/case";
 
 const generalShipMaterial: CaseProject = {
   slug: "general-ship-material",
-  title: "艙室空間優化：讓航行更舒適的秘密",
-  client: "A 公司",
-  category: "船艙內裝",
-  shortDescription: "針對船員艙室進行隔熱與隔音升級，有效降低艙內溫度與噪音，提升長途航行的舒適度與效率。",
+  title: "一般船舶材料",
+  client: "散裝船東聯盟",
+  category: "一般船舶材料",
+  shortDescription: "國際認證的船舶材料，確保安全耐用與規範合一的內裝品質。",
   description:
     "在長途航行中，艙室的舒適度往往被忽略，但它卻直接影響著船員的休息品質與工作效率。這次，我們接到一個挑戰——如何在有限工期內，改善船員艙室的隔熱與隔音問題，讓長時間待在船上的他們，也能擁有安靜、舒適的生活空間。",
-  coverImage: "/images/cases/basic/cabin-space-optimization.png",
+  coverImage: "/images/home/case_bg1.png",
   images: [
     "/images/cases/basic/cabin-space-optimization.png",
     "/images/cases/basic/corridor-partition-1.png",
@@ -55,7 +55,7 @@ const generalShipMaterial: CaseProject = {
   closing: "「這不只是一次艙室翻新，而是我們對船員舒適與航行效率的承諾。」",
   services: ["艙室隔熱材料更換", "隔音層施工", "模組化內裝安裝", "品質驗收"],
   completedAt: "2023-10-01",
-  location: "A 品牌船型艙室",
+  location: "高雄港",
   tags: ["船艙內裝", "隔熱", "隔音", "船員宿舍"],
   publishedAt: "2023-11-01",
   isPublished: true,

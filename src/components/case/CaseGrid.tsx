@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import type { ProductSummary } from "@/types/product";
+import type { CaseSummary } from "@/types/case";
 
 interface Props {
-  products: ProductSummary[];
+  cases: CaseSummary[];
   categories: string[];
 }
 
-export default function ProductGrid({ products, categories }: Props) {
+export default function CaseGrid({ cases, categories }: Props) {
   const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState<string>(() => {
     const cat = searchParams.get("category");
@@ -25,11 +25,11 @@ export default function ProductGrid({ products, categories }: Props) {
 
   const filtered =
     activeCategory === "全部"
-      ? products
-      : products.filter((p) => p.category === activeCategory);
+      ? cases
+      : cases.filter((c) => c.category === activeCategory);
 
-  const categoryCounts = products.reduce<Record<string, number>>((acc, p) => {
-    acc[p.category] = (acc[p.category] || 0) + 1;
+  const categoryCounts = cases.reduce<Record<string, number>>((acc, c) => {
+    acc[c.category] = (acc[c.category] || 0) + 1;
     return acc;
   }, {});
 
@@ -47,40 +47,46 @@ export default function ProductGrid({ products, categories }: Props) {
                 : "bg-surface text-body hover:bg-brand-light/20 hover:text-brand-deep"
             }`}
           >
-            {cat === "全部" ? "全部產品" : `${cat} (${categoryCounts[cat] ?? 0})`}
+            {cat === "全部" ? "全部案例" : `${cat} (${categoryCounts[cat] ?? 0})`}
           </button>
         ))}
       </div>
 
-      {/* Product Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {filtered.map((product) => (
+      {/* Case Grid — 3 columns */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filtered.map((caseItem) => (
           <Link
-            key={product.slug}
-            href={`/product/${product.slug}`}
+            key={caseItem.slug}
+            href={`/case/${caseItem.slug}`}
             className="group block"
           >
-            <div className="relative aspect-square bg-surface rounded-2xl overflow-hidden mb-4">
+            {/* Cover Image */}
+            <div className="relative h-[253px] bg-surface rounded-[15px] overflow-hidden mb-4">
               <Image
-                src={product.listImage}
-                alt={product.name}
+                src={caseItem.coverImage}
+                alt={caseItem.title}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
+
+            {/* Card Info */}
             <span className="text-base font-semibold text-brand-deep uppercase tracking-wider">
-              {product.category}
+              {caseItem.category}
             </span>
-            <h2 className="text-title font-bold text-[20px] mt-1 group-hover:text-brand transition-colors duration-200">
-              {product.name}
+            <h2 className="text-title font-semibold text-[20px] mt-1 group-hover:text-brand transition-colors duration-200">
+              {caseItem.title}
             </h2>
+            <p className="text-body text-[16px] mt-1 line-clamp-2">
+              {caseItem.shortDescription}
+            </p>
           </Link>
         ))}
       </div>
 
       {filtered.length === 0 && (
         <div className="text-center py-20 text-body">
-          <p>此分類暫無產品</p>
+          <p>此分類暫無案例</p>
         </div>
       )}
     </div>

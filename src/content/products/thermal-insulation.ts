@@ -3,8 +3,8 @@ import type { Product } from "@/types/product";
 const thermalInsulation: Product = {
   slug: "thermal-insulation",
   name: "隔熱絕緣材料",
-  category: "隔熱材料",
-  shortDescription: "提供船舶最佳的隔熱與隔音效果，通過國際認證，適用各類船型。",
+  category: "隔熱絕緣材",
+  shortDescription: "提供船舶最佳的隔熱與隔音效果",
   description:
     "欣展代理多款國際知名隔熱絕緣材料，包括岩棉、玻璃棉、泡棉及複合隔熱板等，全面通過 IMO FTP Code 防火認證。廣泛應用於船艙壁板、機艙隔熱、管路包覆等場景，有效降低艙內溫度並提升隔音效果。",
   coverImage: "/images/home/product_bg2.png",
@@ -28,7 +28,7 @@ const thermalInsulation: Product = {
   ],
   applications: ["船艙壁板與天花板", "機艙隔熱", "管路與設備包覆", "甲板隔熱"],
   publishedAt: "2024-01-15",
-  isPublished: false,
+  isPublished: true,
 };
 
 export default thermalInsulation;

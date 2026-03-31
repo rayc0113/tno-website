@@ -34,5 +34,6 @@ export interface ProductSummary {
   name: string;
   category: string;
   shortDescription: string;
-  coverImage: string;
+  coverImage: string;  // 首頁用（指定封面圖）
+  listImage: string;   // 列表頁用（畫廊第一張）
 }

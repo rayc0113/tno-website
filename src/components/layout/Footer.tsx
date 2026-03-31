@@ -2,20 +2,20 @@ import Link from "next/link";
 import Image from "next/image";
 
 const productLinks = [
-  { href: "/product/metal-partition", label: "金屬隔間板" },
-  { href: "/product/thermal-insulation", label: "隔熱絕緣材" },
-  { href: "/product/stainless-kitchen", label: "不鏽鋼廚具" },
-  { href: "/product", label: "PU聚氨脂" },
-  { href: "/product", label: "木材" },
-  { href: "/product", label: "造船用舵軸系統" },
-  { href: "/product", label: "造船用甲板上艤品、錨座配件" },
-  { href: "/product/air-cabinet", label: "船裝配件空氣櫃、過濾器" },
+  { href: "/product?category=金屬隔間板", label: "金屬隔間板" },
+  { href: "/product?category=隔熱絕緣材", label: "隔熱絕緣材" },
+  { href: "/product?category=不鏽鋼廚具", label: "不鏽鋼廚具" },
+  { href: "/product?category=PU聚氨脂", label: "PU聚氨脂" },
+  { href: "/product?category=木材", label: "木材" },
+  { href: "/product?category=造船用舵軸系統", label: "造船用舵軸系統" },
+  { href: "/product?category=造船用甲板上艤品、錨座配件", label: "造船用甲板上艤品、錨座配件" },
+  { href: "/product?category=船裝配件空氣櫃、過濾器", label: "船裝配件空氣櫃、過濾器" },
 ];
 
 const caseLinks = [
-  { href: "/case/general-ship-material", label: "一般船舶材料" },
-  { href: "/case/commercial-vessel-interior", label: "商業貨輪內裝" },
-  { href: "/case/ship-renovation", label: "船舶改裝與維修" },
+  { href: "/case?category=一般船舶材料", label: "一般船舶材料" },
+  { href: "/case?category=商業貨輪內裝", label: "商業貨輪內裝" },
+  { href: "/case?category=船舶改裝與維修", label: "船舶改裝與維修" },
 ];
 
 const companyLinks = [

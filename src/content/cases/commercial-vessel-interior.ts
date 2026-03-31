@@ -2,9 +2,9 @@ import type { CaseProject } from "@/types/case";
 
 const commercialVesselInterior: CaseProject = {
   slug: "commercial-vessel-interior",
-  title: "艙室空間優化：讓航行更舒適的秘密",
+  title: "商業貨輪內裝",
   client: "XX 航運股份有限公司",
-  category: "船艙內裝",
+  category: "商業貨輪內裝",
   shortDescription: "完整的船員起居與操作空間解決方案，打造舒適與高效的工作環境。",
   description:
     "在長途航行中，艙室的舒適度往往被忽略，但它卻直接影響著船員的休息品質與工作效率。這次，我們接到一個挑戰——如何在有限工期內，改善船員艙室的隔熱與隔音問題，讓長時間待在船上的他們，也能擁有安靜、舒適的生活空間。",

@@ -18,7 +18,6 @@ export const allCases: CaseProject[] = [
   generalShipMaterial,
   commercialVesselInterior,
   shipRenovation,
-  cabinCeilingRenovation,
 ];
 
 export function getPublishedCases(): CaseProject[] {
