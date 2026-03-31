@@ -11,10 +11,6 @@ interface Props {
   products: ProductSummary[];
 }
 
-// 卡片寬度 = (100vw - 左padding - 3個間距) / 3.5
-// 讓任何視窗寬度下永遠顯示 3 張完整 + 半張
-const CARD_WIDTH_STYLE = "calc((100vw - 108px) / 3.5)";
-const LEFT_PAD = 60;
 
 export default function HomeProducts({ products }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -37,14 +33,14 @@ export default function HomeProducts({ products }: Props) {
   };
 
   return (
-    <section className="bg-page pt-[60px] pb-[80px]">
+    <section className="bg-page pt-10 md:pt-[60px] pb-12 md:pb-[80px]">
       {/* Header */}
-      <div className="px-[60px] flex items-end justify-between mb-8">
+      <div className="px-4 md:px-[60px] flex items-end justify-between mb-6 md:mb-8">
         <div>
-          <h2 className="text-[54px] font-bold text-title mb-3">精選產品</h2>
-          <p className="text-body text-[22px]">
+          <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-2 md:mb-3">精選產品</h2>
+          <p className="text-body text-base md:text-[22px]">
             每一件產品都是欣展多年的專業淬鍊。
-            <br />
+            <br className="hidden md:block" />
             我們致力於打造航運產業最值得信賴的國際級產品。
           </p>
         </div>
@@ -78,10 +74,9 @@ export default function HomeProducts({ products }: Props) {
       <div
         ref={scrollRef}
         onScroll={handleScroll}
-        className="flex gap-4"
+        className="flex gap-4 pl-4 md:pl-[60px]"
         style={{
           overflowX: "auto",
-          paddingLeft: LEFT_PAD,
           scrollbarWidth: "none",
           msOverflowStyle: "none",
           scrollBehavior: "smooth",
@@ -91,8 +86,8 @@ export default function HomeProducts({ products }: Props) {
           <Link
             key={product.slug}
             href={`/product/${product.slug}`}
-            className="group relative flex-shrink-0 rounded-[20px] overflow-hidden bg-black block"
-            style={{ width: CARD_WIDTH_STYLE, aspectRatio: "3/5" }}
+            className="group relative flex-shrink-0 rounded-[20px] overflow-hidden bg-black block w-[calc((100vw-32px)/1.5)] md:w-[calc((100vw-108px)/3.5)]"
+            style={{ aspectRatio: "3/5" }}
           >
             <Image
               src={product.coverImage}
@@ -100,19 +95,19 @@ export default function HomeProducts({ products }: Props) {
               fill
               className="object-cover opacity-75 transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-              <h3 className="text-white text-[28px] font-bold leading-snug mb-2">{product.name}</h3>
-              <p className="text-white/70 text-[20px]">{product.shortDescription}</p>
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-6 text-center">
+              <h3 className="text-white text-[22px] md:text-[28px] font-bold leading-snug mb-2">{product.name}</h3>
+              <p className="text-white/70 text-sm md:text-[20px]">{product.shortDescription}</p>
             </div>
           </Link>
         ))}
 
-        {/* trailing spacer so last card doesn't bleed to edge */}
-        <div className="flex-shrink-0" style={{ width: LEFT_PAD }} />
+        {/* trailing spacer */}
+        <div className="flex-shrink-0 w-4 md:w-[60px]" />
       </div>
 
       {/* CTA */}
-      <div className="flex justify-center mt-10 px-[60px]">
+      <div className="flex justify-center mt-8 md:mt-10 px-4 md:px-[60px]">
         <Button href="/product">查看所有產品</Button>
       </div>
     </section>

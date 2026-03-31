@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[280px] flex items-center justify-center">
+      <section className="relative h-[200px] md:h-[280px] flex items-center justify-center">
         <Image
           src="/images/contact/hero.webp"
           alt="聯絡我們"

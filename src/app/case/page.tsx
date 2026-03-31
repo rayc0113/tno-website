@@ -18,7 +18,7 @@ export default function CaseListPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[420px] overflow-hidden bg-black">
+      <section className="relative h-[300px] md:h-[420px] overflow-hidden bg-black">
         <Image
           src="/images/cases/hero.webp"
           alt="TNO 欣展實績案例"
@@ -28,11 +28,11 @@ export default function CaseListPage() {
           placeholder="blur"
           blurDataURL="data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACwAQCdASoIAAMABUB8JYgCdAD0h/pcAP46my29YNqOHcqlWgAAAA=="
         />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-[60px] h-full flex flex-col justify-center">
-          <h1 className="text-[60px] font-extrabold leading-[75px] text-white mb-4">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-[60px] h-full flex flex-col justify-center">
+          <h1 className="text-[36px] md:text-[60px] font-extrabold md:leading-[75px] text-white mb-4">
             實績案例
           </h1>
-          <p className="text-white text-[20px] leading-[30px] max-w-[600px]">
+          <p className="text-white text-base md:text-[20px] md:leading-[30px] max-w-[600px]">
             每一個案例都代表著我們對品質的承諾，<br />
             見證欣展與客戶共同創造的成果。
           </p>

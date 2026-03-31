@@ -27,7 +27,7 @@ const companyLinks = [
 export default function Footer() {
   return (
     <footer className="bg-navy text-white/80">
-      <div className="w-full px-[60px] py-16">
+      <div className="w-full px-4 md:px-[60px] py-12 md:py-16">
         <div className="flex flex-col md:flex-row gap-10 justify-between">
           {/* Brand + Contact */}
           <div>
@@ -71,8 +71,8 @@ export default function Footer() {
             </address>
           </div>
 
-          {/* Nav links — pushed to the right */}
-          <div className="flex gap-40 mr-[80px]">
+          {/* Nav links */}
+          <div className="grid grid-cols-2 md:flex md:gap-20 lg:gap-40 md:mr-[80px] gap-x-8 gap-y-8">
           <div>
             <h3 className="text-white text-sm font-medium mb-4">公司</h3>
             <ul className="space-y-3">

@@ -18,7 +18,7 @@ export default function ProductListPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[420px] overflow-hidden bg-black">
+      <section className="relative h-[300px] md:h-[420px] overflow-hidden bg-black">
         <Image
           src="/images/products/hero.webp"
           alt="TNO 欣展精選產品"
@@ -28,11 +28,11 @@ export default function ProductListPage() {
           placeholder="blur"
           blurDataURL="data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAMABUB8JZgCdAD0bVroAP6/fH+rWv4vwhzPbo3mEAQAAAA="
         />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-[60px] h-full flex flex-col justify-center">
-          <h1 className="text-[60px] font-extrabold leading-[75px] text-white mb-4 max-w-[771px]">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-[60px] h-full flex flex-col justify-center">
+          <h1 className="text-[36px] md:text-[60px] font-extrabold md:leading-[75px] text-white mb-4 max-w-[771px]">
             多元船舶材料
           </h1>
-          <p className="text-white text-[20px] leading-[30px] max-w-[722px]">
+          <p className="text-white text-base md:text-[20px] md:leading-[30px] max-w-[722px]">
             從國際認證的隔熱材到艙裝系統，我們提供全方位解決方案。
           </p>
         </div>

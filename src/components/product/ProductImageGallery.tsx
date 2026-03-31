@@ -26,7 +26,7 @@ export default function ProductImageGallery({ images, productName }: Props) {
 
       {/* Thumbnails */}
       {images.length > 1 && (
-        <div className="grid grid-cols-5 gap-3">
+        <div className="grid grid-cols-5 sm:grid-cols-5 gap-2 md:gap-3">
           {images.map((img, i) => (
             <button
               key={i}

@@ -79,17 +79,17 @@ export default async function CaseDetailPage({ params }: Props) {
         {/* Main Content Column */}
         <div className="max-w-[1080px] mx-auto px-[60px] max-lg:px-4 pt-10">
           {/* Title + Date */}
-          <div className="flex justify-between items-start gap-6">
-            <h1 className="text-[40px] font-semibold text-title leading-snug">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-start md:gap-6">
+            <h1 className="text-[28px] md:text-[40px] font-semibold text-title leading-snug">
               {caseItem.title}
             </h1>
-            <span className="text-[14px] text-body whitespace-nowrap pt-3 shrink-0">
+            <span className="text-[14px] text-body whitespace-nowrap md:pt-3 shrink-0 mt-1 md:mt-0">
               更新日期：{dateDisplay}
             </span>
           </div>
 
           {/* Client Meta Row */}
-          <div className="flex items-center gap-6 mt-4 text-[16px] text-title">
+          <div className="flex flex-wrap items-center gap-4 md:gap-6 mt-3 md:mt-4 text-[15px] md:text-[16px] text-title">
             <span className="flex items-center gap-1.5">
               {/* Building icon */}
               <svg className="w-5 h-5 shrink-0 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -107,7 +107,7 @@ export default async function CaseDetailPage({ params }: Props) {
           </div>
 
           {/* Cover Image */}
-          <div className="relative w-full h-[470px] rounded-[15px] overflow-hidden mt-8">
+          <div className="relative w-full h-[220px] md:h-[470px] rounded-[15px] overflow-hidden mt-6 md:mt-8">
             <Image
               src={caseItem.coverImage}
               alt={caseItem.title}
@@ -161,9 +161,9 @@ export default async function CaseDetailPage({ params }: Props) {
 
         {/* More Cases Section */}
         {relatedCases.length > 0 && (
-          <section className="bg-page py-[80px] mt-[80px]">
-            <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-4">
-              <h2 className="text-[32px] font-semibold text-title mb-10">
+          <section className="bg-page py-12 md:py-[80px] mt-10 md:mt-[80px]">
+            <div className="max-w-[1400px] mx-auto px-4 md:px-[60px]">
+              <h2 className="text-[24px] md:text-[32px] font-semibold text-title mb-8 md:mb-10">
                 更多船舶案例
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
