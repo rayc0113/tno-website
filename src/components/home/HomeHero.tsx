@@ -10,6 +10,8 @@ export default function HomeHero() {
         fill
         className="object-cover"
         priority
+        placeholder="blur"
+        blurDataURL="data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACwAQCdASoIAAUABUB8JZwAAurZ1CgAAP59Qt5bRWrUFrgAAAA="
       />
       {/* 頂部漸層遮罩，確保 Header 圖文可讀 */}
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 to-transparent z-[1]" />

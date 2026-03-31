@@ -67,6 +67,8 @@ export default function ServicePage() {
           fill
           className="object-cover"
           priority
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAAAwAQCdASoIAAUABUB8JZwAA3AA/tr3XSSpR+0IAAA="
         />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 to-transparent z-[1]" />
         <div className="absolute inset-0 bg-black/30 z-[1]" />

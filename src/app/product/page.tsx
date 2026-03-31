@@ -25,6 +25,8 @@ export default function ProductListPage() {
           fill
           className="object-cover opacity-50"
           priority
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAMABUB8JZgCdAD0bVroAP6/fH+rWv4vwhzPbo3mEAQAAAA="
         />
         <div className="relative z-10 max-w-[1400px] mx-auto px-[60px] h-full flex flex-col justify-center">
           <h1 className="text-[60px] font-extrabold leading-[75px] text-white mb-4 max-w-[771px]">

@@ -20,6 +20,8 @@ export default function ContactPage() {
           fill
           className="object-cover"
           priority
+          placeholder="blur"
+          blurDataURL="data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAABwAQCdASoIAAMABUB8JaACdAFAAAD+7Nm8ObqAbnxVuQXUaTP673pa4GgAAA=="
         />
         <div className="absolute inset-0 bg-[#071018]/60" />
         <h1 className="relative z-10 text-[56px] font-bold text-white">聯絡我們</h1>
