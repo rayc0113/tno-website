@@ -30,14 +30,14 @@ export default function HomeCertifications() {
         />
 
         <div
-          className="flex items-center gap-16"
+          className="flex items-center gap-8 md:gap-16"
           style={{
             width: "max-content",
             animation: "marquee 20s linear infinite",
           }}
         >
           {doubled.map((cert, i) => (
-            <div key={i} className="relative h-[68px] w-[120px] flex-shrink-0">
+            <div key={i} className="relative h-[48px] w-[80px] md:h-[68px] md:w-[120px] flex-shrink-0">
               <Image
                 src={cert.src}
                 alt={cert.name}
