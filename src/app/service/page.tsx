@@ -62,7 +62,7 @@ export default function ServicePage() {
       {/* Hero */}
       <section className="relative h-[800px] overflow-hidden">
         <Image
-          src="/images/service/hero.jpg"
+          src="/images/service/hero.webp"
           alt="欣展服務項目"
           fill
           className="object-cover"

@@ -5,7 +5,7 @@ export default function HomeHero() {
   return (
     <section className="relative h-[80vh] overflow-hidden">
       <Image
-        src="/images/home/hero.jpg"
+        src="/images/home/hero.webp"
         alt="船舶裝修 TNO 欣展"
         fill
         className="object-cover"

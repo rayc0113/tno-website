@@ -15,7 +15,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-[800px] bg-black overflow-hidden">
         <Image
-          src="/images/about/hero.jpg"
+          src="/images/about/hero.webp"
           alt="欣展 — 船舶艙室整體規劃"
           fill
           className="object-cover opacity-60"

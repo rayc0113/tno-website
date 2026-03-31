@@ -20,7 +20,7 @@ export default function ProductListPage() {
       {/* Hero */}
       <section className="relative h-[420px] overflow-hidden bg-black">
         <Image
-          src="/images/products/hero.jpg"
+          src="/images/products/hero.webp"
           alt="TNO 欣展精選產品"
           fill
           className="object-cover opacity-50"

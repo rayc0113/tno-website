@@ -20,7 +20,7 @@ export default function CaseListPage() {
       {/* Hero */}
       <section className="relative h-[420px] overflow-hidden bg-black">
         <Image
-          src="/images/cases/hero.jpg"
+          src="/images/cases/hero.webp"
           alt="TNO 欣展實績案例"
           fill
           className="object-cover opacity-50"

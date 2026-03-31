@@ -15,7 +15,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="relative h-[280px] flex items-center justify-center">
         <Image
-          src="/images/contact/hero.jpg"
+          src="/images/contact/hero.webp"
           alt="聯絡我們"
           fill
           className="object-cover"
