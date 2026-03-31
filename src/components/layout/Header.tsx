@@ -17,7 +17,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const forceWhite = /^\/product\/.+/.test(pathname);
+  const forceWhite = /^\/(product|case)\/.+/.test(pathname);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -98,7 +98,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-title text-sm font-semibold py-3 border-b border-gray-100 hover:text-[#0c74b5] transition-colors duration-200"
+                className="text-title text-sm font-semibold py-3 border-b border-gray-100 hover:text-brand transition-colors duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

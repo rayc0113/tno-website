@@ -37,7 +37,7 @@ export default function HomeProducts({ products }: Props) {
   };
 
   return (
-    <section className="bg-[#f7f8fa] pt-[60px] pb-[80px]">
+    <section className="bg-page pt-[60px] pb-[80px]">
       {/* Header */}
       <div className="px-[60px] flex items-end justify-between mb-8">
         <div>

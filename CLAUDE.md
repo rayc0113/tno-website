@@ -139,7 +139,16 @@ public/images/
 
 ### Tailwind Design Token 規則
 
-**顏色一律使用 `src/app/globals.css` 的 `@theme` token，禁止直接寫死 hex 值。**
+**所有樣式一律使用 Tailwind class + `globals.css` 的 `@theme` token，嚴禁以下寫法：**
+
+- ❌ 直接寫死 hex：`text-[#2e3b5d]`、`bg-[#002044]`
+- ❌ 靜態 inline style：`style={{ color: "#2e3b5d" }}`、`style={{ background: "#f7f8fa" }}`
+
+**例外（允許保留）：**
+- 動態 inline style（值由 JS 運算決定，無法用 Tailwind class 表達）
+- SVG 屬性（`stroke`、`fill`）的動態值
+- `linear-gradient` 等 Tailwind 無法直接表達的漸層語法
+
 遇到現有 token 無法覆蓋的新顏色，才在 `globals.css` 新增 token，並更新 CLAUDE.md 的色彩表。
 
 | Token | 值 | 用途 |

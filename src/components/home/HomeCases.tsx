@@ -10,7 +10,7 @@ interface Props {
 export default function HomeCases({ cases }: Props) {
   return (
     <div className="bg-white">
-    <section className="bg-[#ecf0f6] rounded-[60px] py-[80px] px-[60px]">
+    <section className="bg-surface rounded-[60px] py-[80px] px-[60px]">
       <div className="max-w-[1600px] mx-auto">
         <h2 className="text-[54px] font-bold text-title mb-3">應用與實績</h2>
         <p className="text-body text-[22px] mb-[60px] max-w-[726px]">

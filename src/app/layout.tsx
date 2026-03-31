@@ -83,7 +83,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-TW" className={notoSansTC.variable}>
-      <body className={`${notoSansTC.className} bg-[#f7f8fa] text-[#2e3b5d] antialiased`}>
+      <body className={`${notoSansTC.className} bg-page text-title antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

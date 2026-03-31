@@ -17,7 +17,7 @@ export default function ProductListPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[560px] overflow-hidden bg-black">
+      <section className="relative h-[420px] overflow-hidden bg-black">
         <Image
           src="/images/products/hero.jpg"
           alt="TNO 欣展精選產品"

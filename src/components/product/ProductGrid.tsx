@@ -26,7 +26,7 @@ export default function ProductGrid({ products, categories }: Props) {
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 cursor-pointer ${
+            className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 cursor-pointer ${
               activeCategory === cat
                 ? "bg-brand-deep text-white"
                 : "bg-surface text-body hover:bg-brand-light/20 hover:text-brand-deep"
