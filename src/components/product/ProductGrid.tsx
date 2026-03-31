@@ -36,12 +36,12 @@ export default function ProductGrid({ products, categories }: Props) {
   return (
     <div>
       {/* Category Filter */}
-      <div className="flex flex-wrap gap-3 mb-12">
+      <div className="sticky top-[70px] z-30 bg-page md:static md:bg-transparent flex gap-3 mb-6 md:mb-12 overflow-x-auto py-3 md:py-0 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
         {["全部", ...categories].map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 cursor-pointer ${
+            className={`flex-shrink-0 px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 cursor-pointer ${
               activeCategory === cat
                 ? "bg-brand-deep text-white"
                 : "bg-surface text-body hover:bg-brand-light/20 hover:text-brand-deep"
@@ -60,12 +60,13 @@ export default function ProductGrid({ products, categories }: Props) {
             href={`/product/${product.slug}`}
             className="group block"
           >
-            <div className="relative aspect-square bg-surface rounded-2xl overflow-hidden mb-4">
+            <div className="bg-surface rounded-2xl overflow-hidden mb-4">
               <Image
                 src={product.listImage}
                 alt={product.name}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                width={600}
+                height={600}
+                className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <span className="text-base font-semibold text-brand-deep uppercase tracking-wider">

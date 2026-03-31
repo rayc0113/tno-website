@@ -58,7 +58,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-surface pt-[70px]">
-        <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-4 py-4">
+        <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-6 py-4">
           <nav className="text-sm text-body flex items-center gap-2">
             <Link href="/" className="hover:text-brand transition-colors">
               首頁
@@ -75,7 +75,19 @@ export default async function ProductDetailPage({ params }: Props) {
 
       {/* Product Detail */}
       <section className="bg-white pt-[40px] pb-[80px]">
-        <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-4">
+        <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-6">
+
+          {/* Mobile: 分類 + 名稱 + 簡述（畫廊上方） */}
+          <div className="lg:hidden mb-6">
+            <p className="text-body text-[18px] mb-1">{product.category}</p>
+            <h1 className="text-[28px] font-bold text-title leading-tight mb-3">
+              {product.name}
+            </h1>
+            <p className="text-body text-[18px] leading-relaxed">
+              {product.description}
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
 
             {/* Image Gallery */}
@@ -86,13 +98,13 @@ export default async function ProductDetailPage({ params }: Props) {
 
             {/* Product Info */}
             <div className="flex flex-col gap-7">
-              {/* Category + Title + Description */}
-              <div>
-                <p className="text-body text-[16px] mb-1">{product.category}</p>
+              {/* Category + Title + Description — desktop only */}
+              <div className="hidden lg:block">
+                <p className="text-body text-[18px] mb-1">{product.category}</p>
                 <h1 className="text-[32px] font-bold text-title leading-tight mb-4">
                   {product.name}
                 </h1>
-                <p className="text-body text-[16px] leading-relaxed">
+                <p className="text-body text-[18px] leading-relaxed">
                   {product.description}
                 </p>
               </div>
@@ -107,7 +119,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     {product.features.map((feature) => (
                       <li
                         key={feature}
-                        className="text-title text-[16px] leading-relaxed"
+                        className="text-title text-[18px] leading-relaxed"
                       >
                         • {feature}
                       </li>
@@ -124,7 +136,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   </h2>
                   <div className="flex flex-col gap-4">
                     {product.systemDescription.split("\n\n").map((para, i) => (
-                      <p key={i} className="text-title text-[16px] leading-relaxed">
+                      <p key={i} className="text-title text-[18px] leading-relaxed">
                         {para}
                       </p>
                     ))}
@@ -142,7 +154,7 @@ export default async function ProductDetailPage({ params }: Props) {
                     {product.applications.map((app) => (
                       <li
                         key={app}
-                        className="text-title text-[16px] leading-relaxed"
+                        className="text-title text-[18px] leading-relaxed"
                       >
                         • {app}
                       </li>
@@ -158,7 +170,7 @@ export default async function ProductDetailPage({ params }: Props) {
       {/* Specs Table */}
       {(product.specRows ?? product.specs).length > 0 && (
         <section className="bg-white pb-[80px]">
-          <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-4">
+          <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-6">
             <div className="border-t border-surface mb-10" />
             <h2 className="text-brand font-extrabold text-[20px] mb-6">
               詳細規格
@@ -222,7 +234,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
       {/* Product CTA */}
       <section className="bg-white pb-[80px]">
-        <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-4">
+        <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-6">
           <div className="border-t border-surface pt-[60px] flex flex-col items-center text-center">
             <h2 className="text-title font-semibold text-[24px] leading-relaxed mb-6">
               想了解此產品如何幫助您的專案？

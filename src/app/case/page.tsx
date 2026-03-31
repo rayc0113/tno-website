@@ -28,7 +28,7 @@ export default function CaseListPage() {
           placeholder="blur"
           blurDataURL="data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACwAQCdASoIAAMABUB8JYgCdAD0h/pcAP46my29YNqOHcqlWgAAAA=="
         />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-[60px] h-full flex flex-col justify-center">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-[60px] h-full flex flex-col justify-center">
           <h1 className="text-[36px] md:text-[60px] font-extrabold md:leading-[75px] text-white mb-4">
             實績案例
           </h1>
@@ -40,8 +40,8 @@ export default function CaseListPage() {
       </section>
 
       {/* Cases Section */}
-      <section className="bg-page py-[100px]">
-        <div className="max-w-[1700px] mx-auto px-[60px]">
+      <section className="bg-page py-8 md:py-[100px]">
+        <div className="max-w-[1700px] mx-auto px-6 md:px-[60px]">
           <Suspense>
             <CaseGrid cases={cases} categories={categories} />
           </Suspense>

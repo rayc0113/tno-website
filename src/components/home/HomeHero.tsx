@@ -15,13 +15,13 @@ export default function HomeHero() {
       />
       {/* 頂部漸層遮罩，確保 Header 圖文可讀 */}
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 to-transparent z-[1]" />
-      <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-[60px] pt-[20vh] md:pt-[22vh]">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-[60px] pt-[20vh] md:pt-[22vh]">
         <h1 className="text-[36px] leading-[46px] md:text-[60px] font-extrabold md:leading-[75px] text-white mb-4 max-w-[771px]">
           從材料到設計製造
           <br />
           船舶裝修全方位領導品牌
         </h1>
-        <p className="text-white text-base md:text-[20px] md:leading-[30px] mb-8 md:mb-[60px] max-w-[722px]">
+        <p className="text-white text-[18px] md:text-[22px] md:leading-[34px] mb-8 md:mb-[60px] max-w-[722px]">
           深耕十多年專業經驗與國際認證，欣展堅持安全與品質，守護您的每一趟航行。
         </p>
         <Button href="/service">探索服務</Button>

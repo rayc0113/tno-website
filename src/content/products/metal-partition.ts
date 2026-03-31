@@ -3,7 +3,7 @@ import type { Product } from "@/types/product";
 const metalPartition: Product = {
   slug: "metal-partition",
   name: "金屬隔間板",
-  category: "內裝材料",
+  category: "金屬隔間板",
   shortDescription: "通過認證的防火隔間板，專為船舶內裝設計",
   description:
     "欣展金屬隔間板採用高強度鋼板與防火核材複合製成，通過 IMO FTP Code A 級防火認證，適用於船員艙房、走廊、機艙等各類隔間需求。模組化設計可快速安裝，有效縮短塢期，降低施工成本。",

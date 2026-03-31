@@ -22,7 +22,7 @@ export default function Button({
   className = "",
 }: ButtonProps) {
   const base =
-    "inline-flex items-center gap-2.5 text-base font-semibold px-[35px] py-5 rounded-full transition-colors duration-200";
+    "inline-flex items-center gap-2 text-sm md:text-base font-semibold px-6 py-3 md:px-[35px] md:py-5 rounded-full transition-colors duration-200";
 
   const variants = {
     primary: "bg-brand hover:bg-brand-hover text-white",

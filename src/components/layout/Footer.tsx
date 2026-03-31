@@ -27,7 +27,7 @@ const companyLinks = [
 export default function Footer() {
   return (
     <footer className="bg-navy text-white/80">
-      <div className="w-full px-4 md:px-[60px] py-12 md:py-16">
+      <div className="w-full px-6 md:px-[60px] py-12 md:py-16">
         <div className="flex flex-col md:flex-row gap-10 justify-between">
           {/* Brand + Contact */}
           <div>

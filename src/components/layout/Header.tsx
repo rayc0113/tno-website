@@ -36,7 +36,7 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [isMenuOpen]);
 
-  const isWhite = forceWhite || scrolled;
+  const isWhite = forceWhite || scrolled || isMenuOpen;
   const textColor = isWhite ? "text-title" : "text-white";
   const hoverBg = isWhite ? "hover:bg-surface" : "hover:bg-white/10";
   const iconStroke = isWhite ? "var(--color-title)" : "white";
@@ -45,10 +45,10 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isWhite ? "bg-white/70 backdrop-blur-md shadow-sm" : "bg-transparent"
+          isMenuOpen ? "bg-white shadow-sm" : isWhite ? "bg-white/70 backdrop-blur-md shadow-sm" : "bg-transparent"
         }`}
       >
-        <div className="w-full px-4 md:px-[60px]">
+        <div className="w-full px-6 md:px-[60px]">
           <div className="flex items-center h-[70px]">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
@@ -123,6 +123,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={() => setIsMenuOpen(false)}
                 className="text-title text-base font-semibold py-3 px-2 border-b border-surface last:border-0 hover:text-brand transition-colors duration-200"
               >
                 {link.label}

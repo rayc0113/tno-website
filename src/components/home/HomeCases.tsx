@@ -10,10 +10,10 @@ interface Props {
 export default function HomeCases({ cases }: Props) {
   return (
     <div className="bg-white">
-    <section className="bg-surface rounded-[30px] md:rounded-[60px] py-10 px-4 md:py-[80px] md:px-[60px]">
+    <section className="bg-surface rounded-[30px] md:rounded-[60px] py-10 px-6 md:py-[80px] md:px-[60px]">
       <div className="max-w-[1600px] mx-auto">
         <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-3">應用與實績</h2>
-        <p className="text-body text-base md:text-[22px] mb-10 md:mb-[60px] max-w-[726px]">
+        <p className="text-body text-[18px] md:text-[24px] mb-10 md:mb-[60px] max-w-[726px]">
           從船舶內裝到改裝維修，我們以專業與細節，實現每一個值得驕傲的成果。
         </p>
 
@@ -37,7 +37,7 @@ export default function HomeCases({ cases }: Props) {
                   <h3 className="text-xl md:text-[32px] font-semibold text-white mb-1">
                     {caseItem.title}
                   </h3>
-                  <p className="text-white/80 text-sm md:text-[18px] line-clamp-1">{caseItem.shortDescription}</p>
+                  <p className="text-white/80 text-base md:text-[20px] line-clamp-1">{caseItem.shortDescription}</p>
                 </div>
                 <div className="hidden md:flex flex-shrink-0 bg-white/20 items-center gap-3.5 px-[23px] py-[15px] rounded-full text-white text-[16px] font-semibold group-hover:bg-white/30 transition-colors duration-200">
                   了解更多

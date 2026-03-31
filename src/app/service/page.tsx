@@ -60,7 +60,7 @@ export default function ServicePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[480px] md:h-[800px] overflow-hidden">
+      <section className="relative h-[300px] md:h-[800px] overflow-hidden">
         <Image
           src="/images/service/hero.webp"
           alt="欣展服務項目"
@@ -72,11 +72,11 @@ export default function ServicePage() {
         />
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 to-transparent z-[1]" />
         <div className="absolute inset-0 bg-black/30 z-[1]" />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-[60px] h-full flex flex-col justify-center">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-[60px] h-full flex flex-col justify-center">
           <h1 className="text-[36px] leading-[46px] md:text-[60px] font-extrabold md:leading-[75px] text-white mb-4 max-w-[771px]">
             我們的服務
           </h1>
-          <p className="text-white text-base md:text-[20px] md:leading-[30px] max-w-[722px]">
+          <p className="text-white text-[18px] md:text-[22px] md:leading-[34px] max-w-[722px]">
             每一個專案背後，都是安全與信任的承諾。<br />
             欣展從設計到製造，提供全方位的一站式服務。
           </p>
@@ -85,12 +85,12 @@ export default function ServicePage() {
 
       {/* Intro */}
       <section className="py-16 md:py-[120px] bg-white">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-[60px] text-center">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-[60px] text-center">
           <h2 className="text-[28px] md:text-[40px] font-bold leading-[1.4] mb-4 md:mb-6 text-title">
             我們的核心服務，<br />
             為每個專案提供最全面的支持。
           </h2>
-          <p className="text-body text-base md:text-[20px] leading-[1.8] max-w-[714px] mx-auto">
+          <p className="text-body text-[18px] md:text-[22px] leading-[1.8] max-w-[714px] mx-auto">
             結合設計、製造與加工能力，搭配物料代理與供應鏈優勢，<br className="hidden md:block" />
             為您的專案從初期規劃一路到交付提供完整解決方案。
           </p>
@@ -99,7 +99,7 @@ export default function ServicePage() {
 
       {/* Service Items */}
       <section className="bg-white pt-4 pb-16 md:pb-40">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-[60px] space-y-16 md:space-y-40">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-[60px] space-y-16 md:space-y-40">
           {services.map((service) => (
             <div
               key={service.id}
@@ -107,13 +107,13 @@ export default function ServicePage() {
             >
               {/* Text */}
               <div className="flex-1 flex flex-col justify-center md:py-[40px]">
-                <p className="text-brand-deep text-base md:text-[20px] font-bold mb-3 md:mb-4">
+                <p className="text-brand-deep text-[18px] md:text-[22px] font-bold mb-3 md:mb-4">
                   {service.category}
                 </p>
                 <h3 className="text-[26px] md:text-[40px] font-bold leading-tight mb-4 md:mb-6 text-title">
                   {service.title}
                 </h3>
-                <p className="text-body text-base md:text-[20px] leading-[1.8] mb-6 md:mb-8 max-w-[497px]">
+                <p className="text-body text-[18px] md:text-[22px] leading-[1.8] mb-6 md:mb-8 max-w-[497px]">
                   {service.description}
                 </p>
                 <div>
@@ -138,11 +138,11 @@ export default function ServicePage() {
 
       {/* CTA */}
       <section className="py-16 md:py-[120px] bg-gradient-to-br from-brand-deep to-brand-light text-center">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-[60px]">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-[60px]">
           <h2 className="text-[28px] md:text-[40px] font-bold mb-8 md:mb-[40px] text-white">
             讓我們一起啟動您的專案
           </h2>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-row items-center justify-center gap-4">
             <Button href="/contact" variant="white">立即聯繫我們</Button>
             <Button href="/case" variant="outline">查看案例</Button>
           </div>

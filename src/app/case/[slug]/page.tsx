@@ -64,7 +64,7 @@ export default async function CaseDetailPage({ params }: Props) {
 
       {/* Breadcrumb Bar */}
       <div className="bg-white border-b border-surface pt-[70px]">
-        <div className="max-w-[1080px] mx-auto px-[60px] max-lg:px-4 py-4">
+        <div className="max-w-[1080px] mx-auto px-[60px] max-lg:px-6 py-4">
           <nav className="text-sm text-body flex items-center gap-2">
             <Link href="/" className="hover:text-brand transition-colors">首頁</Link>
             <span className="text-muted">/</span>
@@ -77,7 +77,7 @@ export default async function CaseDetailPage({ params }: Props) {
 
       <div className="bg-white">
         {/* Main Content Column */}
-        <div className="max-w-[1080px] mx-auto px-[60px] max-lg:px-4 pt-10">
+        <div className="max-w-[1080px] mx-auto px-[60px] max-lg:px-6 pt-10">
           {/* Title + Date */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-start md:gap-6">
             <h1 className="text-[28px] md:text-[40px] font-semibold text-title leading-snug">
@@ -129,21 +129,21 @@ export default async function CaseDetailPage({ params }: Props) {
                 {section.heading}
               </h2>
               {section.paragraphs?.map((p, j) => (
-                <p key={j} className="text-[16px] text-title leading-[30px] mb-4">
+                <p key={j} className="text-[18px] text-title leading-[32px] mb-4">
                   {p}
                 </p>
               ))}
               {section.bullets && section.bullets.length > 0 && (
                 <ul className="list-disc pl-6 mb-4 space-y-1">
                   {section.bullets.map((b, j) => (
-                    <li key={j} className="text-[16px] text-title leading-[30px]">
+                    <li key={j} className="text-[18px] text-title leading-[32px]">
                       {b}
                     </li>
                   ))}
                 </ul>
               )}
               {section.trailing?.map((p, j) => (
-                <p key={j} className="text-[16px] text-title leading-[30px] mb-4">
+                <p key={j} className="text-[18px] text-title leading-[32px] mb-4">
                   {p}
                 </p>
               ))}
@@ -153,7 +153,7 @@ export default async function CaseDetailPage({ params }: Props) {
           {/* Quote / Closing Box */}
           <div className="bg-[#e4f1f9] rounded-[15px] px-6 py-6 mt-10 mb-[80px]">
             <p className="text-[20px] font-semibold text-title mb-2">結語</p>
-            <p className="text-[16px] font-semibold text-title leading-[30px]">
+            <p className="text-[18px] font-semibold text-title leading-[32px]">
               {caseItem.closing ?? caseItem.shortDescription}
             </p>
           </div>
@@ -162,7 +162,7 @@ export default async function CaseDetailPage({ params }: Props) {
         {/* More Cases Section */}
         {relatedCases.length > 0 && (
           <section className="bg-page py-12 md:py-[80px] mt-10 md:mt-[80px]">
-            <div className="max-w-[1400px] mx-auto px-4 md:px-[60px]">
+            <div className="max-w-[1400px] mx-auto px-6 md:px-[60px]">
               <h2 className="text-[24px] md:text-[32px] font-semibold text-title mb-8 md:mb-10">
                 更多船舶案例
               </h2>
@@ -181,7 +181,7 @@ export default async function CaseDetailPage({ params }: Props) {
                     <h3 className="text-title font-semibold text-[18px] mt-1 group-hover:text-brand transition-colors duration-200">
                       {c.title}
                     </h3>
-                    <p className="text-body text-[16px] mt-1 line-clamp-2">
+                    <p className="text-body text-[17px] mt-1 line-clamp-2">
                       {c.shortDescription}
                     </p>
                   </Link>

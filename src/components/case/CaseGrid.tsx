@@ -36,12 +36,12 @@ export default function CaseGrid({ cases, categories }: Props) {
   return (
     <div>
       {/* Category Filter */}
-      <div className="flex flex-wrap gap-3 mb-12">
+      <div className="sticky top-[70px] z-30 bg-page md:static md:bg-transparent flex gap-3 mb-6 md:mb-12 overflow-x-auto py-3 md:py-0 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
         {["全部", ...categories].map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 cursor-pointer ${
+            className={`flex-shrink-0 px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 cursor-pointer ${
               activeCategory === cat
                 ? "bg-brand-deep text-white"
                 : "bg-surface text-body hover:bg-brand-light/20 hover:text-brand-deep"

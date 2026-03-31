@@ -28,7 +28,7 @@ export default function ProductListPage() {
           placeholder="blur"
           blurDataURL="data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAQCdASoIAAMABUB8JZgCdAD0bVroAP6/fH+rWv4vwhzPbo3mEAQAAAA="
         />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-[60px] h-full flex flex-col justify-center">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-[60px] h-full flex flex-col justify-center">
           <h1 className="text-[36px] md:text-[60px] font-extrabold md:leading-[75px] text-white mb-4 max-w-[771px]">
             多元船舶材料
           </h1>
@@ -39,8 +39,8 @@ export default function ProductListPage() {
       </section>
 
       {/* Products Section */}
-      <section className="bg-page py-[100px]">
-        <div className="max-w-[1700px] mx-auto px-[60px]">
+      <section className="bg-page py-8 md:py-[100px]">
+        <div className="max-w-[1700px] mx-auto px-6 md:px-[60px]">
           <Suspense>
             <ProductGrid products={products} categories={categories} />
           </Suspense>
