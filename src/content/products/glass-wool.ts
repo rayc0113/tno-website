@@ -8,15 +8,15 @@ const glassWool: Product = {
     "通過國際船級社認證的船用玻璃棉，優異的隔熱與隔音性能，廣泛應用於船艙壁板與管路包覆。",
   description:
     "欣展代理之船用玻璃棉採用高品質無機玻璃纖維製成，具有優異的熱絕緣性能與良好的隔音吸噪特性。通過 IMO FTP Code 防火認證，符合多國船級社要求，廣泛應用於船員艙房、走廊壁板、天花板及管路設備包覆，有效降低艙內溫度並提升居住舒適度。輕量化特性不增加船體負擔，施工便利可依現場尺寸裁切成型。",
-  coverImage: "/images/products/glass-wool.png",
+  coverImage: "/images/products/glass-wool.webp",
   images: [
-    "/images/products/glass-wool/glass-wool01.png",
-    "/images/products/glass-wool/glass-wool02.png",
-    "/images/products/glass-wool/glass-wool03.png",
-    "/images/products/glass-wool/glass-wool04.png",
-    "/images/products/glass-wool/glass-wool05.png",
-    "/images/products/glass-wool/glass-wool06.png",
-    "/images/products/glass-wool/glass-wool07.png",
+    "/images/products/glass-wool/glass-wool01.webp",
+    "/images/products/glass-wool/glass-wool02.webp",
+    "/images/products/glass-wool/glass-wool03.webp",
+    "/images/products/glass-wool/glass-wool04.webp",
+    "/images/products/glass-wool/glass-wool05.webp",
+    "/images/products/glass-wool/glass-wool06.webp",
+    "/images/products/glass-wool/glass-wool07.webp",
   ],
   specs: [
     { label: "材料", value: "無機玻璃纖維" },

@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const certifications = [
-  { name: "ABS", src: "/images/home/logo_abs.png" },
-  { name: "ClassNK", src: "/images/home/logo_classnk.png" },
-  { name: "Bureau Veritas", src: "/images/home/logo_bureauveritas.png" },
-  { name: "DNV", src: "/images/home/logo_dnv.png" },
-  { name: "GL", src: "/images/home/logo_gl.png" },
-  { name: "KR", src: "/images/home/logo_kr.png" },
-  { name: "Lloyd's Register", src: "/images/home/logo_lr.png" },
-  { name: "RINA", src: "/images/home/logo_rina.png" },
+  { name: "ABS", src: "/images/home/logo_abs.webp" },
+  { name: "ClassNK", src: "/images/home/logo_classnk.webp" },
+  { name: "Bureau Veritas", src: "/images/home/logo_bureauveritas.webp" },
+  { name: "DNV", src: "/images/home/logo_dnv.webp" },
+  { name: "GL", src: "/images/home/logo_gl.webp" },
+  { name: "KR", src: "/images/home/logo_kr.webp" },
+  { name: "Lloyd's Register", src: "/images/home/logo_lr.webp" },
+  { name: "RINA", src: "/images/home/logo_rina.webp" },
 ];
 
 const doubled = [...certifications, ...certifications];

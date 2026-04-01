@@ -8,9 +8,9 @@ const cabinCeilingRenovation: CaseProject = {
   shortDescription: "更換老化天花板隔熱板材，同步升級防火等級，延長船舶使用年限。",
   description:
     "本案針對一艘服役逾十年的貨輪進行天花板系統全面翻新，更換老化的隔熱板材，並導入符合最新 SOLAS 規範的防火建材，有效提升艙室隔熱性能與安全等級。",
-  coverImage: "/images/cases/basic/ship-ceiling-panel-renovation.png",
+  coverImage: "/images/cases/basic/ship-ceiling-panel-renovation.webp",
   images: [
-    "/images/cases/basic/ship-ceiling-panel-renovation.png",
+    "/images/cases/basic/ship-ceiling-panel-renovation.webp",
   ],
   services: ["天花板板材拆除", "隔熱材料更換", "防火建材安裝", "品質驗收"],
   completedAt: "2024-02-01",

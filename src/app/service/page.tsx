@@ -17,7 +17,7 @@ const services = [
     description:
       "我們代理多種進口建材與原料，如隔熱材、PU 發泡板、工程用木材等，為您的專案提供穩定、高效的物料支援，避免因材料短缺延誤工期。",
     cta: { label: "立即洽詢", href: "/contact" },
-    image: "/images/service/services_img1.png",
+    image: "/images/service/services_img1.webp",
     imageAlt: "材料供應",
     imageRight: true,
   },
@@ -28,7 +28,7 @@ const services = [
     description:
       "在自有工廠中生產金屬隔間板、不鏽鋼廚具、艤裝設備等，每道工序皆經過嚴格檢驗與控制，從材料到成品，皆符合國際認證標準。",
     cta: { label: "了解更多", href: "/product" },
-    image: "/images/service/services_img2.png",
+    image: "/images/service/services_img2.webp",
     imageAlt: "產品製造",
     imageRight: false,
   },
@@ -39,7 +39,7 @@ const services = [
     description:
       "我們為您量身設計 2D / 3D 規劃圖，從需求分析到空間佈局，確保每個細節契合實際運作。無論是船艙隔間還是不鏽鋼設備，皆能精準對接您的專案需求。",
     cta: { label: "立即洽詢", href: "/contact" },
-    image: "/images/service/services_img3.png",
+    image: "/images/service/services_img3.webp",
     imageAlt: "設計規劃",
     imageRight: true,
   },
@@ -50,7 +50,7 @@ const services = [
     description:
       "提供 CNC 車銑床、折床、燒焊、龍門銑等多樣金屬加工服務，支援船舶、工業與建築專案的二次加工需求，滿足多樣化設計與功能規格。",
     cta: { label: "立即洽詢", href: "/contact" },
-    image: "/images/service/services_img4.png",
+    image: "/images/service/services_img4.webp",
     imageAlt: "各式代工",
     imageRight: false,
   },

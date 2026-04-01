@@ -6,7 +6,7 @@ export default function HomeBrandCTA() {
     <section className="py-20 md:py-[200px] text-center relative overflow-hidden">
       <div
         className="absolute inset-0"
-        style={{ backgroundImage: "url('/images/home/brandCTA_bg.png')", backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: "url('/images/home/brandCTA_bg.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       />
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-[60px]">
         <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-4 md:mb-6 max-w-[788px] mx-auto leading-tight">
@@ -22,7 +22,7 @@ export default function HomeBrandCTA() {
         <Button href="/about">了解更多</Button>
         <div className="flex items-center justify-center gap-2 mt-6">
           <Image
-            src="/images/home/brandCTA_logo.png"
+            src="/images/home/brandCTA_logo.webp"
             alt="ISO 9001:2015 certified"
             width={98}
             height={50}

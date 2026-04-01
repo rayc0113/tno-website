@@ -8,10 +8,10 @@ const generalShipMaterial: CaseProject = {
   shortDescription: "國際認證的船舶材料，確保安全耐用與規範合一的內裝品質。",
   description:
     "在長途航行中，艙室的舒適度往往被忽略，但它卻直接影響著船員的休息品質與工作效率。這次，我們接到一個挑戰——如何在有限工期內，改善船員艙室的隔熱與隔音問題，讓長時間待在船上的他們，也能擁有安靜、舒適的生活空間。",
-  coverImage: "/images/home/case_bg1.png",
+  coverImage: "/images/home/case_bg1.webp",
   images: [
-    "/images/cases/basic/cabin-space-optimization.png",
-    "/images/cases/basic/corridor-partition-1.png",
+    "/images/cases/basic/cabin-space-optimization.webp",
+    "/images/cases/basic/corridor-partition-1.webp",
   ],
   sections: [
     {

@@ -8,8 +8,8 @@ const ceramicWool: Product = {
     "高密度岩礦棉隔熱材，耐高溫、防火性能優異，適用於船舶機艙及高溫管路包覆。",
   description:
     "欣展代理之船用岩（礦）棉由天然玄武岩或礦渣熔融紡絲製成，具有卓越的耐高溫與防火性能，通過 IMO FTP Code A 級認證。相較玻璃棉，岩礦棉耐溫更高、吸音效果更佳，特別適用於機艙隔熱、高溫管路包覆及防火隔間填充等嚴苛環境。",
-  coverImage: "/images/products/ceramic-wool.png",
-  images: ["/images/products/ceramic-wool.png"],
+  coverImage: "/images/products/ceramic-wool.webp",
+  images: ["/images/products/ceramic-wool.webp"],
   specs: [
     { label: "材料", value: "天然玄武岩 / 礦渣纖維" },
     { label: "導熱係數", value: "≤ 0.040 W/(m·K)" },

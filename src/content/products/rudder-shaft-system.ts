@@ -7,7 +7,7 @@ const rudderShaftSystem: Product = {
   shortDescription: "高精度船用舵軸系統，確保船舶操控穩定性與安全性",
   description:
     "欣展提供完整的船用舵軸系統，包括舵軸、舵托、舵機支架及相關緊固配件。採用高強度合金鋼製造，通過 ABS、ClassNK 等主要船級社認證，確保在各種海況下的操舵穩定性與可靠性，適用於各類型商業船舶與特種船。",
-  coverImage: "/images/home/product_bg4.png",
+  coverImage: "/images/home/product_bg4.webp",
   images: [
     "/images/products/rudder-shaft-1.jpg",
     "/images/products/rudder-shaft-2.jpg",

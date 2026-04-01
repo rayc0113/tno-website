@@ -7,7 +7,7 @@ const deckFittings: Product = {
   shortDescription: "完整的甲板上艤品系列，符合國際規範，確保甲板作業安全",
   description:
     "欣展提供各式造船用甲板上艤品，包括繫纜桩、導纜器、甲板艙蓋、通風筒、救生艇架等標準及客製化配件。所有產品均依照 IACS、IMO 規範設計，採用高強度鋼材製造，通過主要船級社認證，確保甲板作業安全與可靠性。",
-  coverImage: "/images/home/product_bg1.png",
+  coverImage: "/images/home/product_bg1.webp",
   images: [
     "/images/products/deck-fittings-1.jpg",
     "/images/products/deck-fittings-2.jpg",

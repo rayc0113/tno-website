@@ -53,7 +53,7 @@ export default function AboutPage() {
             {/* 團隊照：mobile 排第一(上)，desktop order-2(右) */}
             <div className="relative h-[260px] md:h-auto md:w-[594px] flex-shrink-0 md:order-2 rounded-[20px] md:rounded-l-none md:rounded-r-[24px] overflow-hidden">
               <Image
-                src="/images/about/about-teams.png"
+                src="/images/about/about-teams.webp"
                 alt="欣展團隊"
                 fill
                 sizes="(max-width: 768px) 100vw, 594px"
@@ -63,7 +63,7 @@ export default function AboutPage() {
             {/* 公司照：mobile 排第二(下)，desktop order-1(左) */}
             <div className="relative h-[260px] md:h-auto flex-1 md:order-1 rounded-[20px] md:rounded-r-none md:rounded-l-[24px] overflow-hidden">
               <Image
-                src="/images/about/about-company.png"
+                src="/images/about/about-company.webp"
                 alt="欣展公司外觀"
                 fill
                 sizes="(max-width: 768px) 100vw, calc(100vw - 714px)"
@@ -97,7 +97,7 @@ export default function AboutPage() {
             <div className="absolute left-[24px] top-[36px] right-0 bottom-0 bg-sky rounded-[24px]" />
             <div className="absolute left-0 top-0 right-[24px] bottom-[36px] rounded-[24px] overflow-hidden">
               <Image
-                src="/images/about/about-belief.png"
+                src="/images/about/about-belief.webp"
                 alt="我們的信念"
                 fill
                 className="object-cover"
@@ -115,7 +115,7 @@ export default function AboutPage() {
             <div className="absolute left-0 top-[36px] right-[24px] bottom-0 bg-sky-light rounded-[24px]" />
             <div className="absolute left-[24px] top-0 right-0 bottom-[36px] rounded-[24px] overflow-hidden">
               <Image
-                src="/images/about/about-expertise.png"
+                src="/images/about/about-expertise.webp"
                 alt="我們的專業"
                 fill
                 className="object-cover"
@@ -161,7 +161,7 @@ export default function AboutPage() {
             <div className="flex flex-col items-center flex-shrink-0">
               <div className="relative w-[160px] h-[216px] md:w-[194px] md:h-[263px]">
                 <Image
-                  src="/images/about/about-certificate.png"
+                  src="/images/about/about-certificate.webp"
                   alt="ISO 9001:2015 品質管理系統證書"
                   fill
                   className="object-contain"
@@ -176,7 +176,7 @@ export default function AboutPage() {
             <div className="flex-1 flex flex-col w-full items-center md:items-start">
               <div className="relative w-full h-[160px] md:h-[216px]">
                 <Image
-                  src="/images/about/about-certification-logos.png"
+                  src="/images/about/about-certification-logos.webp"
                   alt="NK、ABS、KR、CR、BV、DNV、CE、CCS、LR、RINA 認證"
                   fill
                   className="object-contain object-center md:object-left"

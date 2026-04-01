@@ -7,7 +7,7 @@ const thermalInsulation: Product = {
   shortDescription: "提供船舶最佳的隔熱與隔音效果",
   description:
     "欣展代理多款國際知名隔熱絕緣材料，包括岩棉、玻璃棉、泡棉及複合隔熱板等，全面通過 IMO FTP Code 防火認證。廣泛應用於船艙壁板、機艙隔熱、管路包覆等場景，有效降低艙內溫度並提升隔音效果。",
-  coverImage: "/images/home/product_bg2.png",
+  coverImage: "/images/home/product_bg2.webp",
   images: [
     "/images/products/thermal-insulation-1.jpg",
     "/images/products/thermal-insulation-2.jpg",

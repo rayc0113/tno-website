@@ -8,7 +8,7 @@ const shipRenovation: CaseProject = {
   shortDescription: "從內裝翻新到零件更換，以專業工序延長船舶壽命並提升運行效能。",
   description:
     "本案針對一艘服役 15 年的多功能作業船進行全面改裝維修工程，包括機艙隔熱材料更換、甲板防腐塗裝、船員區域內裝全面翻新，以及多項設備換裝作業。整體工程在基隆港執行，依照船東需求分階段完成，成功延長船舶使用年限並取得最新 SOLAS 認證。",
-  coverImage: "/images/home/case_bg3.png",
+  coverImage: "/images/home/case_bg3.webp",
   images: [
     "/images/cases/ship-renovation-1.jpg",
     "/images/cases/ship-renovation-2.jpg",

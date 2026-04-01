@@ -8,7 +8,7 @@ const commercialVesselInterior: CaseProject = {
   shortDescription: "完整的船員起居與操作空間解決方案，打造舒適與高效的工作環境。",
   description:
     "在長途航行中，艙室的舒適度往往被忽略，但它卻直接影響著船員的休息品質與工作效率。這次，我們接到一個挑戰——如何在有限工期內，改善船員艙室的隔熱與隔音問題，讓長時間待在船上的他們，也能擁有安靜、舒適的生活空間。",
-  coverImage: "/images/home/case_bg2.png",
+  coverImage: "/images/home/case_bg2.webp",
   images: [
     "/images/cases/commercial-vessel-interior-1.jpg",
     "/images/cases/commercial-vessel-interior-2.jpg",

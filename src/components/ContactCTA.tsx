@@ -6,7 +6,7 @@ interface ContactCTAProps {
 }
 
 export default function ContactCTA({
-  bgImage = "/images/home/contacCTA_bg.png",
+  bgImage = "/images/home/contacCTA_bg.webp",
 }: ContactCTAProps) {
   return (
     <section className="relative h-[420px] md:h-[696px] overflow-hidden bg-black flex items-center justify-center">

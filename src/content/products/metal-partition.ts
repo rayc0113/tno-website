@@ -7,7 +7,7 @@ const metalPartition: Product = {
   shortDescription: "通過認證的防火隔間板，專為船舶內裝設計",
   description:
     "欣展金屬隔間板採用高強度鋼板與防火核材複合製成，通過 IMO FTP Code A 級防火認證，適用於船員艙房、走廊、機艙等各類隔間需求。模組化設計可快速安裝，有效縮短塢期，降低施工成本。",
-  coverImage: "/images/home/product_bg1.png",
+  coverImage: "/images/home/product_bg1.webp",
   images: [
     "/images/products/metal-partition-1.jpg",
     "/images/products/metal-partition-2.jpg",
