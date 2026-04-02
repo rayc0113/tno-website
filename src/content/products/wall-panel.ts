@@ -9,10 +9,10 @@ const wallPanel: Product = {
   description:
     "專為高安全需求空間打造的金屬隔間系統，結合防火、隔音與高強度結構設計，適用於船舶與各類室內空間，提供穩定、安全且高品質的空間分隔解決方案。",
   images: [
-    "/images/products/wall-panel/wall-panel01.webp",
-    "/images/products/wall-panel/wall-panel02.webp",
-    "/images/products/wall-panel/wall-panel03.webp",
-    "/images/products/wall-panel/wall-panel04.webp",
+    "/images/products/metal-panel/wall-panel/wall-panel01.webp",
+    "/images/products/metal-panel/wall-panel/wall-panel02.webp",
+    "/images/products/metal-panel/wall-panel/wall-panel03.webp",
+    "/images/products/metal-panel/wall-panel/wall-panel04.webp",
   ],
   specs: [
     { label: "型號", value: "TNO-W5001 / TNO-W5002 / TNO-W2501" },
@@ -37,7 +37,7 @@ const wallPanel: Product = {
   ],
   specRows: [
     {
-      typeImage: "/images/products/wall-panel/TNO-W5001.webp",
+      typeImage: "/images/products/metal-panel/wall-panel/TNO-W5001.webp",
       model: "TNO-W5001",
       thickness: "50mm",
       fireClass: "B-15",
@@ -45,7 +45,7 @@ const wallPanel: Product = {
       weight: "20.3 kg/m²",
     },
     {
-      typeImage: "/images/products/wall-panel/TNO-W5002.webp",
+      typeImage: "/images/products/metal-panel/wall-panel/TNO-W5002.webp",
       model: "TNO-W5002",
       thickness: "50mm",
       fireClass: "B-15",
@@ -53,7 +53,7 @@ const wallPanel: Product = {
       weight: "21.0 kg/m²",
     },
     {
-      typeImage: "/images/products/wall-panel/TNO-W2501.webp",
+      typeImage: "/images/products/metal-panel/wall-panel/TNO-W2501.webp",
       model: "TNO-W2501",
       thickness: "25mm",
       fireClass: "B-0",

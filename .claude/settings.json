@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ffmpeg -i /Users/ray/Documents/tno-website-offical/public/videos/商業運輸影片.mp4 -vframes 1 -q:v 2 /Users/ray/Documents/tno-website-offical/public/images/home/hero.webp -y)",
+      "Bash(/opt/homebrew/bin/ffmpeg -i /Users/ray/Documents/tno-website-offical/public/videos/商業運輸影片.mp4 -vframes 1 -q:v 2 /Users/ray/Documents/tno-website-offical/public/images/home/hero.webp -y)",
+      "Bash(/opt/homebrew/bin/ffmpeg -i \"商業運輸影片.mp4\" -vframes 1 -q:v 2 /Users/ray/Documents/tno-website-offical/public/images/home/hero.webp -y)",
+      "Bash(/opt/homebrew/bin/ffmpeg -i /Users/ray/Documents/tno-website-offical/public/videos/hero.mp4 -vframes 1 -q:v 2 /Users/ray/Documents/tno-website-offical/public/images/home/hero.webp -y)"
+    ]
+  }
+}

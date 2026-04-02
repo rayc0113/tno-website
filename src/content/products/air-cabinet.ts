@@ -7,10 +7,8 @@ const airCabinet: Product = {
   shortDescription: "保障系統穩定與高效運行",
   description:
     "欣展提供完整的船用空氣系統設備，包括空氣控制櫃、氣動控制元件及各式船用過濾器。產品依照 IMO、ABS 等國際規範設計製造，確保船舶氣動系統的穩定可靠。廣泛應用於船舶控制系統、壓縮空氣系統及各類船用設備的氣源處理。",
-  coverImage: "/images/home/product_bg4.webp",
   images: [
-    "/images/products/air-cabinet-1.jpg",
-    "/images/products/air-cabinet-2.jpg",
+    "/images/products/air-tank-filter/air-tank-filter/air-tank-filter01.webp",
   ],
   specs: [
     { label: "工作壓力", value: "0.5 ~ 3.0 MPa（依型號）" },

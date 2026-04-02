@@ -2,15 +2,15 @@ import type { Product } from "@/types/product";
 
 const thermalInsulation: Product = {
   slug: "thermal-insulation",
-  name: "隔熱絕緣材料",
+  name: "岩（礦）棉",
   category: "隔熱絕緣材",
-  shortDescription: "提供船舶最佳的隔熱與隔音效果",
+  shortDescription: "高密度岩礦棉隔熱材，耐高溫、防火性能優異，適用於船舶機艙及高溫管路包覆。",
   description:
-    "欣展代理多款國際知名隔熱絕緣材料，包括岩棉、玻璃棉、泡棉及複合隔熱板等，全面通過 IMO FTP Code 防火認證。廣泛應用於船艙壁板、機艙隔熱、管路包覆等場景，有效降低艙內溫度並提升隔音效果。",
-  coverImage: "/images/home/product_bg2.webp",
+    "欣展代理之船用岩（礦）棉由天然玄武岩或礦渣熔融紡絲製成，具有卓越的耐高溫與防火性能，通過 IMO FTP Code A 級認證。相較玻璃棉，岩礦棉耐溫更高、吸音效果更佳，特別適用於機艙隔熱、高溫管路包覆及防火隔間填充等嚴苛環境。",
   images: [
-    "/images/products/thermal-insulation-1.jpg",
-    "/images/products/thermal-insulation-2.jpg",
+    "/images/products/insulation/rock-wool/rock-wool01.webp",
+    "/images/products/insulation/rock-wool/rock-wool02.webp",
+    "/images/products/insulation/rock-wool/rock-wool03.webp",
   ],
   specs: [
     { label: "材料種類", value: "岩棉 / 玻璃棉 / PU泡棉 / 複合板" },

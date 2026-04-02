@@ -8,16 +8,17 @@
  */
 
 import type { CaseProject, CaseSummary } from "@/types/case";
-import generalShipMaterial from "./general-ship-material";
-import commercialVesselInterior from "./commercial-vessel-interior";
-import shipRenovation from "./ship-renovation";
-import cabinCeilingRenovation from "./cabin-ceiling-renovation";
+import bulkCarrierInsulation from "./bulk-carrier-insulation";
+import crewQuartersRenovation from "./crew-quarters-renovation";
+import fishingVesselUpgrade from "./fishing-vessel-upgrade";
+import offshorePlatformLiving from "./offshore-platform-living";
 
 // ✅ 在此新增案例（新案例建議放在陣列最前面）
 export const allCases: CaseProject[] = [
-  generalShipMaterial,
-  commercialVesselInterior,
-  shipRenovation,
+  bulkCarrierInsulation,
+  crewQuartersRenovation,
+  fishingVesselUpgrade,
+  offshorePlatformLiving,
 ];
 
 export function getPublishedCases(): CaseProject[] {

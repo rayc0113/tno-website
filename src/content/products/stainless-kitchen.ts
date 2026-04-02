@@ -2,15 +2,13 @@ import type { Product } from "@/types/product";
 
 const stainlessKitchen: Product = {
   slug: "stainless-kitchen",
-  name: "不鏽鋼廚具",
+  name: "各式不鏽鋼廚具",
   category: "不鏽鋼廚具",
   shortDescription: "專為船舶使用打造的客製化廚具",
   description:
     "欣展不鏽鋼廚具系列採用 316L 海洋級不鏽鋼製造，具備優異的耐鹽腐蝕性能，專為船艙廚房量身設計。提供從料理台、烤箱、爐具到儲物系統的完整廚具解決方案，可依船型尺寸客製化，並符合 SOLAS 防火安全規範。",
-  coverImage: "/images/home/product_bg3.webp",
   images: [
-    "/images/products/stainless-kitchen-1.jpg",
-    "/images/products/stainless-kitchen-2.jpg",
+    "/images/products/stainless-kitchen/stainless-kitchen/stainless-kitchen01.webp",
   ],
   specs: [
     { label: "材質", value: "316L 海洋級不鏽鋼" },

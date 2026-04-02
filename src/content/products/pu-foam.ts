@@ -2,15 +2,13 @@ import type { Product } from "@/types/product";
 
 const puFoam: Product = {
   slug: "pu-foam",
-  name: "PU 聚氨脂隔熱材料",
+  name: "PU板、PU發泡劑、聚氨酯發泡劑",
   category: "PU聚氨脂",
   shortDescription: "高性能 PU 聚氨脂隔熱材，提供優異隔熱效果與防潮性能",
   description:
     "欣展代理高品質 PU 聚氨脂（Polyurethane）隔熱材料，具備優異的導熱係數與防水防潮特性。廣泛應用於船艙冷庫、管路保溫及甲板隔熱，可依需求製作成板材、管殼或現場發泡，符合 IMO FTP Code 防火規範。",
-  coverImage: "/images/home/product_bg2.webp",
   images: [
-    "/images/products/pu-foam-1.jpg",
-    "/images/products/pu-foam-2.jpg",
+    "/images/products/pu-foam/pu-foam/pu-foam01.webp",
   ],
   specs: [
     { label: "密度", value: "30 ~ 80 kg/m³（依規格）" },

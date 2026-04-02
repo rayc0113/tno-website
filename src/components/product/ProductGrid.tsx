@@ -45,7 +45,7 @@ export default function ProductGrid({ products, categories }: Props) {
   return (
     <div ref={wrapperRef}>
       {/* Category Filter */}
-      <div className="sticky top-[70px] z-30 bg-page flex gap-3 mb-6 md:mb-12 overflow-x-auto py-3 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+      <div className="sticky top-[70px] z-30 bg-page flex flex-nowrap md:flex-wrap gap-3 mb-6 md:mb-12 overflow-x-auto md:overflow-x-visible py-3 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
         {["全部", ...categories].map((cat) => (
           <button
             key={cat}

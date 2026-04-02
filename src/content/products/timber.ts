@@ -2,15 +2,13 @@ import type { Product } from "@/types/product";
 
 const timber: Product = {
   slug: "timber",
-  name: "船用木材",
+  name: "原木木料",
   category: "木材",
   shortDescription: "精選海洋級船用木材，耐潮防腐，適用於甲板鋪設與內裝裝潢",
   description:
     "欣展提供多種船用木材，包括柚木、橡木及合成木地板，具備優異的耐海水、耐鹽霧及防腐處理，專為船舶甲板鋪設與艙室內裝設計。所有木材均符合國際防火標準，提供美觀與耐用兼具的船用木材解決方案。",
-  coverImage: "/images/home/product_bg3.webp",
   images: [
-    "/images/products/timber-1.jpg",
-    "/images/products/timber-2.jpg",
+    "/images/products/wood/wood-material/wood-material01.webp",
   ],
   specs: [
     { label: "材質", value: "柚木 / 橡木 / 合成木地板" },

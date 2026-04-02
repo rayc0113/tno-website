@@ -2,15 +2,13 @@ import type { Product } from "@/types/product";
 
 const anchorFittings: Product = {
   slug: "anchor-fittings",
-  name: "錨座配件",
+  name: "導纜孔、繫纜樁、錨座",
   category: "造船用甲板上艤品、錨座配件",
   shortDescription: "高強度船用錨座配件，確保錨泊系統安全可靠",
   description:
     "欣展提供完整的船用錨座配件系列，包括錨鏈艙口、錨機座板、止鏈器、錨鏈導向器及相關緊固配件。採用高強度船用鋼材製造，依照 IACS 及各船級社規範設計，確保錨泊作業的安全性與可靠性，適用於各型商業船舶。",
-  coverImage: "/images/home/product_bg2.webp",
   images: [
-    "/images/products/anchor-fittings-1.jpg",
-    "/images/products/anchor-fittings-2.jpg",
+    "/images/products/deck-fittings/mooring-fittings/mooring-fittings01.webp",
   ],
   specs: [
     { label: "材質", value: "高強度船用鋼 / 鑄鐵" },
