@@ -39,15 +39,13 @@ export default function HomeHero() {
 
   return (
     <section className="relative h-[80vh] overflow-hidden">
-      {/* Mobile: 靜態圖 */}
+      {/* Mobile: 影片第一幀靜態圖 */}
       <Image
-        src="/images/home/hero.webp"
+        src="/images/home/hero-frame.jpg"
         alt="船舶裝修 TNO 欣展"
         fill
         className="object-cover md:hidden"
         priority
-        placeholder="blur"
-        blurDataURL="data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAACwAQCdASoIAAUABUB8JZwAAurZ1CgAAP59Qt5bRWrUFrgAAAA="
       />
 
       {/* Desktop: 背景影片 */}
@@ -58,7 +56,7 @@ export default function HomeHero() {
         muted
         loop
         playsInline
-        poster="/images/home/hero.webp"
+        poster="/images/home/hero-frame.jpg"
       >
         <source src="/videos/hero.webm" type="video/webm" />
         <source src="/videos/hero.mp4" type="video/mp4" />
