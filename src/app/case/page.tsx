@@ -40,7 +40,7 @@ export default function CaseListPage() {
       </section>
 
       {/* Cases Section */}
-      <section className="bg-page py-8 md:py-[100px]">
+      <section className="bg-page py-8 md:pt-[48px] md:pb-[100px]">
         <div className="max-w-[1700px] mx-auto px-6 md:px-[60px]">
           <Suspense>
             <CaseGrid cases={cases} categories={categories} />
