@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "service": "Services",
+    "product": "Products",
+    "case": "Case Studies",
+    "about": "About Us",
+    "contact": "Contact",
+    "lang": "EN",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "company": "Company",
+    "products": "Products",
+    "cases": "Case Studies",
+    "about": "About Us",
+    "service": "Our Services",
+    "contact": "Contact Us",
+    "copyright": "© 2026 TNO Inc."
+  },
+  "home": {
+    "hero": {
+      "title1": "From Materials to Design & Manufacturing",
+      "title2": "Your Complete Marine Interior Solution",
+      "description": "With over a decade of expertise and international certifications, TNO is committed to safety and quality — protecting every voyage.",
+      "cta": "Explore Services"
+    },
+    "services": {
+      "title": "Our Professional Services",
+      "description1": "From interior design to component manufacturing, we support every stage of ship construction and maintenance,",
+      "description2": "delivering comprehensive solutions that ensure navigational safety and onboard comfort.",
+      "items": {
+        "material": { "title": "Material Agency", "description": "Supplying certified insulation, foam, and timber — keeping every build on schedule" },
+        "manufacturing": { "title": "Manufacturing", "description": "From metal panels to stainless steel kitchens — durable, precision-made marine components" },
+        "design": { "title": "Design & Planning", "description": "2D/3D planning with professional design workflows to ensure every detail works" },
+        "processing": { "title": "Custom Fabrication", "description": "Precision machining, bending, and welding — reliable components for any spec" }
+      }
+    },
+    "products": {
+      "title": "Featured Products",
+      "description1": "Every product reflects years of TNO expertise.",
+      "description2": "We are dedicated to delivering internationally trusted solutions for the maritime industry.",
+      "cta": "View All Products",
+      "scrollLeft": "Scroll left",
+      "scrollRight": "Scroll right"
+    },
+    "cases": {
+      "title": "Projects & Case Studies",
+      "description": "From ship interiors to retrofit and repair — we deliver results worth being proud of, with precision and expertise.",
+      "learnMore": "Learn More"
+    },
+    "whyChoose": {
+      "title": "Why Choose TNO?",
+      "description": "Rooted in Taiwan, reaching globally — we earn the trust of vessel owners through expertise and commitment.",
+      "stat1Label": "Years of Marine Expertise",
+      "stat2Label": "Preferred Partner for Taiwan Shipyards",
+      "stat3Label": "International Certifications"
+    },
+    "brandCTA": {
+      "title1": "From the Open Ocean to Everyday Life,",
+      "title2": "TNO Sails Alongside You.",
+      "description1": "Backed by ISO 9001 and multiple international classification society certifications,",
+      "description2": "we ensure every process is reliable — delivering safe, durable, and high-quality results for the maritime industry.",
+      "cta": "Learn More"
+    },
+    "certifications": {
+      "label": "Certified by International Classification Societies"
+    },
+    "contactCTA": {
+      "tagline": "Partner With Us",
+      "title1": "Contact us today for a customized marine solution",
+      "title2": "and make every voyage safer and more efficient.",
+      "cta": "Contact Us"
+    }
+  },
+  "service": {
+    "meta": {
+      "title": "Services",
+      "description": "TNO provides full-scope marine services including material supply, product manufacturing, design planning, and custom fabrication — integrated solutions from concept to delivery."
+    },
+    "hero": {
+      "title": "Our Services",
+      "description1": "Behind every project is a commitment to safety and trust.",
+      "description2": "TNO delivers end-to-end solutions from design to manufacturing."
+    },
+    "intro": {
+      "title1": "Our Core Services —",
+      "title2": "Full Support for Every Project.",
+      "description1": "Combining design, manufacturing, and processing capabilities with material agency and supply chain advantages,",
+      "description2": "we provide complete solutions from initial planning through to final delivery."
+    },
+    "items": {
+      "material": {
+        "category": "Material Agency",
+        "title": "Material Supply • Rapid Fulfillment",
+        "description": "We represent a wide range of imported construction materials and raw materials — including thermal insulation, PU foam boards, and engineering timber — ensuring a stable and efficient material supply for your projects.",
+        "cta": "Inquire Now"
+      },
+      "manufacturing": {
+        "category": "Manufacturing",
+        "title": "High-Quality Production • Strict Quality Control",
+        "description": "We manufacture metal partition panels, stainless steel kitchen equipment, and outfitting components in our own factory. Every process is rigorously inspected and controlled to meet international certification standards.",
+        "cta": "Learn More"
+      },
+      "design": {
+        "category": "Design & Planning",
+        "title": "Tailored Solutions • Precise Execution",
+        "description": "We create custom 2D/3D planning drawings for your project — from requirements analysis to spatial layout — ensuring every detail aligns with real-world operations, whether for ship cabin partitions or stainless steel equipment.",
+        "cta": "Inquire Now"
+      },
+      "processing": {
+        "category": "Custom Fabrication",
+        "title": "Flexible Processing • Versatile Applications",
+        "description": "We offer a range of metal processing services including CNC turning and milling, bending, welding, and gantry milling — supporting secondary fabrication for marine, industrial, and construction projects.",
+        "cta": "Inquire Now"
+      }
+    },
+    "cta": {
+      "title": "Let's Kick Off Your Project Together",
+      "contact": "Contact Us Now",
+      "cases": "View Case Studies"
+    }
+  },
+  "product": {
+    "meta": {
+      "title": "Products",
+      "description": "TNO represents a range of internationally certified marine materials, including thermal insulation, metal partition systems, and marine equipment — reliable quality, professional service."
+    },
+    "hero": {
+      "title": "Diverse Marine Materials",
+      "description": "From certified thermal insulation to complete cabin outfitting systems — we offer comprehensive solutions."
+    },
+    "filter": {
+      "all": "All Products"
+    },
+    "empty": "No products in this category",
+    "detail": {
+      "home": "Home",
+      "products": "Products",
+      "features": "Key Features",
+      "system": "System Structure",
+      "applications": "Applications",
+      "specs": "Specifications",
+      "specItem": "Specification",
+      "specValue": "Value / Description",
+      "specType": "Type",
+      "specModel": "Model",
+      "specThickness": "Thickness",
+      "specFire": "Fire Rating",
+      "specSound": "Sound Reduction",
+      "specWeight": "Weight",
+      "ctaTitle": "Want to know how this product can help your project?",
+      "ctaContact": "Contact Us",
+      "ctaCases": "View Related Cases"
+    }
+  },
+  "case": {
+    "meta": {
+      "title": "Case Studies",
+      "description": "Explore TNO's extensive portfolio of marine renovation projects — including bulk carrier refurbishment, yacht interiors, and offshore platform coating."
+    },
+    "hero": {
+      "title": "Case Studies",
+      "description1": "Every project represents our commitment to quality —",
+      "description2": "witness the results we create together with our clients."
+    },
+    "filter": {
+      "all": "All Cases"
+    },
+    "empty": "No cases in this category",
+    "detail": {
+      "home": "Home",
+      "cases": "Case Studies",
+      "updatedAt": "Updated: ",
+      "closing": "Closing Remarks",
+      "moreCases": "More Marine Projects"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About Us",
+      "description": "TNO Metal was founded in 2016, specializing in ship cabin planning, marine maintenance, metal processing, and stainless steel kitchen manufacturing, certified under ISO 9001:2015 and multiple international classification societies."
+    },
+    "hero": {
+      "title1": "From Design to Maintenance —",
+      "title2": "Building the Safest and Most Comfortable Ship Cabins",
+      "description1": "Focused on comprehensive ship cabin planning and construction,",
+      "description2": "we deliver turnkey services through professional integration and rigorous processes."
+    },
+    "team": {
+      "title": "We Are the TNO Team",
+      "description1": "TNO Metal was founded in 2016, specializing in ship cabin planning, marine maintenance, metal processing, and stainless steel kitchen manufacturing.",
+      "description2": "We believe safety is not just a technique — it is a responsibility to people and spaces.",
+      "description3": "From ship cabin partitions to architectural interiors, our core values of",
+      "description4": "\"Quality, Safety, and Function\" ensure every space combines professional structure with the comfort of home.",
+      "teamAlt": "TNO Team",
+      "companyAlt": "TNO Office"
+    },
+    "belief": {
+      "label": "Our Philosophy",
+      "title": "Safety as an Extension of Home",
+      "description1": "We believe safety is not just a technique — it is a responsibility.",
+      "description2": "Every product and every installation is a direct response to the trust placed in us.",
+      "description3": "We are committed to integrity, quality, and service as our foundation,",
+      "description4": "completing every detail with a professional attitude,",
+      "description5": "making 'safety' not just a standard, but the most reassuring anchor in people's lives.",
+      "imageAlt": "Our Philosophy"
+    },
+    "expertise": {
+      "label": "Our Expertise",
+      "title1": "Focused on Ship Cabin",
+      "title2": "Planning & Maintenance Services",
+      "description1": "We possess comprehensive ship cabin integration capabilities —",
+      "description2": "from planning and design, material supply, and component processing to onboard installation and maintenance,",
+      "description3": "providing vessel owners with a complete one-stop professional service.",
+      "description4": "With rigorous processes and extensive practical experience,",
+      "description5": "we ensure every vessel achieves the ideal balance of safety, comfort, and efficiency.",
+      "imageAlt": "Our Expertise"
+    },
+    "certification": {
+      "title": "International Certifications & Quality Assurance",
+      "description1": "We hold multiple international quality and safety certifications, including ISO 9001:2015 and approvals from classification societies worldwide.",
+      "description2": "Each certificate represents our unwavering commitment to quality and responsibility.",
+      "description3": "We believe trust comes from expertise, and expertise is continuously validated.",
+      "isoAlt": "ISO 9001:2015 Quality Management System Certificate",
+      "isoCaption": "ISO 9001:2015 Quality Management System Certificate obtained in August 2018",
+      "logosAlt": "NK, ABS, KR, CR, BV, DNV, CE, CCS, LR, RINA certifications",
+      "logosCaption": "IMO certificates per international classification society regulations: NK, ABS, KR, CR, BV, DNV, CE, CCS, LR, RINA"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact Us",
+      "description": "Contact the TNO professional marine team for a free assessment and customized service proposal. Reach us by phone, email, or the inquiry form."
+    },
+    "title": "Contact Us",
+    "description1": "For product inquiries, quotes, or business discussions,",
+    "description2": "please leave your contact details and we will respond within 24 business hours.",
+    "form": {
+      "company": "Company Name",
+      "name": "Contact Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "message": "Your Message",
+      "required": "Required",
+      "submit": "Submit",
+      "submitting": "Sending…",
+      "successMessage": "Thank you for your inquiry! We will respond within 24 business hours.",
+      "errorMessage": "Message failed to send. Please try again or contact us directly by phone.",
+      "fieldRequired": "Please fill in the required fields (name, email, message).",
+      "invalidEmail": "Please enter a valid email address."
+    }
+  }
+}

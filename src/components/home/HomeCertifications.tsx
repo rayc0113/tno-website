@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
 const certifications = [
@@ -13,11 +14,12 @@ const certifications = [
 
 const doubled = [...certifications, ...certifications];
 
-export default function HomeCertifications() {
+export default async function HomeCertifications() {
+  const t = await getTranslations("home.certifications");
   return (
     <section className="bg-white py-[60px] overflow-hidden">
-      <p className="text-[#2e3b5d] text-lg font-semibold mb-10 text-center">
-        獲得國際船級社專業認證
+      <p className="text-title text-lg font-semibold mb-10 text-center">
+        {t("label")}
       </p>
       <div className="relative w-full">
         <div

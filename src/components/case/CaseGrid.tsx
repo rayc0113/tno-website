@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import type { CaseSummary } from "@/types/case";
 
 interface Props {
@@ -12,16 +13,17 @@ interface Props {
 }
 
 export default function CaseGrid({ cases, categories }: Props) {
+  const t = useTranslations("case");
   const searchParams = useSearchParams();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [activeCategory, setActiveCategory] = useState<string>(() => {
     const cat = searchParams.get("category");
-    return cat && categories.includes(cat) ? cat : "全部";
+    return cat && categories.includes(cat) ? cat : "all";
   });
 
   useEffect(() => {
     const cat = searchParams.get("category");
-    setActiveCategory(cat && categories.includes(cat) ? cat : "全部");
+    setActiveCategory(cat && categories.includes(cat) ? cat : "all");
   }, [searchParams, categories]);
 
   function handleCategoryChange(cat: string) {
@@ -33,7 +35,7 @@ export default function CaseGrid({ cases, categories }: Props) {
   }
 
   const filtered =
-    activeCategory === "全部"
+    activeCategory === "all"
       ? cases
       : cases.filter((c) => c.category === activeCategory);
 
@@ -46,7 +48,7 @@ export default function CaseGrid({ cases, categories }: Props) {
     <div ref={wrapperRef}>
       {/* Category Filter */}
       <div className="sticky top-[70px] z-30 bg-page flex gap-3 mb-6 md:mb-12 overflow-x-auto py-3 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-        {["全部", ...categories].map((cat) => (
+        {["all", ...categories].map((cat) => (
           <button
             key={cat}
             onClick={() => handleCategoryChange(cat)}
@@ -56,7 +58,7 @@ export default function CaseGrid({ cases, categories }: Props) {
                 : "bg-surface text-body hover:bg-brand-light/20 hover:text-brand-deep"
             }`}
           >
-            {cat === "全部" ? "全部案例" : `${cat} (${categoryCounts[cat] ?? 0})`}
+            {cat === "all" ? t("filter.all") : `${cat} (${categoryCounts[cat] ?? 0})`}
           </button>
         ))}
       </div>
@@ -95,7 +97,7 @@ export default function CaseGrid({ cases, categories }: Props) {
 
       {filtered.length === 0 && (
         <div className="text-center py-20 text-body">
-          <p>此分類暫無案例</p>
+          <p>{t("empty")}</p>
         </div>
       )}
     </div>

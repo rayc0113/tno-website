@@ -1,5 +1,6 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import type { CaseSummary } from "@/types/case";
 
@@ -7,14 +8,15 @@ interface Props {
   cases: CaseSummary[];
 }
 
-export default function HomeCases({ cases }: Props) {
+export default async function HomeCases({ cases }: Props) {
+  const t = await getTranslations("home.cases");
   return (
     <div className="bg-white">
     <section className="bg-surface rounded-[30px] md:rounded-[60px] py-10 px-6 md:py-[80px] md:px-[60px]">
       <div className="max-w-[1600px] mx-auto">
-        <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-3">應用與實績</h2>
+        <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-3">{t("title")}</h2>
         <p className="text-body text-[18px] md:text-[24px] mb-10 md:mb-[60px] md:whitespace-nowrap">
-          從船舶內裝到改裝維修，我們以專業與細節，實現每一個值得驕傲的成果。
+          {t("description")}
         </p>
 
         {/* 3 stacked full-width cards */}
@@ -22,7 +24,7 @@ export default function HomeCases({ cases }: Props) {
           {cases.map((caseItem) => (
             <Link
               key={caseItem.slug}
-              href={`/case?category=${encodeURIComponent(caseItem.category)}`}
+              href={`/case/${caseItem.slug}`}
               className="group relative h-[240px] md:h-[400px] overflow-hidden rounded-[15px] block bg-black"
             >
               <Image
@@ -40,7 +42,7 @@ export default function HomeCases({ cases }: Props) {
                   <p className="text-white/80 text-base md:text-[20px] line-clamp-1">{caseItem.shortDescription}</p>
                 </div>
                 <div className="hidden md:flex flex-shrink-0 bg-white/20 items-center gap-3.5 px-[23px] py-[15px] rounded-full text-white text-[16px] font-semibold group-hover:bg-white/30 transition-colors duration-200">
-                  了解更多
+                  {t("learnMore")}
                   <ArrowIcon />
                 </div>
               </div>

@@ -1,0 +1,254 @@
+{
+  "nav": {
+    "service": "服務",
+    "product": "產品",
+    "case": "實績案例",
+    "about": "關於欣展",
+    "contact": "聯絡我們",
+    "lang": "繁中",
+    "openMenu": "開啟選單",
+    "closeMenu": "關閉選單"
+  },
+  "footer": {
+    "company": "公司",
+    "products": "產品",
+    "cases": "實績案例",
+    "about": "關於欣展",
+    "service": "服務項目",
+    "contact": "聯絡我們",
+    "copyright": "© 2026 TNO Inc."
+  },
+  "home": {
+    "hero": {
+      "title1": "從材料到設計製造",
+      "title2": "船舶裝修全方位領導品牌",
+      "description": "深耕十多年專業經驗與國際認證，欣展堅持安全與品質，守護您的每一趟航行。",
+      "cta": "探索服務"
+    },
+    "services": {
+      "title": "我們的專業服務",
+      "description1": "從內裝設計到零件加工，我們一路陪伴船舶建造與維護的每個環節，",
+      "description2": "用最完善的解決方案，守護航行安全，也讓艙內生活更安心舒適。",
+      "items": {
+        "material": { "title": "代理銷售", "description": "提供經國際認證的隔熱材、泡棉與木材，確保船舶建造更安心" },
+        "manufacturing": { "title": "產品製造", "description": "從堅固的金屬板到不鏽鋼廚具，打造經久耐用的船舶部件" },
+        "design": { "title": "設計規劃", "description": "從 2D 到 3D 規劃，以專業設計流程確保每個細節的可靠性" },
+        "processing": { "title": "各式代工", "description": "從精密加工到焊接組裝，以專業工序打造可靠的船舶零件" }
+      }
+    },
+    "products": {
+      "title": "精選產品",
+      "description1": "每一件產品都是欣展多年的專業淬鍊。",
+      "description2": "我們致力於打造航運產業最值得信賴的國際級產品。",
+      "cta": "查看所有產品",
+      "scrollLeft": "向左滑動",
+      "scrollRight": "向右滑動"
+    },
+    "cases": {
+      "title": "應用與實績",
+      "description": "從船舶內裝到改裝維修，我們以專業與細節，實現每一個值得驕傲的成果。",
+      "learnMore": "了解更多"
+    },
+    "whyChoose": {
+      "title": "為何選擇欣展？",
+      "description": "深耕台灣，放眼全球，我們憑藉專業與承諾，成為船舶業主共同信賴的合作夥伴。",
+      "stat1Label": "年專業船舶經驗",
+      "stat2Label": "台灣船廠的首選合作夥伴",
+      "stat3Label": "國際認證背書"
+    },
+    "brandCTA": {
+      "title1": "從浩瀚海洋到日常生活，",
+      "title2": "欣展用專業與您同行。",
+      "description1": "我們結合 ISO 9001 與多項國際船級社認證，",
+      "description2": "確保每一個流程穩定可靠，為船舶產業打造安全、耐用與高質量的成品。",
+      "cta": "了解更多"
+    },
+    "certifications": {
+      "label": "獲得國際船級社專業認證"
+    },
+    "contactCTA": {
+      "tagline": "攜手合作",
+      "title1": "立即聯繫並獲取專屬船舶方案，",
+      "title2": "讓每一次航行更安全高效。",
+      "cta": "聯絡我們"
+    }
+  },
+  "service": {
+    "meta": {
+      "title": "服務項目",
+      "description": "欣展提供材料供應、產品製造、設計規劃、各式代工等全方位船舶裝修服務。整合設計、製造與加工能力，為您的專案提供一站式解決方案。"
+    },
+    "hero": {
+      "title": "我們的服務",
+      "description1": "每一個專案背後，都是安全與信任的承諾。",
+      "description2": "欣展從設計到製造，提供全方位的一站式服務。"
+    },
+    "intro": {
+      "title1": "我們的核心服務，",
+      "title2": "為每個專案提供最全面的支持。",
+      "description1": "結合設計、製造與加工能力，搭配物料代理與供應鏈優勢，",
+      "description2": "為您的專案從初期規劃一路到交付提供完整解決方案。"
+    },
+    "items": {
+      "material": {
+        "category": "代理銷售",
+        "title": "材料供應 • 快速補給",
+        "description": "我們代理多種進口建材與原料，如隔熱材、PU 發泡板、工程用木材等，為您的專案提供穩定、高效的物料支援，避免因材料短缺延誤工期。",
+        "cta": "立即洽詢"
+      },
+      "manufacturing": {
+        "category": "產品製造",
+        "title": "高品質生產 • 嚴格把關",
+        "description": "在自有工廠中生產金屬隔間板、不鏽鋼廚具、艤裝設備等，每道工序皆經過嚴格檢驗與控制，從材料到成品，皆符合國際認證標準。",
+        "cta": "了解更多"
+      },
+      "design": {
+        "category": "設計規劃",
+        "title": "打造專屬方案 • 精準表達構想",
+        "description": "我們為您量身設計 2D / 3D 規劃圖，從需求分析到空間佈局，確保每個細節契合實際運作。無論是船艙隔間還是不鏽鋼設備，皆能精準對接您的專案需求。",
+        "cta": "立即洽詢"
+      },
+      "processing": {
+        "category": "各式代工",
+        "title": "靈活加工 • 多元應用",
+        "description": "提供 CNC 車銑床、折床、燒焊、龍門銑等多樣金屬加工服務，支援船舶、工業與建築專案的二次加工需求，滿足多樣化設計與功能規格。",
+        "cta": "立即洽詢"
+      }
+    },
+    "cta": {
+      "title": "讓我們一起啟動您的專案",
+      "contact": "立即聯繫我們",
+      "cases": "查看案例"
+    }
+  },
+  "product": {
+    "meta": {
+      "title": "精選產品",
+      "description": "欣展代理多款通過國際認證的船舶材料，包括隔熱絕緣材料、金屬隔間板、船用設備等，品質可靠、服務專業。"
+    },
+    "hero": {
+      "title": "多元船舶材料",
+      "description": "從國際認證的隔熱材到艙裝系統，我們提供全方位解決方案。"
+    },
+    "filter": {
+      "all": "全部產品"
+    },
+    "empty": "此分類暫無產品",
+    "detail": {
+      "home": "首頁",
+      "products": "產品",
+      "features": "產品優勢",
+      "system": "系統結構",
+      "applications": "應用場景",
+      "specs": "詳細規格",
+      "specItem": "規格項目",
+      "specValue": "數值 / 說明",
+      "specType": "類型",
+      "specModel": "型號",
+      "specThickness": "厚度",
+      "specFire": "防火等級",
+      "specSound": "隔音係數",
+      "specWeight": "重量",
+      "ctaTitle": "想了解此產品如何幫助您的專案？",
+      "ctaContact": "聯絡我們",
+      "ctaCases": "查看相關案例"
+    }
+  },
+  "case": {
+    "meta": {
+      "title": "實績案例",
+      "description": "欣展豐富的船舶裝修工程實績，涵蓋散裝船翻新、遊艇內裝、離岸平台塗裝等多元類型案例。"
+    },
+    "hero": {
+      "title": "實績案例",
+      "description1": "每一個案例都代表著我們對品質的承諾，",
+      "description2": "見證欣展與客戶共同創造的成果。"
+    },
+    "filter": {
+      "all": "全部案例"
+    },
+    "empty": "此分類暫無案例",
+    "detail": {
+      "home": "首頁",
+      "cases": "實績案例",
+      "updatedAt": "更新日期：",
+      "closing": "結語",
+      "moreCases": "更多船舶案例"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "關於我們",
+      "description": "TNO 欣展金屬成立於 2016 年，專注船舶隔間規劃、船舶維修、金屬加工與不鏽鋼廚具製造，通過 ISO 9001：2015 及多國船級社認證。"
+    },
+    "hero": {
+      "title1": "從設計到維修",
+      "title2": "打造最安全舒適的船舶艙室",
+      "description1": "專注船舶艙室整體規劃與施工，",
+      "description2": "以專業整合能力與嚴謹製程，提供業主一條龍服務。"
+    },
+    "team": {
+      "title": "我們是欣展團隊",
+      "description1": "TNO 欣展金屬成立於 2016 年，專注於船舶隔間規劃、船舶維修、金屬加工與不鏽鋼廚具製造。",
+      "description2": "我們相信，安全不只是技術，更是一份對人與空間的責任。",
+      "description3": "從船艙隔間到建築內裝，我們以「品質、安全、功能」為核心，",
+      "description4": "讓每個空間都兼具專業結構與家的安心。",
+      "teamAlt": "欣展團隊",
+      "companyAlt": "欣展公司外觀"
+    },
+    "belief": {
+      "label": "我們的信念",
+      "title": "安全，是家的延伸",
+      "description1": "我們相信安全不只是技術，而是一種責任。",
+      "description2": "每一項產品、每一次施工，都是對信任最直接的回應。",
+      "description3": "我們堅持以誠信、品質與服務為基礎，",
+      "description4": "用專業態度完成每個細節，",
+      "description5": "讓「安全」不只是標準，而是人們生活中最安心的依靠。",
+      "imageAlt": "我們的信念"
+    },
+    "expertise": {
+      "label": "我們的專業",
+      "title1": "專注船舶艙室",
+      "title2": "整體規劃與維修服務",
+      "description1": "我們擁有完整的船舶艙室整合能力，",
+      "description2": "從規劃設計、材料供應、零件加工到船上安裝與維修，",
+      "description3": "提供業主一條龍的專業服務。",
+      "description4": "我們以嚴謹製程與豐富實務經驗，",
+      "description5": "確保每艘船舶都兼具安全、舒適與效率。",
+      "imageAlt": "我們的專業"
+    },
+    "certification": {
+      "title": "國際認證與品質保證",
+      "description1": "我們通過多項國際品質與安全認證，包括 ISO 9001：2015 以及多國船級社核可。",
+      "description2": "每一張證書，都是我們對品質與責任的堅持。",
+      "description3": "我們相信，信任來自專業，而專業源於不斷驗證。",
+      "isoAlt": "ISO 9001:2015 品質管理系統證書",
+      "isoCaption": "於2018年8月取得ISO 9001：2015品質管理系統證書",
+      "logosAlt": "NK、ABS、KR、CR、BV、DNV、CE、CCS、LR、RINA 認證",
+      "logosCaption": "依國際船級社規範含各式IMO證書：NK、ABS、KR、CR、BV、DNV、CE、CCS、LR、RINA"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "聯絡我們",
+      "description": "聯絡欣展船舶裝修專業團隊，取得免費評估報告與客製化服務方案。電話、Email、或填寫詢問表單均可聯繫。"
+    },
+    "title": "聯絡我們",
+    "description1": "若您有產品諮詢、報價需求或合作洽談，",
+    "description2": "請留下您的聯絡方式，我們將於工作日 24 小時內回覆。",
+    "form": {
+      "company": "公司名稱",
+      "name": "聯絡人姓名",
+      "phone": "聯絡電話",
+      "email": "聯絡信箱",
+      "message": "您的訊息",
+      "required": "必填",
+      "submit": "提交",
+      "submitting": "傳送中…",
+      "successMessage": "感謝您的詢問！我們將於工作日 24 小時內回覆。",
+      "errorMessage": "訊息傳送失敗，請稍後再試或直接來電聯繫。",
+      "fieldRequired": "請填寫必填欄位（聯絡人姓名、信箱、訊息）。",
+      "invalidEmail": "請輸入有效的電子信箱格式。"
+    }
+  }
+}

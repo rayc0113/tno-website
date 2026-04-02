@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import Button from "@/components/ui/Button";
 import type { ProductSummary } from "@/types/product";
 
@@ -12,6 +13,7 @@ interface Props {
 
 
 export default function HomeProducts({ products }: Props) {
+  const t = useTranslations("home.products");
   const scrollRef = useRef<HTMLDivElement>(null);
 
   function scroll(dir: "left" | "right") {
@@ -26,25 +28,25 @@ export default function HomeProducts({ products }: Props) {
       {/* Header */}
       <div className="px-6 md:px-[60px] mb-6 md:mb-8 flex items-end justify-between">
         <div>
-          <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-2 md:mb-3">精選產品</h2>
+          <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-2 md:mb-3">{t("title")}</h2>
           <p className="text-body text-[18px] md:text-[24px]">
-            每一件產品都是欣展多年的專業淬鍊。
+            {t("description1")}
             <br className="hidden md:block" />
-            我們致力於打造航運產業最值得信賴的國際級產品。
+            {t("description2")}
           </p>
         </div>
         {/* Desktop nav arrows */}
         <div className="hidden md:flex gap-2 flex-shrink-0 mb-1">
           <button
             onClick={() => scroll("left")}
-            aria-label="向左滑動"
+            aria-label={t("scrollLeft")}
             className="w-14 h-14 rounded-full border border-surface bg-white shadow-md flex items-center justify-center text-title hover:bg-brand hover:border-brand hover:text-white hover:shadow-lg transition-colors"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
           <button
             onClick={() => scroll("right")}
-            aria-label="向右滑動"
+            aria-label={t("scrollRight")}
             className="w-14 h-14 rounded-full border border-surface bg-white shadow-md flex items-center justify-center text-title hover:bg-brand hover:border-brand hover:text-white hover:shadow-lg transition-colors"
           >
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -66,7 +68,7 @@ export default function HomeProducts({ products }: Props) {
         {products.map((product) => (
           <Link
             key={product.slug}
-            href={`/product?category=${encodeURIComponent(product.category)}`}
+            href={`/product/${product.slug}`}
             className="group relative flex-shrink-0 rounded-[20px] overflow-hidden bg-black block w-[calc((100vw-32px)/1.5)] md:w-[calc((100vw-108px)/3.5)]"
             style={{ aspectRatio: "3/5" }}
           >
@@ -90,7 +92,7 @@ export default function HomeProducts({ products }: Props) {
 
       {/* CTA */}
       <div className="flex justify-center mt-8 md:mt-10 px-6 md:px-[60px]">
-        <Button href="/product">查看所有產品</Button>
+        <Button href="/product">{t("cta")}</Button>
       </div>
     </section>
   );

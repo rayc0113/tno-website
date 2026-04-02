@@ -1,22 +1,27 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-
-const navLinks = [
-  { href: "/service", label: "服務" },
-  { href: "/product", label: "產品" },
-  { href: "/case", label: "實績案例" },
-  { href: "/about", label: "關於欣展" },
-  { href: "/contact", label: "聯絡我們" },
-];
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 
 export default function Header() {
+  const t = useTranslations("nav");
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/service", label: t("service") },
+    { href: "/product", label: t("product") },
+    { href: "/case", label: t("case") },
+    { href: "/about", label: t("about") },
+    { href: "/contact", label: t("contact") },
+  ];
+
   const forceWhite = /^\/(product|case)\/.+/.test(pathname);
 
   useEffect(() => {
@@ -25,16 +30,19 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // 路由切換時關閉選單
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
 
-  // 選單開啟時鎖定 body 捲動
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [isMenuOpen]);
+
+  function switchLocale() {
+    const newLocale = locale === "zh" ? "en" : "zh";
+    router.replace(pathname, { locale: newLocale });
+  }
 
   const isWhite = forceWhite || scrolled || isMenuOpen;
   const textColor = isWhite ? "text-title" : "text-white";
@@ -76,32 +84,31 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Language selector (desktop only) */}
-            <div className={`hidden md:flex items-center gap-2 ml-auto ${textColor} text-base font-semibold cursor-pointer ${hoverBg} px-4 py-3 rounded-xl transition-colors duration-200`}>
+            {/* Language switcher (desktop) */}
+            <button
+              onClick={switchLocale}
+              className={`hidden md:flex items-center gap-2 ml-auto ${textColor} text-base font-semibold cursor-pointer ${hoverBg} px-4 py-3 rounded-xl transition-colors duration-200`}
+              aria-label={t("lang")}
+            >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <circle cx="10" cy="10" r="8.5" stroke={iconStroke} strokeWidth="1.2"/>
                 <ellipse cx="10" cy="10" rx="3.5" ry="8.5" stroke={iconStroke} strokeWidth="1.2"/>
                 <line x1="1.5" y1="10" x2="18.5" y2="10" stroke={iconStroke} strokeWidth="1.2"/>
               </svg>
-              <span>繁中</span>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M6 8l4 4 4-4" stroke={iconStroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
+              <span>{t("lang")}</span>
+            </button>
 
-            {/* Mobile hamburger / close button */}
+            {/* Mobile hamburger */}
             <button
               className="md:hidden ml-auto p-2 flex flex-col justify-center items-center w-10 h-10"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? "關閉選單" : "開啟選單"}
+              aria-label={isMenuOpen ? t("closeMenu") : t("openMenu")}
             >
               {isMenuOpen ? (
-                // X 圖示
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M6 6l12 12M18 6L6 18" stroke={iconStroke} strokeWidth="2" strokeLinecap="round"/>
                 </svg>
               ) : (
-                // 漢堡圖示
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <line x1="3" y1="6" x2="21" y2="6" stroke={iconStroke} strokeWidth="2" strokeLinecap="round"/>
                   <line x1="3" y1="12" x2="21" y2="12" stroke={iconStroke} strokeWidth="2" strokeLinecap="round"/>
@@ -129,11 +136,23 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            {/* Language switcher (mobile) */}
+            <button
+              onClick={() => { switchLocale(); setIsMenuOpen(false); }}
+              className="text-title text-base font-semibold py-3 px-2 text-left hover:text-brand transition-colors duration-200 flex items-center gap-2"
+            >
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="8.5" stroke="currentColor" strokeWidth="1.2"/>
+                <ellipse cx="10" cy="10" rx="3.5" ry="8.5" stroke="currentColor" strokeWidth="1.2"/>
+                <line x1="1.5" y1="10" x2="18.5" y2="10" stroke="currentColor" strokeWidth="1.2"/>
+              </svg>
+              {t("lang")}
+            </button>
           </nav>
         </div>
       </header>
 
-      {/* Overlay — 點擊關閉選單 */}
+      {/* Overlay */}
       {isMenuOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/30 md:hidden"

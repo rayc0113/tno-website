@@ -1,7 +1,9 @@
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 
-export default function HomeBrandCTA() {
+export default async function HomeBrandCTA() {
+  const t = await getTranslations("home.brandCTA");
   return (
     <section className="py-20 md:py-[200px] text-center relative overflow-hidden">
       <div
@@ -10,16 +12,16 @@ export default function HomeBrandCTA() {
       />
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-[60px]">
         <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-4 md:mb-6 max-w-[788px] mx-auto leading-tight">
-          從浩瀚海洋到日常生活，
+          {t("title1")}
           <br />
-          欣展用專業與您同行。
+          {t("title2")}
         </h2>
         <p className="text-body text-[18px] md:text-[24px] mb-8 md:mb-10 mx-auto leading-relaxed">
-          我們結合 ISO 9001 與多項國際船級社認證，
+          {t("description1")}
           <br className="hidden md:block" />
-          確保每一個流程穩定可靠，為船舶產業打造安全、耐用與高質量的成品。
+          {t("description2")}
         </p>
-        <Button href="/about">了解更多</Button>
+        <Button href="/about">{t("cta")}</Button>
         <div className="flex items-center justify-center gap-2 mt-6">
           <Image
             src="/images/home/brandCTA_logo.webp"

@@ -1,30 +1,10 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 
-const productLinks = [
-  { href: "/product?category=金屬隔間板", label: "金屬隔間板" },
-  { href: "/product?category=隔熱絕緣材", label: "隔熱絕緣材" },
-  { href: "/product?category=不鏽鋼廚具", label: "不鏽鋼廚具" },
-  { href: "/product?category=PU聚氨脂", label: "PU聚氨脂" },
-  { href: "/product?category=木材", label: "木材" },
-  { href: "/product?category=造船用舵軸系統", label: "造船用舵軸系統" },
-  { href: "/product?category=造船用甲板上艤品、錨座配件", label: "造船用甲板上艤品、錨座配件" },
-  { href: "/product?category=船裝配件空氣櫃、過濾器", label: "船裝配件空氣櫃、過濾器" },
-];
+export default async function Footer() {
+  const t = await getTranslations("footer");
 
-const caseLinks = [
-  { href: "/case?category=一般船舶材料", label: "一般船舶材料" },
-  { href: "/case?category=商業貨輪內裝", label: "商業貨輪內裝" },
-  { href: "/case?category=船舶改裝與維修", label: "船舶改裝與維修" },
-];
-
-const companyLinks = [
-  { href: "/about", label: "關於欣展" },
-  { href: "/service", label: "服務項目" },
-  { href: "/contact", label: "聯絡我們" },
-];
-
-export default function Footer() {
   return (
     <footer className="bg-navy text-white/80">
       <div className="w-full px-6 md:px-[60px] py-12 md:py-16">
@@ -73,49 +53,33 @@ export default function Footer() {
 
           {/* Nav links */}
           <div className="grid grid-cols-2 md:flex md:gap-20 lg:gap-40 md:mr-[80px] gap-x-8 gap-y-8">
-          <div>
-            <h3 className="text-white text-sm font-medium mb-4">公司</h3>
-            <ul className="space-y-3">
-              {companyLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm hover:text-white transition-colors duration-200">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div>
+              <h3 className="text-white text-sm font-medium mb-4">{t("company")}</h3>
+              <ul className="space-y-3">
+                <li><Link href="/about" className="text-sm hover:text-white transition-colors duration-200">{t("about")}</Link></li>
+                <li><Link href="/service" className="text-sm hover:text-white transition-colors duration-200">{t("service")}</Link></li>
+                <li><Link href="/contact" className="text-sm hover:text-white transition-colors duration-200">{t("contact")}</Link></li>
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="text-white text-sm font-medium mb-4">產品</h3>
-            <ul className="space-y-3">
-              {productLinks.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-sm hover:text-white transition-colors duration-200">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div>
+              <h3 className="text-white text-sm font-medium mb-4">{t("products")}</h3>
+              <ul className="space-y-3">
+                <li><Link href="/product" className="text-sm hover:text-white transition-colors duration-200">{t("products")}</Link></li>
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="text-white text-sm font-medium mb-4">實績案例</h3>
-            <ul className="space-y-3">
-              {caseLinks.map((link) => (
-                <li key={link.href}>
-                  <Link href={link.href} className="text-sm hover:text-white transition-colors duration-200">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div>
+              <h3 className="text-white text-sm font-medium mb-4">{t("cases")}</h3>
+              <ul className="space-y-3">
+                <li><Link href="/case" className="text-sm hover:text-white transition-colors duration-200">{t("cases")}</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-6 text-xs text-center text-white/30">
-          © 2026 TNO Inc.
+          {t("copyright")}
         </div>
       </div>
     </footer>
