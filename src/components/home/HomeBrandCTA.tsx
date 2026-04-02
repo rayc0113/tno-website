@@ -14,7 +14,7 @@ export default function HomeBrandCTA() {
           <br />
           欣展用專業與您同行。
         </h2>
-        <p className="text-body text-[18px] md:text-[24px] mb-8 md:mb-10 max-w-[748px] mx-auto leading-relaxed">
+        <p className="text-body text-[18px] md:text-[24px] mb-8 md:mb-10 mx-auto leading-relaxed">
           我們結合 ISO 9001 與多項國際船級社認證，
           <br className="hidden md:block" />
           確保每一個流程穩定可靠，為船舶產業打造安全、耐用與高質量的成品。

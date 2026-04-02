@@ -13,7 +13,7 @@ export default function HomeCases({ cases }: Props) {
     <section className="bg-surface rounded-[30px] md:rounded-[60px] py-10 px-6 md:py-[80px] md:px-[60px]">
       <div className="max-w-[1600px] mx-auto">
         <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-3">應用與實績</h2>
-        <p className="text-body text-[18px] md:text-[24px] mb-10 md:mb-[60px] max-w-[726px]">
+        <p className="text-body text-[18px] md:text-[24px] mb-10 md:mb-[60px] md:whitespace-nowrap">
           從船舶內裝到改裝維修，我們以專業與細節，實現每一個值得驕傲的成果。
         </p>
 

@@ -21,7 +21,7 @@ export default function HomeHero() {
           <br />
           船舶裝修全方位領導品牌
         </h1>
-        <p className="text-white text-[18px] md:text-[22px] md:leading-[34px] mb-8 md:mb-[60px] max-w-[722px]">
+        <p className="text-white text-[18px] md:text-[22px] md:leading-[34px] mb-8 md:mb-[60px] md:whitespace-nowrap">
           深耕十多年專業經驗與國際認證，欣展堅持安全與品質，守護您的每一趟航行。
         </p>
         <Button href="/service">探索服務</Button>

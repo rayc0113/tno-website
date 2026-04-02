@@ -38,7 +38,7 @@ export default function HomeServices() {
     <section className="bg-white pt-[60px]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-[60px] text-center mb-8 md:mb-[48px]">
         <h2 className="text-[32px] md:text-[54px] font-bold text-title mb-4">我們的專業服務</h2>
-        <p className="text-body text-[18px] md:text-[24px] max-w-[670px] mx-auto">
+        <p className="text-body text-[18px] md:text-[24px]">
           從內裝設計到零件加工，我們一路陪伴船舶建造與維護的每個環節，
           <br className="hidden md:block" />
           用最完善的解決方案，守護航行安全，也讓艙內生活更安心舒適。
