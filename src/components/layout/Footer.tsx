@@ -1,9 +1,13 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { getAllCategories } from "@/content/products";
+import { getAllCaseCategories } from "@/content/cases";
 
 export default async function Footer() {
   const t = await getTranslations("footer");
+  const productCategories = getAllCategories();
+  const caseCategories = getAllCaseCategories();
 
   return (
     <footer className="bg-navy text-white/80">
@@ -65,14 +69,32 @@ export default async function Footer() {
             <div>
               <h3 className="text-white text-sm font-medium mb-4">{t("products")}</h3>
               <ul className="space-y-3">
-                <li><Link href="/product" className="text-sm hover:text-white transition-colors duration-200">{t("products")}</Link></li>
+                {productCategories.map((cat) => (
+                  <li key={cat}>
+                    <Link
+                      href={`/product?category=${encodeURIComponent(cat)}`}
+                      className="text-sm hover:text-white transition-colors duration-200"
+                    >
+                      {cat}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div>
               <h3 className="text-white text-sm font-medium mb-4">{t("cases")}</h3>
               <ul className="space-y-3">
-                <li><Link href="/case" className="text-sm hover:text-white transition-colors duration-200">{t("cases")}</Link></li>
+                {caseCategories.map((cat) => (
+                  <li key={cat}>
+                    <Link
+                      href={`/case?category=${encodeURIComponent(cat)}`}
+                      className="text-sm hover:text-white transition-colors duration-200"
+                    >
+                      {cat}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

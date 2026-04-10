@@ -1,18 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+
+const localeOptions = [
+  { value: "zh", label: "繁體中文" },
+  { value: "en", label: "English" },
+];
 
 export default function Header() {
   const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
-  const router = useRouter();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { href: "/service", label: t("service") },
@@ -32,6 +38,7 @@ export default function Header() {
 
   useEffect(() => {
     setIsMenuOpen(false);
+    setLangOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -39,11 +46,17 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [isMenuOpen]);
 
-  function switchLocale() {
-    const newLocale = locale === "zh" ? "en" : "zh";
-    router.replace(pathname, { locale: newLocale });
-  }
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
+  const currentLang = localeOptions.find((o) => o.value === locale);
   const isWhite = forceWhite || scrolled || isMenuOpen;
   const textColor = isWhite ? "text-title" : "text-white";
   const hoverBg = isWhite ? "hover:bg-surface" : "hover:bg-white/10";
@@ -84,19 +97,51 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Language switcher (desktop) */}
-            <button
-              onClick={switchLocale}
-              className={`hidden md:flex items-center gap-2 ml-auto ${textColor} text-base font-semibold cursor-pointer ${hoverBg} px-4 py-3 rounded-xl transition-colors duration-200`}
-              aria-label={t("lang")}
-            >
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="8.5" stroke={iconStroke} strokeWidth="1.2"/>
-                <ellipse cx="10" cy="10" rx="3.5" ry="8.5" stroke={iconStroke} strokeWidth="1.2"/>
-                <line x1="1.5" y1="10" x2="18.5" y2="10" stroke={iconStroke} strokeWidth="1.2"/>
-              </svg>
-              <span>{t("lang")}</span>
-            </button>
+            {/* Language dropdown (desktop) */}
+            <div ref={langRef} className="hidden md:block relative ml-auto">
+              <button
+                onClick={() => setLangOpen((v) => !v)}
+                className={`flex items-center gap-2 ${textColor} text-base font-semibold cursor-pointer ${hoverBg} px-4 py-3 rounded-xl transition-colors duration-200`}
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <circle cx="10" cy="10" r="8.5" stroke={iconStroke} strokeWidth="1.2"/>
+                  <ellipse cx="10" cy="10" rx="3.5" ry="8.5" stroke={iconStroke} strokeWidth="1.2"/>
+                  <line x1="1.5" y1="10" x2="18.5" y2="10" stroke={iconStroke} strokeWidth="1.2"/>
+                </svg>
+                <span>{currentLang?.label}</span>
+                <svg
+                  width="16" height="16" viewBox="0 0 20 20" fill="none"
+                  className={`transition-transform duration-200 ${langOpen ? "rotate-180" : ""}`}
+                >
+                  <path d="M5 8l5 5 5-5" stroke={iconStroke} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-1 w-44 bg-white rounded-xl shadow-lg border border-surface overflow-hidden z-50">
+                  {localeOptions.map((opt) => (
+                    <Link
+                      key={opt.value}
+                      href={pathname}
+                      locale={opt.value}
+                      onClick={() => setLangOpen(false)}
+                      className={`w-full text-left px-4 py-3 text-base font-semibold transition-colors duration-150 flex items-center justify-between ${
+                        locale === opt.value
+                          ? "text-brand bg-surface"
+                          : "text-title hover:bg-surface"
+                      }`}
+                    >
+                      {opt.label}
+                      {locale === opt.value && (
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Mobile hamburger */}
             <button
@@ -131,23 +176,40 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-title text-base font-semibold py-3 px-2 border-b border-surface last:border-0 hover:text-brand transition-colors duration-200"
+                className="text-title text-base font-semibold py-3 px-2 border-b border-surface hover:text-brand transition-colors duration-200"
               >
                 {link.label}
               </Link>
             ))}
-            {/* Language switcher (mobile) */}
-            <button
-              onClick={() => { switchLocale(); setIsMenuOpen(false); }}
-              className="text-title text-base font-semibold py-3 px-2 text-left hover:text-brand transition-colors duration-200 flex items-center gap-2"
-            >
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="8.5" stroke="currentColor" strokeWidth="1.2"/>
-                <ellipse cx="10" cy="10" rx="3.5" ry="8.5" stroke="currentColor" strokeWidth="1.2"/>
-                <line x1="1.5" y1="10" x2="18.5" y2="10" stroke="currentColor" strokeWidth="1.2"/>
-              </svg>
-              {t("lang")}
-            </button>
+
+            {/* Language options (mobile) */}
+            <div className="pt-2">
+              {localeOptions.map((opt) => (
+                <Link
+                  key={opt.value}
+                  href={pathname}
+                  locale={opt.value}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`w-full flex items-center justify-between py-3 px-2 text-base font-semibold transition-colors duration-200 ${
+                    locale === opt.value ? "text-brand" : "text-title hover:text-brand"
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                      <circle cx="10" cy="10" r="8.5" stroke="currentColor" strokeWidth="1.2"/>
+                      <ellipse cx="10" cy="10" rx="3.5" ry="8.5" stroke="currentColor" strokeWidth="1.2"/>
+                      <line x1="1.5" y1="10" x2="18.5" y2="10" stroke="currentColor" strokeWidth="1.2"/>
+                    </svg>
+                    {opt.label}
+                  </span>
+                  {locale === opt.value && (
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
+                </Link>
+              ))}
+            </div>
           </nav>
         </div>
       </header>

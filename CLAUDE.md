@@ -53,6 +53,16 @@
 ### 隱藏但不刪除
 將 `isPublished: false` 即可隱藏，不會出現在網站或 sitemap 中。
 
+### 首頁精選商品／案例圖片（重要規則）
+
+首頁的「精選商品」和「實績案例」使用**專屬的首頁圖片**，與產品／案例詳情頁的 `coverImage` **完全無關**。
+
+- 首頁圖片配置集中在 `src/content/homeConfig.ts`，使用 `/images/home/` 路徑
+- **更換首頁展示圖** → 只修改 `homeConfig.ts` 的 `homeImage` 欄位
+- **更換產品／案例的封面圖** → 只修改對應 content 檔案的 `coverImage`
+- ❌ 不可讓首頁 section 直接讀取 `product.coverImage` 或 `caseItem.coverImage`
+- ❌ 不可在 product/case content 檔案裡填寫 `/images/home/` 路徑（反向耦合）
+
 ## 目錄結構
 
 ```

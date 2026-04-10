@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { getHomeFeaturedProducts } from "@/content/products";
-import { getCaseSummaries } from "@/content/cases";
+import { getHomeFeaturedProducts, getHomeFeaturedCases } from "@/content/homeConfig";
 import HomeHero from "@/components/home/HomeHero";
 import HomeCertifications from "@/components/home/HomeCertifications";
 import HomeServices from "@/components/home/HomeServices";
@@ -22,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function HomePage() {
   const products = getHomeFeaturedProducts();
-  const cases = getCaseSummaries();
+  const cases = getHomeFeaturedCases();
 
   return (
     <>

@@ -47,9 +47,9 @@ export default async function AboutPage() {
             {t("team.title")}
           </h2>
           <p className="text-body text-[18px] md:text-[22px] text-center leading-[1.8] mb-10 md:mb-[64px] max-w-[988px] mx-auto">
-            {t("team.description1")}
+            {t("team.description1")}<br />
             {t("team.description2")}<br /><br />
-            {t("team.description3")}
+            {t("team.description3")}<br />
             {t("team.description4")}
           </p>
 
@@ -135,15 +135,15 @@ export default async function AboutPage() {
             <h2 className="text-[28px] md:text-[40px] font-bold text-title mb-4 md:mb-6">
               {t("certification.title")}
             </h2>
-            <p className="text-body text-[18px] md:text-[22px] leading-[1.8] max-w-[720px] mx-auto">
-              {t("certification.description1")}<br className="hidden md:block" />
-              {t("certification.description2")}<br className="hidden md:block" />
+            <p className="text-body text-[18px] md:text-[22px] leading-[1.8] max-w-[900px] mx-auto">
+              {t("certification.description1")}<br />
+              {t("certification.description2")}<br />
               {t("certification.description3")}
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row md:gap-[160px] items-center md:items-start gap-10">
-            <div className="flex flex-col items-center flex-shrink-0">
+          <div className="flex flex-col md:flex-row md:gap-[80px] items-center md:items-start gap-10">
+            <div className="flex flex-col items-center flex-shrink-0 md:h-[310px] md:justify-between">
               <div className="relative w-[160px] h-[216px] md:w-[194px] md:h-[263px]">
                 <Image
                   src="/images/about/about-certificate.webp"
@@ -152,12 +152,12 @@ export default async function AboutPage() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-body text-base md:text-[18px] text-center mt-4 leading-relaxed">
+              <p className="text-body text-base md:text-[18px] text-center mt-4 md:mt-0 leading-relaxed">
                 {t("certification.isoCaption")}
               </p>
             </div>
 
-            <div className="flex-1 flex flex-col w-full items-center md:items-start">
+            <div className="flex-1 flex flex-col w-full items-center md:items-start md:h-[310px] md:justify-between">
               <div className="relative w-full h-[160px] md:h-[216px]">
                 <Image
                   src="/images/about/about-certification-logos.webp"
@@ -166,7 +166,7 @@ export default async function AboutPage() {
                   className="object-contain object-center md:object-left"
                 />
               </div>
-              <p className="text-body text-base md:text-[18px] mt-4 leading-relaxed text-center md:text-left">
+              <p className="text-body text-base md:text-[18px] mt-4 md:mt-0 leading-relaxed text-center md:text-left">
                 {t("certification.logosCaption")}
               </p>
             </div>
