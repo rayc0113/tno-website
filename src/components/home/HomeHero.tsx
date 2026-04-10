@@ -41,19 +41,10 @@ export default function HomeHero() {
 
   return (
     <section className="relative h-[80vh] overflow-hidden">
-      {/* Mobile: 影片第一幀靜態圖 */}
-      <Image
-        src="/images/home/hero-frame.jpg"
-        alt="船舶裝修 TNO 欣展"
-        fill
-        className="object-cover md:hidden"
-        priority
-      />
-
-      {/* Desktop: 背景影片 */}
+      {/* 背景影片（桌面 + 行動），poster 為影片第一幀，網速慢時不會空白 */}
       <video
         ref={videoRef}
-        className="hidden md:block absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         muted
         loop
@@ -67,7 +58,7 @@ export default function HomeHero() {
       {/* 全域暗色遮罩 */}
       <div className="absolute inset-0 bg-black/40 z-[1]" />
       {/* Loop 轉場：黑色淡入淡出 */}
-      <div className={`hidden md:block absolute inset-0 bg-black z-[2] transition-opacity duration-[1500ms] ${fading ? "opacity-100" : "opacity-0"}`} />
+      <div className={`absolute inset-0 bg-black z-[2] transition-opacity duration-[1500ms] ${fading ? "opacity-100" : "opacity-0"}`} />
       {/* 頂部漸層遮罩，確保 Header 圖文可讀 */}
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/60 to-transparent z-[1]" />
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-[60px] pt-[20vh] md:pt-[22vh]">
