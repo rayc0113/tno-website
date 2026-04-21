@@ -17,16 +17,24 @@ import { allCases } from "./cases";
 
 // ─── 精選商品 ────────────────────────────────────────────────────
 // homeImage 必須填 /images/home/ 路徑，勿改為 /images/products/
-const HOME_FEATURED_PRODUCTS: { slug: string; homeImage: string }[] = [
+// homeTitle / homeTitleEn：首頁卡片標題覆寫（未填則使用 product.name / nameEn）
+type HomeFeatured = {
+  slug: string;
+  homeImage: string;
+  homeTitle?: string;
+  homeTitleEn?: string;
+};
+
+const HOME_FEATURED_PRODUCTS: HomeFeatured[] = [
   { slug: "metal-partition",    homeImage: "/images/home/product_bg1.webp" },
-  { slug: "thermal-insulation", homeImage: "/images/home/product_bg2.webp" },
+  { slug: "thermal-insulation", homeImage: "/images/home/product_bg2.webp", homeTitle: "隔熱絕緣材", homeTitleEn: "Thermal Insulation" },
   { slug: "stainless-kitchen",  homeImage: "/images/home/product_bg3.webp" },
   { slug: "air-cabinet",        homeImage: "/images/home/product_bg4.webp" },
 ];
 
 // ─── 精選案例 ────────────────────────────────────────────────────
 // homeImage 必須填 /images/home/ 路徑，勿改為 /images/cases/
-const HOME_FEATURED_CASES: { slug: string; homeImage: string }[] = [
+const HOME_FEATURED_CASES: HomeFeatured[] = [
   { slug: "bulk-carrier-insulation",  homeImage: "/images/home/case_bg1.webp" },
   { slug: "crew-quarters-renovation", homeImage: "/images/home/case_bg2.webp" },
   { slug: "fishing-vessel-upgrade",   homeImage: "/images/home/case_bg3.webp" },
@@ -34,13 +42,16 @@ const HOME_FEATURED_CASES: { slug: string; homeImage: string }[] = [
 
 export function getHomeFeaturedProducts(locale = "zh"): ProductSummary[] {
   const isEn = locale === "en";
-  return HOME_FEATURED_PRODUCTS.flatMap(({ slug, homeImage }) => {
+  return HOME_FEATURED_PRODUCTS.flatMap(({ slug, homeImage, homeTitle, homeTitleEn }) => {
     const p = allProducts.find((p) => p.slug === slug);
     if (!p) return [];
+    const name = isEn
+      ? (homeTitleEn ?? p.nameEn ?? p.name)
+      : (homeTitle ?? p.name);
     return [
       {
         slug: p.slug,
-        name: isEn ? (p.nameEn ?? p.name) : p.name,
+        name,
         category: p.category,
         shortDescription: isEn ? (p.shortDescriptionEn ?? p.shortDescription) : p.shortDescription,
         coverImage: homeImage,

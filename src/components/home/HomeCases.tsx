@@ -25,7 +25,7 @@ export default async function HomeCases({ cases, locale }: Props) {
           {cases.map((caseItem) => (
             <Link
               key={caseItem.slug}
-              href={`/case/${caseItem.slug}`}
+              href={`/case?category=${encodeURIComponent(caseItem.category)}`}
               className="group relative h-[240px] md:h-[400px] overflow-hidden rounded-[15px] block bg-black"
             >
               <Image
