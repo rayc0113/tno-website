@@ -6,10 +6,11 @@ import type { CaseSummary } from "@/types/case";
 
 interface Props {
   cases: CaseSummary[];
+  locale: string;
 }
 
-export default async function HomeCases({ cases }: Props) {
-  const t = await getTranslations("home.cases");
+export default async function HomeCases({ cases, locale }: Props) {
+  const t = await getTranslations({ locale, namespace: "home.cases" });
   return (
     <div className="bg-white">
     <section className="bg-surface rounded-[30px] md:rounded-[60px] py-10 px-6 md:py-[80px] md:px-[60px]">

@@ -2,8 +2,8 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 
-export default async function HomeBrandCTA() {
-  const t = await getTranslations("home.brandCTA");
+export default async function HomeBrandCTA({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "home.brandCTA" });
   return (
     <section className="py-20 md:py-[200px] text-center relative overflow-hidden">
       <div

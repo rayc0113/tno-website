@@ -32,16 +32,17 @@ const HOME_FEATURED_CASES: { slug: string; homeImage: string }[] = [
   { slug: "fishing-vessel-upgrade",   homeImage: "/images/home/case_bg3.webp" },
 ];
 
-export function getHomeFeaturedProducts(): ProductSummary[] {
+export function getHomeFeaturedProducts(locale = "zh"): ProductSummary[] {
+  const isEn = locale === "en";
   return HOME_FEATURED_PRODUCTS.flatMap(({ slug, homeImage }) => {
     const p = allProducts.find((p) => p.slug === slug);
     if (!p) return [];
     return [
       {
         slug: p.slug,
-        name: p.name,
+        name: isEn ? (p.nameEn ?? p.name) : p.name,
         category: p.category,
-        shortDescription: p.shortDescription,
+        shortDescription: isEn ? (p.shortDescriptionEn ?? p.shortDescription) : p.shortDescription,
         coverImage: homeImage,
         listImage: homeImage,
       },
@@ -49,17 +50,18 @@ export function getHomeFeaturedProducts(): ProductSummary[] {
   });
 }
 
-export function getHomeFeaturedCases(): CaseSummary[] {
+export function getHomeFeaturedCases(locale = "zh"): CaseSummary[] {
+  const isEn = locale === "en";
   return HOME_FEATURED_CASES.flatMap(({ slug, homeImage }) => {
     const c = allCases.find((c) => c.slug === slug);
     if (!c) return [];
     return [
       {
         slug: c.slug,
-        title: c.title,
+        title: isEn ? (c.titleEn ?? c.title) : c.title,
         client: c.client,
         category: c.category,
-        shortDescription: c.shortDescription,
+        shortDescription: isEn ? (c.shortDescriptionEn ?? c.shortDescription) : c.shortDescription,
         coverImage: homeImage,
         completedAt: c.completedAt,
       },

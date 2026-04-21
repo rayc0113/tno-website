@@ -10,8 +10,8 @@ const serviceImages = [
   { id: "processing", image: "/images/home/service_bg4.webp", href: "/service" },
 ] as const;
 
-export default async function HomeServices() {
-  const t = await getTranslations("home.services");
+export default async function HomeServices({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "home.services" });
   return (
     <section className="bg-white pt-[60px]">
       <div className="max-w-[1400px] mx-auto px-6 md:px-[60px] text-center mb-8 md:mb-[48px]">
@@ -39,7 +39,7 @@ export default async function HomeServices() {
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-8 md:px-12">
               <h3 className="text-[24px] md:text-[32px] font-bold mb-2 md:mb-3">{t(`items.${id}.title`)}</h3>
-              <p className="text-base md:text-[22px] text-white/90 md:whitespace-nowrap">{t(`items.${id}.description`)}</p>
+              <p className="text-base md:text-[22px] text-white/90 max-w-full">{t(`items.${id}.description`)}</p>
             </div>
             <div className="absolute bottom-5 right-5 md:bottom-8 md:right-8">
               <div className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-white/20 flex items-center justify-center text-white opacity-70 group-hover:opacity-100 transition-opacity">

@@ -67,7 +67,7 @@ export default function HomeHero() {
           <br />
           {t("title2")}
         </h1>
-        <p className="text-white text-[18px] md:text-[22px] md:leading-[34px] mb-8 md:mb-[60px] md:whitespace-nowrap">
+        <p className="text-white text-[18px] md:text-[22px] md:leading-[34px] mb-8 md:mb-[60px] max-w-[900px]">
           {t("description")}
         </p>
         <Button href="/service">{t("cta")}</Button>

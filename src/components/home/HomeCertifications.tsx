@@ -14,8 +14,8 @@ const certifications = [
 
 const doubled = [...certifications, ...certifications];
 
-export default async function HomeCertifications() {
-  const t = await getTranslations("home.certifications");
+export default async function HomeCertifications({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "home.certifications" });
   return (
     <section className="bg-white py-[60px] overflow-hidden">
       <p className="text-title text-lg font-semibold mb-10 text-center">

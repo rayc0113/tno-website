@@ -28,19 +28,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const products = getHomeFeaturedProducts();
-  const cases = getHomeFeaturedCases();
+  const products = getHomeFeaturedProducts(locale);
+  const cases = getHomeFeaturedCases(locale);
 
   return (
     <>
       <HomeHero />
-      <HomeCertifications />
-      <HomeServices />
+      <HomeCertifications locale={locale} />
+      <HomeServices locale={locale} />
       <HomeProducts products={products} />
       <HomeWhyChoose />
-      <HomeCases cases={cases} />
-      <HomeBrandCTA />
-      <ContactCTA />
+      <HomeCases cases={cases} locale={locale} />
+      <HomeBrandCTA locale={locale} />
+      <ContactCTA locale={locale} />
     </>
   );
 }

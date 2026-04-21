@@ -180,7 +180,7 @@ export default async function AboutPage({ params }: Props) {
         </div>
       </section>
 
-      <ContactCTA />
+      <ContactCTA locale={locale} />
     </>
   );
 }
