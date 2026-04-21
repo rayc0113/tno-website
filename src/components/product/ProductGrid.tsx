@@ -14,6 +14,8 @@ interface Props {
 
 export default function ProductGrid({ products, categories }: Props) {
   const t = useTranslations("product");
+  const tc = useTranslations("categories");
+  const translateCategory = (cat: string) => (tc.has(cat) ? tc(cat) : cat);
   const searchParams = useSearchParams();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [activeCategory, setActiveCategory] = useState<string>(() => {
@@ -58,7 +60,7 @@ export default function ProductGrid({ products, categories }: Props) {
                 : "bg-surface text-body hover:bg-brand-light/20 hover:text-brand-deep"
             }`}
           >
-            {cat === "all" ? t("filter.all") : `${cat} (${categoryCounts[cat] ?? 0})`}
+            {cat === "all" ? t("filter.all") : `${translateCategory(cat)} (${categoryCounts[cat] ?? 0})`}
           </button>
         ))}
       </div>
@@ -81,7 +83,7 @@ export default function ProductGrid({ products, categories }: Props) {
               />
             </div>
             <span className="text-base font-semibold text-brand-deep uppercase tracking-wider">
-              {product.category}
+              {translateCategory(product.category)}
             </span>
             <h2 className="text-title font-bold text-[20px] mt-1 group-hover:text-brand transition-colors duration-200">
               {product.name}

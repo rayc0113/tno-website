@@ -14,6 +14,8 @@ interface Props {
 
 export default function CaseGrid({ cases, categories }: Props) {
   const t = useTranslations("case");
+  const tc = useTranslations("categories");
+  const translateCategory = (cat: string) => (tc.has(cat) ? tc(cat) : cat);
   const searchParams = useSearchParams();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [activeCategory, setActiveCategory] = useState<string>(() => {
@@ -58,7 +60,7 @@ export default function CaseGrid({ cases, categories }: Props) {
                 : "bg-surface text-body hover:bg-brand-light/20 hover:text-brand-deep"
             }`}
           >
-            {cat === "all" ? t("filter.all") : `${cat} (${categoryCounts[cat] ?? 0})`}
+            {cat === "all" ? t("filter.all") : `${translateCategory(cat)} (${categoryCounts[cat] ?? 0})`}
           </button>
         ))}
       </div>
@@ -83,7 +85,7 @@ export default function CaseGrid({ cases, categories }: Props) {
 
             {/* Card Info */}
             <span className="text-base font-semibold text-brand-deep uppercase tracking-wider">
-              {caseItem.category}
+              {translateCategory(caseItem.category)}
             </span>
             <h2 className="text-title font-semibold text-[20px] mt-1 group-hover:text-brand transition-colors duration-200">
               {caseItem.title}
