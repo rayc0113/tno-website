@@ -18,10 +18,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home.hero");
+  const isEn = locale === "en";
   return {
-    title: { absolute: "TNO 欣展｜船舶裝修全方位領導品牌" },
+    title: {
+      absolute: isEn
+        ? "TNO | Complete Marine Interior Solution"
+        : "TNO 欣展｜船舶裝修全方位領導品牌",
+    },
     description: t("description"),
-    alternates: { canonical: "/" },
+    alternates: { canonical: `/${locale}` },
   };
 }
 
