@@ -26,7 +26,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : "TNO 欣展｜船舶裝修全方位領導品牌",
     },
     description: t("description"),
-    alternates: { canonical: `/${locale}` },
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { "zh-TW": "/zh", "en": "/en" },
+    },
   };
 }
 

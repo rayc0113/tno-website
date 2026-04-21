@@ -24,6 +24,13 @@ export default function Header() {
   const fullPathname = useNextPathname();
   const pathWithoutLocale = fullPathname.replace(new RegExp(`^/${locale}`), "") || "/";
 
+  const [prevPath, setPrevPath] = useState(fullPathname);
+  if (prevPath !== fullPathname) {
+    setPrevPath(fullPathname);
+    setIsMenuOpen(false);
+    setLangOpen(false);
+  }
+
   const navLinks = [
     { href: "/service", label: t("service") },
     { href: "/product", label: t("product") },
@@ -39,11 +46,6 @@ export default function Header() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  useEffect(() => {
-    setIsMenuOpen(false);
-    setLangOpen(false);
-  }, [fullPathname]);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";

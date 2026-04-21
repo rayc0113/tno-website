@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRef } from "react";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
@@ -17,19 +17,16 @@ export default function CaseGrid({ cases, categories }: Props) {
   const tc = useTranslations("categories");
   const translateCategory = (cat: string) => (tc.has(cat) ? tc(cat) : cat);
   const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const router = useRouter();
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const [activeCategory, setActiveCategory] = useState<string>(() => {
-    const cat = searchParams.get("category");
-    return cat && categories.includes(cat) ? cat : "all";
-  });
 
-  useEffect(() => {
-    const cat = searchParams.get("category");
-    setActiveCategory(cat && categories.includes(cat) ? cat : "all");
-  }, [searchParams, categories]);
+  const searchCat = searchParams.get("category");
+  const activeCategory = searchCat && categories.includes(searchCat) ? searchCat : "all";
 
   function handleCategoryChange(cat: string) {
-    setActiveCategory(cat);
+    const url = cat === "all" ? pathname : `${pathname}?category=${encodeURIComponent(cat)}`;
+    router.push(url, { scroll: false });
     if (wrapperRef.current) {
       const top = wrapperRef.current.getBoundingClientRect().top + window.scrollY - 70;
       window.scrollTo({ top, behavior: "smooth" });

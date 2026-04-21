@@ -28,7 +28,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: caseItem.title,
     description: caseItem.shortDescription,
-    alternates: { canonical: `/${locale}/case/${slug}` },
+    alternates: {
+      canonical: `/${locale}/case/${slug}`,
+      languages: {
+        "zh-TW": `/zh/case/${slug}`,
+        "en": `/en/case/${slug}`,
+      },
+    },
     openGraph: {
       title: `${caseItem.title}${ogSuffix}`,
       description: caseItem.shortDescription,
@@ -52,7 +58,7 @@ export default async function CaseDetailPage({ params }: Props) {
 
   const relatedCases: CaseSummary[] = getPublishedCases()
     .filter((c) => c.slug !== slug)
-    .sort(() => Math.random() - 0.5)
+    .sort((a, b) => b.completedAt.localeCompare(a.completedAt))
     .slice(0, 3)
     .map((c) => {
       const summary: CaseSummary = {
