@@ -3,10 +3,14 @@ import type { Product } from "@/types/product";
 const airCabinet: Product = {
   slug: "air-cabinet",
   name: "船用空氣櫃、船用過濾器",
+  nameEn: "Marine Air Cabinets & Filters",
   category: "船裝配件空氣櫃、過濾器",
   shortDescription: "保障系統穩定與高效運行",
+  shortDescriptionEn: "Ensuring stable and efficient system operation",
   description:
     "欣展提供完整的船用空氣系統設備，包括空氣控制櫃、氣動控制元件及各式船用過濾器。產品依照 IMO、ABS 等國際規範設計製造，確保船舶氣動系統的穩定可靠。廣泛應用於船舶控制系統、壓縮空氣系統及各類船用設備的氣源處理。",
+  descriptionEn:
+    "TNO supplies a complete range of marine pneumatic equipment — air control cabinets, pneumatic actuators, and an extensive selection of marine-grade filters. Designed and manufactured to IMO and ABS standards, our products ensure stable, reliable performance for every onboard pneumatic system — from control systems and compressed-air networks to air supply for deck machinery and engine-room equipment.",
   images: [
     "/images/products/air-tank-filter/air-tank-filter/air-tank-filter01.webp",
   ],
@@ -17,6 +21,13 @@ const airCabinet: Product = {
     { label: "材質", value: "316L 不鏽鋼 / 碳鋼（依規格）" },
     { label: "認證", value: "ABS、ClassNK、DNV、BV" },
   ],
+  specsEn: [
+    { label: "Operating Pressure", value: "0.5 ~ 3.0 MPa (by model)" },
+    { label: "Operating Temperature", value: "-20°C ~ +60°C" },
+    { label: "Filtration Accuracy", value: "0.01 μm ~ 50 μm" },
+    { label: "Material", value: "316L stainless steel / Carbon steel (by specification)" },
+    { label: "Certifications", value: "ABS, ClassNK, DNV, BV" },
+  ],
   features: [
     "通過多項國際船級社認證",
     "高精度過濾，保護下游設備",
@@ -24,7 +35,20 @@ const airCabinet: Product = {
     "模組化設計，維護便利",
     "可依系統需求客製規格",
   ],
+  featuresEn: [
+    "Certified by multiple international classification societies",
+    "High-accuracy filtration that protects downstream equipment",
+    "Corrosion-resistant — built for demanding marine environments",
+    "Modular design for easy maintenance",
+    "Custom specifications tailored to each system",
+  ],
   applications: ["船舶氣動控制系統", "壓縮空氣管路過濾", "甲板機械氣源處理", "機艙設備氣源供應"],
+  applicationsEn: [
+    "Marine pneumatic control systems",
+    "Compressed-air pipeline filtration",
+    "Deck machinery air supply",
+    "Engine-room equipment air supply",
+  ],
   publishedAt: "2024-02-15",
   isPublished: true,
 };

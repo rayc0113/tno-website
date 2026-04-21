@@ -15,16 +15,23 @@ export interface ProductSpecRow {
 export interface Product {
   slug: string;
   name: string;
+  nameEn?: string;
   category: string;
   shortDescription: string;
+  shortDescriptionEn?: string;
   description: string;
+  descriptionEn?: string;
   coverImage?: string;
   images: string[];
   specs: ProductSpec[];
+  specsEn?: ProductSpec[];
   specRows?: ProductSpecRow[];
   features: string[];
+  featuresEn?: string[];
   systemDescription?: string;
+  systemDescriptionEn?: string;
   applications: string[];
+  applicationsEn?: string[];
   publishedAt: string;
   isPublished: boolean;
 }
