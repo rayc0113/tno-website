@@ -16,7 +16,28 @@
     "about": "About Us",
     "service": "Our Services",
     "contact": "Contact Us",
+    "address": "No. 68, Lane 307, Fengren Rd., Renwu Dist., Kaohsiung City, Taiwan",
     "copyright": "© 2026 TNO Inc."
+  },
+  "categories": {
+    "金屬隔間板": "Metal Partition Panels",
+    "隔熱絕緣材": "Thermal Insulation",
+    "不鏽鋼廚具": "Stainless Steel Kitchen",
+    "PU聚氨脂": "PU Foam",
+    "木材": "Marine Timber",
+    "造船用舵軸系統": "Rudder & Shaft Systems",
+    "造船用甲板上艤品、錨座配件": "Deck Outfittings & Anchor Components",
+    "船裝配件空氣櫃、過濾器": "Air Cabinets & Filters",
+    "一般船舶材料": "General Marine Materials",
+    "商業貨輪內裝": "Commercial Vessel Interior",
+    "船舶改裝與維修": "Ship Retrofit & Maintenance",
+    "船艙內裝": "Cabin Interior",
+    "船體翻新": "Hull Refurbishment",
+    "遊艇內裝": "Yacht Interior",
+    "離岸工程": "Offshore Projects",
+    "內裝": "Interior Outfitting",
+    "塗料": "Marine Coating",
+    "甲板材料": "Deck Materials"
   },
   "home": {
     "hero": {

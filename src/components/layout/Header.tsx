@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
+import { usePathname as useNextPathname } from "next/navigation";
 
 const localeOptions = [
   { value: "zh", label: "繁體中文" },
@@ -13,12 +14,15 @@ const localeOptions = [
 export default function Header() {
   const t = useTranslations("nav");
   const locale = useLocale();
-  const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
+
+  // fullPathname = "/zh/about"，pathWithoutLocale = "/about"（首頁為 "/"）
+  const fullPathname = useNextPathname();
+  const pathWithoutLocale = fullPathname.replace(new RegExp(`^/${locale}`), "") || "/";
 
   const navLinks = [
     { href: "/service", label: t("service") },
@@ -28,7 +32,7 @@ export default function Header() {
     { href: "/contact", label: t("contact") },
   ];
 
-  const forceWhite = /^\/(product|case)\/.+/.test(pathname);
+  const forceWhite = /^\/(product|case)\/.+/.test(pathWithoutLocale);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -39,7 +43,7 @@ export default function Header() {
   useEffect(() => {
     setIsMenuOpen(false);
     setLangOpen(false);
-  }, [pathname]);
+  }, [fullPathname]);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
@@ -120,11 +124,9 @@ export default function Header() {
               {langOpen && (
                 <div className="absolute right-0 top-full mt-1 w-44 bg-white rounded-xl shadow-lg border border-surface overflow-hidden z-50">
                   {localeOptions.map((opt) => (
-                    <Link
+                    <a
                       key={opt.value}
-                      href={pathname}
-                      locale={opt.value}
-                      onClick={() => setLangOpen(false)}
+                      href={`/${opt.value}${pathWithoutLocale}`}
                       className={`w-full text-left px-4 py-3 text-base font-semibold transition-colors duration-150 flex items-center justify-between ${
                         locale === opt.value
                           ? "text-brand bg-surface"
@@ -137,7 +139,7 @@ export default function Header() {
                           <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       )}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               )}
@@ -185,11 +187,9 @@ export default function Header() {
             {/* Language options (mobile) */}
             <div className="pt-2">
               {localeOptions.map((opt) => (
-                <Link
+                <a
                   key={opt.value}
-                  href={pathname}
-                  locale={opt.value}
-                  onClick={() => setIsMenuOpen(false)}
+                  href={`/${opt.value}${pathWithoutLocale}`}
                   className={`w-full flex items-center justify-between py-3 px-2 text-base font-semibold transition-colors duration-200 ${
                     locale === opt.value ? "text-brand" : "text-title hover:text-brand"
                   }`}
@@ -207,7 +207,7 @@ export default function Header() {
                       <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   )}
-                </Link>
+                </a>
               ))}
             </div>
           </nav>

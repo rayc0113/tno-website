@@ -4,12 +4,16 @@ import Button from "@/components/ui/Button";
 
 interface ContactCTAProps {
   bgImage?: string;
+  locale?: string;
 }
 
 export default async function ContactCTA({
   bgImage = "/images/home/contacCTA_bg.webp",
+  locale,
 }: ContactCTAProps) {
-  const t = await getTranslations("home.contactCTA");
+  const t = locale
+    ? await getTranslations({ locale, namespace: "home.contactCTA" })
+    : await getTranslations("home.contactCTA");
   return (
     <section className="relative h-[420px] md:h-[696px] overflow-hidden bg-black flex items-center justify-center">
       <Image

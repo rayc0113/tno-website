@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProductBySlug, getAllProductSlugs } from "@/content/products";
+import { localizeProduct } from "@/lib/localize";
 import { Link } from "@/i18n/navigation";
 import ProductImageGallery from "@/components/product/ProductImageGallery";
 import Button from "@/components/ui/Button";
@@ -16,16 +17,20 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const product = getProductBySlug(slug);
-  if (!product) return {};
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+  const raw = getProductBySlug(slug);
+  if (!raw) return {};
+  const loc: "zh" | "en" = locale === "en" ? "en" : "zh";
+  const product = localizeProduct(raw, loc);
+  const ogSuffix = loc === "en" ? " | TNO Marine" : "｜TNO 欣展船舶";
 
   return {
     title: product.name,
     description: product.shortDescription,
-    alternates: { canonical: `/product/${slug}` },
+    alternates: { canonical: `/${locale}/product/${slug}` },
     openGraph: {
-      title: `${product.name}｜TNO 欣展船舶`,
+      title: `${product.name}${ogSuffix}`,
       description: product.shortDescription,
       images: [{ url: product.coverImage ?? product.images[0], alt: product.name }],
     },
@@ -33,11 +38,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProductDetailPage({ params }: Props) {
-  const { slug } = await params;
-  const product = getProductBySlug(slug);
-  if (!product) notFound();
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+  const raw = getProductBySlug(slug);
+  if (!raw) notFound();
+  const loc: "zh" | "en" = locale === "en" ? "en" : "zh";
+  const product = localizeProduct(raw, loc);
 
   const t = await getTranslations("product.detail");
+  const tc = await getTranslations("categories");
+  const categoryLabel = tc.has(product.category) ? tc(product.category) : product.category;
+  const brandName = loc === "en" ? "TNO Marine" : "TNO 欣展";
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -45,8 +56,8 @@ export default async function ProductDetailPage({ params }: Props) {
     name: product.name,
     description: product.description,
     image: product.images,
-    brand: { "@type": "Brand", name: "TNO 欣展" },
-    category: product.category,
+    brand: { "@type": "Brand", name: brandName },
+    category: categoryLabel,
   };
 
   return (
@@ -75,7 +86,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
           {/* Mobile: 分類 + 名稱 + 簡述 */}
           <div className="lg:hidden mb-6">
-            <p className="text-body text-[18px] mb-1">{product.category}</p>
+            <p className="text-body text-[18px] mb-1">{categoryLabel}</p>
             <h1 className="text-[28px] font-bold text-title leading-tight mb-3">{product.name}</h1>
             <p className="text-body text-[18px] leading-relaxed">{product.description}</p>
           </div>
@@ -86,7 +97,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="flex flex-col gap-7">
               {/* Desktop header */}
               <div className="hidden lg:block">
-                <p className="text-body text-[18px] mb-1">{product.category}</p>
+                <p className="text-body text-[18px] mb-1">{categoryLabel}</p>
                 <h1 className="text-[32px] font-bold text-title leading-tight mb-4">{product.name}</h1>
                 <p className="text-body text-[18px] leading-relaxed">{product.description}</p>
               </div>

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { getCaseBySlug, getAllCaseSlugs, getCaseSummaries } from "@/content/cases";
+import { getCaseBySlug, getAllCaseSlugs, getPublishedCases } from "@/content/cases";
+import { localizeCase, localizeCaseSummary } from "@/lib/localize";
 import { Link } from "@/i18n/navigation";
 import ContactCTA from "@/components/ContactCTA";
+import type { CaseSummary } from "@/types/case";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -15,16 +17,20 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const caseItem = getCaseBySlug(slug);
-  if (!caseItem) return {};
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+  const raw = getCaseBySlug(slug);
+  if (!raw) return {};
+  const loc: "zh" | "en" = locale === "en" ? "en" : "zh";
+  const caseItem = localizeCase(raw, loc);
+  const ogSuffix = loc === "en" ? " | TNO Marine" : "｜TNO 欣展船舶";
 
   return {
     title: caseItem.title,
     description: caseItem.shortDescription,
-    alternates: { canonical: `/case/${slug}` },
+    alternates: { canonical: `/${locale}/case/${slug}` },
     openGraph: {
-      title: `${caseItem.title}｜TNO 欣展船舶`,
+      title: `${caseItem.title}${ogSuffix}`,
       description: caseItem.shortDescription,
       images: [{ url: caseItem.coverImage, alt: caseItem.title }],
     },
@@ -32,16 +38,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function CaseDetailPage({ params }: Props) {
-  const { slug } = await params;
-  const caseItem = getCaseBySlug(slug);
-  if (!caseItem) notFound();
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+  const raw = getCaseBySlug(slug);
+  if (!raw) notFound();
+  const loc: "zh" | "en" = locale === "en" ? "en" : "zh";
+  const caseItem = localizeCase(raw, loc);
 
   const t = await getTranslations("case.detail");
+  const tc = await getTranslations("categories");
+  const translateCategory = (cat: string) => (tc.has(cat) ? tc(cat) : cat);
+  const brandName = loc === "en" ? "TNO Marine" : "TNO 欣展";
 
-  const relatedCases = getCaseSummaries()
+  const relatedCases: CaseSummary[] = getPublishedCases()
     .filter((c) => c.slug !== slug)
     .sort(() => Math.random() - 0.5)
-    .slice(0, 3);
+    .slice(0, 3)
+    .map((c) => {
+      const summary: CaseSummary = {
+        slug: c.slug,
+        title: c.title,
+        client: c.client,
+        category: c.category,
+        shortDescription: c.shortDescription,
+        coverImage: c.coverImage,
+        completedAt: c.completedAt,
+      };
+      return localizeCaseSummary(summary, c, loc);
+    });
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -49,8 +73,8 @@ export default async function CaseDetailPage({ params }: Props) {
     headline: caseItem.title,
     description: caseItem.description,
     image: caseItem.images,
-    author: { "@type": "Organization", name: "TNO 欣展" },
-    publisher: { "@type": "Organization", name: "TNO 欣展" },
+    author: { "@type": "Organization", name: brandName },
+    publisher: { "@type": "Organization", name: brandName },
     datePublished: caseItem.publishedAt,
   };
 
@@ -159,7 +183,7 @@ export default async function CaseDetailPage({ params }: Props) {
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    <span className="text-[14px] text-body">{c.category}</span>
+                    <span className="text-[14px] text-body">{translateCategory(c.category)}</span>
                     <h3 className="text-title font-semibold text-[18px] mt-1 group-hover:text-brand transition-colors duration-200">{c.title}</h3>
                     <p className="text-body text-[17px] mt-1 line-clamp-2">{c.shortDescription}</p>
                   </Link>
@@ -170,7 +194,7 @@ export default async function CaseDetailPage({ params }: Props) {
         )}
       </div>
 
-      <ContactCTA />
+      <ContactCTA locale={locale} />
     </>
   );
 }

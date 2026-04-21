@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 
-export async function generateMetadata(): Promise<Metadata> {
+interface Props { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("service.meta");
   return {
     title: t("title"),
@@ -22,7 +26,9 @@ const serviceImages = [
 const serviceCtas = ["/contact", "/product", "/contact", "/contact"];
 const serviceImageRight = [true, false, true, false];
 
-export default async function ServicePage() {
+export default async function ServicePage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("service");
 
   const services = serviceIds.map((id, i) => ({
