@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Suspense } from "react";
-import { getProductSummaries, getAllCategories } from "@/content/products";
+import { getPublishedProducts, getAllCategories } from "@/content/products";
+import { localizeProductSummary } from "@/lib/localize";
 import ProductGrid from "@/components/product/ProductGrid";
+import type { ProductSummary } from "@/types/product";
 
-export async function generateMetadata(): Promise<Metadata> {
+interface Props { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("product.meta");
   return {
     title: t("title"),
@@ -14,9 +20,22 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function ProductListPage() {
+export default async function ProductListPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("product");
-  const products = getProductSummaries();
+  const loc: "zh" | "en" = locale === "en" ? "en" : "zh";
+  const products: ProductSummary[] = getPublishedProducts().map((product) => {
+    const summary: ProductSummary = {
+      slug: product.slug,
+      name: product.name,
+      category: product.category,
+      shortDescription: product.shortDescription,
+      coverImage: product.coverImage ?? product.images[0],
+      listImage: product.coverImage ?? product.images[0],
+    };
+    return localizeProductSummary(summary, product, loc);
+  });
   const categories = getAllCategories();
 
   return (

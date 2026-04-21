@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Suspense } from "react";
-import { getCaseSummaries, getAllCaseCategories } from "@/content/cases";
+import { getPublishedCases, getAllCaseCategories } from "@/content/cases";
+import { localizeCaseSummary } from "@/lib/localize";
 import CaseGrid from "@/components/case/CaseGrid";
+import type { CaseSummary } from "@/types/case";
 
-export async function generateMetadata(): Promise<Metadata> {
+interface Props { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("case.meta");
   return {
     title: t("title"),
@@ -14,9 +20,23 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function CaseListPage() {
+export default async function CaseListPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("case");
-  const cases = getCaseSummaries();
+  const loc: "zh" | "en" = locale === "en" ? "en" : "zh";
+  const cases: CaseSummary[] = getPublishedCases().map((caseItem) => {
+    const summary: CaseSummary = {
+      slug: caseItem.slug,
+      title: caseItem.title,
+      client: caseItem.client,
+      category: caseItem.category,
+      shortDescription: caseItem.shortDescription,
+      coverImage: caseItem.coverImage,
+      completedAt: caseItem.completedAt,
+    };
+    return localizeCaseSummary(summary, caseItem, loc);
+  });
   const categories = getAllCaseCategories();
 
   return (
