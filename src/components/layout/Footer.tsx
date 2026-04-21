@@ -4,10 +4,16 @@ import Image from "next/image";
 import { getAllCategories } from "@/content/products";
 import { getAllCaseCategories } from "@/content/cases";
 
-export default async function Footer() {
-  const t = await getTranslations("footer");
+export default async function Footer({ locale }: { locale?: string } = {}) {
+  const t = locale
+    ? await getTranslations({ locale, namespace: "footer" })
+    : await getTranslations("footer");
+  const tc = locale
+    ? await getTranslations({ locale, namespace: "categories" })
+    : await getTranslations("categories");
   const productCategories = getAllCategories();
   const caseCategories = getAllCaseCategories();
+  const translateCategory = (cat: string) => (tc.has(cat) ? tc(cat) : cat);
 
   return (
     <footer className="bg-navy text-white/80">
@@ -30,7 +36,7 @@ export default async function Footer() {
                   <path d="M7.5 1C5.01 1 3 3.01 3 5.5c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5C12 3.01 9.99 1 7.5 1z" stroke="currentColor" strokeWidth="1.2"/>
                   <circle cx="7.5" cy="5.5" r="1.5" stroke="currentColor" strokeWidth="1.2"/>
                 </svg>
-                <span>高雄市仁武區鳳仁路307巷68號</span>
+                <span>{t("address")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" className="flex-shrink-0 opacity-50">
@@ -75,7 +81,7 @@ export default async function Footer() {
                       href={`/product?category=${encodeURIComponent(cat)}`}
                       className="text-sm hover:text-white transition-colors duration-200"
                     >
-                      {cat}
+                      {translateCategory(cat)}
                     </Link>
                   </li>
                 ))}
@@ -91,7 +97,7 @@ export default async function Footer() {
                       href={`/case?category=${encodeURIComponent(cat)}`}
                       className="text-sm hover:text-white transition-colors duration-200"
                     >
-                      {cat}
+                      {translateCategory(cat)}
                     </Link>
                   </li>
                 ))}

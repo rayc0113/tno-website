@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Noto_Sans_TC } from "next/font/google";
-import { getLocale } from "next-intl/server";
 import "./globals.css";
 
 const notoSansTC = Noto_Sans_TC({
@@ -24,16 +23,13 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const locale = await getLocale();
-  const lang = locale === "en" ? "en" : "zh-TW";
-
   return (
-    <html lang={lang} className={notoSansTC.variable}>
+    <html lang="zh-TW" className={notoSansTC.variable}>
       <body className={`${notoSansTC.className} bg-page text-title antialiased`}>
         {children}
       </body>
