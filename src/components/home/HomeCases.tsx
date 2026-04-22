@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import ArrowIcon from "@/components/ui/ArrowIcon";
+import { getCategorySlug } from "@/lib/categories";
 import type { CaseSummary } from "@/types/case";
 
 interface Props {
@@ -25,7 +26,7 @@ export default async function HomeCases({ cases, locale }: Props) {
           {cases.map((caseItem) => (
             <Link
               key={caseItem.slug}
-              href={`/case?category=${encodeURIComponent(caseItem.category)}`}
+              href={`/case?category=${getCategorySlug(caseItem.category)}`}
               className="group relative h-[240px] md:h-[400px] overflow-hidden rounded-[15px] block bg-black"
             >
               <Image

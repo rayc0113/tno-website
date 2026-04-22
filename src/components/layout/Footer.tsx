@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { getAllCategories } from "@/content/products";
 import { getAllCaseCategories } from "@/content/cases";
+import { getCategorySlug } from "@/lib/categories";
 
 export default async function Footer({ locale }: { locale?: string } = {}) {
   const t = locale
@@ -78,7 +79,7 @@ export default async function Footer({ locale }: { locale?: string } = {}) {
                 {productCategories.map((cat) => (
                   <li key={cat}>
                     <Link
-                      href={`/product?category=${encodeURIComponent(cat)}`}
+                      href={`/product?category=${getCategorySlug(cat)}`}
                       className="text-sm hover:text-white transition-colors duration-200"
                     >
                       {translateCategory(cat)}
@@ -94,7 +95,7 @@ export default async function Footer({ locale }: { locale?: string } = {}) {
                 {caseCategories.map((cat) => (
                   <li key={cat}>
                     <Link
-                      href={`/case?category=${encodeURIComponent(cat)}`}
+                      href={`/case?category=${getCategorySlug(cat)}`}
                       className="text-sm hover:text-white transition-colors duration-200"
                     >
                       {translateCategory(cat)}

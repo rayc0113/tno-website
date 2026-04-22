@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import Button from "@/components/ui/Button";
+import { getCategorySlug } from "@/lib/categories";
 import type { ProductSummary } from "@/types/product";
 
 interface Props {
@@ -68,7 +69,7 @@ export default function HomeProducts({ products }: Props) {
         {products.map((product) => (
           <Link
             key={product.slug}
-            href={`/product?category=${encodeURIComponent(product.category)}`}
+            href={`/product?category=${getCategorySlug(product.category)}`}
             className="group relative flex-shrink-0 rounded-[20px] overflow-hidden bg-black block w-[calc((100vw-32px)/1.5)] md:w-[calc((100vw-108px)/3.5)]"
             style={{ aspectRatio: "3/5" }}
           >

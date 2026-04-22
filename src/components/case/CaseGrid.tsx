@@ -5,6 +5,7 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { getCategorySlug, getCategoryFromSlug } from "@/lib/categories";
 import type { CaseSummary } from "@/types/case";
 
 interface Props {
@@ -22,10 +23,11 @@ export default function CaseGrid({ cases, categories }: Props) {
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const searchCat = searchParams.get("category");
-  const activeCategory = searchCat && categories.includes(searchCat) ? searchCat : "all";
+  const matchedCategory = searchCat ? getCategoryFromSlug(searchCat, categories) : undefined;
+  const activeCategory = matchedCategory ?? "all";
 
   function handleCategoryChange(cat: string) {
-    const url = cat === "all" ? pathname : `${pathname}?category=${encodeURIComponent(cat)}`;
+    const url = cat === "all" ? pathname : `${pathname}?category=${getCategorySlug(cat)}`;
     router.push(url, { scroll: false });
     if (wrapperRef.current) {
       const top = wrapperRef.current.getBoundingClientRect().top + window.scrollY - 70;
