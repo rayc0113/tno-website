@@ -12,6 +12,7 @@ interface Props {
 
 export default async function HomeCases({ cases, locale }: Props) {
   const t = await getTranslations({ locale, namespace: "home.cases" });
+  const tCategories = await getTranslations({ locale, namespace: "categories" });
   return (
     <div className="bg-white">
     <section className="bg-surface rounded-[30px] md:rounded-[60px] py-10 px-6 md:py-[80px] md:px-[60px]">
@@ -39,9 +40,11 @@ export default async function HomeCases({ cases, locale }: Props) {
               <div className="absolute bottom-5 left-5 right-5 md:bottom-[50px] md:left-[50px] md:right-[50px] flex items-end justify-between gap-4 md:gap-8">
                 <div>
                   <h3 className="text-xl md:text-[32px] font-semibold text-white mb-1">
-                    {caseItem.title}
+                    {tCategories(caseItem.category)}
                   </h3>
-                  <p className="text-white/80 text-base md:text-[20px] line-clamp-1">{caseItem.shortDescription}</p>
+                  <p className="text-white/80 text-base md:text-[20px] line-clamp-1">
+                    {t(`categoryDescriptions.${caseItem.category}`)}
+                  </p>
                 </div>
                 <div className="hidden md:flex flex-shrink-0 bg-white/20 items-center gap-3.5 px-[23px] py-[15px] rounded-full text-white text-[16px] font-semibold group-hover:bg-white/30 transition-colors duration-200">
                   {t("learnMore")}

@@ -68,7 +68,12 @@
     "cases": {
       "title": "Projects & Case Studies",
       "description": "From ship interiors to retrofit and repair — we deliver results worth being proud of, with precision and expertise.",
-      "learnMore": "Learn More"
+      "learnMore": "Learn More",
+      "categoryDescriptions": {
+        "一般船舶材料": "Internationally certified marine materials, ensuring safe, durable interiors that meet industry standards.",
+        "商業貨輪內裝": "Complete crew accommodation and operational space solutions for a comfortable, efficient working environment.",
+        "船舶改裝與維修": "From interior refurbishment to component replacement — professional workflows that extend vessel life and boost performance."
+      }
     },
     "whyChoose": {
       "title": "Why Choose TNO?",
