@@ -33,8 +33,8 @@ type HomeFeatured = {
 // 卡片點擊後導向 /product?category=<該產品的分類>，所以三張新卡各挑一支該分類的產品
 // 當代表，再用 homeTitle / homeDescription 覆寫成「分類層級」的標題與說明。
 //
-// ⚠️ 新分類的產品尚未發布（isPublished: false），卡片仍會顯示，但點進去因為該分類
-//    還沒有已發布產品，列表頁會退回顯示全部產品；素材到位並發布後篩選才會生效。
+// ⚠️ 新分類的三支產品目前是「版面示意」狀態（名稱分類正確、文案圖片為佔位），
+//    卡片點進去的分類篩選已可正常運作，素材到位後只需替換 content 檔案內容。
 // ⚠️ product_bg1/4/5 目前沿用舊圖（bg5 是 bg1 的複本），待欣展提供新照片後
 //    直接覆蓋同名檔案即可。
 const HOME_FEATURED_PRODUCTS: HomeFeatured[] = [
