@@ -1,18 +1,33 @@
 import type { Product } from "@/types/product";
 
+/**
+ * 玻璃棉
+ *
+ * 內容基準（2026-08-31 修訂）：
+ * 舊官網的產品文案已無法取得（Wayback 只存到首頁／關於我們／聯絡我們，
+ * 產品頁未被存檔），原本的敘述與規格為早期架構階段的暫時性內容，
+ * 其中含有未經查證的數字與逐產品船級社宣稱，已全部移除。
+ *
+ * 現行文字為「材料層級的通用正確敘述」——只陳述這類材料本身成立的事實，
+ * 不宣稱本公司特定批次的規格、密度、耐溫值或個別船級社認證。
+ * 規格表（specs）刻意留空，詳情頁會自動隱藏整個區塊。
+ *
+ * 待欣展提供材料商型錄／技術資料表（TDS）／船級社證書後，
+ * 再補回 specs 與更精確的敘述。
+ */
 const glassWool: Product = {
   slug: "glass-wool",
   name: "玻璃棉",
   nameEn: "Glass Wool",
   category: "隔熱絕緣材",
-  shortDescription:
-    "通過國際船級社認證的船用玻璃棉，優異的隔熱與隔音性能，廣泛應用於船艙壁板與管路包覆。",
-  shortDescriptionEn:
-    "Marine-grade glass wool certified by international classification societies — outstanding thermal and acoustic insulation for cabin panels and pipe lagging.",
+  shortDescription: "輕量無機玻璃纖維隔熱材，適用於住艙、走道壁板與管路保溫",
+  shortDescriptionEn: "Lightweight inorganic glass-fiber insulation for accommodation, corridors, and pipework",
   description:
-    "欣展代理之船用玻璃棉採用高品質無機玻璃纖維製成，具有優異的熱絕緣性能與良好的隔音吸噪特性。通過 IMO FTP Code 防火認證，符合多國船級社要求，廣泛應用於船員艙房、走廊壁板、天花板及管路設備包覆，有效降低艙內溫度並提升居住舒適度。輕量化特性不增加船體負擔，施工便利可依現場尺寸裁切成型。",
+    "玻璃棉由玻璃原料經高溫熔融後成纖製成，屬無機纖維隔熱材料，重量輕、施工性佳，是船舶住艙區域常用的隔熱與吸音材料。相較於岩（礦）棉，玻璃棉密度較低、對船體荷重的負擔小，適合壁板、天花與風管等大面積部位。\n\n" +
+    "船舶用隔熱材依 SOLAS 公約與 IMO FTP Code 對不燃性與防火試驗有明確要求，實際採用的密度、厚度與適用等級須依安裝部位與船級社要求選定。欣展可依專案需求提供對應規格與相關證明文件。",
   descriptionEn:
-    "TNO's marine glass wool is manufactured from high-quality inorganic glass fibers, offering excellent thermal insulation and strong sound absorption. Certified under the IMO FTP Code and multiple classification societies, it is widely used on crew quarters, corridor panels, ceilings, and for pipe and equipment lagging — reducing cabin temperatures and improving onboard comfort. Its lightweight construction adds minimal load to the vessel and can be easily cut on-site to fit.",
+    "Glass wool is made by melting glass raw materials at high temperature and forming them into fibers. This inorganic fiber insulation is light and easy to install, making it a common choice for thermal and acoustic insulation in accommodation areas. Compared with rock wool it has a lower density and adds less load to the hull, which suits large areas such as wall panels, ceilings, and ventilation ducting.\n\n" +
+    "Marine insulation is subject to clear non-combustibility and fire-test requirements under the SOLAS Convention and the IMO FTP Code. The density, thickness, and rating actually used must be selected according to the installation location and the requirements of the classification society. TNO can supply matching specifications and supporting documentation on a project basis.",
   images: [
     "/images/products/insulation/glass-wool/glass-wool01.webp",
     "/images/products/insulation/glass-wool/glass-wool02.webp",
@@ -22,53 +37,31 @@ const glassWool: Product = {
     "/images/products/insulation/glass-wool/glass-wool06.webp",
     "/images/products/insulation/glass-wool/glass-wool07.webp",
   ],
-  specs: [
-    { label: "材料", value: "無機玻璃纖維" },
-    { label: "導熱係數", value: "≤ 0.036 W/(m·K)" },
-    { label: "防火等級", value: "IMO FTP Code A 級認證" },
-    { label: "密度範圍", value: "16 ~ 64 kg/m³（依規格）" },
-    { label: "適用溫度", value: "-20°C ~ 350°C" },
-    { label: "認證", value: "ABS、ClassNK、BV、RINA" },
-  ],
-  specsEn: [
-    { label: "Material", value: "Inorganic glass fibers" },
-    { label: "Thermal Conductivity", value: "≤ 0.036 W/(m·K)" },
-    { label: "Fire Class", value: "IMO FTP Code Class A certified" },
-    { label: "Density Range", value: "16 ~ 64 kg/m³ (by specification)" },
-    { label: "Service Temperature", value: "-20°C ~ 350°C" },
-    { label: "Certifications", value: "ABS, ClassNK, BV, RINA" },
-  ],
+  // 規格待欣展提供 TDS／證書後再補；空陣列時詳情頁不顯示規格表
+  specs: [],
   features: [
-    "優異的熱絕緣效果，有效降低艙內溫度",
-    "良好的隔音吸噪特性，提升居住舒適度",
-    "輕量化設計，不增加船體重量",
-    "防潮防腐，使用壽命長",
-    "通過 IMO FTP Code 國際防火認證",
-    "施工便利，可裁切成型依現場安裝",
+    "無機玻璃纖維，質量輕、不增加船體負擔",
+    "隔熱同時具吸音效果",
+    "可現場裁切，施工便利",
+    "適合壁板、天花板等大面積部位",
   ],
   featuresEn: [
-    "Excellent thermal insulation — effectively reduces cabin temperatures",
-    "Strong sound absorption, improving onboard comfort",
-    "Lightweight design that adds no extra hull weight",
-    "Moisture- and corrosion-resistant for a long service life",
-    "Certified to the IMO FTP Code international fire safety standard",
-    "Easy to install — cut on-site to fit",
+    "Inorganic glass fiber — light, with minimal added load to the hull",
+    "Provides sound absorption alongside thermal insulation",
+    "Cuts on site for straightforward installation",
+    "Suited to large areas such as wall panels and ceilings",
   ],
   applications: [
-    "船員艙房壁板與天花板",
-    "走廊隔熱",
-    "機艙隔熱",
-    "管路與設備包覆",
-    "甲板隔熱",
+    "船員住艙與走道壁板隔熱",
+    "天花板與艙間隔音",
+    "風管與管路保溫",
   ],
   applicationsEn: [
-    "Crew cabin wall panels and ceilings",
-    "Corridor insulation",
-    "Engine-room insulation",
-    "Pipe and equipment lagging",
-    "Deck insulation",
+    "Crew accommodation and corridor panel insulation",
+    "Ceiling and compartment sound insulation",
+    "Ventilation duct and pipe lagging",
   ],
-  publishedAt: "2024-01-01",
+  publishedAt: "2024-01-20",
   isPublished: true,
 };
 

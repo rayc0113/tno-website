@@ -55,6 +55,7 @@ export default async function ProductDetailPage({ params }: Props) {
   const tc = await getTranslations("categories");
   const categoryLabel = tc.has(product.category) ? tc(product.category) : product.category;
   const brandName = loc === "en" ? "TNO Marine" : "TNO 欣展";
+  const descriptionParagraphs = product.description.split("\n\n").filter(Boolean);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -94,7 +95,11 @@ export default async function ProductDetailPage({ params }: Props) {
           <div className="lg:hidden mb-6">
             <p className="text-body text-[18px] mb-1">{categoryLabel}</p>
             <h1 className="text-[28px] font-bold text-title leading-tight mb-3">{product.name}</h1>
-            <p className="text-body text-[18px] leading-relaxed">{product.description}</p>
+            <div className="flex flex-col gap-3">
+              {descriptionParagraphs.map((para, i) => (
+                <p key={i} className="text-body text-[18px] leading-relaxed">{para}</p>
+              ))}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
@@ -105,7 +110,11 @@ export default async function ProductDetailPage({ params }: Props) {
               <div className="hidden lg:block">
                 <p className="text-body text-[18px] mb-1">{categoryLabel}</p>
                 <h1 className="text-[32px] font-bold text-title leading-tight mb-4">{product.name}</h1>
-                <p className="text-body text-[18px] leading-relaxed">{product.description}</p>
+                <div className="flex flex-col gap-4">
+                  {descriptionParagraphs.map((para, i) => (
+                    <p key={i} className="text-body text-[18px] leading-relaxed">{para}</p>
+                  ))}
+                </div>
               </div>
 
               {product.features.length > 0 && (

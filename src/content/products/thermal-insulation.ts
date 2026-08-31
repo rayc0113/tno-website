@@ -1,55 +1,61 @@
 import type { Product } from "@/types/product";
 
+/**
+ * 岩（礦）棉
+ *
+ * 內容基準（2026-08-31 修訂）：
+ * 舊官網的產品文案已無法取得（Wayback 只存到首頁／關於我們／聯絡我們，
+ * 產品頁未被存檔），原本的敘述與規格為早期架構階段的暫時性內容，
+ * 其中含有未經查證的數字與逐產品船級社宣稱，已全部移除。
+ *
+ * 現行文字為「材料層級的通用正確敘述」——只陳述這類材料本身成立的事實，
+ * 不宣稱本公司特定批次的規格、密度、耐溫值或個別船級社認證。
+ * 規格表（specs）刻意留空，詳情頁會自動隱藏整個區塊。
+ *
+ * 待欣展提供材料商型錄／技術資料表（TDS）／船級社證書後，
+ * 再補回 specs 與更精確的敘述。
+ */
 const thermalInsulation: Product = {
   slug: "thermal-insulation",
   name: "岩（礦）棉",
-  nameEn: "Rock / Mineral Wool",
+  nameEn: "Rock (Mineral) Wool",
   category: "隔熱絕緣材",
-  shortDescription: "高密度岩礦棉隔熱材，耐高溫、防火性能優異，適用於船舶機艙及高溫管路包覆。",
-  shortDescriptionEn: "High-density rock wool insulation with superior heat and fire resistance for engine rooms and high-temp piping",
+  shortDescription: "由天然礦石熔融紡絲製成的不燃性礦物纖維，適用於機艙與高溫管路",
+  shortDescriptionEn: "Non-combustible mineral fiber spun from molten rock — for engine rooms and hot pipework",
   description:
-    "欣展代理之船用岩（礦）棉由天然玄武岩或礦渣熔融紡絲製成，具有卓越的耐高溫與防火性能，通過 IMO FTP Code A 級認證。相較玻璃棉，岩礦棉耐溫更高、吸音效果更佳，特別適用於機艙隔熱、高溫管路包覆及防火隔間填充等嚴苛環境。",
+    "岩（礦）棉以天然玄武岩、輝綠岩或礦渣經高溫熔融、紡絲成纖後製成，屬不燃性礦物纖維材料，是船舶防火隔熱最常使用的材料之一。其纖維結構同時具備隔熱與吸音效果，在高溫下不助燃、不易變形，適合機艙、鍋爐周邊與高溫管路等部位。\n\n" +
+    "船舶用隔熱材依 SOLAS 公約與 IMO FTP Code 對不燃性與防火試驗有明確要求，實際採用的密度、厚度與適用等級須依安裝部位與船級社要求選定。欣展可依專案需求提供對應規格與相關證明文件，歡迎來電洽詢。",
   descriptionEn:
-    "TNO's marine rock (mineral) wool is spun from melted natural basalt or slag, delivering outstanding heat and fire resistance certified to IMO FTP Code Class A. Compared to glass wool, rock wool handles higher temperatures and offers better sound absorption — making it ideal for engine-room insulation, high-temperature pipe lagging, and fire-rated partition infill in demanding marine environments.",
+    "Rock (mineral) wool is produced by melting natural basalt, diabase, or mineral slag at high temperature and spinning it into fibers. As a non-combustible mineral fiber, it is one of the most widely used materials for marine fire insulation. Its fiber structure provides both thermal insulation and sound absorption, and it neither supports combustion nor deforms readily at high temperatures — making it well suited to engine rooms, boiler surrounds, and hot pipework.\n\n" +
+    "Marine insulation is subject to clear non-combustibility and fire-test requirements under the SOLAS Convention and the IMO FTP Code. The density, thickness, and rating actually used must be selected according to the installation location and the requirements of the classification society. TNO can supply matching specifications and supporting documentation on a project basis — please contact us.",
   images: [
     "/images/products/insulation/rock-wool/rock-wool01.webp",
     "/images/products/insulation/rock-wool/rock-wool02.webp",
     "/images/products/insulation/rock-wool/rock-wool03.webp",
   ],
-  specs: [
-    { label: "材料種類", value: "岩棉 / 玻璃棉 / PU泡棉 / 複合板" },
-    { label: "導熱係數", value: "≤ 0.040 W/(m·K)" },
-    { label: "防火等級", value: "IMO FTP Code A 級認證" },
-    { label: "密度", value: "32 ~ 120 kg/m³（依規格）" },
-    { label: "認證", value: "ABS、ClassNK、MED" },
-  ],
-  specsEn: [
-    { label: "Material Types", value: "Rock wool / Glass wool / PU foam / Composite panels" },
-    { label: "Thermal Conductivity", value: "≤ 0.040 W/(m·K)" },
-    { label: "Fire Class", value: "IMO FTP Code Class A certified" },
-    { label: "Density", value: "32 ~ 120 kg/m³ (by specification)" },
-    { label: "Certifications", value: "ABS, ClassNK, MED" },
-  ],
+  // 規格待欣展提供 TDS／證書後再補；空陣列時詳情頁不顯示規格表
+  specs: [],
   features: [
-    "優異的隔熱降溫效果",
-    "良好的隔音吸噪特性",
-    "輕量化，不增加船體重量",
-    "防潮防腐，耐久性佳",
-    "施工便利，可裁切成型",
+    "不燃性礦物纖維，高溫下不助燃",
+    "耐溫範圍高於一般玻璃棉",
+    "纖維結構兼具隔熱與吸音",
+    "可依部位裁切、包覆施工",
   ],
   featuresEn: [
-    "Outstanding thermal insulation and heat reduction",
-    "Strong acoustic absorption and noise damping",
-    "Lightweight — no added hull weight",
-    "Moisture- and corrosion-resistant with long-term durability",
-    "Easy to install and cut to shape on site",
+    "Non-combustible mineral fiber that does not support combustion",
+    "Higher service temperature range than typical glass wool",
+    "Fiber structure delivers both insulation and sound absorption",
+    "Can be cut and wrapped to suit each installation",
   ],
-  applications: ["船艙壁板與天花板", "機艙隔熱", "管路與設備包覆", "甲板隔熱"],
+  applications: [
+    "機艙與鍋爐周邊隔熱",
+    "高溫管路包覆",
+    "防火隔間與甲板隔熱填充",
+  ],
   applicationsEn: [
-    "Cabin wall panels and ceilings",
-    "Engine-room insulation",
-    "Pipe and equipment lagging",
-    "Deck insulation",
+    "Engine-room and boiler-area insulation",
+    "High-temperature pipe lagging",
+    "Fire-rated bulkhead and deck insulation infill",
   ],
   publishedAt: "2024-01-15",
   isPublished: true,
