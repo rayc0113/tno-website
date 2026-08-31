@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# 素材專區（客戶提供原始檔，不進版控）
+/materials/*
+!/materials/README.md
