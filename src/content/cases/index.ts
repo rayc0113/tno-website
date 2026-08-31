@@ -14,6 +14,10 @@ import fishingVesselUpgrade from "./fishing-vessel-upgrade";
 import offshorePlatformLiving from "./offshore-platform-living";
 
 // ✅ 在此新增案例（新案例建議放在陣列最前面）
+//
+// 分類（2026-07-24 會議決議）：一般船舶工程 / 船舶改裝 / 船舶維修
+// ⚠️ 下列四筆為暫時性內容，待欣展提供 3–5 個代表案例後整批汰換
+//    （素材見 materials/04-案例）
 export const allCases: CaseProject[] = [
   bulkCarrierInsulation,
   crewQuartersRenovation,

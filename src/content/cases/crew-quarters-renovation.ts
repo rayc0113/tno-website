@@ -6,7 +6,7 @@ const crewQuartersRenovation: CaseProject = {
   titleEn: "Commercial Vessel Crew Quarters Renovation",
   client: "XX 航運股份有限公司",
   clientEn: "XX Shipping Co., Ltd.",
-  category: "商業貨輪內裝",
+  category: "船舶改裝",
   shortDescription: "完整的船員起居與操作空間解決方案，打造舒適與高效的工作環境。",
   shortDescriptionEn: "Complete crew living and working space solutions for comfort and efficiency.",
   description:

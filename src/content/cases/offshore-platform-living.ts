@@ -6,7 +6,7 @@ const offshorePlatformLiving: CaseProject = {
   titleEn: "Offshore Platform Living Quarters Upgrade",
   client: "XX 航運股份有限公司",
   clientEn: "XX Shipping Co., Ltd.",
-  category: "船舶改裝與維修",
+  category: "船舶改裝",
   shortDescription: "完整的船員起居與操作空間解決方案，打造舒適與高效的工作環境。",
   shortDescriptionEn: "Complete crew living and working space solutions for comfort and efficiency.",
   description:

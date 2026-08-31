@@ -50,7 +50,8 @@ const airCabinet: Product = {
     "Engine-room equipment air supply",
   ],
   publishedAt: "2024-02-15",
-  isPublished: true,
+  // 2026-07-24 會議決議下架（保留資料，不刪除）
+  isPublished: false,
 };
 
 export default airCabinet;

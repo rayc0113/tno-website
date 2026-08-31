@@ -5,7 +5,7 @@ import { getTranslations } from "next-intl/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "raychen0113@gmail.com";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "tno.tw@msa.hinet.net";
 
 export type ContactFormState = {
   success: boolean;

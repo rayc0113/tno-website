@@ -11,7 +11,11 @@
  */
 
 const CATEGORY_TO_SLUG: Record<string, string> = {
-  // 產品分類
+  // 產品分類（2026-07-24 會議新增的三個工程分類）
+  "客製化工程": "custom-engineering",
+  "海軍艤裝工程": "naval-outfitting",
+  "港務工程": "port-engineering",
+  // 產品分類（既有；已下架品項的分類仍保留對照，方便日後重新上架）
   "金屬隔間板": "metal-partition",
   "隔熱絕緣材": "thermal-insulation",
   "不鏽鋼廚具": "stainless-kitchen",
@@ -20,10 +24,10 @@ const CATEGORY_TO_SLUG: Record<string, string> = {
   "造船用舵軸系統": "rudder-shaft-system",
   "造船用甲板上艤品、錨座配件": "deck-anchor-fittings",
   "船裝配件空氣櫃、過濾器": "air-cabinet-filters",
-  // 案例分類
-  "一般船舶材料": "general-marine-materials",
-  "商業貨輪內裝": "commercial-vessel-interior",
-  "船舶改裝與維修": "ship-retrofit",
+  // 案例分類（2026-07-24 會議調整為 一般／改裝／維修）
+  "一般船舶工程": "general-marine",
+  "船舶改裝": "ship-retrofit",
+  "船舶維修": "ship-maintenance",
 };
 
 export function getCategorySlug(category: string): string {

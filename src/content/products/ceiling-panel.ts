@@ -54,7 +54,8 @@ const ceilingPanel: Product = {
     "Corridors and public areas",
   ],
   publishedAt: "2024-01-01",
-  isPublished: true,
+  // 2026-07-24 會議決議下架（保留資料，不刪除）
+  isPublished: false,
 };
 
 export default ceilingPanel;

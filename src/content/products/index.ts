@@ -8,6 +8,12 @@
  */
 
 import type { Product, ProductSummary } from "@/types/product";
+import ductLouverPanel from "./duct-louver-panel";
+import handrailInstallation from "./handrail-installation";
+import lighthouseBase from "./lighthouse-base";
+import exhaustPipeInsulation from "./exhaust-pipe-insulation";
+import accommodationLadder from "./accommodation-ladder";
+import slipwayConstruction from "./slipway-construction";
 import wallPanel from "./wall-panel";
 import ceilingPanel from "./ceiling-panel";
 import glassWool from "./glass-wool";
@@ -24,20 +30,31 @@ import anchorFittings from "./anchor-fittings";
 
 export const allProducts: Product[] = [
   // 分類順序決定篩選列左至右的排列
-  wallPanel,
-  ceilingPanel,
+  //
+  // 2026-07-24 會議新增的三個工程分類，共 6 個代表項目
+  // （暫定名單，待欣展窗口確認；素材到位前 isPublished: false，不會出現在網站上）
+  ductLouverPanel,
+  handrailInstallation,
+  lighthouseBase,
+  exhaustPipeInsulation,
+  accommodationLadder,
+  slipwayConstruction,
+  // 保留的 6 個材料類品項
   thermalInsulation,
   glassWool,
   ceramicWool,
   stainlessKitchen,
   puFoam,
   timber,
-  rudderShaftSystem,
-  deckFittings,
-  anchorFittings,
-  airCabinet,
+  //
   // 未發布（不影響分類順序）
   metalPartition,
+  wallPanel,          // 2026-07-24 下架
+  ceilingPanel,       // 2026-07-24 下架
+  rudderShaftSystem,  // 2026-07-24 下架
+  deckFittings,       // 2026-07-24 下架
+  anchorFittings,     // 2026-07-24 下架
+  airCabinet,         // 2026-07-24 下架
 ];
 
 export function getPublishedProducts(): Product[] {
@@ -57,27 +74,6 @@ export function getProductSummaries(): ProductSummary[] {
     coverImage: coverImage ?? images[0],
     listImage: coverImage ?? images[0],
   }));
-}
-
-const HOME_FEATURED_SLUGS = [
-  "metal-partition",
-  "thermal-insulation",
-  "stainless-kitchen",
-  "air-cabinet",
-];
-
-export function getHomeFeaturedProducts(): ProductSummary[] {
-  return HOME_FEATURED_SLUGS
-    .map((slug) => allProducts.find((p) => p.slug === slug))
-    .filter((p): p is Product => p !== undefined)
-    .map(({ slug, name, category, shortDescription, coverImage, images }) => ({
-      slug,
-      name,
-      category,
-      shortDescription,
-      coverImage: coverImage ?? images[0],
-      listImage: images[0],
-    }));
 }
 
 export function getAllProductSlugs(): string[] {

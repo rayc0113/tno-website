@@ -51,7 +51,8 @@ const rudderShaftSystem: Product = {
     "Vessel refit and repair",
   ],
   publishedAt: "2024-03-01",
-  isPublished: true,
+  // 2026-07-24 會議決議下架（保留資料，不刪除）
+  isPublished: false,
 };
 
 export default rudderShaftSystem;
