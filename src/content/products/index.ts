@@ -9,10 +9,14 @@
 
 import type { Product, ProductSummary } from "@/types/product";
 import ductLouverPanel from "./duct-louver-panel";
+import drainageScaffolding from "./drainage-scaffolding";
+import soundingRod from "./sounding-rod";
+import hatchOpening from "./hatch-opening";
 import handrailInstallation from "./handrail-installation";
 import lighthouseBase from "./lighthouse-base";
 import exhaustPipeInsulation from "./exhaust-pipe-insulation";
 import accommodationLadder from "./accommodation-ladder";
+import magazineConversion from "./magazine-conversion";
 import slipwayConstruction from "./slipway-construction";
 import wallPanel from "./wall-panel";
 import ceilingPanel from "./ceiling-panel";
@@ -31,13 +35,21 @@ import anchorFittings from "./anchor-fittings";
 export const allProducts: Product[] = [
   // 分類順序決定篩選列左至右的排列
   //
-  // 2026-07-24 會議新增的三個工程分類，共 6 個代表項目
-  // （暫定名單，待欣展窗口確認；素材到位前 isPublished: false，不會出現在網站上）
+  // 2026-07-24 會議新增的三個工程分類，共 10 個項目
+  // （目前為版面示意內容，名稱與分類正確、文案圖片為佔位，待欣展窗口確認）
+  //
+  // 註：欣展提供的資料夾共 11 項，其中 D-登艦梯 未單獨開卡——它與 L-登艦梯
+  //    是同一種品項，照片併入 accommodation-ladder 的照片牆即可，避免產品頁
+  //    出現兩張同名卡片。
   ductLouverPanel,
+  drainageScaffolding,
+  soundingRod,
+  hatchOpening,
   handrailInstallation,
   lighthouseBase,
   exhaustPipeInsulation,
   accommodationLadder,
+  magazineConversion,
   slipwayConstruction,
   // 保留的 6 個材料類品項
   thermalInsulation,
