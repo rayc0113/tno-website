@@ -132,7 +132,8 @@ export default async function ContactPage({ params }: Props) {
                 </div>
               )}
             </div>
-            <div>
+            {/* 表單靠下對齊，讓底部與左欄的 LINE 區塊切齊（桌機才需要，行動版是上下堆疊） */}
+            <div className="flex flex-col lg:justify-end">
               <ContactForm />
             </div>
           </div>
