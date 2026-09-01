@@ -35,8 +35,8 @@ type HomeFeatured = {
 //
 // ⚠️ 新分類的三支產品目前是「版面示意」狀態（名稱分類正確、文案圖片為佔位），
 //    卡片點進去的分類篩選已可正常運作，素材到位後只需替換 content 檔案內容。
-// ⚠️ product_bg1/4/5 目前沿用舊圖（bg5 是 bg1 的複本），待欣展提供新照片後
-//    直接覆蓋同名檔案即可。
+// ✅ 2026-09-01：product_bg1/4/5 已換成欣展提供的三張工程實照
+//    （bg1 船上欄杆、bg4 排煙管保溫材包覆、bg5 船台）。
 const HOME_FEATURED_PRODUCTS: HomeFeatured[] = [
   {
     slug: "duct-louver-panel",

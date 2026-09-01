@@ -46,13 +46,13 @@
     "hero": {
       "title1": "From Materials to Design & Manufacturing",
       "title2": "Your Complete Marine Interior Solution",
-      "description": "With over a decade of expertise and international certifications, TNO is committed to safety and quality — protecting every voyage.",
+      "description": "Serving the marine industry since 2016, TNO is committed to safety and quality — protecting every voyage.",
       "cta": "Explore Services"
     },
     "services": {
       "title": "Our Professional Services",
-      "description1": "From interior design to component manufacturing, we support every stage of ship construction and maintenance,",
-      "description2": "delivering comprehensive solutions that ensure navigational safety and onboard comfort.",
+      "description1": "From material supply to onboard work, we take part in every stage of ship construction, retrofit, and maintenance,",
+      "description2": "delivering complete solutions that safeguard every voyage and stand up to inspection.",
       "items": {
         "material": { "title": "Material Agency", "description": "Supplying certified insulation, foam, and timber — keeping every build on schedule" },
         "manufacturing": { "title": "Manufacturing", "description": "From metal panels to stainless steel kitchens — durable, precision-made marine components" },
@@ -62,15 +62,15 @@
     },
     "products": {
       "title": "Featured Products",
-      "description1": "Every product reflects years of TNO expertise.",
-      "description2": "We are dedicated to delivering internationally trusted solutions for the maritime industry.",
+      "description1": "Every product and project reflects years of TNO expertise.",
+      "description2": "We are dedicated to delivering the most trusted, world-class quality in the maritime industry.",
       "cta": "View All Products",
       "scrollLeft": "Scroll left",
       "scrollRight": "Scroll right"
     },
     "cases": {
       "title": "Projects & Case Studies",
-      "description": "From ship interiors to retrofit and repair — we deliver results worth being proud of, with precision and expertise.",
+      "description": "From ship retrofit to maintenance — we deliver results worth being proud of, with precision and expertise.",
       "learnMore": "Learn More",
       "categoryDescriptions": {
         "一般船舶工程": "Internationally certified materials and standards-compliant workmanship for safe, durable vessel interiors.",
@@ -82,11 +82,11 @@
       "title": "Why Choose TNO?",
       "description": "Rooted in Taiwan, reaching globally — we earn the trust of vessel owners through expertise and commitment.",
       "stat1Label": "Years of Marine Expertise",
-      "stat2Label": "Preferred Partner for Taiwan Shipyards",
+      "stat2Label": "Coverage of Taiwan's Marine Clients",
       "stat3Label": "International Certifications"
     },
     "brandCTA": {
-      "title1": "From the Open Ocean to Everyday Life,",
+      "title1": "From the Open Ocean to Every Safe Return,",
       "title2": "TNO Sails Alongside You.",
       "description1": "Backed by ISO 9001 and multiple international classification society certifications,",
       "description2": "we ensure every process is reliable — delivering safe, durable, and high-quality results for the maritime industry.",

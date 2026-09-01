@@ -3,11 +3,17 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 
-const statsData = [
-  { value: 10, unit: "+", labelKey: "stat1Label" },
-  { value: 80, unit: "%", labelKey: "stat2Label" },
-  { value: 10, unit: "+", labelKey: "stat3Label" },
-];
+// 欣展成立年份。第一項「年專業船舶經驗」由此自動推算，
+// 不需要每年手動改數字。
+const FOUNDED_YEAR = 2016;
+
+function getStatsData() {
+  return [
+    { value: new Date().getFullYear() - FOUNDED_YEAR, unit: "", labelKey: "stat1Label" },
+    { value: 80, unit: "%", labelKey: "stat2Label" },
+    { value: 10, unit: "+", labelKey: "stat3Label" },
+  ];
+}
 
 function useCountUp(target: number, duration = 1500, triggered: boolean) {
   const [count, setCount] = useState(0);
@@ -46,6 +52,7 @@ function StatItem({ value, unit, label, triggered }: { value: number; unit: stri
 
 export default function HomeWhyChoose() {
   const t = useTranslations("home.whyChoose");
+  const statsData = getStatsData();
   const sectionRef = useRef<HTMLElement>(null);
   const [triggered, setTriggered] = useState(false);
 
