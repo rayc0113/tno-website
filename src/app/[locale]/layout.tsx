@@ -15,7 +15,7 @@ const notoSansTC = Noto_Sans_TC({
   variable: "--font-noto-sans-tc",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tno-marine.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tno.com.tw";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

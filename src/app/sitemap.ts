@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllProductSlugs } from "@/content/products";
 import { getAllCaseSlugs } from "@/content/cases";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tno-marine.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tno.com.tw";
 const locales = ["zh", "en"];
 
 function localedUrl(locale: string, path: string) {
