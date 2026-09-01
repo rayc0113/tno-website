@@ -6,13 +6,18 @@ import ContactForm from "./ContactForm";
 interface Props { params: Promise<{ locale: string }> }
 
 /**
- * LINE 官方帳號 QR Code
+ * LINE 官方帳號
  *
- * ⚠️ 2026-07-24 會議決議新增，圖片待欣展提供（見 materials/06-聯絡我們-LINE-QR）。
- * 素材到位後：圖片放至 /public/images/contact/line-qr.webp，
- * 並將此常數改為 "/images/contact/line-qr.webp"，區塊就會自動顯示。
+ * QR Code 供桌機掃碼，lineUrl 供行動裝置直接點擊加好友
+ * （手機無法掃自己螢幕上的 QR，兩者都要有）。
+ * QR 圖用 lossless webp 保留黑白邊緣，避免有損壓縮影響掃描。
+ * 將 qrImage 設為 null 可整塊隱藏。
  */
-const LINE_QR_IMAGE: string | null = null;
+const LINE_ACCOUNT: { qrImage: string | null; id: string; url: string } = {
+  qrImage: "/images/contact/line-qr.webp",
+  id: "@252zcdqr",
+  url: "https://line.me/R/ti/p/@252zcdqr",
+};
 
 const CONTACT_INFO = {
   phone: "07-3717521",
@@ -96,18 +101,33 @@ export default async function ContactPage({ params }: Props) {
               </dl>
 
               {/* LINE 官方帳號（QR Code 到位前不顯示） */}
-              {LINE_QR_IMAGE && (
-                <div className="mt-8 flex items-center gap-5">
-                  <Image
-                    src={LINE_QR_IMAGE}
-                    alt={t("info.line")}
-                    width={120}
-                    height={120}
-                    className="rounded-lg border border-surface"
-                  />
+              {LINE_ACCOUNT.qrImage && (
+                <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5 bg-sky-light rounded-[20px] p-6">
+                  <a
+                    href={LINE_ACCOUNT.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 rounded-xl bg-white p-2"
+                  >
+                    <Image
+                      src={LINE_ACCOUNT.qrImage}
+                      alt={t("info.line")}
+                      width={120}
+                      height={120}
+                      className="rounded-md"
+                    />
+                  </a>
                   <div>
                     <p className="text-[14px] font-semibold text-muted mb-1">{t("info.line")}</p>
                     <p className="text-body">{t("info.lineHint")}</p>
+                    <a
+                      href={LINE_ACCOUNT.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand hover:text-brand-hover transition-colors font-semibold"
+                    >
+                      {LINE_ACCOUNT.id}
+                    </a>
                   </div>
                 </div>
               )}
