@@ -9,7 +9,6 @@ import type { Product } from "@/types/product";
  *   shortDescription / shortDescriptionEn  ← 卡片上的一句話
  *   description / descriptionEn            ← 詳情頁開頭段落
  *   features / applications（含 En）        ← 條列內容
- *   specs / specsEn                        ← 規格表，工程類若不適用可整個刪掉
  *   （coverImage / images 已於 2026-09-01 換成欣展提供的實照，
  *    位於 /images/products/custom-engineering/，不需再動）
  *
@@ -34,16 +33,7 @@ const soundingRod: Product = {
     "/images/products/custom-engineering/sounding-rod-cover.webp",
     "/images/products/custom-engineering/sounding-rod-1.webp",
   ],
-  specs: [
-    { label: "【示意】規格項目一", value: "數值或說明待補" },
-    { label: "【示意】規格項目二", value: "數值或說明待補" },
-    { label: "【示意】適用規範", value: "待欣展確認" },
-  ],
-  specsEn: [
-    { label: "[Placeholder] Spec 1", value: "Pending" },
-    { label: "[Placeholder] Spec 2", value: "Pending" },
-    { label: "[Placeholder] Standards", value: "Pending" },
-  ],
+  specs: [],
   features: [
     "【示意】工程特點一，待正式文案替換",
     "【示意】工程特點二，待正式文案替換",
