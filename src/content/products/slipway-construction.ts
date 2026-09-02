@@ -9,27 +9,31 @@ import type { Product } from "@/types/product";
  * 鋼材規格、客戶名稱與完工年份，因為這些都沒有來源可查證。
  * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
- * 兩處是從現場照片推斷、尚待欣展窗口確認：
- *   1.「行走於岸邊既有軌道」——照片中軌道已鋪設，但也可能是本案一併施作。
- *      若軌道也是欣展做的，需改為含軌道舖設，並調整「不需變更原有軌距」那條
- *   2.「分節編號製作」——依木樑上手寫的 C3／C4 編號推斷
+ * 2026-09-02 改寫為與海軍艤裝三支一致的規格書式登記：段中不出現公司名、
+ * 移除能力宣稱（原「木料供應與金屬加工都是欣展本身的能力…同一支團隊完成」）。
  *
- * 計畫將網站連結提供給窗口確認產品描述，屆時一併釐清上述兩點。
+ * 原本待確認的「行走於岸邊既有軌道」已藉改寫迴避——軌道是既有或本案一併
+ * 施作無法從照片判斷，故改為中性的「行走於港區軌道」，連帶把「不需變更
+ * 原有軌距」改為「輪組與接頭依軌道軌距製作」，兩種情況都成立。
+ *
+ * 仍待欣展窗口確認：「分節編號製作」是依木樑上手寫的 C3／C4 編號推斷。
+ *
+ * 計畫將網站連結提供給窗口確認產品描述，屆時一併釐清該點。
  */
 const slipwayConstruction: Product = {
   slug: "slipway-construction",
   name: "船台新製",
   nameEn: "Slipway Construction",
   category: "港務工程",
-  shortDescription: "以大斷面木料與鋼製輪組構成的船台台車，供船舶上架維修與下水作業使用",
+  shortDescription: "船台台車的製作與現場組立，供船舶上架維修與下水作業使用",
   shortDescriptionEn:
-    "Slipway cradles built from heavy timber beams and steel roller assemblies, for hauling vessels out and launching them",
+    "Fabrication and on-site assembly of slipway cradles, for hauling vessels out and launching them",
   description:
-    "船台是船舶上架維修與下水作業的基礎設施。船體離水之後的全部重量都由船台承載，因此台車的結構強度、輪組與軌道的配合精度，直接決定作業能否安全進行。\n\n" +
-    "欣展承製的船台以大斷面木料構成台車主體，搭配鋼製輪組、接頭與拖曳吊耳，分節製作後於現場組立，行走於岸邊既有軌道。木料供應與金屬加工都是欣展本身的能力，從料件備製到現場組裝可由同一支團隊完成。實際尺寸、節數與承載條件須依船型與港區軌道規格設計，歡迎來電洽詢。",
+    "船台為船舶上架維修與下水作業的基礎設施。船體離水後的全部重量由船台承載，台車的結構強度與輪組、軌道的配合精度，直接決定作業能否安全進行。\n\n" +
+    "台車主體以大斷面木料構成，搭配鋼製輪組、接頭與拖曳吊耳，分節製作後於現場組立，行走於港區軌道。尺寸、節數與承載條件須依船型與既有軌道規格設計；欣展可依現場條件提出製作與組立方案，歡迎來電洽詢。",
   descriptionEn:
     "A slipway is the basic infrastructure for hauling vessels out of the water for repair and for launching them again. Once a hull leaves the water its entire weight rests on the slipway, so the structural strength of the cradle and the fit between its rollers and the rails determine whether the operation can be carried out safely.\n\n" +
-    "TNO builds slipway cradles around a body of heavy timber beams, combined with steel roller assemblies, connectors, and towing lugs. The cradles are fabricated in numbered sections, assembled on site, and run on the existing rails along the quay. Both timber supply and metal fabrication are in-house capabilities at TNO, so everything from material preparation to on-site assembly can be handled by one team. Dimensions, the number of sections, and load conditions are designed around the vessel type and the existing rail gauge — please contact us to discuss your requirements.",
+    "The cradle body is built from heavy timber beams, combined with steel roller assemblies, connectors, and towing lugs, fabricated in numbered sections and assembled on site to run on the harbour rails. Dimensions, the number of sections, and load conditions are designed around the vessel type and the existing rail gauge. TNO can propose a fabrication and assembly approach for your site — please contact us.",
   coverImage: "/images/products/port-engineering/slipway-construction-cover.webp",
   images: [
     "/images/products/port-engineering/slipway-construction-cover.webp",
@@ -38,16 +42,14 @@ const slipwayConstruction: Product = {
   ],
   specs: [],
   features: [
-    "以大斷面木料承載船體重量，局部磨損或損壞時可單根更換",
-    "鋼製輪組與接頭配合港區既有軌道，不需變更原有軌距",
-    "分節編號製作，便於運輸、現場組裝與日後維護",
-    "木料與金屬加工由同一家承接，減少介面協調",
+    "台車主體採大斷面木料，局部磨損或損壞時可單根更換",
+    "輪組與接頭依軌道軌距製作",
+    "分節編號製作，便於運輸、現場組立與日後維護",
   ],
   featuresEn: [
     "Heavy timber beams carry the hull load, and individual beams can be replaced as they wear",
-    "Steel rollers and connectors are matched to the existing rails, so the original gauge stays unchanged",
+    "Rollers and connectors made to suit the rail gauge",
     "Fabricated in numbered sections for easier transport, on-site assembly, and later maintenance",
-    "Timber supply and metal fabrication handled by one contractor, reducing coordination between trades",
   ],
   applications: [
     "漁港與小型港區的船舶上架維修",
