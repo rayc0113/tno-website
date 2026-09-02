@@ -13,7 +13,7 @@ const deckFittings: Product = {
   descriptionEn:
     "TNO supplies a full line of marine deck outfittings — mooring bollards, fairleads, hatch covers, ventilators, lifeboat davits, and custom-engineered parts. Every item is designed to IACS and IMO standards, fabricated from high-strength steel, and certified by major classification societies — ensuring safe and reliable deck operations on any vessel.",
   images: [
-    "/images/products/deck-fittings/roller-fairlead/roller-fairlead01.webp",
+    "/images/products/_placeholder.webp",
   ],
   specs: [
     { label: "材質", value: "高強度碳鋼 / 316L 不鏽鋼" },

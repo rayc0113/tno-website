@@ -28,10 +28,10 @@ const soundingRod: Product = {
   descriptionEn:
     "[Placeholder] A full description of this service will go here, covering scope of work, " +
     "materials used, construction methods, and quality control. Final copy pending client input.",
-  coverImage: "/images/products/_placeholder.webp",
+  coverImage: "/images/products/sounding-rod-cover.webp",
   images: [
-    "/images/products/_placeholder.webp",
-    "/images/products/_placeholder.webp",
+    "/images/products/sounding-rod-cover.webp",
+    "/images/products/sounding-rod-1.webp",
   ],
   specs: [
     { label: "【示意】規格項目一", value: "數值或說明待補" },

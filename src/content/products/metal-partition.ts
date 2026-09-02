@@ -11,10 +11,9 @@ const metalPartition: Product = {
     "欣展金屬隔間板採用高強度鋼板與防火核材複合製成，通過 IMO FTP Code A 級防火認證，適用於船員艙房、走廊、機艙等各類隔間需求。模組化設計可快速安裝，有效縮短塢期，降低施工成本。",
   descriptionEn:
     "TNO's metal partition panels pair high-strength steel facings with a fire-rated core, certified to IMO FTP Code Class A. They suit every type of onboard partition — crew quarters, corridors, engine-room separation, and more. The modular design enables rapid installation, shortening dry-dock time and reducing overall construction costs.",
-  coverImage: "/images/home/product_bg1.webp",
+  coverImage: "/images/products/_placeholder.webp",
   images: [
-    "/images/products/metal-partition-1.jpg",
-    "/images/products/metal-partition-2.jpg",
+    "/images/products/_placeholder.webp",
   ],
   specs: [
     { label: "材質", value: "鍍鋅鋼板 / 防火核材" },

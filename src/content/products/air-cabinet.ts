@@ -12,7 +12,7 @@ const airCabinet: Product = {
   descriptionEn:
     "TNO supplies a complete range of marine pneumatic equipment — air control cabinets, pneumatic actuators, and an extensive selection of marine-grade filters. Designed and manufactured to IMO and ABS standards, our products ensure stable, reliable performance for every onboard pneumatic system — from control systems and compressed-air networks to air supply for deck machinery and engine-room equipment.",
   images: [
-    "/images/products/air-tank-filter/air-tank-filter/air-tank-filter01.webp",
+    "/images/products/_placeholder.webp",
   ],
   specs: [
     { label: "工作壓力", value: "0.5 ~ 3.0 MPa（依型號）" },

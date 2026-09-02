@@ -13,7 +13,7 @@ const rudderShaftSystem: Product = {
   descriptionEn:
     "TNO delivers complete marine rudder and shaft systems — including rudder stocks, rudder carriers, steering-gear mounts, and all related fasteners. Machined from high-strength alloy steel and certified by ABS, ClassNK, and other major classification societies, these systems ensure stable, dependable steering performance across all sea states — suitable for every class of commercial vessel and specialty ship.",
   images: [
-    "/images/products/rudder-system/rudder-system/rudder-system01.webp",
+    "/images/products/_placeholder.webp",
   ],
   specs: [
     { label: "材質", value: "高強度合金鋼 / 不鏽鋼" },

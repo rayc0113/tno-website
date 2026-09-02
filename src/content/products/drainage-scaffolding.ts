@@ -28,10 +28,13 @@ const drainageScaffolding: Product = {
   descriptionEn:
     "[Placeholder] A full description of this service will go here, covering scope of work, " +
     "materials used, construction methods, and quality control. Final copy pending client input.",
-  coverImage: "/images/products/_placeholder.webp",
+  coverImage: "/images/products/drainage-scaffolding-cover.webp",
   images: [
-    "/images/products/_placeholder.webp",
-    "/images/products/_placeholder.webp",
+    "/images/products/drainage-scaffolding-cover.webp",
+    "/images/products/drainage-scaffolding-1.webp",
+    "/images/products/drainage-scaffolding-2.webp",
+    "/images/products/drainage-scaffolding-3.webp",
+    "/images/products/drainage-scaffolding-4.webp",
   ],
   specs: [
     { label: "【示意】規格項目一", value: "數值或說明待補" },

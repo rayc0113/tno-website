@@ -14,10 +14,7 @@ const wallPanel: Product = {
   descriptionEn:
     "A metal partition system engineered for high-safety environments, integrating fire resistance, sound insulation, and a high-strength structural design for marine vessels and indoor spaces — delivering a stable, safe, and premium-quality space-division solution.",
   images: [
-    "/images/products/metal-panel/wall-panel/wall-panel01.webp",
-    "/images/products/metal-panel/wall-panel/wall-panel02.webp",
-    "/images/products/metal-panel/wall-panel/wall-panel03.webp",
-    "/images/products/metal-panel/wall-panel/wall-panel04.webp",
+    "/images/products/_placeholder.webp",
   ],
   specs: [
     { label: "型號", value: "TNO-W5001 / TNO-W5002 / TNO-W2501" },

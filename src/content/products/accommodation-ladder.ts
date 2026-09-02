@@ -28,10 +28,9 @@ const accommodationLadder: Product = {
   descriptionEn:
     "[Placeholder] A full description of this service will go here, covering scope of work, " +
     "materials used, construction methods, and quality control. Final copy pending client input.",
-  coverImage: "/images/products/_placeholder.webp",
+  coverImage: "/images/products/accommodation-ladder-cover.webp",
   images: [
-    "/images/products/_placeholder.webp",
-    "/images/products/_placeholder.webp",
+    "/images/products/accommodation-ladder-cover.webp",
   ],
   specs: [
     { label: "【示意】規格項目一", value: "數值或說明待補" },

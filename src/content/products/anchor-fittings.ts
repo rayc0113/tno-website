@@ -13,7 +13,7 @@ const anchorFittings: Product = {
   descriptionEn:
     "TNO offers a full catalog of marine anchor fittings — chain pipes, windlass mounting plates, chain stoppers, chain guides, and matching fasteners. Forged and cast from high-strength marine steel and designed to IACS and classification-society specifications, these fittings ensure safe, reliable mooring operations across every class of commercial vessel.",
   images: [
-    "/images/products/deck-fittings/mooring-fittings/mooring-fittings01.webp",
+    "/images/products/_placeholder.webp",
   ],
   specs: [
     { label: "材質", value: "高強度船用鋼 / 鑄鐵" },

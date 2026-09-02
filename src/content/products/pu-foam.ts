@@ -29,7 +29,7 @@ const puFoam: Product = {
     "Polyurethane (PU) is a closed-cell foam with low thermal conductivity and low water absorption, delivering strong insulation performance for a given thickness along with good moisture resistance. It is commonly used for refrigerated holds, low-temperature pipework, and anywhere a vapor barrier is needed, and can be supplied as rigid board, pre-formed pipe shells, or foamed in place.\n\n" +
     "PU behaves differently from mineral fiber materials, so the fire requirements of each location must be considered when specifying it — fire-rated divisions generally still rely on non-combustible mineral fiber, while PU is chosen for its insulation and moisture performance. Specifications and suitable applications are welcome to be discussed by phone.",
   images: [
-    "/images/products/pu-foam/pu-foam/pu-foam01.webp",
+    "/images/products/pu-foam-cover.webp",
   ],
   // 規格待欣展提供 TDS／證書後再補；空陣列時詳情頁不顯示規格表
   specs: [],

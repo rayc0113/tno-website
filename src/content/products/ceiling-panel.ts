@@ -14,9 +14,7 @@ const ceilingPanel: Product = {
   descriptionEn:
     "TNO's marine ceiling panel system uses lightweight aluminum or steel framing paired with fire-rated panels, certified to the IMO FTP Code. The modular grid layout simplifies pipework routing and future maintenance, making it widely suitable for passenger ships, cargo vessels, and workboat cabin ceilings.",
   images: [
-    "/images/products/metal-panel/ceiling-panel/ceiling-panel01.webp",
-    "/images/products/metal-panel/ceiling-panel/ceiling-panel02.webp",
-    "/images/products/metal-panel/ceiling-panel/ceiling-panel03.webp",
+    "/images/products/_placeholder.webp",
   ],
   specs: [
     { label: "材質", value: "鋁合金骨架 / 防火板材" },
