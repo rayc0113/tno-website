@@ -3,53 +3,57 @@ import type { Product } from "@/types/product";
 /**
  * 海軍艤裝工程（L 系列）— L-登艦梯
  *
- * ⚠️ 文案仍為佔位內容 —— 名稱、分類與照片都已是正式的，只有文字待替換。
+ * 文案基準（2026-09-02 撰寫）：
+ * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
+ * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 刻意不寫尺寸、階數、載重與材質。
+ * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
- * 素材到位後要替換的欄位（見 materials/02-產品-海軍艤裝工程L系列）：
- *   shortDescription / shortDescriptionEn  ← 卡片上的一句話
- *   description / descriptionEn            ← 詳情頁開頭段落
- *   features / applications（含 En）        ← 條列內容
- *   （coverImage / images 已於 2026-09-01 換成欣展提供的實照，
- *    位於 /images/products/naval-outfitting/，不需再動）
+ * ⚠️ 材質待欣展窗口確認：照片中踏面有熱浸鍍鋅特有的斑紋，但立柱與邊樑
+ *    看起來像鋁擠型，無法從照片分辨是鋁合金或熱浸鍍鋅鋼，因此文案一律
+ *    不提材質。確認後可補上「鋁合金製」或「熱浸鍍鋅鋼製」，說服力會更強。
  *
- * 註：本項是「湊滿 12 筆產品」的暫定名單之一，尚待欣展窗口確認，
- *    可能整批或個別替換成其他工程項目。
+ * 註：本項照片僅 1 張。D 系列另有一批「D-登艦梯」照片（與本項同品項、
+ *    不同客戶），欣展尚未提供，可再向窗口索取併入本項照片牆。
  */
 const accommodationLadder: Product = {
   slug: "accommodation-ladder",
   name: "登艦梯",
-  nameEn: "Accommodation Ladders",
+  nameEn: "Accommodation Ladder",
   category: "海軍艤裝工程",
-  shortDescription: "【示意文字】此處放本項工程的一句話說明，正式文案待欣展提供後替換。",
-  shortDescriptionEn: "[Placeholder] A one-line summary of this service, pending final copy.",
+  shortDescription: "廠內整體預製的登艦梯，含防滑踏面與鋼索扶手",
+  shortDescriptionEn:
+    "Accommodation ladders prefabricated as complete units, with anti-slip treads and wire rope handrails",
   description:
-    "【示意文字】此處為本項工程的完整說明段落，將描述施作範圍、使用材料、工法特點與品質管控方式。" +
-    "實際內容待欣展提供原始資訊後，由我們整理撰寫成正式文案。",
+    "登艦梯為人員上下船的主要通道，使用頻繁並承受活載重，傾角隨潮位與吃水變動。踏面須具防滑性能，扶手須連續且張力可調，端部與舷側的固定方式則決定梯身在潮位變化下能否保持貼合。\n\n" +
+    "梯體於廠內整體預製後交付現場吊掛安裝，端部設固定與滾動機構。尺寸、階數、載重與傾角範圍須依船型與舷側高度設計；欣展可依專案條件提出規格建議，歡迎來電洽詢。",
   descriptionEn:
-    "[Placeholder] A full description of this service will go here, covering scope of work, " +
-    "materials used, construction methods, and quality control. Final copy pending client input.",
+    "An accommodation ladder is the main route for people boarding and leaving a vessel. It is in constant use, carries live loads, and changes angle with the tide and the vessel's draught. The treads must resist slipping, the handrail must be continuous and adjustable in tension, and the way the ends attach to the ship's side determines whether the ladder stays seated as the water level changes.\n\n" +
+    "Ladders are prefabricated as complete units in the workshop and delivered for lifting into place on site, with fixing and rolling arrangements at the ends. Dimensions, the number of steps, load rating, and the range of working angles are designed around the vessel type and freeboard height. TNO can advise on specification for your project — please contact us.",
   coverImage: "/images/products/naval-outfitting/accommodation-ladder-cover.webp",
-  images: [
-    "/images/products/naval-outfitting/accommodation-ladder-cover.webp",
-  ],
+  images: ["/images/products/naval-outfitting/accommodation-ladder-cover.webp"],
   specs: [],
   features: [
-    "【示意】工程特點一，待正式文案替換",
-    "【示意】工程特點二，待正式文案替換",
-    "【示意】工程特點三，待正式文案替換",
+    "廠內整體預製，到場吊掛即可安裝",
+    "防滑踏面，適用濕滑與傾斜狀態",
+    "鋼索扶手張力可調，長期使用後仍能保持繃緊",
+    "端部設固定與滾動機構，隨潮位變化維持貼合",
   ],
   featuresEn: [
-    "[Placeholder] Feature one, pending final copy",
-    "[Placeholder] Feature two, pending final copy",
-    "[Placeholder] Feature three, pending final copy",
+    "Prefabricated as a complete unit, ready to be lifted into place on arrival",
+    "Anti-slip treads suited to wet and inclined conditions",
+    "Wire rope handrail with adjustable tension, staying taut over years of use",
+    "Fixing and rolling arrangements at the ends keep the ladder seated as the tide changes",
   ],
   applications: [
-    "【示意】應用場景一",
-    "【示意】應用場景二",
+    "艦艇與商船的人員上下船通道",
+    "碼頭停靠期間的臨時登船設施",
+    "既有登艦梯的汰換",
   ],
   applicationsEn: [
-    "[Placeholder] Application one",
-    "[Placeholder] Application two",
+    "Crew and visitor access for naval and commercial vessels",
+    "Temporary boarding access while alongside",
+    "Replacement of existing accommodation ladders",
   ],
   publishedAt: "2026-07-24",
   isPublished: true,

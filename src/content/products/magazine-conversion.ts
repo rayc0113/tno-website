@@ -3,31 +3,32 @@ import type { Product } from "@/types/product";
 /**
  * 海軍艤裝工程（L 系列）— L-彈藥庫改裝案
  *
- * ⚠️ 文案仍為佔位內容 —— 名稱、分類與照片都已是正式的，只有文字待替換。
+ * 文案基準（2026-09-02 撰寫）：
+ * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
+ * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
  *
- * 素材到位後要替換的欄位（見 materials/02-產品-海軍艤裝工程L系列）：
- *   shortDescription / shortDescriptionEn  ← 卡片上的一句話
- *   description / descriptionEn            ← 詳情頁開頭段落
- *   features / applications（含 En）        ← 條列內容
- *   （coverImage / images 已於 2026-09-01 換成欣展提供的實照，
- *    位於 /images/products/naval-outfitting/，不需再動）
+ * ⚠️ 這是軍方案子，文案刻意停在「艙內儲放架系統」的工程邏輯層級：
+ *    不寫存放物、艦名、單位、艙室位置、層數格距與尺寸數量。
  *
- * 註：本項是「湊滿 16 筆產品」的暫定名單之一，尚待欣展窗口確認，
- *    可能整批或個別替換成其他工程項目。
+ * ⚠️ 待欣展窗口確認：「彈藥庫改裝」這個案名是否適合公開露出。
+ *    - 可以公開 → 維持現名
+ *    - 不宜公開 → 改為中性名稱（例如「艙內儲放架系統」），並一併確認
+ *      照片是否也要撤下
+ *    此項須在網站正式上線前得到答覆。
  */
 const magazineConversion: Product = {
   slug: "magazine-conversion",
   name: "彈藥庫改裝",
   nameEn: "Magazine Conversion",
   category: "海軍艤裝工程",
-  shortDescription: "【示意文字】此處放本項工程的一句話說明，正式文案待欣展提供後替換。",
-  shortDescriptionEn: "[Placeholder] A one-line summary of this service, pending final copy.",
+  shortDescription: "艙內儲放架系統的設計製作與現場組裝",
+  shortDescriptionEn: "Design, fabrication, and on-site assembly of onboard storage rack systems",
   description:
-    "【示意文字】此處為本項工程的完整說明段落，將描述施作範圍、使用材料、工法特點與品質管控方式。" +
-    "實際內容待欣展提供原始資訊後，由我們整理撰寫成正式文案。",
+    "艦艇於航行中持續承受搖晃與振動，艙內儲放架除容納物件外，須確保物件不位移、不碰撞，並維持人員取放的安全空間。架體剛性、固定方式與緩衝設計為主要設計重點。\n\n" +
+    "架體採金屬擠型骨架螺栓組立，適用於既有艙室的有限施工空間；各格位設弧形托座貼合物件外形，並以可調夾具與緩衝元件抑制位移。層數、格距與固定方式須依艙室尺寸與使用需求設計；欣展可依現場條件提出配置方案，歡迎來電洽詢。",
   descriptionEn:
-    "[Placeholder] A full description of this service will go here, covering scope of work, " +
-    "materials used, construction methods, and quality control. Final copy pending client input.",
+    "A vessel underway is subject to continuous roll and vibration, so onboard storage racks must do more than hold their contents: items have to stay put, avoid contact with one another, and remain safely accessible to the crew. Frame rigidity, the method of restraint, and cushioning are therefore the primary design considerations.\n\n" +
+    "Racks are built from bolted metal extrusion frames, which suits the limited working space of an existing compartment. Each position carries a contoured saddle matched to the shape of its contents, with adjustable clamps and cushioning elements to restrain movement. The number of tiers, spacing, and restraint method are designed around compartment dimensions and how the rack will be used. TNO can propose a layout for your compartment — please contact us.",
   coverImage: "/images/products/naval-outfitting/magazine-conversion-cover.webp",
   images: [
     "/images/products/naval-outfitting/magazine-conversion-cover.webp",
@@ -36,22 +37,26 @@ const magazineConversion: Product = {
   ],
   specs: [],
   features: [
-    "【示意】工程特點一，待正式文案替換",
-    "【示意】工程特點二，待正式文案替換",
-    "【示意】工程特點三，待正式文案替換",
+    "金屬擠型骨架螺栓組立，適用有限施工空間",
+    "弧形托座貼合物件外形，減少接觸面應力集中",
+    "可調夾具與緩衝元件抑制航行中的位移",
+    "分層配置依取放動線與艙高規劃",
   ],
   featuresEn: [
-    "[Placeholder] Feature one, pending final copy",
-    "[Placeholder] Feature two, pending final copy",
-    "[Placeholder] Feature three, pending final copy",
+    "Bolted metal extrusion frame, suited to confined working spaces",
+    "Contoured saddles matched to the shape of the contents, reducing stress concentration at contact points",
+    "Adjustable clamps and cushioning elements restrain movement underway",
+    "Tier layout planned around access routes and compartment height",
   ],
   applications: [
-    "【示意】應用場景一",
-    "【示意】應用場景二",
+    "艦艇艙內儲放架的新製與汰換",
+    "既有艙室的空間重新規劃",
+    "需要固定與緩衝的艙內設備置放",
   ],
   applicationsEn: [
-    "[Placeholder] Application one",
-    "[Placeholder] Application two",
+    "New and replacement storage racks in vessel compartments",
+    "Reconfiguring the space in an existing compartment",
+    "Onboard stowage that requires restraint and cushioning",
   ],
   publishedAt: "2026-07-24",
   isPublished: true,

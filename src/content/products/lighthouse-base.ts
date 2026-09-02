@@ -6,7 +6,8 @@ import type { Product } from "@/types/product";
  * ⚠️ 文案仍為佔位內容 —— 名稱、分類與照片都已是正式的，只有文字待替換。
  *
  * 素材到位後要替換的欄位（見 materials/01-產品-客製化工程D系列）：
- *   shortDescription / shortDescriptionEn  ← 卡片上的一句話
+ *   shortDescription / shortDescriptionEn  ← 詳情頁的 SEO／OG description
+ *                                          （列表卡片只顯示圖／分類／名稱，不顯示這句）
  *   description / descriptionEn            ← 詳情頁開頭段落
  *   features / applications（含 En）        ← 條列內容
  *   （coverImage / images 已於 2026-09-01 換成欣展提供的實照，
