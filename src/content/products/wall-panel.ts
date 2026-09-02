@@ -53,7 +53,7 @@ const wallPanel: Product = {
   ],
   specRows: [
     {
-      typeImage: "/images/products/metal-panel/wall-panel/TNO-W5001.webp",
+      typeImage: "/images/products/_placeholder.webp",
       model: "TNO-W5001",
       thickness: "50mm",
       fireClass: "B-15",
@@ -61,7 +61,7 @@ const wallPanel: Product = {
       weight: "20.3 kg/m²",
     },
     {
-      typeImage: "/images/products/metal-panel/wall-panel/TNO-W5002.webp",
+      typeImage: "/images/products/_placeholder.webp",
       model: "TNO-W5002",
       thickness: "50mm",
       fireClass: "B-15",
@@ -69,7 +69,7 @@ const wallPanel: Product = {
       weight: "21.0 kg/m²",
     },
     {
-      typeImage: "/images/products/metal-panel/wall-panel/TNO-W2501.webp",
+      typeImage: "/images/products/_placeholder.webp",
       model: "TNO-W2501",
       thickness: "25mm",
       fireClass: "B-0",

@@ -42,7 +42,7 @@
 1. 複製 `src/content/products/_template.ts` → 改名為 `[slug].ts`
 2. 填入資料
 3. 在 `src/content/products/index.ts` 的 `allProducts` 陣列加入 import
-4. 圖片放至 `public/images/products/`
+4. 圖片放至 `public/images/products/<分類-slug>/`（分類 slug 見 `src/lib/categories.ts`），命名 `[slug]-cover.webp`、`[slug]-1.webp`
 
 ### 新增案例
 1. 複製 `src/content/cases/_template.ts` → 改名為 `[slug].ts`
@@ -119,7 +119,14 @@ src/
 public/images/
 ├── common/     # logo.svg、logo_fullname.svg
 ├── home/       # 首頁用圖（hero、各 section 背景、認證機構 logo）
-├── products/   # 產品圖片（命名：[slug]-cover.jpg、[slug]-1.jpg …）
+├── products/   # 產品圖片，依分類 slug 分子目錄
+│   ├── custom-engineering/   # [slug]-cover.webp、[slug]-1.webp …
+│   ├── naval-outfitting/
+│   ├── port-engineering/
+│   ├── thermal-insulation/
+│   ├── stainless-kitchen/ pu-foam/ timber/
+│   ├── hero.webp             # 產品頁 Hero
+│   └── _placeholder.webp     # 尚無照片時的共用佔位圖
 ├── cases/      # 案例圖片（命名：[slug]-cover.jpg、[slug]-1.jpg …）
 ├── service/    # 服務頁圖片
 └── about/      # 關於頁圖片
@@ -213,7 +220,8 @@ public/images/
 - 所有圖片放在 `public/images/` 下對應子目錄
 - 使用 Next.js `<Image>` 元件（必填 `alt`）
 - Hero / 背景圖加 `priority` prop
-- 圖片命名格式：`[slug]-cover.jpg`、`[slug]-1.jpg`
+- 圖片命名格式：`[slug]-cover.webp`、`[slug]-1.webp`
+- 產品圖片依**分類 slug** 分子目錄存放（例：`products/custom-engineering/hatch-opening-cover.webp`），分類對照表在 `src/lib/categories.ts`
 
 ## 環境變數
 

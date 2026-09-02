@@ -27,12 +27,12 @@ const template: Product = {
   description: "完整詳細的產品說明，包含材料特性、適用場景、施工方式等。",
 
   // 封面圖（顯示於列表），放至 /public/images/products/
-  coverImage: "/images/products/your-product-cover.jpg",
+  coverImage: "/images/products/<分類-slug>/your-product-cover.webp",
 
   // 詳情頁輪播圖片
   images: [
-    "/images/products/your-product-1.jpg",
-    "/images/products/your-product-2.jpg",
+    "/images/products/<分類-slug>/your-product-cover.webp",
+    "/images/products/<分類-slug>/your-product-1.webp",
   ],
 
   // 技術規格

@@ -29,9 +29,9 @@ const thermalInsulation: Product = {
     "Rock (mineral) wool is produced by melting natural basalt, diabase, or mineral slag at high temperature and spinning it into fibers. As a non-combustible mineral fiber, it is one of the most widely used materials for marine fire insulation. Its fiber structure provides both thermal insulation and sound absorption, and it neither supports combustion nor deforms readily at high temperatures — making it well suited to engine rooms, boiler surrounds, and hot pipework.\n\n" +
     "Marine insulation is subject to clear non-combustibility and fire-test requirements under the SOLAS Convention and the IMO FTP Code. The density, thickness, and rating actually used must be selected according to the installation location and the requirements of the classification society. TNO can supply matching specifications and supporting documentation on a project basis — please contact us.",
   images: [
-    "/images/products/thermal-insulation-cover.webp",
-    "/images/products/thermal-insulation-1.webp",
-    "/images/products/thermal-insulation-2.webp",
+    "/images/products/thermal-insulation/thermal-insulation-cover.webp",
+    "/images/products/thermal-insulation/thermal-insulation-1.webp",
+    "/images/products/thermal-insulation/thermal-insulation-2.webp",
   ],
   // 規格待欣展提供 TDS／證書後再補；空陣列時詳情頁不顯示規格表
   specs: [],

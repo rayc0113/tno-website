@@ -29,13 +29,13 @@ const glassWool: Product = {
     "Glass wool is made by melting glass raw materials at high temperature and forming them into fibers. This inorganic fiber insulation is light and easy to install, making it a common choice for thermal and acoustic insulation in accommodation areas. Compared with rock wool it has a lower density and adds less load to the hull, which suits large areas such as wall panels, ceilings, and ventilation ducting.\n\n" +
     "Marine insulation is subject to clear non-combustibility and fire-test requirements under the SOLAS Convention and the IMO FTP Code. The density, thickness, and rating actually used must be selected according to the installation location and the requirements of the classification society. TNO can supply matching specifications and supporting documentation on a project basis.",
   images: [
-    "/images/products/glass-wool-cover.webp",
-    "/images/products/glass-wool-1.webp",
-    "/images/products/glass-wool-2.webp",
-    "/images/products/glass-wool-3.webp",
-    "/images/products/glass-wool-4.webp",
-    "/images/products/glass-wool-5.webp",
-    "/images/products/glass-wool-6.webp",
+    "/images/products/thermal-insulation/glass-wool-cover.webp",
+    "/images/products/thermal-insulation/glass-wool-1.webp",
+    "/images/products/thermal-insulation/glass-wool-2.webp",
+    "/images/products/thermal-insulation/glass-wool-3.webp",
+    "/images/products/thermal-insulation/glass-wool-4.webp",
+    "/images/products/thermal-insulation/glass-wool-5.webp",
+    "/images/products/thermal-insulation/glass-wool-6.webp",
   ],
   // 規格待欣展提供 TDS／證書後再補；空陣列時詳情頁不顯示規格表
   specs: [],

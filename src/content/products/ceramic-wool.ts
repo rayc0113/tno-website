@@ -29,8 +29,8 @@ const ceramicWool: Product = {
     "Ceramic fiber is composed primarily of alumina and silica, melted at high temperature and formed into fibers. As a refractory fiber, its service temperature is far higher than that of glass wool or rock wool. It has low heat storage, responds quickly to temperature change, and offers good thermal-shock resistance — properties that suit the lagging and lining of high-temperature areas such as exhaust uptakes, boilers, and combustion equipment.\n\n" +
     "Service temperature, density, and supply form (blanket, board, or rope) must be selected according to the conditions at each location and the available specifications. TNO can supply matching specifications and supporting documentation on a project basis — please contact us.",
   images: [
-    "/images/products/ceramic-wool-cover.webp",
-    "/images/products/ceramic-wool-1.webp",
+    "/images/products/thermal-insulation/ceramic-wool-cover.webp",
+    "/images/products/thermal-insulation/ceramic-wool-1.webp",
   ],
   // 規格待欣展提供 TDS／證書後再補；空陣列時詳情頁不顯示規格表
   specs: [],

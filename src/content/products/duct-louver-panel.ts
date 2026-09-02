@@ -3,14 +3,15 @@ import type { Product } from "@/types/product";
 /**
  * 客製化工程（D 系列）— D-風管 百葉窗 封板 案
  *
- * ⚠️ 版面示意用內容 —— 名稱與分類是正確的，其餘文字與圖片皆為佔位。
+ * ⚠️ 文案仍為佔位內容 —— 名稱、分類與照片都已是正式的，只有文字待替換。
  *
  * 素材到位後要替換的欄位（見 materials/01-產品-客製化工程D系列）：
  *   shortDescription / shortDescriptionEn  ← 卡片上的一句話
  *   description / descriptionEn            ← 詳情頁開頭段落
  *   features / applications（含 En）        ← 條列內容
  *   specs / specsEn                        ← 規格表，若此項目不適用可整個刪掉
- *   coverImage / images                    ← 換成 /images/products/duct-louver-panel-cover.webp 等
+ *   （coverImage / images 已於 2026-09-01 換成欣展提供的實照，
+ *    位於 /images/products/custom-engineering/，不需再動）
  *
  * 註：本項是「湊滿 12 筆產品」的暫定名單之一，尚待欣展窗口確認，
  *    可能整批或個別替換成其他工程項目。
@@ -28,13 +29,13 @@ const ductLouverPanel: Product = {
   descriptionEn:
     "[Placeholder] A full description of this service will go here, covering scope of work, " +
     "materials used, construction methods, and quality control. Final copy pending client input.",
-  coverImage: "/images/products/duct-louver-panel-cover.webp",
+  coverImage: "/images/products/custom-engineering/duct-louver-panel-cover.webp",
   images: [
-    "/images/products/duct-louver-panel-cover.webp",
-    "/images/products/duct-louver-panel-1.webp",
-    "/images/products/duct-louver-panel-2.webp",
-    "/images/products/duct-louver-panel-3.webp",
-    "/images/products/duct-louver-panel-4.webp",
+    "/images/products/custom-engineering/duct-louver-panel-cover.webp",
+    "/images/products/custom-engineering/duct-louver-panel-1.webp",
+    "/images/products/custom-engineering/duct-louver-panel-2.webp",
+    "/images/products/custom-engineering/duct-louver-panel-3.webp",
+    "/images/products/custom-engineering/duct-louver-panel-4.webp",
   ],
   specs: [
     { label: "【示意】規格項目一", value: "數值或說明待補" },
