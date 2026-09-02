@@ -3,32 +3,29 @@ import type { Product } from "@/types/product";
 /**
  * 客製化工程（D 系列）— D-開艙案
  *
- * ⚠️ 文案仍為佔位內容 —— 名稱、分類與照片都已是正式的，只有文字待替換。
+ * 文案基準（2026-09-02 撰寫）：
+ * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
+ * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 刻意不寫開口尺寸、板厚、設備型號與船名。
+ * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
- * 素材到位後要替換的欄位（見 materials/01-產品-客製化工程D系列）：
- *   shortDescription / shortDescriptionEn  ← 詳情頁的 SEO／OG description
- *                                          （列表卡片只顯示圖／分類／名稱，不顯示這句）
- *   description / descriptionEn            ← 詳情頁開頭段落
- *   features / applications（含 En）        ← 條列內容
- *   （coverImage / images 已於 2026-09-01 換成欣展提供的實照，
- *    位於 /images/products/custom-engineering/，不需再動）
- *
- * 註：本項是「湊滿 16 筆產品」的暫定名單之一，尚待欣展窗口確認，
- *    可能整批或個別替換成其他工程項目。
+ * 依現場照片撰寫：夜間甲板切割出方形開口（周邊設加強框）、大型設備由
+ * 船上吊車吊過開口、封板鋼板已銲上加強肋後吊起、甲板封板現場銲接復原。
  */
 const hatchOpening: Product = {
   slug: "hatch-opening",
   name: "開艙工程",
-  nameEn: "Hatch Opening Works",
+  nameEn: "Deck Opening & Closing",
   category: "客製化工程",
-  shortDescription: "【示意文字】此處放本項工程的一句話說明，正式文案待欣展提供後替換。",
-  shortDescriptionEn: "[Placeholder] A one-line summary of this service, pending final copy.",
+  shortDescription: "甲板臨時開口的切割與復原，供大型設備吊運進出",
+  shortDescriptionEn:
+    "Cutting and restoring temporary deck openings so large equipment can be lifted in and out",
   description:
-    "【示意文字】此處為本項工程的完整說明段落，將描述施作範圍、使用材料、工法特點與品質管控方式。" +
-    "實際內容待欣展提供原始資訊後，由我們整理撰寫成正式文案。",
+    "機艙內的大型設備更換時，既有通道往往不足以讓設備進出，需在甲板上開設臨時開口。開口會切斷甲板的連續性，因此復原時的封板厚度、加強肋配置與銲接品質，必須讓甲板恢復原有的強度與水密。\n\n" +
+    "施工範圍涵蓋開口位置的放樣與切割、設備吊運進出的配合、封板與加強肋製作，以及銲接復原與表面處理。開口尺寸與補強方式須依設備外型與甲板結構設計；欣展可依現場條件提出施工方案，歡迎來電洽詢。",
   descriptionEn:
-    "[Placeholder] A full description of this service will go here, covering scope of work, " +
-    "materials used, construction methods, and quality control. Final copy pending client input.",
+    "When large equipment in the engine room has to be replaced, the existing accesses are often too small for it to pass through, so a temporary opening is cut in the deck. Cutting the opening interrupts the continuity of the deck, so on closing up, the thickness of the insert plate, the arrangement of stiffeners, and the quality of the welding all have to bring the deck back to its original strength and watertightness.\n\n" +
+    "The scope of work covers marking out and cutting the opening, supporting the lifting operation as equipment passes through, fabrication of the insert plate and stiffeners, and welding up and surface treatment afterwards. Opening size and the method of reinforcement are designed around the equipment's dimensions and the deck structure. TNO can propose a method statement for your project — please contact us.",
   coverImage: "/images/products/custom-engineering/hatch-opening-cover.webp",
   images: [
     "/images/products/custom-engineering/hatch-opening-cover.webp",
@@ -40,22 +37,24 @@ const hatchOpening: Product = {
   ],
   specs: [],
   features: [
-    "【示意】工程特點一，待正式文案替換",
-    "【示意】工程特點二，待正式文案替換",
-    "【示意】工程特點三，待正式文案替換",
+    "開口位置依甲板結構放樣，避開主要結構構件",
+    "封板附加強肋，銲接後恢復甲板強度與水密",
+    "配合船上吊車與船期安排施作",
   ],
   featuresEn: [
-    "[Placeholder] Feature one, pending final copy",
-    "[Placeholder] Feature two, pending final copy",
-    "[Placeholder] Feature three, pending final copy",
+    "Opening marked out from the deck structure so that primary members are avoided",
+    "Insert plate with stiffeners, welded up to restore deck strength and watertightness",
+    "Carried out in step with the ship's crane and its schedule",
   ],
   applications: [
-    "【示意】應用場景一",
-    "【示意】應用場景二",
+    "機艙大型設備的更換吊運",
+    "甲板臨時開口的切割與復原",
+    "既有開口的補強",
   ],
   applicationsEn: [
-    "[Placeholder] Application one",
-    "[Placeholder] Application two",
+    "Lifting large engine-room equipment in and out for replacement",
+    "Cutting and closing temporary deck openings",
+    "Reinforcement of existing openings",
   ],
   publishedAt: "2026-07-24",
   isPublished: true,

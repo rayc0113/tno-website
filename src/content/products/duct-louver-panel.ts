@@ -3,32 +3,33 @@ import type { Product } from "@/types/product";
 /**
  * 客製化工程（D 系列）— D-風管 百葉窗 封板 案
  *
- * ⚠️ 文案仍為佔位內容 —— 名稱、分類與照片都已是正式的，只有文字待替換。
+ * 文案基準（2026-09-02 撰寫）：
+ * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
+ * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 刻意不寫管徑、風量、板厚與開口尺寸。
+ * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
- * 素材到位後要替換的欄位（見 materials/01-產品-客製化工程D系列）：
- *   shortDescription / shortDescriptionEn  ← 詳情頁的 SEO／OG description
- *                                          （列表卡片只顯示圖／分類／名稱，不顯示這句）
- *   description / descriptionEn            ← 詳情頁開頭段落
- *   features / applications（含 En）        ← 條列內容
- *   （coverImage / images 已於 2026-09-01 換成欣展提供的實照，
- *    位於 /images/products/custom-engineering/，不需再動）
+ * shortDescription 的實際用途是詳情頁的 SEO／OG description，
+ * 列表卡片只顯示圖／分類／名稱（見 ProductGrid.tsx），故以一句講完、
+ * 關鍵詞完整為準。
  *
- * 註：本項是「湊滿 12 筆產品」的暫定名單之一，尚待欣展窗口確認，
- *    可能整批或個別替換成其他工程項目。
+ * 依現場照片撰寫：艙內通風機與風管彎頭、方形風箱、艙頂管路的 U 形吊架、
+ * 艙壁銲上的管路托架、艙壁開口的鋼板封板、舷外帶擋雨彎頭的通風口。
  */
 const ductLouverPanel: Product = {
   slug: "duct-louver-panel",
   name: "風管、百葉窗、封板",
-  nameEn: "Ducts, Louvers & Cover Plates",
+  nameEn: "Ducting, Louvers & Blanking Plates",
   category: "客製化工程",
-  shortDescription: "【示意文字】此處放本項工程的一句話說明，正式文案待欣展提供後替換。",
-  shortDescriptionEn: "[Placeholder] A one-line summary of this service, pending final copy.",
+  shortDescription: "船舶通風風管、通風口與艙壁開口封板的製作與安裝",
+  shortDescriptionEn:
+    "Fabrication and installation of marine ventilation ducting, vent openings, and bulkhead blanking plates",
   description:
-    "【示意文字】此處為本項工程的完整說明段落，將描述施作範圍、使用材料、工法特點與品質管控方式。" +
-    "實際內容待欣展提供原始資訊後，由我們整理撰寫成正式文案。",
+    "艙內通風靠風管將空氣送至各艙區，管路須穿越艙壁與甲板，並在舷外設通風口。穿越處的開口在管路變更或設備移除後，須以鋼板封板復原，以維持艙壁的強度與水密。管路本身則須有足夠的支撐吊架，避免航行振動造成鬆動。\n\n" +
+    "施工範圍涵蓋風管與風箱製作、通風口與擋雨彎頭安裝、管路支撐吊架設置，以及艙壁開口的封板銲接與表面處理。管徑、風量與開口位置須依艙區配置與既有結構設計；欣展可依現場條件提出施工方案，歡迎來電洽詢。",
   descriptionEn:
-    "[Placeholder] A full description of this service will go here, covering scope of work, " +
-    "materials used, construction methods, and quality control. Final copy pending client input.",
+    "Ventilation air reaches each compartment through ducting that has to pass through bulkheads and decks and terminate in vent openings on the ship's side. Where a run is altered or equipment removed, the resulting opening is closed with a blanking plate so the bulkhead recovers its strength and watertightness. The ducting itself needs adequate supports and hangers so that vibration underway does not work it loose.\n\n" +
+    "The scope of work covers fabrication of ducting and plenum boxes, installation of vent openings and weather elbows, provision of pipe supports and hangers, and the welding and surface treatment of bulkhead blanking plates. Duct sizes, air volumes, and opening positions are designed around the compartment layout and the existing structure. TNO can propose a method statement for your project — please contact us.",
   coverImage: "/images/products/custom-engineering/duct-louver-panel-cover.webp",
   images: [
     "/images/products/custom-engineering/duct-louver-panel-cover.webp",
@@ -39,22 +40,26 @@ const ductLouverPanel: Product = {
   ],
   specs: [],
   features: [
-    "【示意】工程特點一，待正式文案替換",
-    "【示意】工程特點二，待正式文案替換",
-    "【示意】工程特點三，待正式文案替換",
+    "風管與風箱依現場尺寸製作，貼合既有艙區結構",
+    "舷外通風口設擋雨彎頭，避免海水與雨水侵入",
+    "管路以支撐吊架固定，抑制航行振動造成的鬆動",
+    "開口封板銲接後施作表面處理，維持艙壁強度與水密",
   ],
   featuresEn: [
-    "[Placeholder] Feature one, pending final copy",
-    "[Placeholder] Feature two, pending final copy",
-    "[Placeholder] Feature three, pending final copy",
+    "Ducting and plenum boxes made to site dimensions, fitting the existing compartment structure",
+    "Weather elbows on ship-side vents keep out sea spray and rain",
+    "Runs secured with supports and hangers to resist loosening from vibration",
+    "Blanking plates welded and surface-treated, restoring bulkhead strength and watertightness",
   ],
   applications: [
-    "【示意】應用場景一",
-    "【示意】應用場景二",
+    "艙區通風系統的新設與變更",
+    "設備移除後的艙壁開口封板",
+    "既有風管的支撐補強",
   ],
   applicationsEn: [
-    "[Placeholder] Application one",
-    "[Placeholder] Application two",
+    "New and altered compartment ventilation systems",
+    "Blanking off bulkhead openings after equipment removal",
+    "Reinforcing supports on existing ductwork",
   ],
   publishedAt: "2026-07-24",
   isPublished: true,
