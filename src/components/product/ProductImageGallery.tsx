@@ -10,7 +10,7 @@ interface Props {
 }
 
 const ARROW_BUTTON =
-  "absolute top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-surface bg-white/90 backdrop-blur-sm shadow-md flex items-center justify-center text-title cursor-pointer hover:bg-brand hover:border-brand hover:text-white hover:shadow-lg transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
+  "w-11 h-11 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center text-white cursor-pointer hover:bg-white hover:text-title transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand";
 
 export default function ProductImageGallery({ images, productName }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -36,13 +36,14 @@ export default function ProductImageGallery({ images, productName }: Props) {
           priority
         />
 
+        {/* 兩顆切換鈕併排置於主圖下緣中央，避免壓在照片主體上 */}
         {hasMultiple && (
-          <>
+          <div className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
             <button
               type="button"
               onClick={() => step(-1)}
               aria-label={t("prevImage")}
-              className={`${ARROW_BUTTON} left-3 md:left-4`}
+              className={ARROW_BUTTON}
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -52,13 +53,13 @@ export default function ProductImageGallery({ images, productName }: Props) {
               type="button"
               onClick={() => step(1)}
               aria-label={t("nextImage")}
-              className={`${ARROW_BUTTON} right-3 md:right-4`}
+              className={ARROW_BUTTON}
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-          </>
+          </div>
         )}
       </div>
 
