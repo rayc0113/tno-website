@@ -107,7 +107,7 @@ export default async function CaseDetailPage({ params }: Props) {
 
       {/* Breadcrumb Bar */}
       <div className="bg-white border-b border-surface pt-[70px]">
-        <div className="max-w-[1080px] mx-auto px-[60px] max-lg:px-6 py-4">
+        <div className="max-w-[840px] mx-auto px-[60px] max-lg:px-6 py-4">
           <nav className="text-sm text-body flex items-center gap-2">
             <Link href="/" className="hover:text-brand transition-colors">{t("home")}</Link>
             <span className="text-muted">/</span>
@@ -119,10 +119,8 @@ export default async function CaseDetailPage({ params }: Props) {
       </div>
 
       <div className="bg-white">
-        <div className="max-w-[1080px] mx-auto px-[60px] max-lg:px-6 pt-10">
-          {/* 文字收窄至 720px 居中（18px 下每行約 40 字，落在中文舒適閱讀區間）；
-              圖片維持容器的 960px，自然突出於文字兩側 */}
-          <div className="max-w-[720px] mx-auto">
+        {/* 內寬 720px：圖片與文字同寬，避免段落間寬窄交替造成伸縮感 */}
+        <div className="max-w-[840px] mx-auto px-[60px] max-lg:px-6 pt-10">
           {/* Title + Date */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-start md:gap-6">
             <h1 className="text-[28px] md:text-[40px] font-semibold text-title leading-snug">
@@ -149,21 +147,17 @@ export default async function CaseDetailPage({ params }: Props) {
             </span>
           </div>
 
-          </div>
-
           {/* Cover Image（3:2，減少正方形施工照被裁切的比例） */}
           <div className="relative w-full aspect-[3/2] rounded-[15px] overflow-hidden bg-surface mt-6 md:mt-8">
             <Image src={caseItem.coverImage} alt={caseItem.title} fill className="object-cover" priority />
           </div>
 
-          <div className="max-w-[720px] mx-auto">
-            <p className="text-[16px] text-title leading-[30px] mt-10 text-pretty">{caseItem.description}</p>
-          </div>
+          <p className="text-[16px] text-title leading-[30px] mt-10 text-pretty">{caseItem.description}</p>
 
           {/* Body Sections：每段之後依序插一張施工照，剩餘的收在文末照片牆 */}
           {caseItem.sections?.map((section, i) => (
             <div key={i}>
-              <div className="max-w-[720px] mx-auto mt-8">
+              <div className="mt-8">
                 <h2 className="text-[24px] font-semibold text-title leading-[30px] mb-4">{section.heading}</h2>
                 {section.paragraphs?.map((p, j) => (
                   <p key={j} className="text-[18px] text-title leading-[32px] mb-4 text-pretty">{p}</p>
@@ -194,9 +188,7 @@ export default async function CaseDetailPage({ params }: Props) {
           {/* 文末照片牆：段落沒用完的照片 */}
           {restIndexes.length > 0 && (
             <div className="mt-12">
-              <div className="max-w-[720px] mx-auto">
-                <h2 className="text-[24px] font-semibold text-title leading-[30px] mb-2">{t("gallery")}</h2>
-              </div>
+              <h2 className="text-[24px] font-semibold text-title leading-[30px] mb-2">{t("gallery")}</h2>
               <CaseImageFigure
                 images={bodyImages}
                 locale={locale}
@@ -207,14 +199,12 @@ export default async function CaseDetailPage({ params }: Props) {
             </div>
           )}
 
-          <div className="max-w-[720px] mx-auto">
-            {/* Closing Box */}
-            <div className="bg-sky-light rounded-[15px] px-6 py-6 mt-10 mb-[80px]">
-              <p className="text-[20px] font-semibold text-title mb-2">{t("closing")}</p>
-              <p className="text-[18px] font-semibold text-title leading-[32px] text-pretty">
-                {caseItem.closing ?? caseItem.shortDescription}
-              </p>
-            </div>
+          {/* Closing Box */}
+          <div className="bg-sky-light rounded-[15px] px-6 py-6 mt-10 mb-[80px]">
+            <p className="text-[20px] font-semibold text-title mb-2">{t("closing")}</p>
+            <p className="text-[18px] font-semibold text-title leading-[32px] text-pretty">
+              {caseItem.closing ?? caseItem.shortDescription}
+            </p>
           </div>
         </div>
 

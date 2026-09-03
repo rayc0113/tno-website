@@ -63,8 +63,8 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt }
           <Image
             src={img.src}
             alt={caption ?? alt}
-            width={960}
-            height={640}
+            width={720}
+            height={480}
             sizes={sizes}
             className="w-full aspect-[3/2] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           />
@@ -78,13 +78,11 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt }
 
   return (
     <>
-      {layout === "single" ? (
-        <div className="my-10">{figure(indexes[0], "(max-width: 1024px) 100vw, 960px")}</div>
-      ) : (
-        <div className="my-10 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-          {indexes.map((i) => figure(i, "(max-width: 640px) 100vw, 470px"))}
-        </div>
-      )}
+      {/* 單張與文末照片牆都是單欄、與內文同寬——版面只有一種圖片寬度，
+          維持一致的縱向節奏，不會出現寬窄交替的伸縮感 */}
+      <div className={layout === "single" ? "my-10" : "my-10 flex flex-col gap-10"}>
+        {indexes.map((i) => figure(i, "(max-width: 840px) 100vw, 720px"))}
+      </div>
 
       {openAt !== null && (
         <div
