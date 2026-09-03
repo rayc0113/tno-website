@@ -93,12 +93,8 @@ export default async function AboutPage({ params }: Props) {
             <h2 className="text-[28px] md:text-[40px] font-bold text-title leading-tight mb-4 md:mb-6">
               {t("belief.title")}
             </h2>
-            <p className="text-body text-[18px] md:text-[22px] leading-[1.8]">
-              {t("belief.description1")}<br />
-              {t("belief.description2")}<br />
-              {t("belief.description3")}<br />
-              {t("belief.description4")}<br />
-              {t("belief.description5")}
+            <p className="text-body text-[18px] md:text-[22px] leading-[1.8] text-pretty">
+              {t("belief.paragraph1")}
             </p>
           </div>
           <div className="relative w-full md:w-[640px] h-[300px] md:h-[488px] flex-shrink-0">
@@ -125,18 +121,11 @@ export default async function AboutPage({ params }: Props) {
               {t("expertise.title1")}<br />
               {t("expertise.title2")}
             </h2>
-            {/* 原本每句以 <br /> 硬換行，但第二句長於欄寬，會先自然折行再被硬換行截斷，
-                在畫面上留下 4 個字的孤行。改為兩段自然流動並加 text-balance 讓各行等寬。 */}
+            {/* 段落文字存成完整字串（paragraph1／paragraph2），不再由多個 t() 相接——
+                中文相接無妨，英文會少掉句間空白。斷行交給瀏覽器，text-pretty 只修飾末行。 */}
             <div className="text-body text-[18px] md:text-[22px] leading-[1.8] text-pretty space-y-10">
-              <p>
-                {t("expertise.description1")}
-                {t("expertise.description2")}
-                {t("expertise.description3")}
-              </p>
-              <p>
-                {t("expertise.description4")}
-                {t("expertise.description5")}
-              </p>
+              <p>{t("expertise.paragraph1")}</p>
+              <p>{t("expertise.paragraph2")}</p>
             </div>
           </div>
         </div>

@@ -230,22 +230,15 @@
     "belief": {
       "label": "Our Philosophy",
       "title": "Safety as an Extension of Home",
-      "description1": "We believe safety is not just a technique — it is a responsibility.",
-      "description2": "Every product and every installation is a direct response to the trust placed in us.",
-      "description3": "We are committed to integrity, quality, and service as our foundation,",
-      "description4": "completing every detail with a professional attitude,",
-      "description5": "making 'safety' not just a standard, but the most reassuring anchor in people's lives.",
+      "paragraph1": "We believe safety is not just a technique — it is a responsibility. Every product and every installation is a direct response to the trust placed in us. We are committed to integrity, quality, and service as our foundation, completing every detail with a professional attitude, making 'safety' not just a standard, but the most reassuring anchor in people's lives.",
       "imageAlt": "Our Philosophy"
     },
     "expertise": {
       "label": "Our Expertise",
       "title1": "Focused on Ship Retrofit & Maintenance",
       "title2": "From Compartment Planning to Onboard Work",
-      "description1": "We possess comprehensive ship retrofit and maintenance capabilities —",
-      "description2": "from compartment planning, piping and system retrofits, and insulation cladding to metal fabrication and onboard installation,",
-      "description3": "providing vessel owners with a complete one-stop professional service.",
-      "description4": "With rigorous processes and extensive practical experience,",
-      "description5": "so every retrofit and repair stands up to the demands of the sea.",
+      "paragraph1": "We possess comprehensive ship retrofit and maintenance capabilities — from compartment planning, piping and system retrofits, and insulation cladding to metal fabrication and onboard installation, providing vessel owners with a complete one-stop professional service.",
+      "paragraph2": "Rigorous processes and extensive practical experience mean every retrofit and repair stands up to the demands of the sea.",
       "imageAlt": "TNO team performing a retrofit onboard a vessel"
     },
     "certification": {
