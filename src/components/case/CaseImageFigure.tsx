@@ -89,32 +89,38 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt }
           role="dialog"
           aria-modal="true"
           aria-label={t("gallery")}
-          className="fixed inset-0 z-50 bg-navy/95 backdrop-blur-sm flex flex-col items-center justify-center p-4 md:p-10"
+          className="fixed inset-0 z-50 bg-navy/95 backdrop-blur-sm flex flex-col items-center justify-center px-4 py-14 md:px-10 md:py-16"
           onClick={() => setOpenAt(null)}
         >
+          {/* 圖片區用「容器決定尺寸 + fill + object-contain」，不靠圖片原生尺寸。
+              施工照原生只有 914px 見方，若用 w-auto 會依原生大小顯示（再被 sizes
+              的密度換算縮一次），在全螢幕遮罩裡只剩一小塊。
+              flex-1 min-h-0 讓圖片吃掉說明與按鈕以外的全部高度。
+              上限 960px 是避免把 914px 的原圖放大太多而變模糊。 */}
           <div
-            className="relative max-w-[1100px] w-full flex flex-col items-center"
+            className="relative max-w-[960px] w-full h-full flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={images[openAt].src}
-              alt={captionOf(images[openAt]) ?? alt}
-              width={1200}
-              height={1200}
-              sizes="(max-width: 1100px) 100vw, 1100px"
-              className="max-h-[72vh] w-auto object-contain rounded-[12px]"
-            />
+            <div className="relative w-full flex-1 min-h-0">
+              <Image
+                src={images[openAt].src}
+                alt={captionOf(images[openAt]) ?? alt}
+                fill
+                sizes="(max-width: 960px) 100vw, 960px"
+                className="object-contain rounded-[12px]"
+              />
+            </div>
             {captionOf(images[openAt]) && (
-              <p className="mt-4 text-[15px] md:text-[16px] leading-[1.7] text-white/80 text-center max-w-[720px]">
+              <p className="mt-4 text-[15px] md:text-[16px] leading-[1.7] text-white/80 text-center max-w-[720px] shrink-0">
                 {captionOf(images[openAt])}
               </p>
             )}
-            <p className="mt-2 text-[14px] text-white/50 tabular-nums">
+            <p className="mt-2 text-[14px] text-white/50 tabular-nums shrink-0">
               {openAt + 1} / {images.length}
             </p>
 
             {images.length > 1 && (
-              <div className="mt-5 flex items-center gap-3">
+              <div className="mt-5 flex items-center gap-3 shrink-0">
                 <button type="button" onClick={() => step(-1)} aria-label={t("prevImage")} className={ICON_BUTTON}>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
