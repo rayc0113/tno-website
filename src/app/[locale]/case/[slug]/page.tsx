@@ -87,16 +87,23 @@ export default async function CaseDetailPage({ params }: Props) {
 
   const dateDisplay = caseItem.completedAt.substring(0, 7).replace("-", " / ");
 
-  // 封面照片通常也列在 images 裡（content 檔案照慣例把第一張同時當封面），
-  // 若不濾掉，同一張會在頁首與第一段之後各出現一次，看起來像貼錯。
-  const bodyImages = caseItem.images.filter((img) => img.src !== caseItem.coverImage);
+  // 全頁照片共用同一個陣列與索引：封面、段落間插圖、文末照片牆點開後都在
+  // 同一組裡前後移動，計數也以整組為準（例如 1 / 6）。
+  // 封面通常也列在 images 裡（content 檔案照慣例把第一張同時當封面）；
+  // 若沒列入，就把 coverImage 補成第一張，避免它無法點開放大。
+  const coverIndex = caseItem.images.findIndex((img) => img.src === caseItem.coverImage);
+  const gallery =
+    coverIndex >= 0 ? caseItem.images : [{ src: caseItem.coverImage }, ...caseItem.images];
+  const coverAt = coverIndex >= 0 ? coverIndex : 0;
 
-  // 插圖分配：每個段落之後插一張，段落用完還有剩的收進文末照片牆。
-  // 照片可能只有 1 張（例如登艦梯，濾掉封面後就沒有了），此時 inlineCount 為 0，
-  // 版面自動退化成只有封面，不會出現空的圖位。
+  // 內文用的照片是「除封面以外」的那些，避免同一張在頁首與段落間各出現一次。
+  // 每個段落之後插一張，段落用完還有剩的收進文末照片牆。
+  // 照片只有 1 張時（例如登艦梯）bodyAt 為空，版面自動退化成只有封面，
+  // 不會出現空的圖位。
+  const bodyAt = gallery.map((_, i) => i).filter((i) => i !== coverAt);
   const sectionCount = caseItem.sections?.length ?? 0;
-  const inlineCount = Math.min(sectionCount, bodyImages.length);
-  const restIndexes = bodyImages.map((_, i) => i).filter((i) => i >= inlineCount);
+  const inlineAt = bodyAt.slice(0, Math.min(sectionCount, bodyAt.length));
+  const restAt = bodyAt.slice(inlineAt.length);
 
   return (
     <>
@@ -147,9 +154,17 @@ export default async function CaseDetailPage({ params }: Props) {
             </span>
           </div>
 
-          {/* Cover Image（3:2，減少正方形施工照被裁切的比例） */}
-          <div className="relative w-full aspect-[3/2] rounded-[15px] overflow-hidden bg-surface mt-6 md:mt-8">
-            <Image src={caseItem.coverImage} alt={caseItem.title} fill className="object-cover" priority />
+          {/* Cover Image（3:2，減少正方形施工照被裁切的比例）。
+              與其他照片走同一個元件，所以同樣可以點開放大，規則一致。 */}
+          <div className="mt-6 md:mt-8">
+            <CaseImageFigure
+              images={gallery}
+              locale={locale}
+              indexes={[coverAt]}
+              layout="single"
+              alt={caseItem.title}
+              priority
+            />
           </div>
 
           <p className="text-[16px] text-title leading-[30px] mt-10 text-pretty">{caseItem.description}</p>
@@ -173,11 +188,11 @@ export default async function CaseDetailPage({ params }: Props) {
                   <p key={j} className="text-[18px] text-title leading-[32px] mb-4 text-pretty">{p}</p>
                 ))}
               </div>
-              {i < inlineCount && (
+              {i < inlineAt.length && (
                 <CaseImageFigure
-                  images={bodyImages}
+                  images={gallery}
                   locale={locale}
-                  indexes={[i]}
+                  indexes={[inlineAt[i]]}
                   layout="single"
                   alt={caseItem.title}
                 />
@@ -186,13 +201,13 @@ export default async function CaseDetailPage({ params }: Props) {
           ))}
 
           {/* 文末照片牆：段落沒用完的照片 */}
-          {restIndexes.length > 0 && (
+          {restAt.length > 0 && (
             <div className="mt-12">
               <h2 className="text-[24px] font-semibold text-title leading-[30px] mb-2">{t("gallery")}</h2>
               <CaseImageFigure
-                images={bodyImages}
+                images={gallery}
                 locale={locale}
-                indexes={restIndexes}
+                indexes={restAt}
                 layout="grid"
                 alt={caseItem.title}
               />

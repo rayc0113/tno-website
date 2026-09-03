@@ -10,15 +10,17 @@ interface Props {
   locale: string;
   /** 這個元件負責顯示 images 裡的哪些張（索引） */
   indexes: number[];
-  /** 單張（插在段落之間）或多張網格（文末照片牆） */
+  /** 單張（封面與段落間插圖）或多張堆疊（文末照片牆） */
   layout: "single" | "grid";
   alt: string;
+  /** 封面用：LCP 圖片優先載入 */
+  priority?: boolean;
 }
 
 const ICON_BUTTON =
   "w-11 h-11 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center text-white cursor-pointer hover:bg-white hover:text-title transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
 
-export default function CaseImageFigure({ images, locale, indexes, layout, alt }: Props) {
+export default function CaseImageFigure({ images, locale, indexes, layout, alt, priority = false }: Props) {
   const t = useTranslations("case.detail");
   const [openAt, setOpenAt] = useState<number | null>(null);
 
@@ -66,6 +68,7 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt }
             width={720}
             height={480}
             sizes={sizes}
+            priority={priority}
             className="w-full aspect-[3/2] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           />
         </button>
@@ -93,10 +96,7 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt }
           onClick={() => setOpenAt(null)}
         >
           {/* 放大後維持與外層相同的 3:2 長方形（object-cover），讓點開前後看到的
-              是同一個構圖，只是變大。
-              尺寸由容器決定而非圖片原生尺寸：外層 flex-1 min-h-0 吃掉說明與按鈕
-              以外的全部高度，內層以 aspect-[3/2] + max-w-full + max-h-full 收斂，
-              寬或高哪個先到極限就由它決定，兩種視窗比例都不會溢出。 */}
+              是同一個構圖，只是變大。 */}
           <div
             className="relative max-w-[1200px] w-full flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
