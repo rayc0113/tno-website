@@ -104,12 +104,14 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt, 
             {/* 寬度取「容器寬」與「可用高度換算出的寬度」兩者較小值，
                 aspect-[3/2] 再由寬度推出高度。寬螢幕由高度決定、窄螢幕由寬度
                 決定，兩種情況都維持 3:2 且不溢出。
-                230px 是遮罩上下 padding（96）加說明、計數與按鈕的高度（約 134）；
-                用 px 而非 vh 扣除，是因為這段高度不隨視窗縮放，純 vh 公式在矮視窗
-                會溢出。
+                200px 是遮罩上下 padding（96）加說明與計數的高度（約 70），
+                再留一點餘裕給說明換成兩行的情況；用 px 而非 vh 扣除，是因為
+                這段高度不隨視窗縮放，純 vh 公式在矮視窗會溢出。
+                切換鈕移到圖片左右兩側疊在圖上後，不再佔用垂直空間，
+                所以扣除值從 230 降到 200，圖片跟著變大。
                 不能只寫 aspect + max-w/max-h：fill 讓圖片絕對定位，外框沒有流內
                 內容，寬度會塌成 0。 */}
-            <div className="relative aspect-[3/2] w-[min(100%,calc((100vh-230px)*1.5))]">
+            <div className="relative aspect-[3/2] w-[min(100%,calc((100vh-200px)*1.5))]">
               <Image
                 src={images[openAt].src}
                 alt={captionOf(images[openAt]) ?? alt}
@@ -117,6 +119,32 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt, 
                 sizes="(max-width: 1200px) 100vw, 1200px"
                 className="object-cover rounded-[12px]"
               />
+
+              {/* 切換鈕疊在圖片左右兩側、垂直居中 */}
+              {images.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => step(-1)}
+                    aria-label={t("prevImage")}
+                    className={`${ICON_BUTTON} absolute left-3 md:left-4 top-1/2 -translate-y-1/2`}
+                  >
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => step(1)}
+                    aria-label={t("nextImage")}
+                    className={`${ICON_BUTTON} absolute right-3 md:right-4 top-1/2 -translate-y-1/2`}
+                  >
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                </>
+              )}
             </div>
             {captionOf(images[openAt]) && (
               <p className="mt-4 text-[15px] md:text-[16px] leading-[1.7] text-white/80 text-center max-w-[720px] shrink-0">
@@ -126,21 +154,6 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt, 
             <p className="mt-1.5 text-[14px] text-white/50 tabular-nums shrink-0">
               {openAt + 1} / {images.length}
             </p>
-
-            {images.length > 1 && (
-              <div className="mt-3 flex items-center gap-3 shrink-0">
-                <button type="button" onClick={() => step(-1)} aria-label={t("prevImage")} className={ICON_BUTTON}>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-                <button type="button" onClick={() => step(1)} aria-label={t("nextImage")} className={ICON_BUTTON}>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                    <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-              </div>
-            )}
           </div>
 
           <button
