@@ -89,7 +89,7 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt }
           role="dialog"
           aria-modal="true"
           aria-label={t("gallery")}
-          className="fixed inset-0 z-50 bg-navy/95 backdrop-blur-sm flex flex-col items-center justify-center px-4 py-16 md:px-8 md:py-12"
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex flex-col items-center justify-center px-4 py-16 md:px-8 md:py-12"
           onClick={() => setOpenAt(null)}
         >
           {/* 放大後維持與外層相同的 3:2 長方形（object-cover），讓點開前後看到的
