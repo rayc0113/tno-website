@@ -101,7 +101,7 @@ export default async function ServicePage({ params }: Props) {
                 <h3 className="text-[26px] md:text-[40px] font-bold leading-tight mb-4 md:mb-6 text-title">
                   {service.title}
                 </h3>
-                <p className="text-body text-[18px] md:text-[22px] leading-[1.8] text-balance mb-6 md:mb-8 max-w-[497px]">
+                <p className="text-body text-[18px] md:text-[22px] leading-[1.8] text-pretty mb-6 md:mb-8">
                   {service.description}
                 </p>
                 <div>
