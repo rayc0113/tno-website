@@ -58,7 +58,22 @@ export function getCasesByCategory(category: string): CaseProject[] {
   return getPublishedCases().filter((c) => c.category === category);
 }
 
+/**
+ * 分類篩選列的顯示順序（2026-07-24 會議定的順序，與首頁精選案例一致）。
+ *
+ * 不能沿用 allCases 的陣列順序——那個順序決定「案例本身」的顯示排序
+ * （新案例放最前面），若拿來推分類順序，只要最新的案例換一個分類，
+ * 篩選列的順序就會跟著跳動。
+ *
+ * 新增分類時請同步在此登錄；未登錄的分類會排在最後。
+ */
+const CASE_CATEGORY_ORDER = ["一般船舶工程", "船舶改裝", "船舶維修"];
+
 export function getAllCaseCategories(): string[] {
-  const categories = getPublishedCases().map((c) => c.category);
-  return [...new Set(categories)];
+  const categories = [...new Set(getPublishedCases().map((c) => c.category))];
+  return categories.sort((a, b) => {
+    const ia = CASE_CATEGORY_ORDER.indexOf(a);
+    const ib = CASE_CATEGORY_ORDER.indexOf(b);
+    return (ia === -1 ? Number.MAX_SAFE_INTEGER : ia) - (ib === -1 ? Number.MAX_SAFE_INTEGER : ib);
+  });
 }
