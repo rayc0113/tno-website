@@ -125,14 +125,19 @@ export default async function AboutPage({ params }: Props) {
               {t("expertise.title1")}<br />
               {t("expertise.title2")}
             </h2>
-            <p className="text-body text-[18px] md:text-[22px] leading-[1.8]">
-              {t("expertise.description1")}<br />
-              {t("expertise.description2")}<br />
-              {t("expertise.description3")}<br />
-              <br />
-              {t("expertise.description4")}<br />
-              {t("expertise.description5")}
-            </p>
+            {/* 原本每句以 <br /> 硬換行，但第二句長於欄寬，會先自然折行再被硬換行截斷，
+                在畫面上留下 4 個字的孤行。改為兩段自然流動並加 text-balance 讓各行等寬。 */}
+            <div className="text-body text-[18px] md:text-[22px] leading-[1.8] text-balance space-y-10">
+              <p>
+                {t("expertise.description1")}
+                {t("expertise.description2")}
+                {t("expertise.description3")}
+              </p>
+              <p>
+                {t("expertise.description4")}
+                {t("expertise.description5")}
+              </p>
+            </div>
           </div>
         </div>
       </section>
