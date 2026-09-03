@@ -42,7 +42,11 @@ export interface CaseProject {
   sections?: CaseSection[];
   /** 英文版結構化內文段落（選填，與 sections 對應） */
   sectionsEn?: CaseSection[];
-  /** 結語引言，顯示於內文末尾的 highlight 框（選填，預設使用 shortDescription） */
+  /**
+   * 結語引言。
+   * ⚠️ 2026-09-02 起詳情頁不再渲染結語區塊（珈汶要求統一移除），
+   *    欄位保留是為了不刪掉已寫好的文字，日後若要恢復可直接沿用。
+   */
   closing?: string;
   closingEn?: string;
 }

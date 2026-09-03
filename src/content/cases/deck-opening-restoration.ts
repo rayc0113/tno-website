@@ -11,15 +11,18 @@ import type { CaseProject } from "@/types/case";
  *
  * 文案：內文敘事為我方草稿，寫作標準與產品文案一致——只講工序與工程邏輯，
  *      不寫船名、客戶、設備型號、尺寸板厚與工期數字。
- *      client / location / completedAt 三個欄位在型別上是必填，但實際值
- *      欣展還沒提供，故填「待欣展提供」而非編造。正式案例素材到位後整筆汰換。
+ *      client / location / completedAt 為版面示意用的假資料（依珈汶
+ *      2026-09-02 要求，讓那一列有東西可看），客戶名沿用既有案例的
+ *      「XX ○○股份有限公司」寫法，一眼就看得出是示意而非真實客戶。
+ *      正式案例素材到位後整筆汰換。
  */
 const deckOpeningRestoration: CaseProject = {
   slug: "deck-opening-restoration",
   title: "機艙設備吊換的甲板開孔與復原",
   titleEn: "Deck Opening and Restoration for Engine-Room Equipment Replacement",
-  client: "待欣展提供",
-  clientEn: "To be provided",
+  // 【示意資料】施工單位與地點為版面示意用，待欣展提供正式資訊後替換
+  client: "XX 造船股份有限公司",
+  clientEn: "XX Shipbuilding Co., Ltd.",
   category: "船舶維修",
   shortDescription: "在甲板上開設臨時開口吊換機艙大型設備，並以封板與加強肋復原甲板強度與水密",
   shortDescriptionEn:
@@ -69,8 +72,8 @@ const deckOpeningRestoration: CaseProject = {
   ],
   services: ["甲板放樣與切割", "設備吊運配合", "封板與加強肋製作", "銲接復原", "表面處理"],
   completedAt: "2026-01-01",
-  location: "待欣展提供",
-  locationEn: "To be provided",
+  location: "高雄港",
+  locationEn: "Port of Kaohsiung",
   tags: ["開艙工程", "甲板復原", "設備吊換", "夜間施工"],
   publishedAt: "2026-09-02",
   isPublished: true,

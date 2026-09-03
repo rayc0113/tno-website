@@ -128,15 +128,9 @@ export default async function CaseDetailPage({ params }: Props) {
       <div className="bg-white">
         {/* 內寬 720px：圖片與文字同寬，避免段落間寬窄交替造成伸縮感 */}
         <div className="max-w-[840px] mx-auto px-[60px] max-lg:px-6 pt-10">
-          {/* Title + Date */}
-          <div className="flex flex-col md:flex-row md:justify-between md:items-start md:gap-6">
-            <h1 className="text-[28px] md:text-[40px] font-semibold text-title leading-snug">
-              {caseItem.title}
-            </h1>
-            <span className="text-[14px] text-body whitespace-nowrap md:pt-3 shrink-0 mt-1 md:mt-0">
-              {t("updatedAt")}{dateDisplay}
-            </span>
-          </div>
+          <h1 className="text-[28px] md:text-[40px] font-semibold text-title leading-snug">
+            {caseItem.title}
+          </h1>
 
           {/* Client Meta Row */}
           <div className="flex flex-wrap items-center gap-4 md:gap-6 mt-3 md:mt-4 text-[15px] md:text-[16px] text-title">
@@ -151,6 +145,11 @@ export default async function CaseDetailPage({ params }: Props) {
                 <path fillRule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clipRule="evenodd" />
               </svg>
               {caseItem.location}
+            </span>
+            {/* 更新日期與施工單位、施工地點同列，桌機以 ml-auto 靠最右；
+                行動版空間不足時自然換行到下一行 */}
+            <span className="text-[14px] text-body whitespace-nowrap md:ml-auto">
+              {t("updatedAt")}{dateDisplay}
             </span>
           </div>
 
@@ -214,13 +213,7 @@ export default async function CaseDetailPage({ params }: Props) {
             </div>
           )}
 
-          {/* Closing Box */}
-          <div className="bg-sky-light rounded-[15px] px-6 py-6 mt-10 mb-[80px]">
-            <p className="text-[20px] font-semibold text-title mb-2">{t("closing")}</p>
-            <p className="text-[18px] font-semibold text-title leading-[32px] text-pretty">
-              {caseItem.closing ?? caseItem.shortDescription}
-            </p>
-          </div>
+          <div className="mb-[80px]" />
         </div>
 
         {/* More Cases */}
