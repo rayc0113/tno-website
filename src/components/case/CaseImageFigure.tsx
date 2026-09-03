@@ -89,25 +89,33 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt }
           role="dialog"
           aria-modal="true"
           aria-label={t("gallery")}
-          className="fixed inset-0 z-50 bg-navy/95 backdrop-blur-sm flex flex-col items-center justify-center px-4 py-14 md:px-10 md:py-16"
+          className="fixed inset-0 z-50 bg-navy/95 backdrop-blur-sm flex flex-col items-center justify-center px-4 py-16 md:px-8 md:py-12"
           onClick={() => setOpenAt(null)}
         >
-          {/* 圖片區用「容器決定尺寸 + fill + object-contain」，不靠圖片原生尺寸。
-              施工照原生只有 914px 見方，若用 w-auto 會依原生大小顯示（再被 sizes
-              的密度換算縮一次），在全螢幕遮罩裡只剩一小塊。
-              flex-1 min-h-0 讓圖片吃掉說明與按鈕以外的全部高度。
-              上限 960px 是避免把 914px 的原圖放大太多而變模糊。 */}
+          {/* 放大後維持與外層相同的 3:2 長方形（object-cover），讓點開前後看到的
+              是同一個構圖，只是變大。
+              尺寸由容器決定而非圖片原生尺寸：外層 flex-1 min-h-0 吃掉說明與按鈕
+              以外的全部高度，內層以 aspect-[3/2] + max-w-full + max-h-full 收斂，
+              寬或高哪個先到極限就由它決定，兩種視窗比例都不會溢出。 */}
           <div
-            className="relative max-w-[960px] w-full h-full flex flex-col items-center"
+            className="relative max-w-[1200px] w-full flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full flex-1 min-h-0">
+            {/* 寬度取「容器寬」與「可用高度換算出的寬度」兩者較小值，
+                aspect-[3/2] 再由寬度推出高度。寬螢幕由高度決定、窄螢幕由寬度
+                決定，兩種情況都維持 3:2 且不溢出。
+                230px 是遮罩上下 padding（96）加說明、計數與按鈕的高度（約 134）；
+                用 px 而非 vh 扣除，是因為這段高度不隨視窗縮放，純 vh 公式在矮視窗
+                會溢出。
+                不能只寫 aspect + max-w/max-h：fill 讓圖片絕對定位，外框沒有流內
+                內容，寬度會塌成 0。 */}
+            <div className="relative aspect-[3/2] w-[min(100%,calc((100vh-230px)*1.5))]">
               <Image
                 src={images[openAt].src}
                 alt={captionOf(images[openAt]) ?? alt}
                 fill
-                sizes="(max-width: 960px) 100vw, 960px"
-                className="object-contain rounded-[12px]"
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                className="object-cover rounded-[12px]"
               />
             </div>
             {captionOf(images[openAt]) && (
@@ -115,12 +123,12 @@ export default function CaseImageFigure({ images, locale, indexes, layout, alt }
                 {captionOf(images[openAt])}
               </p>
             )}
-            <p className="mt-2 text-[14px] text-white/50 tabular-nums shrink-0">
+            <p className="mt-1.5 text-[14px] text-white/50 tabular-nums shrink-0">
               {openAt + 1} / {images.length}
             </p>
 
             {images.length > 1 && (
-              <div className="mt-5 flex items-center gap-3 shrink-0">
+              <div className="mt-3 flex items-center gap-3 shrink-0">
                 <button type="button" onClick={() => step(-1)} aria-label={t("prevImage")} className={ICON_BUTTON}>
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                     <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
