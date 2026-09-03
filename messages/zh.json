@@ -204,6 +204,11 @@
       "cases": "實績案例",
       "updatedAt": "更新日期：",
       "closing": "結語",
+      "gallery": "施工紀錄",
+      "enlarge": "點擊放大照片",
+      "prevImage": "上一張照片",
+      "nextImage": "下一張照片",
+      "close": "關閉",
       "moreCases": "更多船舶案例"
     }
   },

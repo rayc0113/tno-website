@@ -34,8 +34,8 @@ const template: CaseProject = {
 
   // 詳情頁輪播圖片
   images: [
-    "/images/cases/your-case-1.jpg",
-    "/images/cases/your-case-2.jpg",
+    { src: "/images/cases/your-case-1.jpg", caption: "這張照片在拍什麼（選填，顯示於圖片下方）" },
+    { src: "/images/cases/your-case-2.jpg", caption: "這張照片在拍什麼（選填，顯示於圖片下方）" },
   ],
 
   // 本案使用的服務項目

@@ -5,6 +5,18 @@ export interface CaseSection {
   trailing?: string[];
 }
 
+/**
+ * 案例照片
+ *
+ * caption 為該張照片的說明，顯示於圖片下方；未填則不顯示說明列。
+ * 說明是「這張照片在拍什麼」，不是文案——內文敘事由 sections 負責。
+ */
+export interface CaseImage {
+  src: string;
+  caption?: string;
+  captionEn?: string;
+}
+
 export interface CaseProject {
   slug: string;
   title: string;
@@ -17,7 +29,8 @@ export interface CaseProject {
   description: string;
   descriptionEn?: string;
   coverImage: string;
-  images: string[];
+  /** 施工照片。詳情頁會依序插在各段之間，剩餘的收在文末照片牆 */
+  images: CaseImage[];
   services: string[];
   completedAt: string;
   location: string;

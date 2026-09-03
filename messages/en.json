@@ -204,6 +204,11 @@
       "cases": "Case Studies",
       "updatedAt": "Updated: ",
       "closing": "Closing Remarks",
+      "gallery": "On-Site Record",
+      "enlarge": "Click to enlarge",
+      "prevImage": "Previous image",
+      "nextImage": "Next image",
+      "close": "Close",
       "moreCases": "More Marine Projects"
     }
   },

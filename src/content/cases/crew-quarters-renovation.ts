@@ -15,7 +15,7 @@ const crewQuartersRenovation: CaseProject = {
     "On long-haul voyages, cabin comfort is often overlooked — yet it directly shapes the crew's rest quality and on-duty performance. On this project, TNO took on the challenge of upgrading the thermal and acoustic insulation of the crew quarters within a tight drydock schedule, so that the people living aboard could finally enjoy a quiet, comfortable place to rest.",
   coverImage: "/images/cases/business/diner1.png",
   images: [
-    "/images/cases/business/diner1.png",
+    { src: "/images/cases/business/diner1.png" },
   ],
   sections: [
     {

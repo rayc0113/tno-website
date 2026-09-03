@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import CaseImageFigure from "@/components/case/CaseImageFigure";
 import { getCaseBySlug, getAllCaseSlugs, getPublishedCases } from "@/content/cases";
 import { localizeCase, localizeCaseSummary } from "@/lib/localize";
 import { Link } from "@/i18n/navigation";
@@ -78,13 +79,24 @@ export default async function CaseDetailPage({ params }: Props) {
     "@type": "Article",
     headline: caseItem.title,
     description: caseItem.description,
-    image: caseItem.images,
+    image: caseItem.images.map((img) => img.src),
     author: { "@type": "Organization", name: brandName },
     publisher: { "@type": "Organization", name: brandName },
     datePublished: caseItem.publishedAt,
   };
 
   const dateDisplay = caseItem.completedAt.substring(0, 7).replace("-", " / ");
+
+  // 封面照片通常也列在 images 裡（content 檔案照慣例把第一張同時當封面），
+  // 若不濾掉，同一張會在頁首與第一段之後各出現一次，看起來像貼錯。
+  const bodyImages = caseItem.images.filter((img) => img.src !== caseItem.coverImage);
+
+  // 插圖分配：每個段落之後插一張，段落用完還有剩的收進文末照片牆。
+  // 照片可能只有 1 張（例如登艦梯，濾掉封面後就沒有了），此時 inlineCount 為 0，
+  // 版面自動退化成只有封面，不會出現空的圖位。
+  const sectionCount = caseItem.sections?.length ?? 0;
+  const inlineCount = Math.min(sectionCount, bodyImages.length);
+  const restIndexes = bodyImages.map((_, i) => i).filter((i) => i >= inlineCount);
 
   return (
     <>
@@ -108,6 +120,9 @@ export default async function CaseDetailPage({ params }: Props) {
 
       <div className="bg-white">
         <div className="max-w-[1080px] mx-auto px-[60px] max-lg:px-6 pt-10">
+          {/* 文字收窄至 720px 居中（18px 下每行約 40 字，落在中文舒適閱讀區間）；
+              圖片維持容器的 960px，自然突出於文字兩側 */}
+          <div className="max-w-[720px] mx-auto">
           {/* Title + Date */}
           <div className="flex flex-col md:flex-row md:justify-between md:items-start md:gap-6">
             <h1 className="text-[28px] md:text-[40px] font-semibold text-title leading-snug">
@@ -134,40 +149,72 @@ export default async function CaseDetailPage({ params }: Props) {
             </span>
           </div>
 
-          {/* Cover Image */}
-          <div className="relative w-full h-[220px] md:h-[470px] rounded-[15px] overflow-hidden mt-6 md:mt-8">
+          </div>
+
+          {/* Cover Image（3:2，減少正方形施工照被裁切的比例） */}
+          <div className="relative w-full aspect-[3/2] rounded-[15px] overflow-hidden bg-surface mt-6 md:mt-8">
             <Image src={caseItem.coverImage} alt={caseItem.title} fill className="object-cover" priority />
           </div>
 
-          {/* Description */}
-          <p className="text-[16px] text-title leading-[30px] mt-10">{caseItem.description}</p>
+          <div className="max-w-[720px] mx-auto">
+            <p className="text-[16px] text-title leading-[30px] mt-10 text-pretty">{caseItem.description}</p>
+          </div>
 
-          {/* Body Sections */}
+          {/* Body Sections：每段之後依序插一張施工照，剩餘的收在文末照片牆 */}
           {caseItem.sections?.map((section, i) => (
-            <div key={i} className="mt-8">
-              <h2 className="text-[24px] font-semibold text-title leading-[30px] mb-4">{section.heading}</h2>
-              {section.paragraphs?.map((p, j) => (
-                <p key={j} className="text-[18px] text-title leading-[32px] mb-4">{p}</p>
-              ))}
-              {section.bullets && section.bullets.length > 0 && (
-                <ul className="list-disc pl-6 mb-4 space-y-1">
-                  {section.bullets.map((b, j) => (
-                    <li key={j} className="text-[18px] text-title leading-[32px]">{b}</li>
-                  ))}
-                </ul>
+            <div key={i}>
+              <div className="max-w-[720px] mx-auto mt-8">
+                <h2 className="text-[24px] font-semibold text-title leading-[30px] mb-4">{section.heading}</h2>
+                {section.paragraphs?.map((p, j) => (
+                  <p key={j} className="text-[18px] text-title leading-[32px] mb-4 text-pretty">{p}</p>
+                ))}
+                {section.bullets && section.bullets.length > 0 && (
+                  <ul className="list-disc pl-6 mb-4 space-y-1">
+                    {section.bullets.map((b, j) => (
+                      <li key={j} className="text-[18px] text-title leading-[32px]">{b}</li>
+                    ))}
+                  </ul>
+                )}
+                {section.trailing?.map((p, j) => (
+                  <p key={j} className="text-[18px] text-title leading-[32px] mb-4 text-pretty">{p}</p>
+                ))}
+              </div>
+              {i < inlineCount && (
+                <CaseImageFigure
+                  images={bodyImages}
+                  locale={locale}
+                  indexes={[i]}
+                  layout="single"
+                  alt={caseItem.title}
+                />
               )}
-              {section.trailing?.map((p, j) => (
-                <p key={j} className="text-[18px] text-title leading-[32px] mb-4">{p}</p>
-              ))}
             </div>
           ))}
 
-          {/* Closing Box */}
-          <div className="bg-[#e4f1f9] rounded-[15px] px-6 py-6 mt-10 mb-[80px]">
-            <p className="text-[20px] font-semibold text-title mb-2">{t("closing")}</p>
-            <p className="text-[18px] font-semibold text-title leading-[32px]">
-              {caseItem.closing ?? caseItem.shortDescription}
-            </p>
+          {/* 文末照片牆：段落沒用完的照片 */}
+          {restIndexes.length > 0 && (
+            <div className="mt-12">
+              <div className="max-w-[720px] mx-auto">
+                <h2 className="text-[24px] font-semibold text-title leading-[30px] mb-2">{t("gallery")}</h2>
+              </div>
+              <CaseImageFigure
+                images={bodyImages}
+                locale={locale}
+                indexes={restIndexes}
+                layout="grid"
+                alt={caseItem.title}
+              />
+            </div>
+          )}
+
+          <div className="max-w-[720px] mx-auto">
+            {/* Closing Box */}
+            <div className="bg-sky-light rounded-[15px] px-6 py-6 mt-10 mb-[80px]">
+              <p className="text-[20px] font-semibold text-title mb-2">{t("closing")}</p>
+              <p className="text-[18px] font-semibold text-title leading-[32px] text-pretty">
+                {caseItem.closing ?? caseItem.shortDescription}
+              </p>
+            </div>
           </div>
         </div>
 

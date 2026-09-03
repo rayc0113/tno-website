@@ -15,9 +15,9 @@ const bulkCarrierInsulation: CaseProject = {
     "On long-haul voyages, cabin comfort is often overlooked — yet it directly shapes the crew's rest quality and on-duty performance. On this project, TNO took on the challenge of upgrading the thermal and acoustic insulation of the crew cabins within a tight drydock schedule, so that the people living aboard could finally enjoy a quiet, comfortable place to rest.",
   coverImage: "/images/cases/basic/ship-ceiling-panel-renovation.webp",
   images: [
-    "/images/cases/basic/ship-ceiling-panel-renovation.webp",
-    "/images/cases/basic/corridor-partition-1.webp",
-    "/images/cases/basic/cabin-space-optimization.webp",
+    { src: "/images/cases/basic/ship-ceiling-panel-renovation.webp" },
+    { src: "/images/cases/basic/corridor-partition-1.webp" },
+    { src: "/images/cases/basic/cabin-space-optimization.webp" },
   ],
   sections: [
     {

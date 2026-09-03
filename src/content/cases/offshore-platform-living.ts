@@ -15,7 +15,7 @@ const offshorePlatformLiving: CaseProject = {
     "On an offshore platform, living quarter comfort is often overlooked — yet it directly shapes the crew's rest quality and on-duty performance. On this project, TNO took on the challenge of upgrading the thermal and acoustic insulation of the living quarters within a tight turnaround schedule, so that the people stationed offshore could finally enjoy a quiet, comfortable place to rest.",
   coverImage: "/images/cases/repair/repair-demo.png",
   images: [
-    "/images/cases/repair/repair-demo.png",
+    { src: "/images/cases/repair/repair-demo.png" },
   ],
   sections: [
     {
