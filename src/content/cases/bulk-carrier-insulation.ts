@@ -105,7 +105,12 @@ const bulkCarrierInsulation: CaseProject = {
   locationEn: "Port of Kaohsiung",
   tags: ["散裝船", "船艙內裝", "隔熱工程", "SOLAS認證"],
   publishedAt: "2024-04-01",
-  isPublished: true,
+  // ⚠️ 2026-09-03 暫時下架：內容為早期架構階段的暫時性假資料，含編造的量化
+  //    數據（艙室降溫 2–3°C、噪音降 10 dB、工期縮短 15%）與虛構客戶
+  //    「XX 航運股份有限公司」。網站連結要提供給欣展窗口確認產品描述，
+  //    不能讓他看到這種內容。檔案保留不刪，欣展提供正式案例後整批汰換；
+  //    若需暫時顯示改回 true 即可。
+  isPublished: false,
 };
 
 export default bulkCarrierInsulation;

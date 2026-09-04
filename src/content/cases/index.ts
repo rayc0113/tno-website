@@ -17,8 +17,9 @@ import offshorePlatformLiving from "./offshore-platform-living";
 // ✅ 在此新增案例（新案例建議放在陣列最前面）
 //
 // 分類（2026-07-24 會議決議）：一般船舶工程 / 船舶改裝 / 船舶維修
-// ⚠️ 下列四筆為暫時性內容，待欣展提供 3–5 個代表案例後整批汰換
-//    （素材見 materials/04-案例）
+// ⚠️ 下列四筆為暫時性假資料，已於 2026-09-03 設為 isPublished: false 下架
+//    （含編造的量化數據與虛構客戶名，不能讓欣展窗口看到）。檔案保留不刪，
+//    待欣展提供 3–5 個代表案例後整批汰換（素材見 materials/04-案例）。
 export const allCases: CaseProject[] = [
   // 【版面範例】2026-09-02 為檢視多圖編排而建，非欣展提供的正式案例
   deckOpeningRestoration,

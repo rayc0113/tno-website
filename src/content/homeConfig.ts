@@ -79,7 +79,11 @@ const HOME_FEATURED_PRODUCTS: HomeFeatured[] = [
 export const HOME_CASE_LINKABLE_CATEGORIES = ["船舶維修"];
 
 // homeImage 必須填 /images/home/ 路徑，勿改為 /images/cases/
-// ⚠️ 目前三筆為暫時性案例，待欣展提供代表案例後整批汰換（見 materials/04-案例）
+// ⚠️ 這三筆對應的案例已於 2026-09-03 下架（isPublished: false），但首頁卡片
+//    只用到「分類名稱 + 分類說明 + homeImage」，取用時走的是 allCases.find
+//    （不篩發布狀態），所以三張卡照樣顯示、版面維持三塊。卡片連出去的目標是
+//    /case?category=<分類> 的篩選結果，不是那一筆案例本身，因此也不會連到 404。
+//    ⚠️ 但這代表刪除那三個 content 檔案會讓首頁卡片消失——要刪之前先改這裡。
 const HOME_FEATURED_CASES: HomeFeatured[] = [
   { slug: "bulk-carrier-insulation",  homeImage: "/images/home/case_bg1.webp" },
   { slug: "crew-quarters-renovation", homeImage: "/images/home/case_bg2.webp" },
