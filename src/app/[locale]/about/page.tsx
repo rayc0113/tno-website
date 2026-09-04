@@ -77,25 +77,18 @@ export default async function AboutPage({ params }: Props) {
             {t("team.description4")}
           </p>
 
-          <div className="flex flex-col md:flex-row md:h-[512px] gap-2 md:gap-1">
-            <div className="relative h-[260px] md:h-auto md:w-[594px] flex-shrink-0 md:order-2 rounded-[20px] md:rounded-l-none md:rounded-r-[24px] overflow-hidden">
-              <Image
-                src="/images/about/about-teams.webp"
-                alt={t("team.teamAlt")}
-                fill
-                sizes="(max-width: 768px) 100vw, 594px"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative h-[260px] md:h-auto flex-1 md:order-1 rounded-[20px] md:rounded-r-none md:rounded-l-[24px] overflow-hidden">
-              <Image
-                src="/images/about/about-company.webp"
-                alt={t("team.companyAlt")}
-                fill
-                sizes="(max-width: 768px) 100vw, calc(100vw - 714px)"
-                className="object-cover"
-              />
-            </div>
+          {/* 廠房外觀與團隊合照合成一張（2560×1024，2.5:1）。
+              原本是兩張並排、右邊固定 594px、左邊 flex-1 吃剩餘寬度，
+              在 768–1100px 之間左圖會被壓成 50–300px 的細長條；
+              併成單張後沒有兩欄要分寬度，該問題從根本消失。 */}
+          <div className="relative w-full aspect-[5/2] rounded-[20px] md:rounded-[24px] overflow-hidden bg-surface">
+            <Image
+              src="/images/about/about-company-team.webp"
+              alt={t("team.imageAlt")}
+              fill
+              sizes="(max-width: 1400px) 100vw, 1280px"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
