@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import ArrowIcon from "@/components/ui/ArrowIcon";
 import { getCategorySlug } from "@/lib/categories";
+import { HOME_CASE_LINKABLE_CATEGORIES } from "@/content/homeConfig";
 import type { CaseSummary } from "@/types/case";
 
 interface Props {
@@ -22,37 +23,56 @@ export default async function HomeCases({ cases, locale }: Props) {
           {t("description")}
         </p>
 
-        {/* 3 stacked full-width cards */}
+        {/* 3 stacked full-width cards。
+            尚無可公開內容的分類維持顯示但不連出去（見 HOME_CASE_LINKABLE_CATEGORIES），
+            此時不套用 hover 放大，也不顯示「了解更多」按鈕——那顆按鈕等於承諾點得進去。 */}
         <div className="flex flex-col gap-4 md:gap-6">
-          {cases.map((caseItem) => (
-            <Link
-              key={caseItem.slug}
-              href={`/case?category=${getCategorySlug(caseItem.category)}`}
-              className="group relative h-[240px] md:h-[400px] overflow-hidden rounded-[15px] block bg-black"
-            >
-              <Image
-                src={caseItem.coverImage}
-                alt={caseItem.title}
-                fill
-                className="object-cover opacity-70 transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-x-0 bottom-0 h-[200px] bg-gradient-to-t from-black/80 to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 md:bottom-[50px] md:left-[50px] md:right-[50px] flex items-end justify-between gap-4 md:gap-8">
-                <div>
-                  <h3 className="text-xl md:text-[32px] font-semibold text-white mb-1">
-                    {tCategories(caseItem.category)}
-                  </h3>
-                  <p className="text-white/80 text-base md:text-[20px] line-clamp-1">
-                    {t(`categoryDescriptions.${caseItem.category}`)}
-                  </p>
+          {cases.map((caseItem) => {
+            const linkable = HOME_CASE_LINKABLE_CATEGORIES.includes(caseItem.category);
+            const inner = (
+              <>
+                <Image
+                  src={caseItem.coverImage}
+                  alt={caseItem.title}
+                  fill
+                  className={`object-cover opacity-70 transition-transform duration-500 ${
+                    linkable ? "group-hover:scale-105" : ""
+                  }`}
+                />
+                <div className="absolute inset-x-0 bottom-0 h-[200px] bg-gradient-to-t from-black/80 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 md:bottom-[50px] md:left-[50px] md:right-[50px] flex items-end justify-between gap-4 md:gap-8">
+                  <div>
+                    <h3 className="text-xl md:text-[32px] font-semibold text-white mb-1">
+                      {tCategories(caseItem.category)}
+                    </h3>
+                    <p className="text-white/80 text-base md:text-[20px] line-clamp-1">
+                      {t(`categoryDescriptions.${caseItem.category}`)}
+                    </p>
+                  </div>
+                  {linkable && (
+                    <div className="hidden md:flex flex-shrink-0 bg-white/20 items-center gap-3.5 px-[23px] py-[15px] rounded-full text-white text-[16px] font-semibold group-hover:bg-white/30 transition-colors duration-200">
+                      {t("learnMore")}
+                      <ArrowIcon />
+                    </div>
+                  )}
                 </div>
-                <div className="hidden md:flex flex-shrink-0 bg-white/20 items-center gap-3.5 px-[23px] py-[15px] rounded-full text-white text-[16px] font-semibold group-hover:bg-white/30 transition-colors duration-200">
-                  {t("learnMore")}
-                  <ArrowIcon />
-                </div>
+              </>
+            );
+            const className = "group relative h-[240px] md:h-[400px] overflow-hidden rounded-[15px] block bg-black";
+            return linkable ? (
+              <Link
+                key={caseItem.slug}
+                href={`/case?category=${getCategorySlug(caseItem.category)}`}
+                className={className}
+              >
+                {inner}
+              </Link>
+            ) : (
+              <div key={caseItem.slug} className={className}>
+                {inner}
               </div>
-            </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

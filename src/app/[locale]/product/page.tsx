@@ -18,7 +18,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: t("description"),
     alternates: {
       canonical: `/${locale}/product`,
-      languages: { "zh-TW": "/zh/product", "en": "/en/product" },
+      languages: { "zh-TW": "/zh/product", "en": "/en/product", "x-default": "/zh/product" },
+    },
+    // 頁面層級的分享預覽：沒有這段時，貼到 LINE／FB 會全部顯示 root layout
+    // 的首頁圖與首頁標語，六個頁面看起來一模一樣
+    openGraph: {
+      type: "website",
+      title: t("title"),
+      description: t("description"),
+      url: `/${locale}/product`,
+      images: [{ url: "/images/products/hero.webp", width: 1200, height: 630, alt: t("title") }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/images/products/hero.webp"],
     },
   };
 }

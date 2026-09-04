@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         "zh-TW": `/zh/product/${slug}`,
         "en": `/en/product/${slug}`,
+        "x-default": `/zh/product/${slug}`,
       },
     },
     openGraph: {

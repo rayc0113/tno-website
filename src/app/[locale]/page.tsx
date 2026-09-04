@@ -19,16 +19,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   setRequestLocale(locale);
   const t = await getTranslations("home.hero");
   const isEn = locale === "en";
+  const title = isEn
+    ? "TNO | Complete Marine Interior Solution"
+    : "TNO 欣展｜船舶裝修全方位領導品牌";
   return {
-    title: {
-      absolute: isEn
-        ? "TNO | Complete Marine Interior Solution"
-        : "TNO 欣展｜船舶裝修全方位領導品牌",
-    },
+    title: { absolute: title },
     description: t("description"),
     alternates: {
       canonical: `/${locale}`,
-      languages: { "zh-TW": "/zh", "en": "/en" },
+      languages: { "zh-TW": "/zh", "en": "/en", "x-default": "/zh" },
+    },
+    openGraph: {
+      type: "website",
+      title,
+      description: t("description"),
+      url: `/${locale}`,
+      images: [{ url: "/images/home/hero.webp", width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: t("description"),
+      images: ["/images/home/hero.webp"],
     },
   };
 }

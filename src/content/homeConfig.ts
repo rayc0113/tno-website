@@ -70,6 +70,14 @@ const HOME_FEATURED_PRODUCTS: HomeFeatured[] = [
 ];
 
 // ─── 精選案例 ────────────────────────────────────────────────────
+//
+// 首頁三張案例分類卡目前只有「船舶維修」可以點進去——那一類底下有 2026-09-02
+// 建的版面範例案例，內容可以給客戶看；另外兩類底下都還是暫時性假案例
+// （含編造的量化數據），卡片維持顯示以保留三塊的版面，但不連出去。
+//
+// 正式案例到位後把這個陣列清空（或列出全部分類），三張卡就會全部恢復可點。
+export const HOME_CASE_LINKABLE_CATEGORIES = ["船舶維修"];
+
 // homeImage 必須填 /images/home/ 路徑，勿改為 /images/cases/
 // ⚠️ 目前三筆為暫時性案例，待欣展提供代表案例後整批汰換（見 materials/04-案例）
 const HOME_FEATURED_CASES: HomeFeatured[] = [
