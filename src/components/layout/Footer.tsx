@@ -43,14 +43,16 @@ export default async function Footer({ locale }: { locale?: string } = {}) {
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" className="flex-shrink-0 opacity-50">
                   <path d="M13 10.5c0 .28-.06.55-.19.8l-.6 1.2c-.16.31-.4.56-.7.72A2 2 0 0 1 10.5 13C5.25 13 1 8.75 1 3.5c0-.36.08-.72.22-1.01.15-.31.4-.57.7-.73l1.2-.6c.25-.12.52-.16.8-.12.27.04.52.17.7.37l2 2.5c.2.24.28.55.22.85l-.5 2 2 2 2-.5c.3-.07.6.01.85.22l2.5 2c.2.18.33.43.37.7.04.27 0 .54-.12.79z" stroke="currentColor" strokeWidth="1.1"/>
                 </svg>
-                <a href="tel:07-3717521" className="hover:text-white transition-colors">07-3717521</a>
+                {/* Tel: / Fax: 用英文縮寫不進 i18n——兩個號碼都是 07 開頭八碼、icon 又小，
+                    沒有文字標示容易誤打傳真號碼；這兩個縮寫各語言通用，不需翻譯 */}
+                <span>Tel: <a href="tel:07-3717521" className="hover:text-white transition-colors">07-3717521</a></span>
               </div>
               <div className="flex items-center gap-2">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" className="flex-shrink-0 opacity-50">
                   <rect x="1" y="2" width="13" height="10" rx="1" stroke="currentColor" strokeWidth="1.2"/>
                   <path d="M4 5h2M4 8h2M9 5h2M9 8h2M6 11v2M9 11v2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
                 </svg>
-                <span>07-3711073</span>
+                <span>Fax: 07-3711073</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" className="flex-shrink-0 opacity-50">
