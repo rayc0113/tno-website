@@ -24,10 +24,10 @@ const ceramicWool: Product = {
   shortDescriptionEn: "Alumino-silicate refractory fiber with a far higher service temperature than mineral or glass wool",
   description:
     "陶瓷棉（陶瓷纖維）以氧化鋁與二氧化矽為主要成分，經高溫熔融後成纖製成，屬耐火纖維材料，適用溫度遠高於玻璃棉與岩（礦）棉。其熱容量低、升降溫反應快，並具良好的抗熱震特性，常用於排煙管、鍋爐與燃燒設備等高溫部位的包覆與襯裡。\n\n" +
-    "實際可用溫度、密度與供應型態（毯狀、板狀、繩狀）須依部位條件與供應規格選定。欣展可依專案需求提供對應規格與相關證明文件，歡迎來電洽詢。",
+    "實際可用溫度、密度與供應型態（毯狀、板狀、繩狀）須依部位條件與供應規格選定。",
   descriptionEn:
     "Ceramic fiber is composed primarily of alumina and silica, melted at high temperature and formed into fibers. As a refractory fiber, its service temperature is far higher than that of glass wool or rock wool. It has low heat storage, responds quickly to temperature change, and offers good thermal-shock resistance — properties that suit the lagging and lining of high-temperature areas such as exhaust uptakes, boilers, and combustion equipment.\n\n" +
-    "Service temperature, density, and supply form (blanket, board, or rope) must be selected according to the conditions at each location and the available specifications. TNO can supply matching specifications and supporting documentation on a project basis — please contact us.",
+    "Service temperature, density, and supply form (blanket, board, or rope) must be selected according to the conditions at each location and the available specifications.",
   images: [
     "/images/products/thermal-insulation/ceramic-wool-cover.webp",
     "/images/products/thermal-insulation/ceramic-wool-1.webp",

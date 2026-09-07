@@ -5,7 +5,8 @@ import type { Product } from "@/types/product";
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
- * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 選定原則，全段不出現公司名（2026-09-07 依珈汶要求移除原本的「欣展可依…
+ * 歡迎來電洽詢」收句——每支都掛同一句像罐頭文字），只針對功能與工序描述。
  * 刻意不寫塔架高度、管徑、安裝座數量與燈具型號。
  * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
@@ -24,10 +25,10 @@ const lighthouseBase: Product = {
     "Fabrication and installation of light towers and their bases, including access ladder and safety cage",
   description:
     "燈具與號誌設備須架高至不受遮蔽的位置，塔架因此要承受設備自重、風壓與航行振動，並提供維護人員的登高路徑。柱身的斜撐配置與甲板固定方式決定整體穩定性，爬梯則須配置安全護籠。\n\n" +
-    "施工範圍涵蓋塔架柱身與斜撐製作、設備安裝座配置、爬梯與安全護籠組立，以及甲板固定與防蝕處理。高度、安裝座數量與固定方式須依設備規格與甲板結構設計；欣展可依專案條件提出製作與安裝方案，歡迎來電洽詢。",
+    "施工範圍涵蓋塔架柱身與斜撐製作、設備安裝座配置、爬梯與安全護籠組立，以及甲板固定與防蝕處理。高度、安裝座數量與固定方式須依設備規格與甲板結構設計。",
   descriptionEn:
     "Lights and signalling equipment have to sit high enough to be seen without obstruction, so the tower carries the weight of that equipment while standing up to wind load and vibration underway, and at the same time provides a way up for maintenance. The arrangement of the bracing and the method of fixing to the deck govern overall stability, and the access ladder requires a safety cage.\n\n" +
-    "The scope of work covers fabrication of the tower column and bracing, provision of equipment mounting brackets, assembly of the access ladder and safety cage, and fixing to the deck with corrosion protection. Height, the number of mounting positions, and the method of fixing are designed around the equipment specification and the deck structure. TNO can propose a fabrication and installation approach for your project — please contact us.",
+    "The scope of work covers fabrication of the tower column and bracing, provision of equipment mounting brackets, assembly of the access ladder and safety cage, and fixing to the deck with corrosion protection. Height, the number of mounting positions, and the method of fixing are designed around the equipment specification and the deck structure.",
   coverImage: "/images/products/custom-engineering/lighthouse-base-cover.webp",
   images: [
     "/images/products/custom-engineering/lighthouse-base-cover.webp",

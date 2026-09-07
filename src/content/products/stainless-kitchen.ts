@@ -24,10 +24,10 @@ const stainlessKitchen: Product = {
   shortDescriptionEn: "Marine galley equipment in stainless steel, built to each vessel's dimensions and layout",
   description:
     "船舶廚房長期處於高濕、含鹽的環境，設備需同時具備耐蝕性與結構強度。欣展提供船用不鏽鋼廚具的設計與製作，涵蓋料理台、水槽、層架與各式儲物設備，並依實際艙間尺寸與作業動線規劃客製。\n\n" +
-    "不鏽鋼材質等級與表面處理方式依使用部位與客戶需求選定；欣展設有自有金屬加工設備，從設計、下料到焊接組裝一貫作業，可配合現場條件調整尺寸與規格，細節歡迎於洽詢時一併討論。",
+    "不鏽鋼材質等級與表面處理方式依使用部位與客戶需求選定。設計、下料到焊接組裝於自有金屬加工設備一貫作業，尺寸與規格可配合現場條件調整。",
   descriptionEn:
     "A ship's galley lives in a humid, salt-laden environment, so its equipment has to combine corrosion resistance with structural strength. TNO designs and fabricates marine stainless steel galley equipment — prep counters, sinks, shelving, and storage units — laid out around the actual dimensions and workflow of each compartment.\n\n" +
-    "Stainless grade and surface finish are selected according to where the equipment is used and what the client requires. With our own metalworking facility, design, cutting, welding, and assembly are handled in-house, so dimensions and specifications can be adapted to site conditions — details are welcome to be discussed at enquiry stage.",
+    "Stainless grade and surface finish are selected according to where the equipment is used and what the client requires. Design, cutting, welding, and assembly are handled in-house on TNO's own metalworking equipment, so dimensions and specifications can be adapted to site conditions.",
   images: [
     "/images/products/stainless-kitchen/stainless-kitchen-cover.webp",
   ],

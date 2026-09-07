@@ -5,7 +5,8 @@ import type { Product } from "@/types/product";
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
- * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 選定原則，全段不出現公司名（2026-09-07 依珈汶要求移除原本的「欣展可依…
+ * 歡迎來電洽詢」收句——每支都掛同一句像罐頭文字），只針對功能與工序描述。
  *
  * ⚠️ 這是軍方案子，文案刻意停在「艙內儲放架系統」的工程邏輯層級：
  *    不寫存放物、艦名、單位、艙室位置、層數格距與尺寸數量。
@@ -25,10 +26,10 @@ const magazineConversion: Product = {
   shortDescriptionEn: "Design, fabrication, and on-site assembly of onboard storage rack systems",
   description:
     "艦艇於航行中持續承受搖晃與振動，艙內儲放架除容納物件外，須確保物件不位移、不碰撞，並維持人員取放的安全空間。架體剛性、固定方式與緩衝設計為主要設計重點。\n\n" +
-    "架體採金屬擠型骨架螺栓組立，適用於既有艙室的有限施工空間；各格位設弧形托座貼合物件外形，並以可調夾具與緩衝元件抑制位移。層數、格距與固定方式須依艙室尺寸與使用需求設計；欣展可依現場條件提出配置方案，歡迎來電洽詢。",
+    "架體採金屬擠型骨架螺栓組立，適用於既有艙室的有限施工空間；各格位設弧形托座貼合物件外形，並以可調夾具與緩衝元件抑制位移。層數、格距與固定方式須依艙室尺寸與使用需求設計。",
   descriptionEn:
     "A vessel underway is subject to continuous roll and vibration, so onboard storage racks must do more than hold their contents: items have to stay put, avoid contact with one another, and remain safely accessible to the crew. Frame rigidity, the method of restraint, and cushioning are therefore the primary design considerations.\n\n" +
-    "Racks are built from bolted metal extrusion frames, which suits the limited working space of an existing compartment. Each position carries a contoured saddle matched to the shape of its contents, with adjustable clamps and cushioning elements to restrain movement. The number of tiers, spacing, and restraint method are designed around compartment dimensions and how the rack will be used. TNO can propose a layout for your compartment — please contact us.",
+    "Racks are built from bolted metal extrusion frames, which suits the limited working space of an existing compartment. Each position carries a contoured saddle matched to the shape of its contents, with adjustable clamps and cushioning elements to restrain movement. The number of tiers, spacing, and restraint method are designed around compartment dimensions and how the rack will be used.",
   coverImage: "/images/products/naval-outfitting/magazine-conversion-cover.webp",
   images: [
     "/images/products/naval-outfitting/magazine-conversion-cover.webp",

@@ -24,10 +24,10 @@ const glassWool: Product = {
   shortDescriptionEn: "Lightweight inorganic glass-fiber insulation for accommodation, corridors, and pipework",
   description:
     "玻璃棉由玻璃原料經高溫熔融後成纖製成，屬無機纖維隔熱材料，重量輕、施工性佳，是船舶住艙區域常用的隔熱與吸音材料。相較於岩（礦）棉，玻璃棉密度較低、對船體荷重的負擔小，適合壁板、天花與風管等大面積部位。\n\n" +
-    "船舶用隔熱材依 SOLAS 公約與 IMO FTP Code 對不燃性與防火試驗有明確要求，實際採用的密度、厚度與適用等級須依安裝部位與船級社要求選定。欣展可依專案需求提供對應規格與相關證明文件。",
+    "船舶用隔熱材依 SOLAS 公約與 IMO FTP Code 對不燃性與防火試驗有明確要求，實際採用的密度、厚度與適用等級須依安裝部位與船級社要求選定。",
   descriptionEn:
     "Glass wool is made by melting glass raw materials at high temperature and forming them into fibers. This inorganic fiber insulation is light and easy to install, making it a common choice for thermal and acoustic insulation in accommodation areas. Compared with rock wool it has a lower density and adds less load to the hull, which suits large areas such as wall panels, ceilings, and ventilation ducting.\n\n" +
-    "Marine insulation is subject to clear non-combustibility and fire-test requirements under the SOLAS Convention and the IMO FTP Code. The density, thickness, and rating actually used must be selected according to the installation location and the requirements of the classification society. TNO can supply matching specifications and supporting documentation on a project basis.",
+    "Marine insulation is subject to clear non-combustibility and fire-test requirements under the SOLAS Convention and the IMO FTP Code. The density, thickness, and rating actually used must be selected according to the installation location and the requirements of the classification society.",
   images: [
     "/images/products/thermal-insulation/glass-wool-cover.webp",
     "/images/products/thermal-insulation/glass-wool-1.webp",

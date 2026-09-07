@@ -24,10 +24,10 @@ const timber: Product = {
   shortDescriptionEn: "Timber for vessel decking and cabin interior work",
   description:
     "欣展提供船舶甲板鋪設與艙室內裝所需的木質材料。甲板用材傳統上以柚木等硬木為主，取其油脂含量高、耐候且濕潤時仍具防滑特性；艙室內裝則依設計需求選用不同木種與板材形式。\n\n" +
-    "木材屬有機材料，用於船舶時須配合該部位的防火與表面材料規範選用與施作。實際樹種、等級、尺寸與處理方式依專案需求提供，歡迎來電洽詢。",
+    "木材屬有機材料，用於船舶時須配合該部位的防火與表面材料規範選用與施作。實際樹種、等級、尺寸與處理方式依專案需求提供。",
   descriptionEn:
     "TNO supplies the timber used for vessel decking and cabin interior work. Deck timber has traditionally been hardwood such as teak, chosen for its high natural oil content, weather resistance, and grip even when wet; interior work draws on different species and board formats according to the design.\n\n" +
-    "Timber is an organic material, so its use aboard must follow the fire and surface-material requirements applying to each location. Species, grade, dimensions, and treatment are supplied to suit each project — please contact us to discuss.",
+    "Timber is an organic material, so its use aboard must follow the fire and surface-material requirements applying to each location. Species, grade, dimensions, and treatment are supplied to suit each project.",
   images: [
     "/images/products/timber/timber-cover.webp",
   ],

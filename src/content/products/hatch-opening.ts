@@ -5,7 +5,8 @@ import type { Product } from "@/types/product";
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
- * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 選定原則，全段不出現公司名（2026-09-07 依珈汶要求移除原本的「欣展可依…
+ * 歡迎來電洽詢」收句——每支都掛同一句像罐頭文字），只針對功能與工序描述。
  * 刻意不寫開口尺寸、板厚、設備型號與船名。
  * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
@@ -22,10 +23,10 @@ const hatchOpening: Product = {
     "Cutting and restoring temporary deck openings so large equipment can be lifted in and out",
   description:
     "機艙內的大型設備更換時，既有通道往往不足以讓設備進出，需在甲板上開設臨時開口。開口會切斷甲板的連續性，因此復原時的封板厚度、加強肋配置與銲接品質，必須讓甲板恢復原有的強度與水密。\n\n" +
-    "施工範圍涵蓋開口位置的放樣與切割、設備吊運進出的配合、封板與加強肋製作，以及銲接復原與表面處理。開口尺寸與補強方式須依設備外型與甲板結構設計；欣展可依現場條件提出施工方案，歡迎來電洽詢。",
+    "施工範圍涵蓋開口位置的放樣與切割、設備吊運進出的配合、封板與加強肋製作，以及銲接復原與表面處理。開口尺寸與補強方式須依設備外型與甲板結構設計。",
   descriptionEn:
     "When large equipment in the engine room has to be replaced, the existing accesses are often too small for it to pass through, so a temporary opening is cut in the deck. Cutting the opening interrupts the continuity of the deck, so on closing up, the thickness of the insert plate, the arrangement of stiffeners, and the quality of the welding all have to bring the deck back to its original strength and watertightness.\n\n" +
-    "The scope of work covers marking out and cutting the opening, supporting the lifting operation as equipment passes through, fabrication of the insert plate and stiffeners, and welding up and surface treatment afterwards. Opening size and the method of reinforcement are designed around the equipment's dimensions and the deck structure. TNO can propose a method statement for your project — please contact us.",
+    "The scope of work covers marking out and cutting the opening, supporting the lifting operation as equipment passes through, fabrication of the insert plate and stiffeners, and welding up and surface treatment afterwards. Opening size and the method of reinforcement are designed around the equipment's dimensions and the deck structure.",
   coverImage: "/images/products/custom-engineering/hatch-opening-cover.webp",
   images: [
     "/images/products/custom-engineering/hatch-opening-cover.webp",

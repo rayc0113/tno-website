@@ -5,7 +5,8 @@ import type { Product } from "@/types/product";
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
- * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 選定原則，全段不出現公司名（2026-09-07 依珈汶要求移除原本的「欣展可依…
+ * 歡迎來電洽詢」收句——每支都掛同一句像罐頭文字），只針對功能與工序描述。
  * 刻意不寫管徑、保溫材厚度、材質牌號、艦名、單位與完工年份。
  * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
@@ -24,10 +25,10 @@ const exhaustPipeInsulation: Product = {
     "Replacement and retrofit of naval exhaust pipe sections, including insulation and metal cladding",
   description:
     "排煙管為機艙高溫廢氣的排放通道，管壁溫度高且鄰近人員活動範圍與電纜設備，須以保溫材包覆並外覆金屬護皮，以降低表面溫度、防止燙傷並保護周邊設施。管段長期承受高溫與腐蝕，達使用年限後須進行更換。\n\n" +
-    "施工範圍涵蓋既有管段拆除、新管段製作、現場銲接組立，以及保溫材包覆與護皮收邊。保溫材種類、厚度與護皮材質須依管徑、表面溫度與艦上規範選定；欣展可依專案條件提出施工方案，歡迎來電洽詢。",
+    "施工範圍涵蓋既有管段拆除、新管段製作、現場銲接組立，以及保溫材包覆與護皮收邊。保溫材種類、厚度與護皮材質須依管徑、表面溫度與艦上規範選定。",
   descriptionEn:
     "Exhaust pipes carry high-temperature gases out of the engine room. Their surfaces run hot and sit close to crew working areas, cabling, and equipment, so they are wrapped with insulation and finished with metal cladding to bring the surface temperature down, prevent burns, and protect nearby installations. The pipe sections themselves are subject to prolonged heat and corrosion and require replacement at the end of their service life.\n\n" +
-    "The scope of work covers removal of existing sections, fabrication of replacements, on-site welding and assembly, and the insulation and cladding that follow. Insulation type, thickness, and cladding material are selected according to pipe diameter, surface temperature, and the applicable shipboard requirements. TNO can propose a method statement for your project — please contact us.",
+    "The scope of work covers removal of existing sections, fabrication of replacements, on-site welding and assembly, and the insulation and cladding that follow. Insulation type, thickness, and cladding material are selected according to pipe diameter, surface temperature, and the applicable shipboard requirements.",
   coverImage: "/images/products/naval-outfitting/exhaust-pipe-insulation-cover.webp",
   images: [
     "/images/products/naval-outfitting/exhaust-pipe-insulation-cover.webp",

@@ -5,7 +5,8 @@ import type { Product } from "@/types/product";
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
- * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 選定原則，全段不出現公司名（2026-09-07 依珈汶要求移除原本的「欣展可依…
+ * 歡迎來電洽詢」收句——每支都掛同一句像罐頭文字），只針對功能與工序描述。
  * 刻意不寫管徑、風量、板厚與開口尺寸。
  * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
@@ -26,10 +27,10 @@ const ductLouverPanel: Product = {
     "Fabrication and installation of marine ventilation ducting, vent openings, and bulkhead blanking plates",
   description:
     "艙內通風靠風管將空氣送至各艙區，管路須穿越艙壁與甲板，並在舷外設通風口。穿越處的開口在管路變更或設備移除後，須以鋼板封板復原，以維持艙壁的強度與水密。管路本身則須有足夠的支撐吊架，避免航行振動造成鬆動。\n\n" +
-    "施工範圍涵蓋風管與風箱製作、通風口與擋雨彎頭安裝、管路支撐吊架設置，以及艙壁開口的封板銲接與表面處理。管徑、風量與開口位置須依艙區配置與既有結構設計；欣展可依現場條件提出施工方案，歡迎來電洽詢。",
+    "施工範圍涵蓋風管與風箱製作、通風口與擋雨彎頭安裝、管路支撐吊架設置，以及艙壁開口的封板銲接與表面處理。管徑、風量與開口位置須依艙區配置與既有結構設計。",
   descriptionEn:
     "Ventilation air reaches each compartment through ducting that has to pass through bulkheads and decks and terminate in vent openings on the ship's side. Where a run is altered or equipment removed, the resulting opening is closed with a blanking plate so the bulkhead recovers its strength and watertightness. The ducting itself needs adequate supports and hangers so that vibration underway does not work it loose.\n\n" +
-    "The scope of work covers fabrication of ducting and plenum boxes, installation of vent openings and weather elbows, provision of pipe supports and hangers, and the welding and surface treatment of bulkhead blanking plates. Duct sizes, air volumes, and opening positions are designed around the compartment layout and the existing structure. TNO can propose a method statement for your project — please contact us.",
+    "The scope of work covers fabrication of ducting and plenum boxes, installation of vent openings and weather elbows, provision of pipe supports and hangers, and the welding and surface treatment of bulkhead blanking plates. Duct sizes, air volumes, and opening positions are designed around the compartment layout and the existing structure.",
   coverImage: "/images/products/custom-engineering/duct-louver-panel-cover.webp",
   images: [
     "/images/products/custom-engineering/duct-louver-panel-cover.webp",

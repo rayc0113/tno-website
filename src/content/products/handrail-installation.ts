@@ -5,7 +5,8 @@ import type { Product } from "@/types/product";
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
- * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 選定原則，全段不出現公司名（2026-09-07 依珈汶要求移除原本的「欣展可依…
+ * 歡迎來電洽詢」收句——每支都掛同一句像罐頭文字），只針對功能與工序描述。
  * 刻意不寫管徑、欄杆高度與立柱間距。
  * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
@@ -22,10 +23,10 @@ const handrailInstallation: Product = {
     "On-site fabrication and installation of guardrails for onboard walkways and platforms",
   description:
     "欄杆是走道與平台的基本防護，須具連續性且與既有結構確實接合。船上結構多有曲面與高低差，欄杆的立柱間距、橫管高度與端部收頭往往無法沿用標準件，須依現場丈量後製作。\n\n" +
-    "施工範圍涵蓋現場丈量、管件切割彎製、立柱與橫管的銲接組立，以及銲道與表面的防蝕處理。立柱間距、欄杆高度與固定方式須依走道位置與既有結構決定；欣展可依現場條件提出施工方案，歡迎來電洽詢。",
+    "施工範圍涵蓋現場丈量、管件切割彎製、立柱與橫管的銲接組立，以及銲道與表面的防蝕處理。立柱間距、欄杆高度與固定方式須依走道位置與既有結構決定。",
   descriptionEn:
     "Guardrails are the basic protection on walkways and platforms: they must run continuously and be positively connected to the existing structure. Shipboard structures are full of curves and changes in level, so stanchion spacing, rail heights, and end terminations often cannot be taken from standard parts and are instead made to measurements taken on site.\n\n" +
-    "The scope of work covers site measurement, cutting and bending of tube, welding up of stanchions and rails, and corrosion protection of the welds and surfaces. Stanchion spacing, rail height, and the method of fixing are determined by the walkway's location and the existing structure. TNO can propose a method statement for your project — please contact us.",
+    "The scope of work covers site measurement, cutting and bending of tube, welding up of stanchions and rails, and corrosion protection of the welds and surfaces. Stanchion spacing, rail height, and the method of fixing are determined by the walkway's location and the existing structure.",
   coverImage: "/images/products/custom-engineering/handrail-installation-cover.webp",
   images: [
     "/images/products/custom-engineering/handrail-installation-cover.webp",

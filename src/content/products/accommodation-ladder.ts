@@ -5,7 +5,8 @@ import type { Product } from "@/types/product";
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
- * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 選定原則，全段不出現公司名（2026-09-07 依珈汶要求移除原本的「欣展可依…
+ * 歡迎來電洽詢」收句——每支都掛同一句像罐頭文字），只針對功能與工序描述。
  * 刻意不寫尺寸、階數、載重與材質。
  * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
@@ -26,10 +27,10 @@ const accommodationLadder: Product = {
     "Accommodation ladders prefabricated as complete units, with anti-slip treads and wire rope handrails",
   description:
     "登艦梯為人員上下船的主要通道，使用頻繁並承受活載重，傾角隨潮位與吃水變動。踏面須具防滑性能，扶手須連續且張力可調，端部與舷側的固定方式則決定梯身在潮位變化下能否保持貼合。\n\n" +
-    "梯體於廠內整體預製後交付現場吊掛安裝，端部設固定與滾動機構。尺寸、階數、載重與傾角範圍須依船型與舷側高度設計；欣展可依專案條件提出規格建議，歡迎來電洽詢。",
+    "梯體於廠內整體預製後交付現場吊掛安裝，端部設固定與滾動機構。尺寸、階數、載重與傾角範圍須依船型與舷側高度設計。",
   descriptionEn:
     "An accommodation ladder is the main route for people boarding and leaving a vessel. It is in constant use, carries live loads, and changes angle with the tide and the vessel's draught. The treads must resist slipping, the handrail must be continuous and adjustable in tension, and the way the ends attach to the ship's side determines whether the ladder stays seated as the water level changes.\n\n" +
-    "Ladders are prefabricated as complete units in the workshop and delivered for lifting into place on site, with fixing and rolling arrangements at the ends. Dimensions, the number of steps, load rating, and the range of working angles are designed around the vessel type and freeboard height. TNO can advise on specification for your project — please contact us.",
+    "Ladders are prefabricated as complete units in the workshop and delivered for lifting into place on site, with fixing and rolling arrangements at the ends. Dimensions, the number of steps, load rating, and the range of working angles are designed around the vessel type and freeboard height.",
   coverImage: "/images/products/naval-outfitting/accommodation-ladder-cover.webp",
   images: ["/images/products/naval-outfitting/accommodation-ladder-cover.webp"],
   specs: [],

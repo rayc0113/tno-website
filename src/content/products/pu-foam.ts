@@ -24,10 +24,10 @@ const puFoam: Product = {
   shortDescriptionEn: "Closed-cell polyurethane foam — efficient insulation with low water absorption",
   description:
     "聚氨酯（Polyurethane，PU）為閉孔結構的發泡材料，導熱係數低、吸水率小，在相同厚度下可提供較佳的隔熱效果，並具良好的防潮特性，常用於冷藏艙、低溫管路與需要阻隔水氣的部位。可依需求以板材、管殼或現場發泡的方式施作。\n\n" +
-    "PU 與礦物纖維材料的特性不同，選用時須一併考量該部位的防火要求——防火分隔部位通常仍以不燃性礦物纖維材為主，PU 則發揮其隔熱與防潮的優勢。實際規格與適用範圍歡迎來電討論。",
+    "PU 與礦物纖維材料的特性不同，選用時須一併考量該部位的防火要求——防火分隔部位通常仍以不燃性礦物纖維材為主，PU 則發揮其隔熱與防潮的優勢。",
   descriptionEn:
     "Polyurethane (PU) is a closed-cell foam with low thermal conductivity and low water absorption, delivering strong insulation performance for a given thickness along with good moisture resistance. It is commonly used for refrigerated holds, low-temperature pipework, and anywhere a vapor barrier is needed, and can be supplied as rigid board, pre-formed pipe shells, or foamed in place.\n\n" +
-    "PU behaves differently from mineral fiber materials, so the fire requirements of each location must be considered when specifying it — fire-rated divisions generally still rely on non-combustible mineral fiber, while PU is chosen for its insulation and moisture performance. Specifications and suitable applications are welcome to be discussed by phone.",
+    "PU behaves differently from mineral fiber materials, so the fire requirements of each location must be considered when specifying it — fire-rated divisions generally still rely on non-combustible mineral fiber, while PU is chosen for its insulation and moisture performance.",
   images: [
     "/images/products/pu-foam/pu-foam-cover.webp",
   ],

@@ -5,7 +5,8 @@ import type { Product } from "@/types/product";
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
- * 選定原則，公司名只在最後一句出現，與材料類（岩棉等）同一個登記。
+ * 選定原則，全段不出現公司名（2026-09-07 依珈汶要求移除原本的「欣展可依…
+ * 歡迎來電洽詢」收句——每支都掛同一句像罐頭文字），只針對功能與工序描述。
  * specs 留空，詳情頁會自動隱藏規格表區塊。
  *
  * ⚠️ 這是六支客製化工程裡最沒把握的一支，已列為問窗口的第一順位。
@@ -28,10 +29,10 @@ const soundingRod: Product = {
   shortDescriptionEn: "Workshop prefabrication and on-site installation of sounding rods and their bases",
   description:
     "本項為桿件與其基座的製作與安裝。桿件細長，基座以肋板補強並固定於甲板結構，安裝精度直接影響桿件的垂直度與後續使用。桿件與基座的接合面在預製階段即須控制尺寸，才能在現場順利就位。\n\n" +
-    "施工範圍涵蓋桿件與基座的廠內預製、運送至現場，以及吊掛就位與固定。尺寸、基座形式與固定方式須依甲板結構與使用需求設計；欣展可依專案條件提出製作與安裝方案，歡迎來電洽詢。",
+    "施工範圍涵蓋桿件與基座的廠內預製、運送至現場，以及吊掛就位與固定。尺寸、基座形式與固定方式須依甲板結構與使用需求設計。",
   descriptionEn:
     "This work covers the fabrication and installation of a rod and its base. The rod is slender, and the base is stiffened with gussets and fixed to the deck structure, so installation accuracy directly affects how true the rod stands and how well it performs in service. The mating faces between rod and base are dimensioned under workshop control so that the assembly seats correctly on site.\n\n" +
-    "The scope of work covers workshop prefabrication of the rod and base, delivery to site, and lifting into position and fixing. Dimensions, base design, and the method of fixing are determined by the deck structure and how the assembly will be used. TNO can propose a fabrication and installation approach for your project — please contact us.",
+    "The scope of work covers workshop prefabrication of the rod and base, delivery to site, and lifting into position and fixing. Dimensions, base design, and the method of fixing are determined by the deck structure and how the assembly will be used.",
   coverImage: "/images/products/custom-engineering/sounding-rod-cover.webp",
   images: [
     "/images/products/custom-engineering/sounding-rod-cover.webp",
