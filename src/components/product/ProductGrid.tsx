@@ -6,11 +6,12 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getCategorySlug, getCategoryFromSlug } from "@/lib/categories";
-import type { ProductSummary } from "@/types/product";
+import type { ProductSummary, ProductFilterCategory } from "@/types/product";
 
 interface Props {
   products: ProductSummary[];
-  categories: string[];
+  /** 依指定順序排列的篩選鈕；pending 的分類顯示但不可點按 */
+  categories: ProductFilterCategory[];
 }
 
 export default function ProductGrid({ products, categories }: Props) {
@@ -22,8 +23,12 @@ export default function ProductGrid({ products, categories }: Props) {
   const router = useRouter();
   const wrapperRef = useRef<HTMLDivElement>(null);
 
+  // 只有實際有品項的分類可以被 URL 選中，pending 分類不接受篩選
+  const selectableCategories = categories.filter((c) => !c.pending).map((c) => c.name);
   const searchCat = searchParams.get("category");
-  const matchedCategory = searchCat ? getCategoryFromSlug(searchCat, categories) : undefined;
+  const matchedCategory = searchCat
+    ? getCategoryFromSlug(searchCat, selectableCategories)
+    : undefined;
   const activeCategory = matchedCategory ?? "all";
 
   function handleCategoryChange(cat: string) {
@@ -49,17 +54,24 @@ export default function ProductGrid({ products, categories }: Props) {
     <div ref={wrapperRef}>
       {/* Category Filter */}
       <div className="sticky top-[70px] z-30 bg-page flex flex-nowrap md:flex-wrap gap-3 mb-6 md:mb-12 overflow-x-auto md:overflow-x-visible py-3 -mx-6 px-6 md:mx-0 md:px-0" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-        {["all", ...categories].map((cat) => (
+        {[{ name: "all", pending: false }, ...categories].map(({ name: cat, pending }) => (
           <button
             key={cat}
-            onClick={() => handleCategoryChange(cat)}
-            className={`flex-shrink-0 px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 cursor-pointer ${
-              activeCategory === cat
-                ? "bg-brand-deep text-white"
-                : "bg-surface text-body hover:bg-brand-light/20 hover:text-brand-deep"
+            onClick={pending ? undefined : () => handleCategoryChange(cat)}
+            disabled={pending}
+            className={`flex-shrink-0 px-5 py-2 rounded-full text-base font-semibold transition-colors duration-200 ${
+              pending
+                ? "bg-surface text-muted cursor-default"
+                : activeCategory === cat
+                  ? "bg-brand-deep text-white cursor-pointer"
+                  : "bg-surface text-body hover:bg-brand-light/20 hover:text-brand-deep cursor-pointer"
             }`}
           >
-            {cat === "all" ? t("filter.all") : `${translateCategory(cat)} (${categoryCounts[cat] ?? 0})`}
+            {cat === "all"
+              ? t("filter.all")
+              : pending
+                ? translateCategory(cat)
+                : `${translateCategory(cat)} (${categoryCounts[cat] ?? 0})`}
           </button>
         ))}
       </div>

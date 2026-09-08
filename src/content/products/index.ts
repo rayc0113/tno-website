@@ -7,7 +7,7 @@
  * 3. 確保 slug 唯一且使用英文小寫與連字號
  */
 
-import type { Product, ProductSummary } from "@/types/product";
+import type { Product, ProductSummary, ProductFilterCategory } from "@/types/product";
 import ductLouverPanel from "./duct-louver-panel";
 import drainageScaffolding from "./drainage-scaffolding";
 import soundingRod from "./sounding-rod";
@@ -107,8 +107,7 @@ export function getProductsByCategory(category: string): Product[] {
  * 只有「實際有已發布產品」的分類才會顯示，因此在此登錄尚無品項的分類是安全的
  * ——不會多出一個點進去空無一物的篩選鈕，等該分類第一支產品上站就會自動就位。
  *
- * ⚠️「船舶維修」目前尚無產品：Lucy 的清單新增了這個分類，但先前提供的資料與
- *    照片都沒有這一項，品項名稱與照片待她確認後補上。
+ * 尚無品項的分類另見 PENDING_PRODUCT_CATEGORIES。
  */
 const PRODUCT_CATEGORY_ORDER = [
   "客製化工程",
@@ -120,11 +119,35 @@ const PRODUCT_CATEGORY_ORDER = [
   "木材",
 ];
 
+function byCategoryOrder(a: string, b: string): number {
+  const ia = PRODUCT_CATEGORY_ORDER.indexOf(a);
+  const ib = PRODUCT_CATEGORY_ORDER.indexOf(b);
+  return (ia === -1 ? Number.MAX_SAFE_INTEGER : ia) - (ib === -1 ? Number.MAX_SAFE_INTEGER : ib);
+}
+
+/**
+ * 已確定要有、但目前還沒有任何品項的分類
+ *
+ * 產品頁篩選列會顯示這些分類但不可點按（點了會是空列表），
+ * Footer 的分類連結與 sitemap 都不納入。
+ *
+ * ⚠️「船舶維修」2026-09-08 由 TNO 窗口 Lucy 的分類清單新增，但先前 TNO 提供的
+ *    資料與照片都沒有這一項，品項名稱與照片待她確認。第一支產品上站後，
+ *    請從此清單移除，該分類就會變成正常可點的篩選鈕。
+ */
+export const PENDING_PRODUCT_CATEGORIES = ["船舶維修"];
+
+/** 實際有已發布產品的分類（Footer 連結、URL 篩選用） */
 export function getAllCategories(): string[] {
   const categories = [...new Set(getPublishedProducts().map((p) => p.category))];
-  return categories.sort((a, b) => {
-    const ia = PRODUCT_CATEGORY_ORDER.indexOf(a);
-    const ib = PRODUCT_CATEGORY_ORDER.indexOf(b);
-    return (ia === -1 ? Number.MAX_SAFE_INTEGER : ia) - (ib === -1 ? Number.MAX_SAFE_INTEGER : ib);
-  });
+  return categories.sort(byCategoryOrder);
+}
+
+/** 產品頁篩選列用：已發布分類 + 待補分類，一起依指定順序排列 */
+export function getFilterCategories(): ProductFilterCategory[] {
+  const published = getAllCategories();
+  const pending = PENDING_PRODUCT_CATEGORIES.filter((c) => !published.includes(c));
+  return [...published, ...pending]
+    .sort(byCategoryOrder)
+    .map((name) => ({ name, pending: pending.includes(name) }));
 }

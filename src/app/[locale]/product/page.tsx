@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import { Suspense } from "react";
-import { getPublishedProducts, getAllCategories } from "@/content/products";
+import { getPublishedProducts, getFilterCategories } from "@/content/products";
 import { localizeProductSummary } from "@/lib/localize";
 import ProductGrid from "@/components/product/ProductGrid";
 import type { ProductSummary } from "@/types/product";
@@ -54,7 +54,7 @@ export default async function ProductListPage({ params }: Props) {
     };
     return localizeProductSummary(summary, product, loc);
   });
-  const categories = getAllCategories();
+  const categories = getFilterCategories();
 
   return (
     <>

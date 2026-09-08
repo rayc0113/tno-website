@@ -44,3 +44,14 @@ export interface ProductSummary {
   coverImage: string;  // 首頁用（指定封面圖）
   listImage: string;   // 列表頁用（畫廊第一張）
 }
+
+/**
+ * 產品頁篩選列的一個分類鈕
+ *
+ * pending = true 代表「分類已確定要有，但還沒有任何品項」——
+ * 篩選列會顯示但不可點按（見 ProductGrid），避免點進去空無一物。
+ */
+export interface ProductFilterCategory {
+  name: string;
+  pending: boolean;
+}
