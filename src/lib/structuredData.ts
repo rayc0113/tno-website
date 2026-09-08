@@ -13,17 +13,16 @@
  *    - sameAs 只放 LINE 官方帳號，因為 TNO 目前沒有其他官方社群
  *    這幾項補上會讓地區搜尋更完整，可向 TNO 索取。
  *
- * ⚠️ 名稱不一致待確認：站上目前有三種英文寫法——siteName 用 "TNO Marine"、
- *    頁尾版權用 "TNO Inc."、關於我們內文用 "TNO Metal"。Google 認實體時
- *    希望名稱一致，建議請 TNO 定一個對外英文名稱後統一。此處先以 CLAUDE.md
- *    記載的登記名稱作為 legalName，name 沿用各語系頁面現有的寫法。
+ * 名稱一律取自 siteMeta.ts。2026-09-08 珈汶確認英文正式名稱為 TNO Inc.，
+ * 站上原有的 TNO Marine／TNO Metal 兩種寫法已一併統一。
  */
+
+import { getLegalName } from "@/lib/siteMeta";
 
 const PHONE = "+886-7-3717521";
 const FAX = "+886-7-3711073";
 const EMAIL = "tno.tw@msa.hinet.net";
 const LINE_URL = "https://line.me/R/ti/p/@252zcdqr";
-const LEGAL_NAME = "TNO 欣展有限公司";
 const FOUNDING_YEAR = "2016";
 
 /** 供其他 schema 以 @id 指向同一個公司實體，避免 Google 認成多家公司 */
@@ -43,9 +42,9 @@ export function getOrganizationSchema(locale: string, siteUrl: string) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": organizationId(siteUrl),
-    name: isEn ? "TNO Metal" : "TNO 欣展有限公司",
-    legalName: LEGAL_NAME,
-    alternateName: isEn ? ["TNO", "TNO Marine"] : ["TNO 欣展", "欣展"],
+    name: getLegalName(locale),
+    legalName: getLegalName(locale),
+    alternateName: isEn ? ["TNO", "TNO Inc"] : ["TNO 欣展", "欣展"],
     url: `${siteUrl}/${locale}`,
     logo: {
       "@type": "ImageObject",

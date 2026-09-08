@@ -28,6 +28,30 @@
  */
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tno.com.tw";
 
+/**
+ * 對外名稱（2026-09-08 珈汶確認：英文正式名稱為 TNO Inc.）
+ *
+ * 收在這裡的原因與標題相同——「TNO Marine」原本散在 layout、產品內頁、
+ * 案例內頁共四處，站上因此同時存在 TNO Marine／TNO Inc.／TNO Metal 三種
+ * 英文寫法。Google 認公司實體時名稱要一致，三種寫法會互相稀釋。
+ *
+ * 三個用途刻意分開，因為中文站三者不同：
+ * - getBrandName  文案與 schema 的品牌名
+ * - getSiteName   標題後綴與 OG siteName
+ * - getLegalName  登記名稱（結構化資料的 legalName）
+ */
+export function getBrandName(locale: string): string {
+  return locale === "en" ? "TNO Inc." : "TNO 欣展";
+}
+
+export function getSiteName(locale: string): string {
+  return locale === "en" ? "TNO Inc." : "TNO 欣展船舶";
+}
+
+export function getLegalName(locale: string): string {
+  return locale === "en" ? "TNO Inc." : "TNO 欣展有限公司";
+}
+
 export function getSiteTitle(locale: string): string {
   return locale === "en"
     ? "TNO | Your Strongest Support in Ship Retrofit & Maintenance"

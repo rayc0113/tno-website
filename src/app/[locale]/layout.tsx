@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { getSiteTitle, getSiteDescription, SITE_URL as siteUrl } from "@/lib/siteMeta";
+import { getSiteTitle, getSiteDescription, getSiteName, getLegalName, SITE_URL as siteUrl } from "@/lib/siteMeta";
 import { getOrganizationSchema } from "@/lib/structuredData";
 import "../globals.css";
 
@@ -23,15 +23,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const isEn = locale === "en";
   const title = getSiteTitle(locale);
   const description = getSiteDescription(locale);
-  const siteName = isEn ? "TNO Marine" : "TNO 欣展船舶";
+  const siteName = getSiteName(locale);
   return {
     metadataBase: new URL(siteUrl),
     title: {
       default: title,
-      template: isEn ? "%s | TNO Marine" : "%s｜TNO 欣展船舶",
+      template: isEn ? `%s | ${siteName}` : `%s｜${siteName}`,
     },
     description,
-    authors: [{ name: "TNO 欣展有限公司" }],
+    authors: [{ name: getLegalName(locale) }],
     robots: { index: true, follow: true },
     openGraph: {
       type: "website",

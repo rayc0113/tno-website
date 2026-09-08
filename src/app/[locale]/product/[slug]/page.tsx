@@ -7,7 +7,7 @@ import { localizeProduct } from "@/lib/localize";
 import { Link } from "@/i18n/navigation";
 import ProductImageGallery from "@/components/product/ProductImageGallery";
 import Button from "@/components/ui/Button";
-import { SITE_URL } from "@/lib/siteMeta";
+import { SITE_URL, getBrandName, getSiteName } from "@/lib/siteMeta";
 import { getBreadcrumbSchema, organizationId } from "@/lib/structuredData";
 
 interface Props {
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!raw) return {};
   const loc: "zh" | "en" = locale === "en" ? "en" : "zh";
   const product = localizeProduct(raw, loc);
-  const ogSuffix = loc === "en" ? " | TNO Marine" : "｜TNO 欣展船舶";
+  const ogSuffix = loc === "en" ? ` | ${getSiteName(loc)}` : `｜${getSiteName(loc)}`;
 
   return {
     title: product.name,
@@ -57,7 +57,7 @@ export default async function ProductDetailPage({ params }: Props) {
   const t = await getTranslations("product.detail");
   const tc = await getTranslations("categories");
   const categoryLabel = tc.has(product.category) ? tc(product.category) : product.category;
-  const brandName = loc === "en" ? "TNO Marine" : "TNO 欣展";
+  const brandName = getBrandName(loc);
   const descriptionParagraphs = product.description.split("\n\n").filter(Boolean);
 
   const jsonLd = {

@@ -8,7 +8,7 @@ import { localizeCase, localizeCaseSummary } from "@/lib/localize";
 import { Link } from "@/i18n/navigation";
 import ContactCTA from "@/components/ContactCTA";
 import type { CaseSummary } from "@/types/case";
-import { SITE_URL } from "@/lib/siteMeta";
+import { SITE_URL, getSiteName } from "@/lib/siteMeta";
 import { getBreadcrumbSchema, organizationId } from "@/lib/structuredData";
 
 interface Props {
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!raw) return {};
   const loc: "zh" | "en" = locale === "en" ? "en" : "zh";
   const caseItem = localizeCase(raw, loc);
-  const ogSuffix = loc === "en" ? " | TNO Marine" : "｜TNO 欣展船舶";
+  const ogSuffix = loc === "en" ? ` | ${getSiteName(loc)}` : `｜${getSiteName(loc)}`;
 
   return {
     title: caseItem.title,
