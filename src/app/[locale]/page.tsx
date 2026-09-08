@@ -9,6 +9,7 @@ import HomeWhyChoose from "@/components/home/HomeWhyChoose";
 import HomeCases from "@/components/home/HomeCases";
 import HomeBrandCTA from "@/components/home/HomeBrandCTA";
 import ContactCTA from "@/components/ContactCTA";
+import { getSiteTitle } from "@/lib/siteMeta";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -18,10 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home.hero");
-  const isEn = locale === "en";
-  const title = isEn
-    ? "TNO | Complete Marine Interior Solution"
-    : "TNO 欣展｜船舶裝修全方位領導品牌";
+  // 標題取自 src/lib/siteMeta.ts，與 layout 的全站預設同一來源
+  // （原本這裡自己寫了一份字面值，7/24 定位調整時漏改到，詳見該檔說明）
+  const title = getSiteTitle(locale);
   return {
     title: { absolute: title },
     description: t("description"),

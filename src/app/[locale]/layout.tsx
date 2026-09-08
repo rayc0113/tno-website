@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { getSiteTitle, getSiteDescription } from "@/lib/siteMeta";
 import "../globals.css";
 
 const notoSansTC = Noto_Sans_TC({
@@ -20,12 +21,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tno.com.tw";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const isEn = locale === "en";
-  const title = isEn
-    ? "TNO | Complete Marine Interior Solution"
-    : "TNO 欣展｜船舶裝修全方位領導品牌";
-  const description = isEn
-    ? "TNO provides complete marine interior services including anti-corrosion coating, deck finishing, and cabin outfitting. ABS and ClassNK certified with 10+ years of expertise."
-    : "欣展提供船舶防腐塗裝、甲板鋪面、船艙內裝等全方位船舶裝修服務。通過 ABS、ClassNK 國際認證，10 年以上豐富經驗，為您的船隊提供專業保障。";
+  const title = getSiteTitle(locale);
+  const description = getSiteDescription(locale);
   const siteName = isEn ? "TNO Marine" : "TNO 欣展船舶";
   return {
     metadataBase: new URL(siteUrl),
