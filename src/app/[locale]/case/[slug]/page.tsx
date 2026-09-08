@@ -8,6 +8,8 @@ import { localizeCase, localizeCaseSummary } from "@/lib/localize";
 import { Link } from "@/i18n/navigation";
 import ContactCTA from "@/components/ContactCTA";
 import type { CaseSummary } from "@/types/case";
+import { SITE_URL } from "@/lib/siteMeta";
+import { getBreadcrumbSchema, organizationId } from "@/lib/structuredData";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -56,7 +58,6 @@ export default async function CaseDetailPage({ params }: Props) {
   const t = await getTranslations("case.detail");
   const tc = await getTranslations("categories");
   const translateCategory = (cat: string) => (tc.has(cat) ? tc(cat) : cat);
-  const brandName = loc === "en" ? "TNO Marine" : "TNO 欣展";
 
   const relatedCases: CaseSummary[] = getPublishedCases()
     .filter((c) => c.slug !== slug)
@@ -80,11 +81,18 @@ export default async function CaseDetailPage({ params }: Props) {
     "@type": "Article",
     headline: caseItem.title,
     description: caseItem.description,
-    image: caseItem.images.map((img) => img.src),
-    author: { "@type": "Organization", name: brandName },
-    publisher: { "@type": "Organization", name: brandName },
+    image: caseItem.images.map((img) => `${SITE_URL}${img.src}`),
+    // author/publisher 以 @id 指向 layout 的公司實體（原本各自另開一個
+    // 只有名稱的 Organization，Google 會認成與公司無關的第三方）
+    author: { "@id": organizationId(SITE_URL) },
+    publisher: { "@id": organizationId(SITE_URL) },
     datePublished: caseItem.publishedAt,
   };
+
+  const breadcrumbJsonLd = getBreadcrumbSchema(loc, SITE_URL, [
+    { name: t("cases"), path: "/case" },
+    { name: caseItem.title, path: `/case/${caseItem.slug}` },
+  ]);
 
   const dateDisplay = caseItem.completedAt.substring(0, 7).replace("-", " / ");
 
@@ -111,6 +119,10 @@ export default async function CaseDetailPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Breadcrumb Bar */}

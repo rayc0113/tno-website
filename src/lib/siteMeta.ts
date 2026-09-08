@@ -17,6 +17,17 @@
  * 屬 TNO 自己的陳述，不在此處變動。）
  */
 
+/**
+ * 正式網域
+ *
+ * 影響 sitemap、canonical、OG 與結構化資料的 @id。原本 robots.ts、sitemap.ts、
+ * layout.tsx 各寫一份相同的 fallback，一併收斂到這裡。
+ *
+ * ⚠️ NEXT_PUBLIC_* 於 build 時寫入，改了必須重新部署才會生效；在 Vercel 上
+ *    型別要選 Config 而非 Secret（NEXT_PUBLIC_ 前綴的值本來就會露給瀏覽器）。
+ */
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tno.com.tw";
+
 export function getSiteTitle(locale: string): string {
   return locale === "en"
     ? "TNO | Your Strongest Support in Ship Retrofit & Maintenance"

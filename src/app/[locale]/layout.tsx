@@ -6,7 +6,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { getSiteTitle, getSiteDescription } from "@/lib/siteMeta";
+import { getSiteTitle, getSiteDescription, SITE_URL as siteUrl } from "@/lib/siteMeta";
+import { getOrganizationSchema } from "@/lib/structuredData";
 import "../globals.css";
 
 const notoSansTC = Noto_Sans_TC({
@@ -16,7 +17,6 @@ const notoSansTC = Noto_Sans_TC({
   variable: "--font-noto-sans-tc",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tno.com.tw";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -76,9 +76,18 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = (await import(`../../../messages/${locale}.json`)).default;
   const lang = locale === "en" ? "en" : "zh-TW";
 
+  // 公司實體結構化資料掛在 layout，因此每一頁都帶得到。各 schema 以同一個
+  // @id 指向它（見 structuredData.ts 的 organizationId），Google 才會認成
+  // 同一家公司而非每頁一家。
+  const organizationSchema = getOrganizationSchema(locale, siteUrl);
+
   return (
     <html lang={lang} className={notoSansTC.variable}>
       <body className={`${notoSansTC.className} bg-page text-title antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           {children}

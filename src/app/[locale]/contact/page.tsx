@@ -81,7 +81,10 @@ export default async function ContactPage({ params }: Props) {
         <div className="max-w-[1400px] mx-auto px-6 md:px-[60px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="flex flex-col justify-start">
-              <h2 className="text-[40px] font-bold text-title mb-5">{t("title")}</h2>
+              {/* 全頁唯一的 h1——這頁沒有 hero，「聯絡我們」就是頁面主標題。
+                  原本寫成 h2，整頁因此沒有 h1，爬蟲讀不到這頁講什麼。
+                  樣式不變，只換語意標籤。 */}
+              <h1 className="text-[40px] font-bold text-title mb-5">{t("title")}</h1>
               <p className="text-body leading-relaxed">
                 {t("description1")}<br />
                 {t("description2")}

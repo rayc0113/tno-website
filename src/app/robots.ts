@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL as siteUrl } from "@/lib/siteMeta";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.tno.com.tw";
 
 /**
  * ⚠️ 驗收期間暫時全站禁止搜尋引擎索引（2026-09-04 起）

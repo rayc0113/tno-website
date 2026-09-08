@@ -7,6 +7,8 @@ import { localizeProduct } from "@/lib/localize";
 import { Link } from "@/i18n/navigation";
 import ProductImageGallery from "@/components/product/ProductImageGallery";
 import Button from "@/components/ui/Button";
+import { SITE_URL } from "@/lib/siteMeta";
+import { getBreadcrumbSchema, organizationId } from "@/lib/structuredData";
 
 interface Props {
   params: Promise<{ slug: string; locale: string }>;
@@ -63,16 +65,28 @@ export default async function ProductDetailPage({ params }: Props) {
     "@type": "Product",
     name: product.name,
     description: product.description,
-    image: product.images,
+    image: product.images.map((src) => `${SITE_URL}${src}`),
     brand: { "@type": "Brand", name: brandName },
     category: categoryLabel,
+    // 指向 layout 的公司實體，Google 才不會把每頁認成不同的製造商
+    manufacturer: { "@id": organizationId(SITE_URL) },
   };
+
+  // 畫面上的麵包屑（下方 nav）對應的結構化資料，搜尋結果會顯示這條路徑
+  const breadcrumbJsonLd = getBreadcrumbSchema(loc, SITE_URL, [
+    { name: t("products"), path: "/product" },
+    { name: product.name, path: `/product/${product.slug}` },
+  ]);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Breadcrumb */}
@@ -92,32 +106,29 @@ export default async function ProductDetailPage({ params }: Props) {
       <section className="bg-white pt-[40px] pb-[80px]">
         <div className="max-w-[1400px] mx-auto px-[60px] max-lg:px-6">
 
-          {/* Mobile: 分類 + 名稱 + 簡述 */}
-          <div className="lg:hidden mb-6">
-            <p className="text-body text-[18px] mb-1">{categoryLabel}</p>
-            <h1 className="text-[28px] font-bold text-title leading-tight mb-3">{product.name}</h1>
-            <div className="flex flex-col gap-3">
-              {descriptionParagraphs.map((para, i) => (
-                <p key={i} className="text-body text-[18px] leading-relaxed">{para}</p>
-              ))}
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[48px] items-start">
-            <ProductImageGallery images={product.images} productName={product.name} />
-
-            <div className="flex flex-col gap-7">
-              {/* Desktop header */}
-              <div className="hidden lg:block">
-                <p className="text-body text-[18px] mb-1">{categoryLabel}</p>
-                <h1 className="text-[32px] font-bold text-title leading-tight mb-4">{product.name}</h1>
-                <div className="flex flex-col gap-4">
-                  {descriptionParagraphs.map((para, i) => (
-                    <p key={i} className="text-body text-[18px] leading-relaxed">{para}</p>
-                  ))}
-                </div>
+          {/* 標題區、照片、規格說明三塊以 grid 明確定位：
+              手機是單欄「標題 → 照片 → 說明」，桌機是左照片、右側上標題下說明。
+              原本手機與桌機各寫一份標題區（lg:hidden / hidden lg:block），
+              畫面上只看到一個，但兩份都在 HTML 裡——爬蟲會讀到兩個 h1 與
+              重複兩次的產品描述。改為只渲染一份，靠 col/row-start 換位置。 */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[48px] lg:gap-y-7 items-start">
+            <div className="mb-6 lg:mb-0 lg:col-start-2 lg:row-start-1">
+              <p className="text-body text-[18px] mb-1">{categoryLabel}</p>
+              <h1 className="text-[28px] lg:text-[32px] font-bold text-title leading-tight mb-3 lg:mb-4">
+                {product.name}
+              </h1>
+              <div className="flex flex-col gap-3 lg:gap-4">
+                {descriptionParagraphs.map((para, i) => (
+                  <p key={i} className="text-body text-[18px] leading-relaxed">{para}</p>
+                ))}
               </div>
+            </div>
 
+            <div className="max-lg:mb-12 lg:col-start-1 lg:row-start-1 lg:row-span-2">
+              <ProductImageGallery images={product.images} productName={product.name} />
+            </div>
+
+            <div className="lg:col-start-2 lg:row-start-2 flex flex-col gap-7">
               {product.features.length > 0 && (
                 <div>
                   <h2 className="text-brand font-extrabold text-[20px] mb-3">{t("features")}</h2>
