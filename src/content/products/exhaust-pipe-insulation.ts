@@ -14,6 +14,11 @@ import type { Product } from "@/types/product";
  * （見 ProductGrid.tsx），這句話不會出現在頁面上，而是作為詳情頁的
  * SEO description 與分享預覽的 OG description。故寫法以「一句講完、
  * 關鍵詞完整」為準，不需文采。
+ *
+ * 2026-09-08 依 TNO 窗口 Lucy 指示調整照片順序：原第 3 張（師傅組立大型
+ * 保溫管件、甲板散置法蘭盤那張）改為封面兼第一張。作法是輪動實體檔名
+ * （原 -2 → -cover、原 -cover → -1、原 -1 → -2），維持「封面照命名為
+ * -cover.webp」的規範，因此下方 images 陣列不需改動。
  */
 const exhaustPipeInsulation: Product = {
   slug: "exhaust-pipe-insulation",
