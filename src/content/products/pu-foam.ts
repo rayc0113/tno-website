@@ -14,6 +14,11 @@ import type { Product } from "@/types/product";
  *
  * 待欣展提供材料商型錄／技術資料表（TDS）／船級社證書後，
  * 再補回 specs 與更精確的敘述。
+ *
+ * ⚠️ 2026-09-08 下架：TNO 窗口 Lucy 提供的產品分類清單中，「PU聚氨脂」
+ *    整個分類被劃掉，表示已不再列為對外品項。依「隱藏但不刪除」慣例
+ *    改為 isPublished: false，檔案與照片保留，日後若恢復供應只需改回 true
+ *    並在 index.ts 的 allProducts 移回已發布區塊。
  */
 const puFoam: Product = {
   slug: "pu-foam",
@@ -56,7 +61,7 @@ const puFoam: Product = {
     "Deck and bulkhead moisture barriers",
   ],
   publishedAt: "2024-02-05",
-  isPublished: true,
+  isPublished: false,
 };
 
 export default puFoam;

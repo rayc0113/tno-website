@@ -44,6 +44,15 @@
 3. 在 `src/content/products/index.ts` 的 `allProducts` 陣列加入 import
 4. 圖片放至 `public/images/products/<分類-slug>/`（分類 slug 見 `src/lib/categories.ts`），命名 `[slug]-cover.webp`、`[slug]-1.webp`
 
+### 新增產品分類
+
+新增一個分類要同步改四處，漏掉任一處會出現英文站沒翻譯或網址是中文的狀況：
+
+1. `src/lib/categories.ts` 的 `CATEGORY_TO_SLUG` — 登錄英文 slug（URL 用）
+2. `messages/zh.json` 與 `messages/en.json` 的 `categories` — 中／英顯示名稱
+3. `src/content/products/index.ts` 的 `PRODUCT_CATEGORY_ORDER` — 篩選列與 Footer 的排列順序
+4. 該分類至少要有一支已發布產品，篩選鈕才會出現
+
 ### 新增案例
 1. 複製 `src/content/cases/_template.ts` → 改名為 `[slug].ts`
 2. 填入資料（新案例放陣列最前面，優先顯示）
