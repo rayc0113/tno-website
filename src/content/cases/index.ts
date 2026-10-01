@@ -8,6 +8,7 @@
  */
 
 import type { CaseProject, CaseSummary } from "@/types/case";
+import ductLouverPrefabInstallation from "./duct-louver-prefab-installation";
 import deckOpeningRestoration from "./deck-opening-restoration";
 import bulkCarrierInsulation from "./bulk-carrier-insulation";
 import crewQuartersRenovation from "./crew-quarters-renovation";
@@ -21,6 +22,8 @@ import offshorePlatformLiving from "./offshore-platform-living";
 //    （含編造的量化數據與虛構客戶名，不能讓欣展窗口看到）。檔案保留不刪，
 //    待欣展提供 3–5 個代表案例後整批汰換（素材見 materials/04-案例）。
 export const allCases: CaseProject[] = [
+  // 依 TNO 正式工單（完工報告 PDF）撰寫的案例
+  ductLouverPrefabInstallation,
   // 【版面範例】2026-09-02 為檢視多圖編排而建，非欣展提供的正式案例
   deckOpeningRestoration,
   bulkCarrierInsulation,
