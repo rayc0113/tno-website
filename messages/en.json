@@ -202,7 +202,7 @@
     "detail": {
       "home": "Home",
       "cases": "Case Studies",
-      "updatedAt": "Updated: ",
+      "completedAt": "Completed: ",
       "closing": "Closing Remarks",
       "gallery": "On-Site Record",
       "enlarge": "Click to enlarge",

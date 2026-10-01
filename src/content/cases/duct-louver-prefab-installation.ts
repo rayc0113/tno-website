@@ -19,7 +19,7 @@ import type { CaseProject } from "@/types/case";
  *
  * ⚠️ 三項待欣展確認（都已在下方標註）：
  *   1. client：完工報告通篇只寫「貴司」，第一頁上方的紅框是空的。
- *      需確認可否具名；不可具名就改中性寫法。目前沿用示意寫法。
+ *      需確認可否具名；不可具名就維持留空（欄位是選填，不會留下空位）。
  *   2. completedAt：報告只寫 10/20 進場安裝，最後「施工完成」沒有日期。
  *      暫填 2025-10-20（詳情頁只顯示到年月，畫面上是「2025 / 10」）。
  *   3. category：依「新製＋安裝」判斷為一般船舶工程，待確認。
@@ -36,9 +36,11 @@ const ductLouverPrefabInstallation: CaseProject = {
   slug: "duct-louver-prefab-installation",
   title: "風管、風箱與百葉窗的廠內預製與現場安裝",
   titleEn: "Shop-Fabricated Ducting, Plenums and Louvres, Installed on Board",
-  // 【待確認】完工報告通篇只寫「貴司」，未具名
-  client: "XX 造船股份有限公司",
-  clientEn: "XX Shipbuilding Co., Ltd.",
+  // 【待確認】完工報告通篇只寫「貴司」，第一頁紅框是空的，我們不知道客戶是誰。
+  // 這是一筆真實案例，掛假的客戶名風險最高，所以先整個留空——client 是選填，
+  // 留空時 meta 列不會出現這一欄。欣展確認可否具名後再補。
+  // client: "",
+  // clientEn: "",
   // 【待確認】依「新製＋現場安裝」判斷
   category: "一般船舶工程",
   shortDescription:

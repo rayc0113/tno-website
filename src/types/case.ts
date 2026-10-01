@@ -21,7 +21,11 @@ export interface CaseProject {
   slug: string;
   title: string;
   titleEn?: string;
-  client: string;
+  /**
+   * 施工單位（客戶）。選填——客戶不方便具名時留空即可，
+   * 詳情頁的 meta 列會自動不顯示這一欄，不會留下空位。
+   */
+  client?: string;
   clientEn?: string;
   category: string;
   shortDescription: string;
@@ -33,7 +37,8 @@ export interface CaseProject {
   images: CaseImage[];
   services: string[];
   completedAt: string;
-  location: string;
+  /** 施工地點。選填，理由同 client */
+  location?: string;
   locationEn?: string;
   tags: string[];
   publishedAt: string;
@@ -54,7 +59,7 @@ export interface CaseProject {
 export interface CaseSummary {
   slug: string;
   title: string;
-  client: string;
+  client?: string;
   category: string;
   shortDescription: string;
   coverImage: string;

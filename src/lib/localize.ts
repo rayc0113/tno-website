@@ -7,6 +7,16 @@ function pickLocalized(en: string | undefined, zh: string, locale: Locale): stri
   return locale === "en" && en ? en : zh;
 }
 
+/** 選填欄位用：原值未填時維持 undefined，不要回傳空字串 */
+function pickOptional(
+  en: string | undefined,
+  zh: string | undefined,
+  locale: Locale
+): string | undefined {
+  if (!zh && !en) return undefined;
+  return locale === "en" && en ? en : zh;
+}
+
 export function localizeProduct(product: Product, locale: Locale): Product {
   if (locale !== "en") return product;
   return {
@@ -37,8 +47,8 @@ export function localizeCase(caseItem: CaseProject, locale: Locale): CaseProject
     title: pickLocalized(caseItem.titleEn, caseItem.title, locale),
     shortDescription: pickLocalized(caseItem.shortDescriptionEn, caseItem.shortDescription, locale),
     description: pickLocalized(caseItem.descriptionEn, caseItem.description, locale),
-    client: pickLocalized(caseItem.clientEn, caseItem.client, locale),
-    location: pickLocalized(caseItem.locationEn, caseItem.location, locale),
+    client: pickOptional(caseItem.clientEn, caseItem.client, locale),
+    location: pickOptional(caseItem.locationEn, caseItem.location, locale),
     sections: caseItem.sectionsEn ?? caseItem.sections,
     closing: caseItem.closingEn ?? caseItem.closing,
   };

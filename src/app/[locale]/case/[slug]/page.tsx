@@ -147,22 +147,28 @@ export default async function CaseDetailPage({ params }: Props) {
 
           {/* Client Meta Row */}
           <div className="flex flex-wrap items-center gap-4 md:gap-6 mt-3 md:mt-4 text-[15px] md:text-[16px] text-title">
-            <span className="flex items-center gap-1.5">
-              <svg className="w-5 h-5 shrink-0 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fillRule="evenodd" d="M4 16.5v-13h-.25a.75.75 0 010-1.5h12.5a.75.75 0 010 1.5H16v13h.25a.75.75 0 010 1.5h-3.5a.75.75 0 01-.75-.75v-2.5a.75.75 0 00-.75-.75h-2.5a.75.75 0 00-.75.75v2.5a.75.75 0 01-.75.75h-3.5a.75.75 0 010-1.5H4zm3-11a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zM7.5 9a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1zM11 5.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zm.5 3.5a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1z" clipRule="evenodd" />
-              </svg>
-              {caseItem.client}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg className="w-5 h-5 shrink-0 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fillRule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clipRule="evenodd" />
-              </svg>
-              {caseItem.location}
-            </span>
-            {/* 更新日期與施工單位、施工地點同列，桌機以 ml-auto 靠最右；
+            {/* 施工單位與施工地點都是選填——客戶不方便具名、或地點不宜公開時
+                留空即可，整欄連圖示一起不顯示，不會在 meta 列留下空位 */}
+            {caseItem.client && (
+              <span className="flex items-center gap-1.5">
+                <svg className="w-5 h-5 shrink-0 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M4 16.5v-13h-.25a.75.75 0 010-1.5h12.5a.75.75 0 010 1.5H16v13h.25a.75.75 0 010 1.5h-3.5a.75.75 0 01-.75-.75v-2.5a.75.75 0 00-.75-.75h-2.5a.75.75 0 00-.75.75v2.5a.75.75 0 01-.75.75h-3.5a.75.75 0 010-1.5H4zm3-11a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zM7.5 9a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1zM11 5.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v1a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-1zm.5 3.5a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-1z" clipRule="evenodd" />
+                </svg>
+                {caseItem.client}
+              </span>
+            )}
+            {caseItem.location && (
+              <span className="flex items-center gap-1.5">
+                <svg className="w-5 h-5 shrink-0 text-slate-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z" clipRule="evenodd" />
+                </svg>
+                {caseItem.location}
+              </span>
+            )}
+            {/* 完工日期與施工單位、施工地點同列，桌機以 ml-auto 靠最右；
                 行動版空間不足時自然換行到下一行 */}
             <span className="text-[14px] text-body whitespace-nowrap md:ml-auto">
-              {t("updatedAt")}{dateDisplay}
+              {t("completedAt")}{dateDisplay}
             </span>
           </div>
 
@@ -212,10 +218,14 @@ export default async function CaseDetailPage({ params }: Props) {
             </div>
           ))}
 
-          {/* 文末照片牆：段落沒用完的照片 */}
+          {/* 文末照片牆：段落沒用完的照片。
+              只剩 1 張時不掛「施工紀錄」標題——一張照片頂著一個區塊標題不像
+              照片牆，像版面出錯。照片本身照常顯示，不會因此被丟掉。 */}
           {restAt.length > 0 && (
             <div className="mt-12">
-              <h2 className="text-[24px] font-semibold text-title leading-[30px] mb-2">{t("gallery")}</h2>
+              {restAt.length > 1 && (
+                <h2 className="text-[24px] font-semibold text-title leading-[30px] mb-2">{t("gallery")}</h2>
+              )}
               <CaseImageFigure
                 images={gallery}
                 locale={locale}

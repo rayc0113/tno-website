@@ -202,7 +202,7 @@
     "detail": {
       "home": "首頁",
       "cases": "實績案例",
-      "updatedAt": "更新日期：",
+      "completedAt": "完工日期：",
       "closing": "結語",
       "gallery": "施工紀錄",
       "enlarge": "點擊放大照片",
