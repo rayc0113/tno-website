@@ -14,20 +14,35 @@ import type { Product } from "@/types/product";
  *
  * 待欣展提供材料商型錄／技術資料表（TDS）／船級社證書後，
  * 再補回 specs 與更精確的敘述。
+ *
+ * ⚠️ 2026-10-12 文案重寫。原因有二：
+ *   1. 換上窗口提供的新照片後，照片比文案豐富太多。舊照片只有廠內堆放的
+ *      水槽台半成品，文案因此只寫到「料理台、水槽、層架與各式儲物設備」，
+ *      讀起來像一般商用廚具；新照片是船上完成的整間廚房，看得到排油煙罩、
+ *      吊櫃、不鏽鋼壁板、嵌入式把手、百葉通風門與門栓扣——這些細節才是
+ *      船用廚具與陸上廚具的真正差別，全部補進文案。
+ *   2. 舊文案以「欣展提供…」起句，文案裡出現公司名，與後來 10 支工程產品
+ *      確立的標準（全段不出現公司名、規格書式客觀陳述）不一致。
+ *      「自有金屬加工設備一貫作業」這類設備宣稱也一併移除。
+ *
+ * 新文案的立論：船用廚具與商用廚具的差別不在材質，而在細節——把手嵌入
+ * （通道窄）、門片有栓扣（航行搖晃）、櫃門百葉（艙內濕氣）。這三點都在
+ * 照片上看得到，是可查證的敘述。
  */
 const stainlessKitchen: Product = {
   slug: "stainless-kitchen",
   name: "各式不鏽鋼廚具",
   nameEn: "Marine Stainless Steel Galley Equipment",
   category: "不鏽鋼廚具",
-  shortDescription: "依船艙尺寸與動線量身製作的船用不鏽鋼廚房設備",
-  shortDescriptionEn: "Marine galley equipment in stainless steel, built to each vessel's dimensions and layout",
+  shortDescription: "依艙間放樣製作的船用不鏽鋼廚具，含檯面、櫃體、壁板與儲物櫃",
+  shortDescriptionEn:
+    "Stainless steel galley fit-outs made to each compartment — counters, cabinets, wall panels and storage",
   description:
-    "船舶廚房長期處於高濕、含鹽的環境，設備需同時具備耐蝕性與結構強度。欣展提供船用不鏽鋼廚具的設計與製作，涵蓋料理台、水槽、層架與各式儲物設備，並依實際艙間尺寸與作業動線規劃客製。\n\n" +
-    "不鏽鋼材質等級與表面處理方式依使用部位與客戶需求選定。設計、下料到焊接組裝於自有金屬加工設備一貫作業，尺寸與規格可配合現場條件調整。",
+    "船上的廚房空間比陸上緊湊，而且整個艙間都隨著船在晃。這使得船用廚具與商用廚具的差別不在材質，而在細節：把手必須嵌入門片，不能凸出到本就狹窄的通道；門片要有栓扣，航行中才不會自己彈開；櫃體要留通風，艙間的濕氣才不會積在裡面。\n\n" +
+    "不鏽鋼在高濕含鹽的環境下耐蝕、表面也容易清潔，是艙間廚房的主要材料。製作範圍涵蓋檯面、水槽、吊櫃、下櫃、壁板與儲物櫃，並以整合的方式施作，減少積水與藏污的縫隙。船上沒有標準尺寸，每一組都須依艙間的實際尺寸與作業動線放樣。不鏽鋼材質等級與表面處理依使用部位選定。",
   descriptionEn:
-    "A ship's galley lives in a humid, salt-laden environment, so its equipment has to combine corrosion resistance with structural strength. TNO designs and fabricates marine stainless steel galley equipment — prep counters, sinks, shelving, and storage units — laid out around the actual dimensions and workflow of each compartment.\n\n" +
-    "Stainless grade and surface finish are selected according to where the equipment is used and what the client requires. Design, cutting, welding, and assembly are handled in-house on TNO's own metalworking equipment, so dimensions and specifications can be adapted to site conditions.",
+    "A galley at sea is tighter than one ashore, and the whole compartment moves with the ship. What separates marine galley equipment from commercial kitchen equipment is therefore not the material but the detailing: handles are recessed into the doors so they do not project into an already narrow passage; doors carry latches so they cannot swing open underway; and cabinets are ventilated so the moisture in the compartment does not sit inside them.\n\n" +
+    "Stainless steel resists corrosion in humid, salt-laden air and wipes down easily, which makes it the material of choice for a galley. The work covers counters, sinks, upper and lower cabinets, wall panelling and storage units, built as an integrated fit-out so there are fewer joints for water and soil to collect in. There are no standard sizes aboard ship: every set is laid out from the actual dimensions of the compartment and the way it will be worked in. Stainless grade and surface finish are chosen to suit each location.",
   // 2026-10-12 依窗口提供的新照片整批汰換。舊照片是廠內堆放的水槽台半成品，
   // 新的兩張是船上實際完成的廚房與儲物櫃，說服力差很多。
   coverImage: "/images/products/stainless-kitchen/stainless-kitchen-cover.webp",
@@ -38,26 +53,28 @@ const stainlessKitchen: Product = {
   // 規格待欣展提供 TDS／證書後再補；空陣列時詳情頁不顯示規格表
   specs: [],
   features: [
-    "依船艙實際尺寸與作業動線客製設計",
-    "不鏽鋼材質，適應高濕含鹽的船上環境",
-    "自有金屬加工廠，設計與製作一貫作業",
-    "可整合料理、清洗與儲物機能",
+    "把手嵌入門片，不佔用本就狹窄的通道",
+    "門片附栓扣，航行搖晃中不會自行開啟",
+    "儲物櫃門設百葉，維持艙內通風",
+    "檯面、壁板與櫃體整合施作，減少積水與藏污的縫隙",
+    "依艙間實際尺寸與作業動線放樣製作",
   ],
   featuresEn: [
-    "Custom-designed around each compartment's dimensions and workflow",
-    "Stainless steel construction for humid, salt-laden shipboard conditions",
-    "In-house metalworking — design through fabrication under one roof",
-    "Integrates preparation, washing, and storage functions",
+    "Handles recessed into the doors, keeping a narrow passage clear",
+    "Latched doors that stay shut underway",
+    "Louvred storage doors, keeping air moving inside the compartment",
+    "Counters, panelling and cabinets built as one, with fewer joints to trap water and soil",
+    "Laid out from the compartment's real dimensions and the way it will be worked in",
   ],
   applications: [
-    "船員廚房料理台與水槽",
-    "艙間儲物與層架系統",
-    "廚房相關金屬設備客製",
+    "船員廚房的檯面、水槽與櫃體",
+    "艙間儲物櫃與層架",
+    "廚房相關不鏽鋼金屬件客製",
   ],
   applicationsEn: [
-    "Crew galley counters and sinks",
-    "Compartment storage and shelving systems",
-    "Custom galley metalwork",
+    "Counters, sinks and cabinets for crew galleys",
+    "Storage cabinets and shelving in compartments",
+    "Custom stainless steel fittings for galley use",
   ],
   publishedAt: "2024-02-01",
   isPublished: true,
