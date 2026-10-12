@@ -17,7 +17,7 @@ import offshorePlatformLiving from "./offshore-platform-living";
 
 // ✅ 在此新增案例（新案例建議放在陣列最前面）
 //
-// 分類（2026-07-24 會議決議）：一般船舶工程 / 船舶改裝 / 船舶維修
+// 分類（2026-10-12 起）：港務工程 / 船舶改裝 / 船舶維修（沿革見下方 CASE_CATEGORY_ORDER）
 // ⚠️ 下列四筆為暫時性假資料，已於 2026-09-03 設為 isPublished: false 下架
 //    （含編造的量化數據與虛構客戶名，不能讓欣展窗口看到）。檔案保留不刪，
 //    待欣展提供 3–5 個代表案例後整批汰換（素材見 materials/04-案例）。
@@ -71,7 +71,21 @@ export function getCasesByCategory(category: string): CaseProject[] {
  *
  * 新增分類時請同步在此登錄；未登錄的分類會排在最後。
  */
-const CASE_CATEGORY_ORDER = ["一般船舶工程", "船舶改裝", "船舶維修"];
+/**
+ * 案例分類（2026-10-12 調整）
+ *
+ * 7/24 會議定的三類是「一般船舶工程／船舶改裝／船舶維修」。2026-10-12 讀完
+ * 窗口提供的六份完工報告後發現兩件事：
+ *   1.「一般船舶工程」一筆都對應不到——六個案子全是既有船或既有設施的改裝、
+ *      維修與汰換，沒有一筆是新造船工程
+ *   2.「彌陀漁港船台新製」是岸上的港灣設施，三類都放不進去
+ * 因此把空著的「一般船舶工程」換成「港務工程」。維持三類、首頁版面不動，
+ * 而且「港務工程」的用語全部現成（產品分類已在用，slug 與中英翻譯都有）。
+ *
+ * 舊的「一般船舶工程」在 categories.ts 與 messages 仍保留對照，日後若有新造船
+ * 案例可直接復用。
+ */
+const CASE_CATEGORY_ORDER = ["港務工程", "船舶改裝", "船舶維修"];
 
 export function getAllCaseCategories(): string[] {
   const categories = [...new Set(getPublishedCases().map((c) => c.category))];

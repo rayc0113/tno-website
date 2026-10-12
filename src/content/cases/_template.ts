@@ -20,7 +20,7 @@ const template: CaseProject = {
   // 客戶名稱（如客戶要求保密可填「私人客戶」）
   client: "客戶名稱",
 
-  // 分類，須為下列三者之一（2026-07-24 會議定案）：一般船舶工程／船舶改裝／船舶維修
+  // 分類，須為下列三者之一（2026-10-12 調整）：港務工程／船舶改裝／船舶維修
   //（新增分類時要同步登錄 src/lib/categories.ts 的 slug 與 index.ts 的 CASE_CATEGORY_ORDER）
   category: "分類",
 

@@ -6,7 +6,7 @@ const bulkCarrierInsulation: CaseProject = {
   titleEn: "Bulk Carrier Cabin Insulation Retrofit",
   client: "XX 航運股份有限公司",
   clientEn: "XX Shipping Co., Ltd.",
-  category: "一般船舶工程",
+  category: "港務工程",   // 2026-10-12 隨案例分類調整；本筆未發布，僅供首頁卡片取用分類名稱
   shortDescription: "完整的船員起居與操作空間解決方案，打造舒適與高效的工作環境。",
   shortDescriptionEn: "Complete crew living and working space solutions for comfort and efficiency.",
   description:
