@@ -12,6 +12,7 @@ import ductLouverPanel from "./duct-louver-panel";
 import drainageScaffolding from "./drainage-scaffolding";
 import accommodationLadderRefit from "./accommodation-ladder-refit";
 import launchPlatform from "./launch-platform";
+import radarMast from "./radar-mast";
 import soundingRod from "./sounding-rod";
 import hatchOpening from "./hatch-opening";
 import handrailInstallation from "./handrail-installation";
@@ -53,6 +54,7 @@ export const allProducts: Product[] = [
   lighthouseBase,
   accommodationLadderRefit,   // 2026-10-12 依窗口清單新增（D-登艦梯）
   launchPlatform,             // 2026-10-12 依窗口清單新增（案名是否公開待確認）
+  radarMast,                  // 2026-10-12 依窗口清單新增
   exhaustPipeInsulation,
   accommodationLadder,
   magazineConversion,
