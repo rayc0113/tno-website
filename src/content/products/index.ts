@@ -13,6 +13,7 @@ import drainageScaffolding from "./drainage-scaffolding";
 import accommodationLadderRefit from "./accommodation-ladder-refit";
 import launchPlatform from "./launch-platform";
 import radarMast from "./radar-mast";
+import dishAssembly from "./dish-assembly";
 import soundingRod from "./sounding-rod";
 import hatchOpening from "./hatch-opening";
 import handrailInstallation from "./handrail-installation";
@@ -58,6 +59,7 @@ export const allProducts: Product[] = [
   exhaustPipeInsulation,
   accommodationLadder,
   magazineConversion,
+  dishAssembly,               // 2026-10-12 依窗口清單新增
   slipwayConstruction,
   // 船舶維修（2026-10-12 依窗口清單自客製化工程改列）
   drainageScaffolding,
