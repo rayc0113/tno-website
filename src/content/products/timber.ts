@@ -28,8 +28,12 @@ const timber: Product = {
   descriptionEn:
     "TNO supplies the timber used for vessel decking and cabin interior work. Deck timber has traditionally been hardwood such as teak, chosen for its high natural oil content, weather resistance, and grip even when wet; interior work draws on different species and board formats according to the design.\n\n" +
     "Timber is an organic material, so its use aboard must follow the fire and surface-material requirements applying to each location. Species, grade, dimensions, and treatment are supplied to suit each project.",
+  // 2026-10-12 依窗口提供的新照片整批汰換，並補上 coverImage 欄位
+  //（原本只有 images，列表卡片取 images[0]）
+  coverImage: "/images/products/timber/timber-cover.webp",
   images: [
     "/images/products/timber/timber-cover.webp",
+    "/images/products/timber/timber-1.webp",
   ],
   // 規格待欣展提供 TDS／證書後再補；空陣列時詳情頁不顯示規格表
   specs: [],
