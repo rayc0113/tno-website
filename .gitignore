@@ -43,3 +43,6 @@ next-env.d.ts
 # 素材專區（客戶提供原始檔，不進版控）
 /materials/*
 !/materials/README.md
+
+# 產品圖暫存區（客戶丟原始檔進來，轉成 webp 歸位後即刪，原始檔不進版控）
+/public/images/products/_inbox/

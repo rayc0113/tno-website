@@ -1,7 +1,11 @@
 import type { Product } from "@/types/product";
 
 /**
- * 客製化工程（D 系列）— D-排水管修改及鷹架搭建工程
+ * 船舶維修 — 排水管修改及鷹架搭建工程
+ *
+ * 2026-10-12 依 TNO 窗口 Lucy 的產品調整清單，從「客製化工程」改列「船舶維修」
+ * （欣展提供的原始資料夾是 D 系列，分類以窗口的歸類為準）。照片一併移至
+ * public/images/products/ship-maintenance/。
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
@@ -18,7 +22,7 @@ const drainageScaffolding: Product = {
   slug: "drainage-scaffolding",
   name: "排水管修改、鷹架搭建",
   nameEn: "Drainage Pipe Modification & Scaffolding",
-  category: "客製化工程",
+  category: "船舶維修",
   shortDescription: "艙內既有排水管路的改接施作，含作業鷹架搭設",
   shortDescriptionEn:
     "Modification of existing drainage pipework in compartments, including erection of working scaffolding",
@@ -28,13 +32,13 @@ const drainageScaffolding: Product = {
   descriptionEn:
     "Drainage pipework in a compartment usually runs high up along the deckhead and bulkheads, out of reach from floor level, so a working platform has to go up first. Cutting and removing the existing pipework generates heat and sparks, which makes working-at-height safety and the protection of surrounding equipment as important as the pipework itself.\n\n" +
     "The scope of work covers erection and removal of the working scaffolding, cutting and removal of existing pipework, and fabrication and welding of the new runs. The scaffolding uses mobile frames with platforms and guardrails, built up in tiers to suit the compartment height. Pipe sizes, routing, and fall are designed around drainage requirements and the existing structure.",
-  coverImage: "/images/products/custom-engineering/drainage-scaffolding-cover.webp",
+  coverImage: "/images/products/ship-maintenance/drainage-scaffolding-cover.webp",
   images: [
-    "/images/products/custom-engineering/drainage-scaffolding-cover.webp",
-    "/images/products/custom-engineering/drainage-scaffolding-1.webp",
-    "/images/products/custom-engineering/drainage-scaffolding-2.webp",
-    "/images/products/custom-engineering/drainage-scaffolding-3.webp",
-    "/images/products/custom-engineering/drainage-scaffolding-4.webp",
+    "/images/products/ship-maintenance/drainage-scaffolding-cover.webp",
+    "/images/products/ship-maintenance/drainage-scaffolding-1.webp",
+    "/images/products/ship-maintenance/drainage-scaffolding-2.webp",
+    "/images/products/ship-maintenance/drainage-scaffolding-3.webp",
+    "/images/products/ship-maintenance/drainage-scaffolding-4.webp",
   ],
   specs: [],
   features: [

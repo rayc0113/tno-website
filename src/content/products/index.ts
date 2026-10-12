@@ -45,7 +45,6 @@ export const allProducts: Product[] = [
   //    是同一種品項，照片併入 accommodation-ladder 的照片牆即可，避免產品頁
   //    出現兩張同名卡片。
   ductLouverPanel,
-  drainageScaffolding,
   soundingRod,
   hatchOpening,
   handrailInstallation,
@@ -54,6 +53,8 @@ export const allProducts: Product[] = [
   accommodationLadder,
   magazineConversion,
   slipwayConstruction,
+  // 船舶維修（2026-10-12 依窗口清單自客製化工程改列）
+  drainageScaffolding,
   // 保留的材料類品項（排列與 PRODUCT_CATEGORY_ORDER 一致，
   // 讓「全部產品」的卡片順序不會和篩選列的分類順序打架）
   stainlessKitchen,
@@ -131,11 +132,11 @@ function byCategoryOrder(a: string, b: string): number {
  * 產品頁篩選列會顯示這些分類但不可點按（點了會是空列表），
  * Footer 的分類連結與 sitemap 都不納入。
  *
- * ⚠️「船舶維修」2026-09-08 由 TNO 窗口 Lucy 的分類清單新增，但先前 TNO 提供的
- *    資料與照片都沒有這一項，品項名稱與照片待她確認。第一支產品上站後，
- *    請從此清單移除，該分類就會變成正常可點的篩選鈕。
+ * 目前是空的——「船舶維修」已於 2026-10-12 有了第一支品項
+ *（排水管修改、鷹架搭建，依窗口清單自客製化工程改列），因此移出本清單，
+ * 該分類的篩選鈕恢復為正常可點。
  */
-export const PENDING_PRODUCT_CATEGORIES = ["船舶維修"];
+export const PENDING_PRODUCT_CATEGORIES: string[] = [];
 
 /** 實際有已發布產品的分類（Footer 連結、URL 篩選用） */
 export function getAllCategories(): string[] {

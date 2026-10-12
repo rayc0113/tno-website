@@ -132,6 +132,7 @@ public/images/
 │   ├── custom-engineering/   # [slug]-cover.webp、[slug]-1.webp …
 │   ├── naval-outfitting/
 │   ├── port-engineering/
+│   ├── ship-maintenance/
 │   ├── thermal-insulation/
 │   ├── stainless-kitchen/ pu-foam/ timber/
 │   ├── hero.webp             # 產品頁 Hero
