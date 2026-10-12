@@ -14,6 +14,7 @@ import accommodationLadderRefit from "./accommodation-ladder-refit";
 import launchPlatform from "./launch-platform";
 import radarMast from "./radar-mast";
 import dishAssembly from "./dish-assembly";
+import mainEngineCoolingRepair from "./main-engine-cooling-repair";
 import soundingRod from "./sounding-rod";
 import hatchOpening from "./hatch-opening";
 import handrailInstallation from "./handrail-installation";
@@ -63,6 +64,7 @@ export const allProducts: Product[] = [
   slipwayConstruction,
   // 船舶維修（2026-10-12 依窗口清單自客製化工程改列）
   drainageScaffolding,
+  mainEngineCoolingRepair,    // 2026-10-12 依窗口清單新增
   // 保留的材料類品項（排列與 PRODUCT_CATEGORY_ORDER 一致，
   // 讓「全部產品」的卡片順序不會和篩選列的分類順序打架）
   stainlessKitchen,
