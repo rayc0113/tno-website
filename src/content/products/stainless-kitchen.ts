@@ -28,8 +28,12 @@ const stainlessKitchen: Product = {
   descriptionEn:
     "A ship's galley lives in a humid, salt-laden environment, so its equipment has to combine corrosion resistance with structural strength. TNO designs and fabricates marine stainless steel galley equipment — prep counters, sinks, shelving, and storage units — laid out around the actual dimensions and workflow of each compartment.\n\n" +
     "Stainless grade and surface finish are selected according to where the equipment is used and what the client requires. Design, cutting, welding, and assembly are handled in-house on TNO's own metalworking equipment, so dimensions and specifications can be adapted to site conditions.",
+  // 2026-10-12 依窗口提供的新照片整批汰換。舊照片是廠內堆放的水槽台半成品，
+  // 新的兩張是船上實際完成的廚房與儲物櫃，說服力差很多。
+  coverImage: "/images/products/stainless-kitchen/stainless-kitchen-cover.webp",
   images: [
     "/images/products/stainless-kitchen/stainless-kitchen-cover.webp",
+    "/images/products/stainless-kitchen/stainless-kitchen-1.webp",
   ],
   // 規格待欣展提供 TDS／證書後再補；空陣列時詳情頁不顯示規格表
   specs: [],
