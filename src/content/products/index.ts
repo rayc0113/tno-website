@@ -10,6 +10,7 @@
 import type { Product, ProductSummary, ProductFilterCategory } from "@/types/product";
 import ductLouverPanel from "./duct-louver-panel";
 import drainageScaffolding from "./drainage-scaffolding";
+import accommodationLadderRefit from "./accommodation-ladder-refit";
 import soundingRod from "./sounding-rod";
 import hatchOpening from "./hatch-opening";
 import handrailInstallation from "./handrail-installation";
@@ -49,6 +50,7 @@ export const allProducts: Product[] = [
   hatchOpening,
   handrailInstallation,
   lighthouseBase,
+  accommodationLadderRefit,   // 2026-10-12 依窗口清單新增（D-登艦梯）
   exhaustPipeInsulation,
   accommodationLadder,
   magazineConversion,
