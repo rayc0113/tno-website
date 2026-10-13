@@ -45,11 +45,11 @@ const surveyPoleInstall: CaseProject = {
   shortDescriptionEn:
     "Thirteen days from order to acceptance, with a single day on board — because it had already been assembled and tested in the workshop",
   description:
-    "一艘有固定航期的工作船，能空出來的時間不多。\n\n" +
-    "這個案子從委託到驗收十三天，其中船被佔用的時間是一天。這種壓縮不是靠現場趕工趕出來的——工單上的第三道工序寫著「廠內組裝及測試」，欣展在出廠前就把東西組起來、動過、確認可以運作，現場要做的才只剩定位與固定。",
+    "這不是一個支架，是一個會動的東西。\n\n" +
+    "會動的結構比不會動的難交代——它的失效不是一次斷掉，是慢慢走樣，而且走樣到什麼程度才算壞，沒有人說得準。所以欣展在它離開工廠之前，先讓它動過一次。",
   descriptionEn:
-    "A working vessel on a fixed programme has little time to spare.\n\n" +
-    "This job ran thirteen days from order to acceptance, and the ship gave up one of them. That compression did not come from rushing the work on site: the third stage on the work order reads \"assembled and tested in the workshop\", and TNO had the thing put together, moved and proved before it ever left — so what remained on board was positioning and securing it.",
+    "This is not a bracket. It is something that has to move.\n\n" +
+    "A moving structure is harder to answer for than a fixed one. It does not fail all at once; it drifts out of true, and nobody can say precisely how far is too far. So before it left the workshop, TNO made it move.",
   coverImage: "/images/cases/survey-pole-install-cover.webp",
   images: [
     {
@@ -102,7 +102,7 @@ const surveyPoleInstall: CaseProject = {
       heading: "一天，而且不是賭的",
       paragraphs: [
         "人員與機具當天進場，基座吊至甲板定位、與船體固定，桿體組上——同日完成，同日通過驗收。",
-        "十三天裡，船受到影響的只有一天。欣展把不確定留在廠裡，交到船上的是確定——這才是那一天真正的價值。",
+        "會動的東西，不應該等到裝上船才第一次動。欣展在廠裡就讓它動過，所以船上那一天做的，只是把一個已經確認過的機構裝上去——十三天的案子，船只需要讓出其中一天。",
       ],
     },
   ],
@@ -133,7 +133,7 @@ const surveyPoleInstall: CaseProject = {
       heading: "One day — and not a gamble",
       paragraphs: [
         "The crew and their gear went aboard that morning. The base was lifted onto the deck, positioned and secured to the hull, the pole fitted — finished and accepted the same day.",
-        "Of those thirteen days the ship was affected on one. TNO kept the uncertainty ashore and took aboard only what was settled — which is what made that single day worth giving up.",
+        "Something that has to move should not be moving for the first time once it is bolted to a ship. TNO had already worked it in the shop, so the day on board was spent fitting a mechanism that was known to be sound — thirteen days for the job, and one of them asked of the vessel.",
       ],
     },
   ],

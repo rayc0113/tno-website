@@ -120,7 +120,8 @@ const launchPlatformInstall: CaseProject = {
       paragraphs: [
         "組裝沒有一次做完。一月十六日第一次在船上作業，第二次要到四月二十五日，中間隔了三個多月。",
         "兩次上船，每一次都是一到就能動工——沒有在船上才發現少了一個件、或是漏掉一道工序。四月二十九日完成組裝，由船東代表到場驗收，合格。",
-        "船什麼時候有空，不是欣展能決定的；能決定的，是那一天到來時東西是不是已經備好。四個多月的物料準備換的就是這件事——兩次停靠，都沒有白停。",
+        "一座平台好不好，裝上去那天其實看不出來。要等它吊過幾百次、經過幾個航次的搖晃之後，接點才會開口說話。",
+        "欣展能做的，是把判斷全部做在前面：力往哪裡走先想清楚，每個接點才知道該怎麼處理。這種工程的品質不在交付那天，在那之後的每一年。",
       ],
     },
   ],
@@ -152,7 +153,8 @@ const launchPlatformInstall: CaseProject = {
       paragraphs: [
         "The assembly was not done in one go. The first session on board was on 16 January; the second not until 25 April, more than three months later.",
         "On each visit the crew could start the moment they were aboard — no discovering on board that a part was missing or a step had been skipped. Assembly was completed on 29 April and accepted by the owner's representative. It passed.",
-        "When the ship has time was never TNO's to decide; whether the work was ready on the day it came, was. That is what four months of preparation bought — and neither of those two calls was wasted.",
+        "Whether a platform is any good cannot really be told on the day it goes up. It takes a few hundred lifts and a few voyages' worth of movement before the joints have anything to say.",
+        "What TNO could do was make every judgement up front: work out where the loads go, and only then decide how each connection should be made. The quality of work like this is not settled on handover day. It is settled in every year that follows.",
       ],
     },
   ],

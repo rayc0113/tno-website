@@ -45,10 +45,10 @@ const mituoSlipwayReplacement: CaseProject = {
     "Replacing a fishing harbour's slipway cradle — built and assembled complete in the workshop, then demolished, installed and load-tested on site in seven days",
   description:
     "一座漁港的上架線停擺，漁船就上不了岸。船要修、要保養、要檢查船底，都得先靠船台沿著軌道被拉上來。\n\n" +
-    "彌陀漁港的船台要汰換，而汰換的過程本身就會讓它停擺。欣展接下這個案子時，要解的不只是怎麼做出一台新船台，而是怎麼讓這條上架線少停幾天。",
+    "彌陀漁港的船台要汰換。欣展最後交出去的不是一句「做好了」——是把新台車拉進水裡動一次，讓漁會的人站在旁邊看著。",
   descriptionEn:
     "When a harbour's slipway is out of action, the boats cannot come out of the water. Repairs, maintenance, anything that means looking at the hull below the waterline — all of it begins with a boat being drawn up the rails on a cradle.\n\n" +
-    "At Mituo the cradle had to be replaced, and replacing it would itself put the slipway out of action. When TNO took the job on, the question was not only how to build a new cradle, but how few days the slipway would have to stand idle.",
+    "At Mituo the cradle had to be replaced. What TNO handed over at the end was not the words “it is finished” — it was the new cradle run down into the water and worked once, with the fishermen's association standing there watching.",
   coverImage: "/images/cases/mituo-slipway-replacement-cover.webp",
   images: [
     {
@@ -125,7 +125,8 @@ const mituoSlipwayReplacement: CaseProject = {
       paragraphs: [
         "九月十日進場拆除舊船台，軌道與斜坡維持原狀；九月十五至十六日安裝新台車並完成調整。",
         "裝上去之後沒有就此交差。最後還做了一趟拉力測試——台車沿軌道下放入水，在實際狀態下確認整套機構的運行，並由漁會人員一同完驗。結果合格。",
-        "十一週在廠裡，七天在現場。欣展交付的不只是一台新船台，還有這條上架線少停的那幾個星期。",
+        "做給誰用，誰就站在旁邊看著完驗——這對一座公共漁港來說，本來就該是這樣。",
+        "十一週在廠裡，七天在現場。而欣展交出去的，不是一台看起來已經完成的船台，是一台已經拉過一次、確認會動的船台。",
       ],
     },
   ],
@@ -156,7 +157,8 @@ const mituoSlipwayReplacement: CaseProject = {
       paragraphs: [
         "The old cradle came out on 10 September, with the rails and slope left untouched; on 15 and 16 September the new one was installed and adjusted.",
         "Fitting it was not where the job ended. It was then run down the rails into the water under a pull test, to confirm how the whole assembly behaved in service, and commissioned together with staff from the local fishermen's association. It passed.",
-        "Eleven weeks in the shop, seven days on site. What TNO handed over was not only a new cradle, but the weeks the slipway did not lose.",
+        "The people who would be using it stood and watched it signed off — which for a public harbour is how it ought to be.",
+        "Eleven weeks in the shop, seven days on site. And what TNO handed over was not a cradle that looked finished, but one that had already been run down the rails once and proved.",
       ],
     },
   ],
