@@ -111,14 +111,14 @@ const ductLouverPrefabInstallation: CaseProject = {
   isPublished: true,
   sections: [
     {
-      heading: "為什麼先在廠裡做完",
+      heading: "同一件事，在船上做要久得多",
       paragraphs: [
         "船上的施工條件和廠內完全是兩回事。艙間窄、動線被既有管路和設備佔滿，動火作業要配合船上的管制與其他工班的進度，同一件事在船上做往往要花上好幾倍的時間。",
         "但真正的成本不在工時，而在船期。所以這類工程的規劃重點只有一個：把能在廠裡完成的全部在廠裡完成，船上只留非得在船上做的部分——定位、銲接、開口收邊。",
       ],
     },
     {
-      heading: "廠內的七週",
+      heading: "七週做完，然後等",
       paragraphs: [
         "原材料在委託後的第九天進廠，接著依各艙間的需求分件加工：風管彎製與銲接、風箱與百葉窗的框體組立、封板下料。配件逐一完成後進行整體組裝，再做表面處理。",
       ],
@@ -132,7 +132,7 @@ const ductLouverPrefabInstallation: CaseProject = {
       ],
     },
     {
-      heading: "進場之後",
+      heading: "等到船說可以了",
       paragraphs: [
         "十月二十日接到通知進場，作業集中在定位與銲接：風管依既有結構樑的位置吊掛固定，風箱與百葉窗銲入艙壁開口，封板環繞銲接以恢復艙壁的完整性，舷外的通風出口則銲於外板開口並做銲道周邊處理。完工後經驗收，結果為合格。",
         "整個案子橫跨三個多月，船被佔用的只有最後那幾天。欣展用自己的三個月，換船東的幾天——而該做的，一件都沒有少。",
@@ -141,14 +141,14 @@ const ductLouverPrefabInstallation: CaseProject = {
   ],
   sectionsEn: [
     {
-      heading: "Why build it in the workshop first",
+      heading: "The same job takes far longer on board",
       paragraphs: [
         "Working on board and working in the shop are not the same trade. Compartments are tight, the routes through them are already taken up by existing pipework and equipment, and hot work has to fit around the vessel's own controls and the other trades on site. The same task done on board often takes several times as long.",
         "The real cost, though, is not labour but time alongside. So the planning for this kind of work comes down to one principle: finish everything that can be finished ashore, and leave on board only what must be done on board — positioning, welding, and making good around the openings.",
       ],
     },
     {
-      heading: "Seven weeks in the workshop",
+      heading: "Seven weeks to build it, then the wait",
       paragraphs: [
         "Raw material arrived nine days after the order. Fabrication then proceeded compartment by compartment: ducts bent and welded, frames built up for the plenums and louvres, blanking plates cut. As each part was finished the assemblies were brought together and given their surface treatment.",
       ],
@@ -162,7 +162,7 @@ const ductLouverPrefabInstallation: CaseProject = {
       ],
     },
     {
-      heading: "Once on board",
+      heading: "Waiting until the ship was ready",
       paragraphs: [
         "Called in on 20 October, the crew's work came down to positioning and welding: ducts hung and fixed to suit the existing beams, plenums and louvres welded into their bulkhead openings, blanking plates welded continuously around to restore the bulkhead, and the outboard ventilation outlets welded into the shell plating and made good around the welds. On completion the work was inspected and passed.",
         "The job spanned better than three months; the ship gave up only the last few days of it. TNO spent three months of its own so that the owner would spend a handful — and nothing was left undone.",

@@ -102,7 +102,7 @@ const compartmentScaffolding: CaseProject = {
       ],
     },
     {
-      heading: "在艙間裡搭起三層",
+      heading: "讓每個高度都有站的地方",
       paragraphs: [
         "這個艙間的高度足以分三層。每一層鋪設踏板、配置扶手橫桿，層與層之間以爬梯連通；底部裝設腳輪，整座架體可以推移到下一個作業位置，不必拆掉重搭。",
       ],
@@ -113,7 +113,7 @@ const compartmentScaffolding: CaseProject = {
       ],
     },
     {
-      heading: "鷹架搭好之後",
+      heading: "拆掉之後，留下的是什麼",
       paragraphs: [
         "照片的後半段，是鷹架完成之後在上面進行的作業——人員站在頂層處理艙頂的既有管路，切割的火花從架體邊緣落下。這些畫面才是鷹架存在的理由：驗收當天通過，後面的工班隔天就能站上去。",
         "一座搭得好的鷹架，最後會被拆掉、運走，現場不會留下任何痕跡。留下來的，是它撐住的那段時間裡，別人完成的事。",
@@ -129,7 +129,7 @@ const compartmentScaffolding: CaseProject = {
       ],
     },
     {
-      heading: "Three tiers inside the compartment",
+      heading: "A working level at every height",
       paragraphs: [
         "The compartment was tall enough to take three levels. Each was boarded out and fitted with guardrails, with ladders between them; castors underneath let the whole frame be pushed to the next working position rather than struck and built again.",
       ],
@@ -140,7 +140,7 @@ const compartmentScaffolding: CaseProject = {
       ],
     },
     {
-      heading: "Once it was up",
+      heading: "What is left after it comes down",
       paragraphs: [
         "The later photographs show what went on from the scaffold once it was finished — the crew on the top tier working the existing pipework at the deckhead, sparks falling away past the edge of the staging. Those are the pictures that explain why it was there at all: accepted the day it went up, and the trades behind it standing on it the next morning.",
         "Scaffolding that has done its job is taken down and carried away, leaving nothing behind on site. What remains is what other people managed to finish in the time it held them up there.",

@@ -94,14 +94,14 @@ const launchPlatformInstall: CaseProject = {
   isPublished: true,
   sections: [
     {
-      heading: "先決定力怎麼走",
+      heading: "力要先知道往哪裡走",
       paragraphs: [
         "設備的重量由基座承接，經門型架與斜撐傳到平台甲板，最後落到船體的主結構。這條路徑上任何一個接點處理不當，整座平台的剛性就打折，而且問題不會立刻出現——會從接點的疲勞慢慢開始。",
         "所以製作的順序是倒過來的：先確定基座要鎖在甲板的哪些位置，平台甲板的開口才跟著放樣，門型架的斷面與斜撐配置也才有依據。",
       ],
     },
     {
-      heading: "物料準備：四個多月",
+      heading: "四個多月，為了兩次機會",
       paragraphs: [
         "工單上的日期是這樣的：八月二十八日委託，隔年一月十五日完成物料準備。期間在廠內完成梁柱與斜撐的下料、組立與銲接，平台甲板則依基座位置預先開孔。",
       ],
@@ -112,7 +112,7 @@ const launchPlatformInstall: CaseProject = {
       ],
     },
     {
-      heading: "分兩次上船",
+      heading: "一到就能動工",
       paragraphs: [
         "組裝沒有一次做完。一月十六日第一次在船上作業，第二次要到四月二十五日，中間隔了三個多月。",
         "兩次上船，每一次都是一到就能動工——沒有在船上才發現少了一個件、或是漏掉一道工序。四月二十九日完成組裝，由船東代表到場驗收，合格。",
@@ -122,14 +122,14 @@ const launchPlatformInstall: CaseProject = {
   ],
   sectionsEn: [
     {
-      heading: "Settling the load path first",
+      heading: "The load has to know where it is going",
       paragraphs: [
         "The weight of the equipment is picked up by its base, carried through the portal frames and their bracing into the platform deck, and from there into the vessel's main structure. Any connection along that path that is not properly made costs the platform its stiffness — and the symptom does not show up at once, but creeps in as fatigue at the joints.",
         "So the work is planned backwards: where the bases will be bolted to the deck is fixed first, the openings in the platform deck are set out from that, and only then do the frame sections and the arrangement of the bracing follow.",
       ],
     },
     {
-      heading: "Four months of preparation",
+      heading: "Four months for two short openings",
       paragraphs: [
         "The dates on the work order run like this: ordered on 28 August, materials complete by 15 January the following year. In between, the girders and bracing were cut, assembled and welded in the shop, and the platform deck was cut with its openings to suit the base positions.",
       ],
@@ -140,7 +140,7 @@ const launchPlatformInstall: CaseProject = {
       ],
     },
     {
-      heading: "Two visits to the ship",
+      heading: "Able to start the moment they were aboard",
       paragraphs: [
         "The assembly was not done in one go. The first session on board was on 16 January; the second not until 25 April, more than three months later.",
         "On each visit the crew could start the moment they were aboard — no discovering on board that a part was missing or a step had been skipped. Assembly was completed on 29 April and accepted by the owner's representative. It passed.",

@@ -84,7 +84,7 @@ const surveyPoleInstall: CaseProject = {
       ],
     },
     {
-      heading: "廠內：組裝，而且測試過",
+      heading: "在廠裡先讓它動一次",
       paragraphs: [
         "委託的隔天材料就進廠。接著是下料加工、廠內組裝，最後一道是測試——把組好的機構實際動過一遍。",
       ],
@@ -98,7 +98,7 @@ const surveyPoleInstall: CaseProject = {
       ],
     },
     {
-      heading: "現場：三月二十五日",
+      heading: "一天，而且不是賭的",
       paragraphs: [
         "人員與機具當天進場，基座吊至甲板定位、與船體固定，桿體組上——同日完成，同日通過驗收。",
         "十三天裡，船受到影響的只有一天。欣展把不確定留在廠裡，交到船上的是確定——這才是那一天真正的價值。",
@@ -114,7 +114,7 @@ const surveyPoleInstall: CaseProject = {
       ],
     },
     {
-      heading: "In the shop: assembled, and tested",
+      heading: "Made to move before it ever left",
       paragraphs: [
         "Material arrived the day after the order. Cutting and machining followed, then assembly in the workshop, and finally a test — the completed mechanism put through its movement for real.",
       ],
@@ -128,7 +128,7 @@ const surveyPoleInstall: CaseProject = {
       ],
     },
     {
-      heading: "On site: 25 March",
+      heading: "One day — and not a gamble",
       paragraphs: [
         "The crew and their gear went aboard that morning. The base was lifted onto the deck, positioned and secured to the hull, the pole fitted — finished and accepted the same day.",
         "Of those thirteen days the ship was affected on one. TNO kept the uncertainty ashore and took aboard only what was settled — which is what made that single day worth giving up.",

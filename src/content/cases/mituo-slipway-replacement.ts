@@ -100,14 +100,14 @@ const mituoSlipwayReplacement: CaseProject = {
   isPublished: true,
   sections: [
     {
-      heading: "為什麼工期要這樣排",
+      heading: "停多久，是排出來的",
       paragraphs: [
         "這個案子的時間表，答案就寫在工單的日期裡：六月二十三日委託，七月二十九日材料進廠加工，九月八日在廠完成所有配件組合——然後停下來，等現場排定日期。九月十日才進漁港，開始拆除舊船台。",
         "從委託到廠內備便花了十一週，而真正佔用到漁港的，是最後那幾天。這不是巧合，是這類工程唯一合理的排法：能在廠裡做完的都先做完，現場只留非得在現場做的事。",
       ],
     },
     {
-      heading: "廠內：把一台完整的台車做出來",
+      heading: "到場的是一台車，不是零件",
       paragraphs: [
         "船台不是單一構件，而是硬木方材、鋼構底盤與成排滾輪組的組合體。木料要依尺寸下料、整平，鋼構底盤要焊接成形，滾輪座要逐一定位後鎖固。",
       ],
@@ -121,7 +121,7 @@ const mituoSlipwayReplacement: CaseProject = {
       ],
     },
     {
-      heading: "現場：七天",
+      heading: "最後一道：把它拉進水裡",
       paragraphs: [
         "九月十日進場拆除舊船台，軌道與斜坡維持原狀；九月十五至十六日安裝新台車並完成調整。",
         "裝上去之後沒有就此交差。最後還做了一趟拉力測試——台車沿軌道下放入水，在實際狀態下確認整套機構的運行，並由漁會人員一同完驗。結果合格。",
@@ -131,14 +131,14 @@ const mituoSlipwayReplacement: CaseProject = {
   ],
   sectionsEn: [
     {
-      heading: "Why the schedule looks the way it does",
+      heading: "How long it stays idle is a decision",
       paragraphs: [
         "The answer is in the dates on the work order: ordered on 23 June, material into the shop on 29 July, every component assembled and standing ready by 8 September — and then a pause, waiting on a date from the site. Only on 10 September did the crew go into the harbour and start taking the old cradle apart.",
         "Eleven weeks from order to ready; a handful of days actually spent occupying the harbour. That is not a coincidence but the only sensible way to run this kind of job: finish everything that can be finished ashore, and leave on site only what has to happen on site.",
       ],
     },
     {
-      heading: "In the shop: building a complete cradle",
+      heading: "What arrived was a cradle, not parts",
       paragraphs: [
         "A slipway cradle is not one component but an assembly — hardwood baulks, a welded steel underframe, and rows of rollers. The timber is cut to size and dressed, the underframe welded up, and each roller mount set in position and bolted down.",
       ],
@@ -152,7 +152,7 @@ const mituoSlipwayReplacement: CaseProject = {
       ],
     },
     {
-      heading: "On site: seven days",
+      heading: "The last step: running it into the water",
       paragraphs: [
         "The old cradle came out on 10 September, with the rails and slope left untouched; on 15 and 16 September the new one was installed and adjusted.",
         "Fitting it was not where the job ended. It was then run down the rails into the water under a pull test, to confirm how the whole assembly behaved in service, and commissioned together with staff from the local fishermen's association. It passed.",
