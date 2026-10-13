@@ -15,6 +15,12 @@ import type { CaseProject } from "@/types/case";
  *      2026-09-02 要求，讓那一列有東西可看），客戶名沿用既有案例的
  *      「XX ○○股份有限公司」寫法，一眼就看得出是示意而非真實客戶。
  *      正式案例素材到位後整筆汰換。
+ *
+ * ⚠️ 2026-10-13 下架（isPublished: false）。窗口提供的六份完工報告中已有四份
+ *    建成正式案例，這筆版面範例若繼續並列，會是唯一一筆 TNO 不認得、而且
+ *    施工單位寫著「XX 造船股份有限公司」的案例，驗收時容易被當成錯誤。
+ *    檔案保留不刪：日後若欣展提供真正的開艙案例素材，版面與敘事結構可直接
+ *    沿用，把示意資料換成真實資料並改回 isPublished: true 即可。
  */
 const deckOpeningRestoration: CaseProject = {
   slug: "deck-opening-restoration",
@@ -76,7 +82,7 @@ const deckOpeningRestoration: CaseProject = {
   locationEn: "Port of Kaohsiung",
   tags: ["開艙工程", "甲板復原", "設備吊換", "夜間施工"],
   publishedAt: "2026-09-02",
-  isPublished: true,
+  isPublished: false,   // 2026-10-13 下架，見檔頭
   sections: [
     {
       heading: "為什麼要開艙？",

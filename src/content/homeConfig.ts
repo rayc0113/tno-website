@@ -76,7 +76,10 @@ const HOME_FEATURED_PRODUCTS: HomeFeatured[] = [
 // （含編造的量化數據），卡片維持顯示以保留三塊的版面，但不連出去。
 //
 // 正式案例到位後把這個陣列清空（或列出全部分類），三張卡就會全部恢復可點。
-export const HOME_CASE_LINKABLE_CATEGORIES = ["船舶維修"];
+// 2026-10-13 更新：四筆正式案例上線、版面範例下架後，有內容的分類變成
+// 港務工程與船舶改裝；船舶維修目前沒有已發布案例，該張卡維持顯示但不連出去。
+// 等承德排煙管或排水管那兩筆補齊（分別卡在具名政策與報告缺件），再加回來。
+export const HOME_CASE_LINKABLE_CATEGORIES = ["港務工程", "船舶改裝"];
 
 // homeImage 必須填 /images/home/ 路徑，勿改為 /images/cases/
 // ⚠️ 這三筆對應的案例已於 2026-09-03 下架（isPublished: false），但首頁卡片
