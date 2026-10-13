@@ -118,7 +118,9 @@ const exhaustPipeRenewal: CaseProject = {
       paragraphs: [
         "滿焊之後，工單上接著寫的是「焊道鈍化」。",
         "銲接的高溫會讓銲道附近的表面狀態改變，抗蝕性隨之下降。不處理的話，整條管路最先鏽的往往就是銲道——而銲道外面還要再包上保溫材與護皮，等到從外觀看得出問題，通常已經是裡面爛了一段時間之後。",
-        "這道工序做完，外觀上看不出任何差別。它決定的是幾年後的事。",
+        "這道工序做完，外觀上看不出任何差別。做了沒做，當下沒有人分辨得出來——只有做的人自己知道。",
+        "五月二十日，主機與電機排煙管工程全部完工，隔天機具吊離，驗收合格。",
+        "二十四天的工期是靠工序交疊排出來的，這看得見；而工期結束之後的那幾年，靠的是包進保溫層裡、再也看不到的那一道。一條排煙管要算真的換好，兩件都得做到。",
       ],
     },
   ],
@@ -145,7 +147,9 @@ const exhaustPipeRenewal: CaseProject = {
       paragraphs: [
         "After the welding is complete, the next entry on the work order is passivation of the welds.",
         "The heat of welding changes the condition of the surface around the weld, and its resistance to corrosion drops with it. Left alone, the weld is often the first part of the whole run to rust — and the weld then disappears under insulation and cladding, so by the time anything shows on the outside, it has usually been going on inside for a while.",
-        "Done properly, this step leaves nothing visible to show for it. What it settles is the condition of the pipework several years from now.",
+        "Done properly, this step leaves nothing visible to show for it. Whether it was done at all, nobody can tell by looking — only the people who did the work know.",
+        "On 20 May the main engine and generator exhaust work was complete; the gear came off the next day, and the job was accepted.",
+        "The twenty-four days came from letting the operations overlap, and that part shows. The years that follow come from the step that disappears under the lagging and is never seen again. An exhaust run is only properly renewed when both have been done.",
       ],
     },
   ],

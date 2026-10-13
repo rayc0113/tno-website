@@ -101,7 +101,9 @@ const surveyPoleInstall: CaseProject = {
       heading: "現場：三月二十五日",
       paragraphs: [
         "人員與機具當天進場，基座吊至甲板定位、與船體固定，桿體組上，同日完成並通過驗收。",
-        "對船方而言，這代表船只需要空出一天。對這類有固定航期的工作船來說，能空出的時間本來就不多——工程配合得上，船才排得進來。",
+        "能這樣排，是因為該出問題的地方在廠裡就已經出過了——機構出廠前動過、確認可以運作，材質證明也隨工程附上。把不確定留在廠裡，把確定交到船上。",
+        "三月二十五日當天進場、當天完成、當天通過驗收。",
+        "十三天裡，船受到影響的只有一天。對一艘有固定航期的工作船來說，這一天是它付得起的代價——而付出去之後，東西是好的。",
       ],
     },
   ],
@@ -131,7 +133,9 @@ const surveyPoleInstall: CaseProject = {
       heading: "On site: 25 March",
       paragraphs: [
         "The crew and their gear went aboard that morning. The base was lifted onto the deck, positioned and secured to the hull, the pole fitted, and the work completed and accepted the same day.",
-        "For the vessel, that means giving up one day. For a working ship on a fixed programme there is rarely much more to give — the job has to fit the ship's window, or the ship cannot take the job.",
+        "It could be scheduled that way because whatever was going to go wrong had already gone wrong in the shop — the mechanism had been moved and proved before it left, and material certificates came with it. The uncertainty stayed ashore; what went aboard was settled.",
+        "On 25 March the crew went aboard, finished, and had the work accepted, all the same day.",
+        "Of those thirteen days the ship was affected on one. For a working vessel on a fixed programme, that is a day she can afford — and having spent it, what she got back was sound.",
       ],
     },
   ],

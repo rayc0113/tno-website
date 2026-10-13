@@ -122,7 +122,9 @@ const mituoSlipwayReplacement: CaseProject = {
       heading: "現場：七天",
       paragraphs: [
         "九月十日進場拆除舊船台，軌道與斜坡維持原狀。九月十五至十六日安裝新台車並完成調整，由漁會人員一同完驗，結果合格。",
-        "最後一道是拉力測試——台車沿軌道下放入水，確認整套機構在實際狀態下的運行。這一關過了，漁船才能重新開始上架。",
+        "新船台裝上去之後沒有就此交差。最後還做了一趟拉力測試——台車沿軌道下放入水，在實際狀態下確認整套機構的運行，並由漁會人員一同完驗。結果合格。",
+        "六月底委託，九月十六日完驗。十一週的準備，換來現場的七天。",
+        "對一座仰賴這條上架線的漁港來說，交付的不只是一台新船台，還有「盡快能再用」這件事。做給誰用、誰要天天靠它過日子，從排工期的那一刻起就已經算在裡面了。",
       ],
     },
   ],
@@ -152,7 +154,9 @@ const mituoSlipwayReplacement: CaseProject = {
       heading: "On site: seven days",
       paragraphs: [
         "The old cradle came out on 10 September, with the rails and slope left untouched. On 15 and 16 September the new cradle was installed and adjusted, and commissioned together with staff from the local fishermen's association. It passed.",
-        "The last step was the pull test — the cradle run down the rails into the water to confirm how the whole assembly behaves in service. With that cleared, boats could start coming out of the water again.",
+        "Fitting the new cradle was not where the job ended. It was then run down the rails into the water under a pull test, to confirm how the whole assembly behaved in service, and commissioned together with staff from the local fishermen's association. It passed.",
+        "Ordered at the end of June, signed off on 16 September. Eleven weeks of preparation bought seven days on site.",
+        "For a harbour that depends on this one slipway, what was delivered was not only a new cradle but the fact of having it back quickly. Who would be using it, and who relies on it to make a living, was part of the scheduling from the first day.",
       ],
     },
   ],

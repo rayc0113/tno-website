@@ -113,7 +113,9 @@ const launchPlatformInstall: CaseProject = {
       heading: "分兩次上船",
       paragraphs: [
         "組裝沒有一次做完。一月十六日第一次在船上作業，第二次要到四月二十五日，中間隔了三個多月；四月二十九日完成組裝，由船東代表驗收，結果合格。",
-        "船上的工程本來就得等船在。能分階段施作的前提，是每個構件在廠裡就已經做到可以獨立安裝的程度——否則停工的那三個月，現場只會留下一堆半成品。",
+        "兩次上船，每一次都是一到就能動工——沒有在船上才發現少了一個件、或是漏掉一道工序。四月二十九日完成組裝，由船東代表到場驗收，合格。",
+        "船什麼時候有空，不是我們能決定的；能決定的，是那一天到來時東西是不是已經備好。那四個多月的物料準備，換的就是這件事。",
+        "對船東而言，這代表兩次停靠都沒有白停。",
       ],
     },
   ],
@@ -140,7 +142,9 @@ const launchPlatformInstall: CaseProject = {
       heading: "Two visits to the ship",
       paragraphs: [
         "The assembly was not done in one go. The first session on board was on 16 January; the second not until 25 April, more than three months later. Assembly was completed on 29 April and accepted by the owner's representative. It passed.",
-        "Work on a ship waits on the ship. What makes staged installation possible is that each component leaves the shop finished enough to be fitted on its own — otherwise those three months in between would have left nothing on site but half-built parts.",
+        "Two visits, and on each the crew could start the moment they were aboard — no discovering on board that a part was missing or a step had been skipped. Assembly was completed on 29 April and accepted by the owner's representative. It passed.",
+        "When the ship has time is not ours to decide; whether the work is ready on the day it does, is. That is what four months of preparation bought.",
+        "For the owner, it meant neither of those two calls was wasted.",
       ],
     },
   ],

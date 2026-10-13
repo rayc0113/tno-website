@@ -116,6 +116,7 @@ const compartmentScaffolding: CaseProject = {
       heading: "鷹架搭好之後",
       paragraphs: [
         "照片的後半段，是鷹架完成之後在上面進行的作業——人員站在頂層處理艙頂的既有管路，切割的火花從架體邊緣落下。",
+        "四月一日當天完成，通過驗收。後面的工班隔天就能站上去開工。",
         "一座搭得好的鷹架，最後會被拆掉、運走，現場不會留下任何痕跡。留下來的，是它撐住的那段時間裡，別人完成的事。",
       ],
     },
@@ -143,6 +144,7 @@ const compartmentScaffolding: CaseProject = {
       heading: "Once it was up",
       paragraphs: [
         "The later photographs show what went on from the scaffold once it was finished — the crew on the top tier working the existing pipework at the deckhead, sparks falling away past the edge of the staging.",
+        "Finished and accepted on 1 April. The trades behind it could be standing on it the next morning.",
         "Scaffolding that has done its job is taken down and carried away, leaving nothing behind on site. What remains is what other people managed to finish in the time it held them up there.",
       ],
     },
