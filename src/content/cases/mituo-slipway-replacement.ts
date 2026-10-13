@@ -45,10 +45,10 @@ const mituoSlipwayReplacement: CaseProject = {
     "Replacing a fishing harbour's slipway cradle — built and assembled complete in the workshop, then demolished, installed and load-tested on site in seven days",
   description:
     "一座漁港的上架線停擺，漁船就上不了岸。船要修、要保養、要檢查船底，都得先靠船台沿著軌道被拉上來。\n\n" +
-    "彌陀漁港的船台要汰換，而汰換的過程本身就會讓它停擺。欣展接下這個案子時，要解的不只是怎麼做出一台新船台，而是怎麼讓這座漁港少停幾天。",
+    "彌陀漁港的船台要汰換，而汰換的過程本身就會讓它停擺。欣展接下這個案子時，要解的不只是怎麼做出一台新船台，而是怎麼讓這條上架線少停幾天。",
   descriptionEn:
     "When a harbour's slipway is out of action, the boats cannot come out of the water. Repairs, maintenance, anything that means looking at the hull below the waterline — all of it begins with a boat being drawn up the rails on a cradle.\n\n" +
-    "At Mituo the cradle had to be replaced, and replacing it would itself put the slipway out of action. When TNO took the job on, the question was not only how to build a new cradle, but how to give the harbour back as many of those days as possible.",
+    "At Mituo the cradle had to be replaced, and replacing it would itself put the slipway out of action. When TNO took the job on, the question was not only how to build a new cradle, but how few days the slipway would have to stand idle.",
   coverImage: "/images/cases/mituo-slipway-replacement-cover.webp",
   images: [
     {
@@ -123,10 +123,9 @@ const mituoSlipwayReplacement: CaseProject = {
     {
       heading: "現場：七天",
       paragraphs: [
-        "九月十日進場拆除舊船台，軌道與斜坡維持原狀。九月十五至十六日安裝新台車並完成調整，由漁會人員一同完驗，結果合格。",
-        "新船台裝上去之後沒有就此交差。最後還做了一趟拉力測試——台車沿軌道下放入水，在實際狀態下確認整套機構的運行，並由漁會人員一同完驗。結果合格。",
-        "六月底委託，九月十六日完驗。十一週的準備，換來現場的七天。",
-        "十一週在廠裡，七天在現場。欣展交付的不只是一台新船台，還有這座漁港少停的那幾個星期。",
+        "九月十日進場拆除舊船台，軌道與斜坡維持原狀；九月十五至十六日安裝新台車並完成調整。",
+        "裝上去之後沒有就此交差。最後還做了一趟拉力測試——台車沿軌道下放入水，在實際狀態下確認整套機構的運行，並由漁會人員一同完驗。結果合格。",
+        "十一週在廠裡，七天在現場。欣展交付的不只是一台新船台，還有這條上架線少停的那幾個星期。",
       ],
     },
   ],
@@ -155,10 +154,9 @@ const mituoSlipwayReplacement: CaseProject = {
     {
       heading: "On site: seven days",
       paragraphs: [
-        "The old cradle came out on 10 September, with the rails and slope left untouched. On 15 and 16 September the new cradle was installed and adjusted, and commissioned together with staff from the local fishermen's association. It passed.",
-        "Fitting the new cradle was not where the job ended. It was then run down the rails into the water under a pull test, to confirm how the whole assembly behaved in service, and commissioned together with staff from the local fishermen's association. It passed.",
-        "Ordered at the end of June, signed off on 16 September. Eleven weeks of preparation bought seven days on site.",
-        "Eleven weeks in the shop, seven days on site. What TNO handed over was not only a new cradle, but the weeks the harbour did not lose.",
+        "The old cradle came out on 10 September, with the rails and slope left untouched; on 15 and 16 September the new one was installed and adjusted.",
+        "Fitting it was not where the job ended. It was then run down the rails into the water under a pull test, to confirm how the whole assembly behaved in service, and commissioned together with staff from the local fishermen's association. It passed.",
+        "Eleven weeks in the shop, seven days on site. What TNO handed over was not only a new cradle, but the weeks the slipway did not lose.",
       ],
     },
   ],

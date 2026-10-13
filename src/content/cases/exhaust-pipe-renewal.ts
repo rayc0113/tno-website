@@ -99,7 +99,7 @@ const exhaustPipeRenewal: CaseProject = {
     {
       heading: "二十四天裡要做完的事",
       paragraphs: [
-        "四月二十八日進場拆除既有管段，隔天吊離。四月三十日新管段開始定位、點焊，五月七日完成滿焊、焊道鈍化，以及保溫材角鐵的銲接固定。接著是保溫材鋪設與外覆鐵皮，五月二十日全部完工，隔天機具吊離。",
+        "四月二十八日進場拆除既有管段，隔天吊離。四月三十日新管段開始定位、點焊，五月七日完成滿焊、焊道鈍化，以及保溫材角鐵的銲接固定。接著是保溫材鋪設與外覆鐵皮，五月二十日全部完工，隔天機具吊離，驗收合格。",
         "這段期間機艙是工作面，不是通道。排煙管鄰近人員活動範圍與電纜設備，拆除與銲接都伴隨高溫與火花，周邊的防護得先做好，作業才排得下去。",
       ],
     },
@@ -119,8 +119,7 @@ const exhaustPipeRenewal: CaseProject = {
         "滿焊之後，工單上接著寫的是「焊道鈍化」。",
         "銲接的高溫會讓銲道附近的表面狀態改變，抗蝕性隨之下降。不處理的話，整條管路最先鏽的往往就是銲道——而銲道外面還要再包上保溫材與護皮，等到從外觀看得出問題，通常已經是裡面爛了一段時間之後。",
         "這道工序做完，外觀上看不出任何差別。做了沒做，當下沒有人分辨得出來——只有做的人自己知道。",
-        "五月二十日，主機與電機排煙管工程全部完工，隔天機具吊離，驗收合格。",
-        "二十四天的工期是靠工序交疊排出來的，這看得見；而工期結束之後的那幾年，靠的是包進保溫層裡、再也看不到的那一道。一條排煙管要算真的換好，兩件都得做到——欣展交出去的是兩件都做到的那種。",
+        "二十四天的工期是靠工序交疊排出來的，這看得見；而工期結束之後的那幾年，靠的是包進保溫層裡、再也看不到的那一道。一條排煙管要算真的換好，兩件都得做到——而欣展兩件都做了。",
       ],
     },
   ],
@@ -128,7 +127,7 @@ const exhaustPipeRenewal: CaseProject = {
     {
       heading: "What had to fit into twenty-four days",
       paragraphs: [
-        "The old sections came out on 28 April and were lifted off the next day. On 30 April the new pipework began to be positioned and tacked; by 7 May it was fully welded, the welds passivated, and the angle supports for the insulation welded on. Lagging and metal cladding followed, all of it complete on 20 May, with the gear lifted off the day after.",
+        "The old sections came out on 28 April and were lifted off the next day. On 30 April the new pipework began to be positioned and tacked; by 7 May it was fully welded, the welds passivated, and the angle supports for the insulation welded on. Lagging and metal cladding followed, all of it complete on 20 May; the gear came off the day after and the work was accepted.",
         "For that stretch the engine room was a working face rather than a passage. Exhaust pipework runs close to where people work and to cabling and equipment, and both removal and welding bring heat and sparks with them, so the protection around the area has to be in place before any of it can be scheduled.",
       ],
     },
@@ -148,7 +147,6 @@ const exhaustPipeRenewal: CaseProject = {
         "After the welding is complete, the next entry on the work order is passivation of the welds.",
         "The heat of welding changes the condition of the surface around the weld, and its resistance to corrosion drops with it. Left alone, the weld is often the first part of the whole run to rust — and the weld then disappears under insulation and cladding, so by the time anything shows on the outside, it has usually been going on inside for a while.",
         "Done properly, this step leaves nothing visible to show for it. Whether it was done at all, nobody can tell by looking — only the people who did the work know.",
-        "On 20 May the main engine and generator exhaust work was complete; the gear came off the next day, and the job was accepted.",
         "The twenty-four days came from letting the operations overlap, and that part shows. The years that follow come from the step that disappears under the lagging and is never seen again. An exhaust run is only properly renewed when both have been done — and both were.",
       ],
     },

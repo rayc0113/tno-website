@@ -114,7 +114,7 @@ const ductLouverPrefabInstallation: CaseProject = {
       heading: "為什麼先在廠裡做完",
       paragraphs: [
         "船上的施工條件和廠內完全是兩回事。艙間窄、動線被既有管路和設備佔滿，動火作業要配合船上的管制與其他工班的進度，同一件事在船上做往往要花上好幾倍的時間。",
-        "但真正的成本不在工時，而在船期。船停在碼頭的每一天都是帳面上的損失，所以這類工程的規劃重點只有一個：把能在廠裡完成的全部在廠裡完成，船上只留非得在船上做的部分——定位、銲接、開口收邊。",
+        "但真正的成本不在工時，而在船期。所以這類工程的規劃重點只有一個：把能在廠裡完成的全部在廠裡完成，船上只留非得在船上做的部分——定位、銲接、開口收邊。",
       ],
     },
     {
@@ -128,15 +128,13 @@ const ductLouverPrefabInstallation: CaseProject = {
         "完成後留在廠內待命，等船方排定施工日期",
       ],
       trailing: [
-        "備便到進場之間還隔了六週。這段時間裡，船完全沒有因為這項工程而被佔用——這正是廠內預製的意義所在。",
+        "備便到進場之間還隔了六週。這六週不是進度落後，而是刻意的——船還在作業，就讓它作業。",
       ],
     },
     {
       heading: "進場之後",
       paragraphs: [
-        "接到通知後進場，現場作業集中在定位與銲接：風管依既有結構樑的位置吊掛固定，風箱與百葉窗銲入艙壁開口，封板環繞銲接以恢復艙壁的完整性，舷外的通風出口則銲於外板開口並做銲道周邊處理。",
-        "東西九月初就備妥了，卻在廠裡又等了六週才進場。這六週不是進度落後，而是刻意的——船還在作業，就讓它作業。",
-        "十月二十日進場，定位、銲接、收邊，完工後經驗收，結果為合格。",
+        "十月二十日接到通知進場，作業集中在定位與銲接：風管依既有結構樑的位置吊掛固定，風箱與百葉窗銲入艙壁開口，封板環繞銲接以恢復艙壁的完整性，舷外的通風出口則銲於外板開口並做銲道周邊處理。完工後經驗收，結果為合格。",
         "整個案子橫跨三個多月，船被佔用的只有最後那幾天。欣展用自己的三個月，換船東的幾天——而該做的，一件都沒有少。",
       ],
     },
@@ -146,7 +144,7 @@ const ductLouverPrefabInstallation: CaseProject = {
       heading: "Why build it in the workshop first",
       paragraphs: [
         "Working on board and working in the shop are not the same trade. Compartments are tight, the routes through them are already taken up by existing pipework and equipment, and hot work has to fit around the vessel's own controls and the other trades on site. The same task done on board often takes several times as long.",
-        "The real cost, though, is not labour but time alongside. Every day the vessel sits at the quay is a day she is not earning, so the planning for this kind of work comes down to one principle: finish everything that can be finished ashore, and leave on board only what must be done on board — positioning, welding, and making good around the openings.",
+        "The real cost, though, is not labour but time alongside. So the planning for this kind of work comes down to one principle: finish everything that can be finished ashore, and leave on board only what must be done on board — positioning, welding, and making good around the openings.",
       ],
     },
     {
@@ -160,15 +158,13 @@ const ductLouverPrefabInstallation: CaseProject = {
         "Held in the workshop on completion, awaiting the vessel's installation date",
       ],
       trailing: [
-        "Six more weeks passed between standing ready and going aboard — six weeks in which the vessel was not tied up by this work at all. That is the whole point of building it ashore.",
+        "Six more weeks passed between standing ready and going aboard. They were not lost time but deliberate: the vessel was still working, so she was left to work.",
       ],
     },
     {
       heading: "Once on board",
       paragraphs: [
-        "On being called in, the on-site work came down to positioning and welding: ducts hung and fixed to suit the existing beams, plenums and louvres welded into their bulkhead openings, blanking plates welded continuously around to restore the bulkhead, and the outboard ventilation outlets welded into the shell plating and made good around the welds.",
-        "Everything was ready by the start of September, and then stood in the workshop for six more weeks. Those weeks were not lost time; they were deliberate. The vessel was still working, so she was left to work.",
-        "The crew went aboard on 20 October. Positioning, welding, making good — and on completion the work was inspected and passed.",
+        "Called in on 20 October, the crew's work came down to positioning and welding: ducts hung and fixed to suit the existing beams, plenums and louvres welded into their bulkhead openings, blanking plates welded continuously around to restore the bulkhead, and the outboard ventilation outlets welded into the shell plating and made good around the welds. On completion the work was inspected and passed.",
         "The job spanned better than three months; the ship gave up only the last few days of it. TNO spent three months of its own so that the owner would spend a handful — and nothing was left undone.",
       ],
     },

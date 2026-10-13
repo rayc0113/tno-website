@@ -100,9 +100,7 @@ const surveyPoleInstall: CaseProject = {
     {
       heading: "現場：三月二十五日",
       paragraphs: [
-        "人員與機具當天進場，基座吊至甲板定位、與船體固定，桿體組上，同日完成並通過驗收。",
-        "能這樣排，是因為該出問題的地方在廠裡就已經出過了——機構出廠前動過、確認可以運作，材質證明也隨工程附上。",
-        "三月二十五日當天進場、當天完成、當天通過驗收。",
+        "人員與機具當天進場，基座吊至甲板定位、與船體固定，桿體組上——同日完成，同日通過驗收。",
         "十三天裡，船受到影響的只有一天。欣展把不確定留在廠裡，交到船上的是確定——這才是那一天真正的價值。",
       ],
     },
@@ -132,9 +130,7 @@ const surveyPoleInstall: CaseProject = {
     {
       heading: "On site: 25 March",
       paragraphs: [
-        "The crew and their gear went aboard that morning. The base was lifted onto the deck, positioned and secured to the hull, the pole fitted, and the work completed and accepted the same day.",
-        "It could be scheduled that way because whatever was going to go wrong had already gone wrong in the shop — the mechanism had been moved and proved before it left, and material certificates came with it.",
-        "On 25 March the crew went aboard, finished, and had the work accepted, all the same day.",
+        "The crew and their gear went aboard that morning. The base was lifted onto the deck, positioned and secured to the hull, the pole fitted — finished and accepted the same day.",
         "Of those thirteen days the ship was affected on one. TNO kept the uncertainty ashore and took aboard only what was settled — which is what made that single day worth giving up.",
       ],
     },
