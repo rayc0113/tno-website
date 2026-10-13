@@ -8,6 +8,7 @@
  */
 
 import type { CaseProject, CaseSummary } from "@/types/case";
+import exhaustPipeRenewal from "./exhaust-pipe-renewal";
 import surveyPoleInstall from "./survey-pole-install";
 import launchPlatformInstall from "./launch-platform-install";
 import mituoSlipwayReplacement from "./mituo-slipway-replacement";
@@ -26,6 +27,7 @@ import offshorePlatformLiving from "./offshore-platform-living";
 //    待欣展提供 3–5 個代表案例後整批汰換（素材見 materials/04-案例）。
 export const allCases: CaseProject[] = [
   // 依 TNO 正式工單（完工報告 PDF）撰寫的案例
+  exhaustPipeRenewal,
   surveyPoleInstall,
   launchPlatformInstall,
   mituoSlipwayReplacement,
