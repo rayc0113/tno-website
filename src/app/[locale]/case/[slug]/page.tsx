@@ -165,9 +165,11 @@ export default async function CaseDetailPage({ params }: Props) {
                 {caseItem.location}
               </span>
             )}
-            {/* 完工日期與施工單位、施工地點同列，桌機以 ml-auto 靠最右；
-                行動版空間不足時自然換行到下一行 */}
-            <span className="text-[14px] text-body whitespace-nowrap md:ml-auto">
+            {/* 完工日期緊接在施工地點之後，與前兩欄同列靠左。
+                原本桌機以 md:ml-auto 推到最右，但施工單位與地點都是選填——
+                兩者皆未填時左側整個空著、日期孤懸右端，看起來不平衡。
+                改為一律靠左接續，沒有前面兩欄時日期就貼齊左邊。 */}
+            <span className="text-[14px] text-body whitespace-nowrap">
               {t("completedAt")}{dateDisplay}
             </span>
           </div>
