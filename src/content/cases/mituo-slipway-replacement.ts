@@ -112,9 +112,9 @@ const mituoSlipwayReplacement: CaseProject = {
         "船台不是單一構件，而是硬木方材、鋼構底盤與成排滾輪組的組合體。木料要依尺寸下料、整平，鋼構底盤要焊接成形，滾輪座要逐一定位後鎖固。",
       ],
       bullets: [
-        "大斷面硬木承受船體重量，同時吸收上架過程中的衝擊",
-        "鋼構底盤把分散的輪組串成一個整體，確保受力均勻",
-        "滾輪座的位置關係到台車能不能順著軌道平穩運行",
+        "硬木承重也吸震，鋼構底盤把分散的輪組串成整體——兩種材料各做各的事",
+        "滾輪座只要有一處偏掉，台車在軌道上就會卡頓、單邊偏磨",
+        "而這種問題，要等到實際拉第一艘船上來才看得出來",
       ],
       trailing: [
         "這些工序完成後，運到現場的是一台已經組裝好的台車，不是一堆零件。",
@@ -143,9 +143,9 @@ const mituoSlipwayReplacement: CaseProject = {
         "A slipway cradle is not one component but an assembly — hardwood baulks, a welded steel underframe, and rows of rollers. The timber is cut to size and dressed, the underframe welded up, and each roller mount set in position and bolted down.",
       ],
       bullets: [
-        "Large-section hardwood carries the weight of the hull and absorbs the shock of hauling out",
-        "The steel underframe ties the separate roller sets into one structure, spreading the load",
-        "Where the roller mounts sit decides whether the cradle runs true along the rails",
+        "Hardwood to carry the weight and take the shock, a steel underframe to tie the roller sets into one structure — each material doing its own job",
+        "Let one roller mount sit out of line and the cradle will snatch on the rails and wear unevenly on one side",
+        "And that is the kind of fault nobody sees until the first boat is actually drawn up",
       ],
       trailing: [
         "What went to site at the end of all this was a finished cradle, not a pile of parts.",

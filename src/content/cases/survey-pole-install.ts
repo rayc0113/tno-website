@@ -80,7 +80,8 @@ const surveyPoleInstall: CaseProject = {
       heading: "一個會動的結構",
       paragraphs: [
         "測桿是把測量設備送到船體之外的支撐結構。它和一般的固定支架不同之處在於：桿體必須能收放——作業時伸出，不作業時收起，不能一直占著船舷。",
-        "所以基座的核心是樞軸。樞軸要承受桿體伸出時的彎矩，也要在反覆轉動後仍然保持間隙不走樣；而承接這些力的，是基座與甲板之間的那幾道銲道與螺栓。結構上真正要處理的不是桿子，是這個轉點。",
+        "所以基座的核心是樞軸。它要承受桿體伸出時的彎矩，也要在反覆轉動幾百次之後仍然保持間隙不走樣——一旦間隙跑掉，桿體的指向就跟著偏，而裝在上面的測量設備最怕的就是這個。",
+        "結構上真正要處理的不是桿子，是這個轉點；而承接這些力的，是基座與甲板之間的那幾道銲道與螺栓。",
       ],
     },
     {
@@ -110,7 +111,8 @@ const surveyPoleInstall: CaseProject = {
       heading: "A structure that has to move",
       paragraphs: [
         "A survey pole carries measuring equipment out clear of the hull. What sets it apart from an ordinary fixed bracket is that it has to stow: out when it is working, back in when it is not, rather than permanently occupying the ship's side.",
-        "That makes the pivot the heart of the base. It has to carry the bending moment of the pole when deployed, and still hold its clearances after being swung in and out time and again — and the forces behind all of that run into the welds and bolts between the base and the deck. The real structural problem is not the pole; it is this one turning point.",
+        "That makes the pivot the heart of the base. It has to carry the bending moment of the pole when deployed, and still hold its clearances after being swung in and out hundreds of times — once those clearances open up, the pole no longer points where it should, and that is precisely what the equipment on the end of it cannot tolerate.",
+        "The real structural problem is not the pole but this one turning point — and the forces behind it all run into the welds and bolts between the base and the deck.",
       ],
     },
     {

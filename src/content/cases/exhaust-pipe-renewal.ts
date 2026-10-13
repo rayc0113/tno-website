@@ -99,7 +99,8 @@ const exhaustPipeRenewal: CaseProject = {
     {
       heading: "機艙成為工作面的那二十四天",
       paragraphs: [
-        "四月二十八日進場拆除既有管段，隔天吊離。四月三十日新管段開始定位、點焊，五月七日完成滿焊、焊道鈍化，以及保溫材角鐵的銲接固定。接著是保溫材鋪設與外覆鐵皮，五月二十日全部完工，隔天機具吊離，驗收合格。",
+        "四月二十八日進場拆除既有管段，隔天吊離。四月三十日新管段開始定位、點焊——舊的才剛下來，新的就接著上去。",
+        "五月七日完成滿焊、焊道鈍化，以及保溫材角鐵的銲接固定；接著是保溫材鋪設與外覆鐵皮。五月二十日全部完工，隔天機具吊離，驗收合格。",
         "這段期間機艙是工作面，不是通道。排煙管鄰近人員活動範圍與電纜設備，拆除與銲接都伴隨高溫與火花，周邊的防護得先做好，作業才排得下去。",
       ],
     },
@@ -127,7 +128,8 @@ const exhaustPipeRenewal: CaseProject = {
     {
       heading: "Twenty-four days with the engine room as a working face",
       paragraphs: [
-        "The old sections came out on 28 April and were lifted off the next day. On 30 April the new pipework began to be positioned and tacked; by 7 May it was fully welded, the welds passivated, and the angle supports for the insulation welded on. Lagging and metal cladding followed, all of it complete on 20 May; the gear came off the day after and the work was accepted.",
+        "The old sections came out on 28 April and were lifted off the next day. On 30 April the new pipework began to be positioned and tacked — the old barely down before the new went up.",
+        "By 7 May it was fully welded, the welds passivated, and the angle supports for the insulation welded on; lagging and metal cladding followed. All of it was complete on 20 May, the gear came off the day after, and the work was accepted.",
         "For that stretch the engine room was a working face rather than a passage. Exhaust pipework runs close to where people work and to cabling and equipment, and both removal and welding bring heat and sparks with them, so the protection around the area has to be in place before any of it can be scheduled.",
       ],
     },

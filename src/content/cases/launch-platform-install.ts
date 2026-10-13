@@ -96,7 +96,8 @@ const launchPlatformInstall: CaseProject = {
     {
       heading: "力要先知道往哪裡走",
       paragraphs: [
-        "設備的重量由基座承接，經門型架與斜撐傳到平台甲板，最後落到船體的主結構。這條路徑上任何一個接點處理不當，整座平台的剛性就打折，而且問題不會立刻出現——會從接點的疲勞慢慢開始。",
+        "設備的重量由基座承接，經門型架與斜撐傳到平台甲板，最後落到船體的主結構。這條路徑上任何一個接點處理不當，整座平台的剛性就打折。",
+        "麻煩的是，這種缺陷不會當場現形。平台裝好時看起來一樣穩，問題從接點的疲勞慢慢開始——等到看得出來，通常已經累積了很久。",
         "所以製作的順序是倒過來的：先確定基座要鎖在甲板的哪些位置，平台甲板的開口才跟著放樣，門型架的斷面與斜撐配置也才有依據。",
       ],
     },
@@ -109,6 +110,9 @@ const launchPlatformInstall: CaseProject = {
         "構件在廠內做完，上船時是可以直接組立的成品",
         "甲板開口先行加工，現場不必再放樣切割",
         "表面處理同樣在廠內完成，減少船上的動火與塗裝作業",
+      ],
+      trailing: [
+        "這四個多月裡，船一天也沒有因為這項工程停下來。",
       ],
     },
     {
@@ -124,7 +128,8 @@ const launchPlatformInstall: CaseProject = {
     {
       heading: "The load has to know where it is going",
       paragraphs: [
-        "The weight of the equipment is picked up by its base, carried through the portal frames and their bracing into the platform deck, and from there into the vessel's main structure. Any connection along that path that is not properly made costs the platform its stiffness — and the symptom does not show up at once, but creeps in as fatigue at the joints.",
+        "The weight of the equipment is picked up by its base, carried through the portal frames and their bracing into the platform deck, and from there into the vessel's main structure. Any connection along that path that is not properly made costs the platform its stiffness.",
+        "The awkward part is that such a fault does not announce itself. The platform looks just as solid on the day it goes up; the trouble starts quietly as fatigue at the joints, and by the time it shows it has usually been building for a long while.",
         "So the work is planned backwards: where the bases will be bolted to the deck is fixed first, the openings in the platform deck are set out from that, and only then do the frame sections and the arrangement of the bracing follow.",
       ],
     },
@@ -137,6 +142,9 @@ const launchPlatformInstall: CaseProject = {
         "Components finished ashore, so what went aboard could be assembled straight away",
         "Deck openings cut in advance, with no setting out or cutting left for site",
         "Surface treatment done in the shop too, reducing hot work and painting on board",
+      ],
+      trailing: [
+        "Through all four of those months, the ship did not lose a single day to this work.",
       ],
     },
     {

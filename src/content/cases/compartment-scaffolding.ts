@@ -111,6 +111,9 @@ const compartmentScaffolding: CaseProject = {
         "踏板與扶手同步配置，上去的人不必再自己想辦法",
         "可移動式架體，換位置時省下拆裝的時間",
       ],
+      trailing: [
+        "這些不是額外的講究，是必要條件。鷹架搭得鬆、踏板不齊，上面的人就不敢使力——後面每一道工序都會跟著慢下來。",
+      ],
     },
     {
       heading: "拆掉之後，留下的是什麼",
@@ -137,6 +140,9 @@ const compartmentScaffolding: CaseProject = {
         "Built in tiers, so every point on the deckhead has a working level to match it",
         "Boards and guardrails fitted as it went up, so no one arriving has to improvise",
         "A mobile frame, saving the time it would take to dismantle and re-erect",
+      ],
+      trailing: [
+        "None of that is refinement for its own sake. A scaffold that moves underfoot, or boards that do not sit flush, and the people on it will not commit their weight — and every trade behind them slows down with it.",
       ],
     },
     {

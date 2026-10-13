@@ -134,7 +134,8 @@ const ductLouverPrefabInstallation: CaseProject = {
     {
       heading: "等到船說可以了",
       paragraphs: [
-        "十月二十日接到通知進場，作業集中在定位與銲接：風管依既有結構樑的位置吊掛固定，風箱與百葉窗銲入艙壁開口，封板環繞銲接以恢復艙壁的完整性，舷外的通風出口則銲於外板開口並做銲道周邊處理。完工後經驗收，結果為合格。",
+        "十月二十日接到通知進場。現場要做的只剩定位與銲接——風管吊掛固定，風箱與百葉窗銲入艙壁開口，封板環繞銲接恢復艙壁的完整性。完工後經驗收，結果為合格。",
+        "能這樣排，前提是尺寸全部對得上。如果在船上才發現某一段接不上去，選擇只有兩個：拆回廠裡重做，或者將就——前者賠上船期，後者賠上品質。這也是為什麼放樣與加工不能在現場即興。",
         "整個案子橫跨三個多月，船被佔用的只有最後那幾天。欣展用自己的三個月，換船東的幾天——而該做的，一件都沒有少。",
       ],
     },
@@ -164,7 +165,8 @@ const ductLouverPrefabInstallation: CaseProject = {
     {
       heading: "Waiting until the ship was ready",
       paragraphs: [
-        "Called in on 20 October, the crew's work came down to positioning and welding: ducts hung and fixed to suit the existing beams, plenums and louvres welded into their bulkhead openings, blanking plates welded continuously around to restore the bulkhead, and the outboard ventilation outlets welded into the shell plating and made good around the welds. On completion the work was inspected and passed.",
+        "Called in on 20 October, the crew had only positioning and welding left to do — ducts hung and fixed, plenums and louvres welded into their bulkhead openings, blanking plates welded continuously around to restore the bulkhead. On completion the work was inspected and passed.",
+        "All of which assumes every dimension lines up. Find on board that a section will not meet and there are two choices: take it back to the shop and remake it, or make do — the first costs the ship time, the second costs quality. Which is why setting out and fabrication are not things to improvise on site.",
         "The job spanned better than three months; the ship gave up only the last few days of it. TNO spent three months of its own so that the owner would spend a handful — and nothing was left undone.",
       ],
     },
