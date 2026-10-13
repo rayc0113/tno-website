@@ -77,13 +77,14 @@ export default async function AboutPage({ params }: Props) {
             {t("team.description4")}
           </p>
 
-          {/* 廠房外觀與團隊合照合成一張（2560×1024，2.5:1）。
-              原本是兩張並排、右邊固定 594px、左邊 flex-1 吃剩餘寬度，
-              在 768–1100px 之間左圖會被壓成 50–300px 的細長條；
-              併成單張後沒有兩欄要分寬度，該問題從根本消失。 */}
-          <div className="relative w-full aspect-[5/2] rounded-[20px] md:rounded-[24px] overflow-hidden bg-surface">
+          {/* 廠房外觀單張（2000×1024，約 2:1，aspect 配合原圖避免裁切）。
+              沿革：原本是廠房外觀與團隊合照兩張並排，右邊固定 594px、左邊 flex-1，
+              在 768–1100px 之間左圖會被壓成細長條，因此 2026-09-04 併成一張合成圖；
+              2026-10-13 窗口告知團隊合照一直排不出時間拍，決定先移除，改為單張廠房外觀。
+              日後若補拍到團隊合照，再決定要併圖還是另開區塊。 */}
+          <div className="relative w-full aspect-[2/1] rounded-[20px] md:rounded-[24px] overflow-hidden bg-surface">
             <Image
-              src="/images/about/about-company-team.webp"
+              src="/images/about/about-company.webp"
               alt={t("team.imageAlt")}
               fill
               sizes="(max-width: 1400px) 100vw, 1280px"
