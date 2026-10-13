@@ -50,9 +50,11 @@ const ductLouverPrefabInstallation: CaseProject = {
   shortDescriptionEn:
     "Ventilation components fabricated, assembled and finished in the workshop, then held ready — so that only positioning and welding remained to be done on board",
   description:
-    "船上的通風構件數量多，形狀幾乎沒有一件相同——風管要繞過結構樑，風箱要貼合艙壁，百葉窗與封板各有各的開口尺寸。這些東西可以帶著材料上船慢慢量、慢慢做，也可以先在廠裡全部做完再帶上船。這個案子選的是後者，而選擇的理由，看工單的時間軸最清楚。",
+    "船停在碼頭的每一天，都是帳面上的損失。\n\n" +
+    "這個案子有一整批通風構件要做——風管、風箱、百葉窗、封板，形狀幾乎沒有一件相同：風管要繞過結構樑，風箱要貼合艙壁，開口尺寸各不相同。欣展可以帶著材料上船慢慢量、慢慢做，也可以先在廠裡全部做完再帶上船。選後者的理由，看工單的時間軸最清楚。",
   descriptionEn:
-    "A vessel's ventilation components are many, and hardly any two are alike: ducts have to work their way around structural members, plenums have to sit flush against bulkheads, and every louvre and blanking plate answers to its own opening. Such work can be measured and made on board, a piece at a time, or it can be built complete in the workshop and brought aboard finished. This project took the second route — and the reason why is clearest in the dates.",
+    "Every day a ship sits at the quay is a day she is not earning.\n\n" +
+    "This job meant a whole set of ventilation components, hardly any two alike: ducts working their way around structural members, plenums sitting flush against bulkheads, every louvre and blanking plate answering to its own opening. TNO could have measured and made them on board, a piece at a time, or built them complete ashore and brought them aboard finished. Why the second route was chosen is clearest in the dates.",
   coverImage: "/images/products/custom-engineering/duct-louver-panel-cover.webp",
   images: [
     {
@@ -135,7 +137,7 @@ const ductLouverPrefabInstallation: CaseProject = {
         "接到通知後進場，現場作業集中在定位與銲接：風管依既有結構樑的位置吊掛固定，風箱與百葉窗銲入艙壁開口，封板環繞銲接以恢復艙壁的完整性，舷外的通風出口則銲於外板開口並做銲道周邊處理。",
         "東西九月初就備妥了，卻在廠裡又等了六週才進場。這六週不是進度落後，而是刻意的——船還在作業，就讓它作業。",
         "十月二十日進場，定位、銲接、收邊，完工後經驗收，結果為合格。",
-        "整個案子橫跨三個多月，船被佔用的只有最後那幾天。對船東來說，這段期間船照常運作，什麼也沒耽誤——而該做的，一件都沒有少。",
+        "整個案子橫跨三個多月，船被佔用的只有最後那幾天。欣展用自己的三個月，換船東的幾天——而該做的，一件都沒有少。",
       ],
     },
   ],
@@ -167,7 +169,7 @@ const ductLouverPrefabInstallation: CaseProject = {
         "On being called in, the on-site work came down to positioning and welding: ducts hung and fixed to suit the existing beams, plenums and louvres welded into their bulkhead openings, blanking plates welded continuously around to restore the bulkhead, and the outboard ventilation outlets welded into the shell plating and made good around the welds.",
         "Everything was ready by the start of September, and then stood in the workshop for six more weeks. Those weeks were not lost time; they were deliberate. The vessel was still working, so she was left to work.",
         "The crew went aboard on 20 October. Positioning, welding, making good — and on completion the work was inspected and passed.",
-        "The job spanned better than three months; the ship gave up only the last few days of it. For the owner that meant business as usual throughout, with nothing delayed — and nothing left undone.",
+        "The job spanned better than three months; the ship gave up only the last few days of it. TNO spent three months of its own so that the owner would spend a handful — and nothing was left undone.",
       ],
     },
   ],

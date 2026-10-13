@@ -46,9 +46,11 @@ const launchPlatformInstall: CaseProject = {
   shortDescriptionEn:
     "A portal-frame steel platform for launch and recovery gear — fabricated ashore, assembled on board in two separate visits, and accepted by the owner's representative",
   description:
-    "船上多出一座平台，結構上要回答的問題不是「放得下嗎」，而是「撐得住嗎」。這類平台承載的設備要被吊起、放下、再收回，過程中荷重會隨著吊掛角度與船身動作改變——平台承受的是變動的力，不是靜止的重量。",
+    "船上多出一座平台，要回答的問題不是「放得下嗎」，而是「撐得住嗎」。\n\n" +
+    "這座平台承載的設備要被吊起、放下、再收回，荷重會隨著吊掛角度與船身動作改變。欣展要處理的是變動的力，不是靜止的重量——而且這座平台不是裝在新船上，是加到一艘正在運作的船上。",
   descriptionEn:
-    "When a platform is added to a vessel, the structural question is not whether it fits but whether it will hold. Gear mounted on a platform like this is lifted, lowered and recovered, and through all of that the load shifts with the angle of the fall and the movement of the hull. What the platform carries is a changing force, not a static weight.",
+    "When a platform is added to a vessel, the question is not whether it fits but whether it will hold.\n\n" +
+    "The gear it carries is lifted, lowered and recovered, and through all of that the load shifts with the angle of the fall and the movement of the hull. What TNO had to design for was a changing force rather than a static weight — and it was going onto a working ship, not a new one.",
   coverImage: "/images/cases/launch-platform-install-cover.webp",
   images: [
     {
@@ -114,7 +116,7 @@ const launchPlatformInstall: CaseProject = {
       paragraphs: [
         "組裝沒有一次做完。一月十六日第一次在船上作業，第二次要到四月二十五日，中間隔了三個多月；四月二十九日完成組裝，由船東代表驗收，結果合格。",
         "兩次上船，每一次都是一到就能動工——沒有在船上才發現少了一個件、或是漏掉一道工序。四月二十九日完成組裝，由船東代表到場驗收，合格。",
-        "船什麼時候有空，不是我們能決定的；能決定的，是那一天到來時東西是不是已經備好。那四個多月的物料準備，換的就是這件事。",
+        "船什麼時候有空，不是欣展能決定的；能決定的，是那一天到來時東西是不是已經備好。那四個多月的物料準備，換的就是這件事。",
         "對船東而言，這代表兩次停靠都沒有白停。",
       ],
     },
@@ -143,7 +145,7 @@ const launchPlatformInstall: CaseProject = {
       paragraphs: [
         "The assembly was not done in one go. The first session on board was on 16 January; the second not until 25 April, more than three months later. Assembly was completed on 29 April and accepted by the owner's representative. It passed.",
         "Two visits, and on each the crew could start the moment they were aboard — no discovering on board that a part was missing or a step had been skipped. Assembly was completed on 29 April and accepted by the owner's representative. It passed.",
-        "When the ship has time is not ours to decide; whether the work is ready on the day it does, is. That is what four months of preparation bought.",
+        "When the ship has time was never TNO's to decide; whether the work was ready on the day it came, was. That is what four months of preparation bought.",
         "For the owner, it meant neither of those two calls was wasted.",
       ],
     },

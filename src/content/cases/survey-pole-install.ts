@@ -45,11 +45,11 @@ const surveyPoleInstall: CaseProject = {
   shortDescriptionEn:
     "Thirteen days from order to acceptance, with a single day on board — because it had already been assembled and tested in the workshop",
   description:
-    "從委託到驗收，這個案子花了十三天。其中真正在船上的時間，是一天。\n\n" +
-    "這種壓縮不是靠現場趕工趕出來的。工單上的第三道工序寫著「廠內組裝及測試」——東西在出廠前就已經組起來、動過、確認可以運作，現場要做的才只剩定位與固定。",
+    "一艘有固定航期的工作船，能空出來的時間不多。\n\n" +
+    "這個案子從委託到驗收十三天，其中船被佔用的時間是一天。這種壓縮不是靠現場趕工趕出來的——工單上的第三道工序寫著「廠內組裝及測試」，欣展在出廠前就把東西組起來、動過、確認可以運作，現場要做的才只剩定位與固定。",
   descriptionEn:
-    "Thirteen days from order to acceptance; one of them spent on board.\n\n" +
-    "That compression did not come from rushing the work on site. The third stage on the work order reads \"assembled and tested in the workshop\" — the thing was put together, moved and proved before it ever left, so that what remained on board was positioning and securing it.",
+    "A working vessel on a fixed programme has little time to spare.\n\n" +
+    "This job ran thirteen days from order to acceptance, and the ship gave up one of them. That compression did not come from rushing the work on site: the third stage on the work order reads \"assembled and tested in the workshop\", and TNO had the thing put together, moved and proved before it ever left — so what remained on board was positioning and securing it.",
   coverImage: "/images/cases/survey-pole-install-cover.webp",
   images: [
     {
@@ -101,9 +101,9 @@ const surveyPoleInstall: CaseProject = {
       heading: "現場：三月二十五日",
       paragraphs: [
         "人員與機具當天進場，基座吊至甲板定位、與船體固定，桿體組上，同日完成並通過驗收。",
-        "能這樣排，是因為該出問題的地方在廠裡就已經出過了——機構出廠前動過、確認可以運作，材質證明也隨工程附上。把不確定留在廠裡，把確定交到船上。",
+        "能這樣排，是因為該出問題的地方在廠裡就已經出過了——機構出廠前動過、確認可以運作，材質證明也隨工程附上。",
         "三月二十五日當天進場、當天完成、當天通過驗收。",
-        "十三天裡，船受到影響的只有一天。對一艘有固定航期的工作船來說，這一天是它付得起的代價——而付出去之後，東西是好的。",
+        "十三天裡，船受到影響的只有一天。欣展把不確定留在廠裡，交到船上的是確定——這才是那一天真正的價值。",
       ],
     },
   ],
@@ -133,9 +133,9 @@ const surveyPoleInstall: CaseProject = {
       heading: "On site: 25 March",
       paragraphs: [
         "The crew and their gear went aboard that morning. The base was lifted onto the deck, positioned and secured to the hull, the pole fitted, and the work completed and accepted the same day.",
-        "It could be scheduled that way because whatever was going to go wrong had already gone wrong in the shop — the mechanism had been moved and proved before it left, and material certificates came with it. The uncertainty stayed ashore; what went aboard was settled.",
+        "It could be scheduled that way because whatever was going to go wrong had already gone wrong in the shop — the mechanism had been moved and proved before it left, and material certificates came with it.",
         "On 25 March the crew went aboard, finished, and had the work accepted, all the same day.",
-        "Of those thirteen days the ship was affected on one. For a working vessel on a fixed programme, that is a day she can afford — and having spent it, what she got back was sound.",
+        "Of those thirteen days the ship was affected on one. TNO kept the uncertainty ashore and took aboard only what was settled — which is what made that single day worth giving up.",
       ],
     },
   ],

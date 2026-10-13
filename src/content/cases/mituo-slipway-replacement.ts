@@ -44,9 +44,11 @@ const mituoSlipwayReplacement: CaseProject = {
   shortDescriptionEn:
     "Replacing a fishing harbour's slipway cradle — built and assembled complete in the workshop, then demolished, installed and load-tested on site in seven days",
   description:
-    "漁港的船台是漁船上岸的途徑。船要修、要保養、要檢查船底，都得先靠這套台車沿著軌道被拉上岸。也正因為如此，舊船台拆掉之後、新的裝好之前，這條上架線是停著的——工期怎麼排，直接決定了漁港要停多久。",
+    "一座漁港的上架線停擺，漁船就上不了岸。船要修、要保養、要檢查船底，都得先靠船台沿著軌道被拉上來。\n\n" +
+    "彌陀漁港的船台要汰換，而汰換的過程本身就會讓它停擺。欣展接下這個案子時，要解的不只是怎麼做出一台新船台，而是怎麼讓這座漁港少停幾天。",
   descriptionEn:
-    "A slipway is how a fishing boat gets out of the water. Repairs, maintenance, anything that means looking at the hull below the waterline — all of it starts with the boat being drawn up the rails on a cradle. Which is also why, between the old cradle coming out and the new one going in, that slipway stands idle. How the work is scheduled decides how long the harbour goes without it.",
+    "When a harbour's slipway is out of action, the boats cannot come out of the water. Repairs, maintenance, anything that means looking at the hull below the waterline — all of it begins with a boat being drawn up the rails on a cradle.\n\n" +
+    "At Mituo the cradle had to be replaced, and replacing it would itself put the slipway out of action. When TNO took the job on, the question was not only how to build a new cradle, but how to give the harbour back as many of those days as possible.",
   coverImage: "/images/cases/mituo-slipway-replacement-cover.webp",
   images: [
     {
@@ -124,7 +126,7 @@ const mituoSlipwayReplacement: CaseProject = {
         "九月十日進場拆除舊船台，軌道與斜坡維持原狀。九月十五至十六日安裝新台車並完成調整，由漁會人員一同完驗，結果合格。",
         "新船台裝上去之後沒有就此交差。最後還做了一趟拉力測試——台車沿軌道下放入水，在實際狀態下確認整套機構的運行，並由漁會人員一同完驗。結果合格。",
         "六月底委託，九月十六日完驗。十一週的準備，換來現場的七天。",
-        "對一座仰賴這條上架線的漁港來說，交付的不只是一台新船台，還有「盡快能再用」這件事。做給誰用、誰要天天靠它過日子，從排工期的那一刻起就已經算在裡面了。",
+        "十一週在廠裡，七天在現場。欣展交付的不只是一台新船台，還有這座漁港少停的那幾個星期。",
       ],
     },
   ],
@@ -156,7 +158,7 @@ const mituoSlipwayReplacement: CaseProject = {
         "The old cradle came out on 10 September, with the rails and slope left untouched. On 15 and 16 September the new cradle was installed and adjusted, and commissioned together with staff from the local fishermen's association. It passed.",
         "Fitting the new cradle was not where the job ended. It was then run down the rails into the water under a pull test, to confirm how the whole assembly behaved in service, and commissioned together with staff from the local fishermen's association. It passed.",
         "Ordered at the end of June, signed off on 16 September. Eleven weeks of preparation bought seven days on site.",
-        "For a harbour that depends on this one slipway, what was delivered was not only a new cradle but the fact of having it back quickly. Who would be using it, and who relies on it to make a living, was part of the scheduling from the first day.",
+        "Eleven weeks in the shop, seven days on site. What TNO handed over was not only a new cradle, but the weeks the harbour did not lose.",
       ],
     },
   ],

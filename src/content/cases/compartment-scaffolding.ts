@@ -98,7 +98,7 @@ const compartmentScaffolding: CaseProject = {
       heading: "委託隔天，當天完成",
       paragraphs: [
         "工單上的日期只有兩天：三月三十一日委託，四月一日人員與機具進場，同日完成並通過驗收。",
-        "這個速度不是因為鷹架簡單，而是因為它站在整個案子的最前面。鷹架沒搭好，後面的工班就只能等——所以它趕的從來不是自己的進度。",
+        "這個速度不是因為鷹架簡單，而是因為它站在整個案子的最前面。鷹架沒搭好，後面的工班就只能等——欣展趕的從來不是自己的進度，是別人的。",
       ],
     },
     {
@@ -126,7 +126,7 @@ const compartmentScaffolding: CaseProject = {
       heading: "Ordered one day, finished the next",
       paragraphs: [
         "There are only two dates on the work order: ordered on 31 March, crew and equipment on site on 1 April, and the job finished and accepted the same day.",
-        "That pace is not because scaffolding is simple. It is because scaffolding stands at the head of the sequence. Until it is up, every trade behind it waits — so the schedule it is keeping was never its own.",
+        "That pace is not because scaffolding is simple. It is because scaffolding stands at the head of the sequence: until it is up, every trade behind it waits. The schedule TNO was keeping was never its own.",
       ],
     },
     {

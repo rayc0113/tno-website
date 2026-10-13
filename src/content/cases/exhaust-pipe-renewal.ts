@@ -47,11 +47,11 @@ const exhaustPipeRenewal: CaseProject = {
   shortDescriptionEn:
     "Twenty-four days on board: old sections out, new ones welded in, welds passivated and the run insulated and clad — with port and starboard overlapping",
   description:
-    "有些工程可以先在廠裡做完再帶上船，排煙管改裝只能做到一半。新管段確實是預先備妥的，但拆除、定位、滿焊、包覆到最後的收邊，全部得在機艙裡完成——而且主機與電機兩套管路、左右兩舷，都要做。\n\n" +
-    "這份工單記錄的就是船上那一段：四月二十八日進場，五月二十一日機具吊離，二十四天。",
+    "排煙管改裝沒有「廠裡做完再帶上船」這個選項。\n\n" +
+    "新管段確實能預先備妥，但拆除、定位、滿焊、包覆到最後收邊，全部得在機艙裡完成——而且主機與電機兩套管路、左右兩舷都要做。欣展在這艘船上的時間，是二十四天。",
   descriptionEn:
-    "Some work can be finished ashore and carried aboard; exhaust pipe renewal only goes halfway. The new sections were indeed made up in advance, but removing the old run, positioning, welding out, insulating and finally finishing the cladding all had to happen in the engine room — and for two sets of pipework, main engine and generator, on both sides of the ship.\n\n" +
-    "This work order covers that part: on board on 28 April, gear lifted off on 21 May. Twenty-four days.",
+    "With exhaust pipework there is no option of finishing the job ashore.\n\n" +
+    "The new sections can be made up in advance, but removing the old run, positioning, welding out, insulating and finishing the cladding all have to happen in the engine room — and for two sets of pipework, main engine and generator, on both sides of the ship. TNO's time on board came to twenty-four days.",
   coverImage: "/images/cases/exhaust-pipe-renewal-cover.webp",
   images: [
     {
@@ -120,7 +120,7 @@ const exhaustPipeRenewal: CaseProject = {
         "銲接的高溫會讓銲道附近的表面狀態改變，抗蝕性隨之下降。不處理的話，整條管路最先鏽的往往就是銲道——而銲道外面還要再包上保溫材與護皮，等到從外觀看得出問題，通常已經是裡面爛了一段時間之後。",
         "這道工序做完，外觀上看不出任何差別。做了沒做，當下沒有人分辨得出來——只有做的人自己知道。",
         "五月二十日，主機與電機排煙管工程全部完工，隔天機具吊離，驗收合格。",
-        "二十四天的工期是靠工序交疊排出來的，這看得見；而工期結束之後的那幾年，靠的是包進保溫層裡、再也看不到的那一道。一條排煙管要算真的換好，兩件都得做到。",
+        "二十四天的工期是靠工序交疊排出來的，這看得見；而工期結束之後的那幾年，靠的是包進保溫層裡、再也看不到的那一道。一條排煙管要算真的換好，兩件都得做到——欣展交出去的是兩件都做到的那種。",
       ],
     },
   ],
@@ -149,7 +149,7 @@ const exhaustPipeRenewal: CaseProject = {
         "The heat of welding changes the condition of the surface around the weld, and its resistance to corrosion drops with it. Left alone, the weld is often the first part of the whole run to rust — and the weld then disappears under insulation and cladding, so by the time anything shows on the outside, it has usually been going on inside for a while.",
         "Done properly, this step leaves nothing visible to show for it. Whether it was done at all, nobody can tell by looking — only the people who did the work know.",
         "On 20 May the main engine and generator exhaust work was complete; the gear came off the next day, and the job was accepted.",
-        "The twenty-four days came from letting the operations overlap, and that part shows. The years that follow come from the step that disappears under the lagging and is never seen again. An exhaust run is only properly renewed when both have been done.",
+        "The twenty-four days came from letting the operations overlap, and that part shows. The years that follow come from the step that disappears under the lagging and is never seen again. An exhaust run is only properly renewed when both have been done — and both were.",
       ],
     },
   ],

@@ -187,7 +187,13 @@ export default async function CaseDetailPage({ params }: Props) {
             />
           </div>
 
-          <p className="text-[16px] text-title leading-[30px] mt-10 text-pretty">{caseItem.description}</p>
+          {/* 開場白可寫多段，以 \n\n 分隔。原本整段塞進單一 <p>，HTML 會把換行
+              壓成空格、兩段連在一起，因此改為逐段輸出。 */}
+          <div className="mt-10 flex flex-col gap-4">
+            {caseItem.description.split("\n\n").filter(Boolean).map((para, i) => (
+              <p key={i} className="text-[16px] text-title leading-[30px] text-pretty">{para}</p>
+            ))}
+          </div>
 
           {/* Body Sections：每段之後依序插一張施工照，剩餘的收在文末照片牆 */}
           {caseItem.sections?.map((section, i) => (
