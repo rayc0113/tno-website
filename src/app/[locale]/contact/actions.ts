@@ -34,7 +34,7 @@ export async function submitContactForm(
   }
 
   try {
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "TNO 欣展詢問表單 <onboarding@resend.dev>",
       to: TO_EMAIL,
       replyTo: email,
@@ -71,8 +71,17 @@ export async function submitContactForm(
       `,
     });
 
+    // Resend 的 send() 不會丟出例外，API 層的失敗（金鑰無效、網域未驗證、
+    // 收件人未授權、超過額度）是用回傳的 error 表示的。不檢查這裡的話，
+    // 信根本沒寄出，訪客仍會看到「感謝您的詢問」。
+    if (error) {
+      console.error("Email send failed:", error);
+      return { success: false, message: t("errorMessage") };
+    }
+
     return { success: true, message: t("successMessage") };
   } catch (error) {
+    // 走到這裡的是網路層或其他未預期的例外
     console.error("Email send error:", error);
     return { success: false, message: t("errorMessage") };
   }

@@ -13,6 +13,16 @@ function inputClass(hasError: boolean) {
   ].join(" ");
 }
 
+type FieldName = "company" | "name" | "phone" | "email" | "message";
+
+const EMPTY_VALUES: Record<FieldName, string> = {
+  company: "",
+  name: "",
+  phone: "",
+  email: "",
+  message: "",
+};
+
 export default function ContactForm() {
   const t = useTranslations("contact.form");
   const [state, formAction, isPending] = useActionState<ContactFormState, FormData>(
@@ -21,12 +31,34 @@ export default function ContactForm() {
   );
   const [touched, setTouched] = useState<Record<string, boolean>>({});
 
+  // 欄位改為受控：React 19 的 <form action> 在 action 結束後會重設未受控欄位，
+  // 不分成功或失敗。寄信失敗時客戶打的那段詢問會整個消失，等於要重打一次。
+  // 值改由 state 持有，只在送出成功後才主動清空。
+  const [values, setValues] = useState(EMPTY_VALUES);
+
+  // 每次送出都會得到一個新的 state 物件，比對參考即可知道這次結果還沒處理過。
+  const [handledState, setHandledState] = useState<ContactFormState>(null);
+  if (state !== handledState) {
+    setHandledState(state);
+    if (state?.success) {
+      setValues(EMPTY_VALUES);
+      setTouched({});
+    }
+  }
+
   const fields = [
     { id: "company", name: "company", label: t("company"), type: "text" },
     { id: "name",    name: "name",    label: t("name"),    type: "text" },
     { id: "phone",   name: "phone",   label: t("phone"),   type: "tel" },
     { id: "email",   name: "email",   label: t("email"),   type: "email" },
   ] as const;
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) {
+    const { name, value } = e.target;
+    setValues((prev) => ({ ...prev, [name]: value }));
+  }
 
   function handleBlur(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) {
     if (!e.target.value.trim()) {
@@ -48,6 +80,8 @@ export default function ContactForm() {
             id={id}
             name={name}
             required
+            value={values[name]}
+            onChange={handleChange}
             onBlur={handleBlur}
             className={inputClass(!!touched[name])}
           />
@@ -66,6 +100,8 @@ export default function ContactForm() {
           name="message"
           rows={6}
           required
+          value={values.message}
+          onChange={handleChange}
           onBlur={handleBlur}
           className={`${inputClass(!!touched["message"])} resize-none`}
         />
