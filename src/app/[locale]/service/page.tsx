@@ -125,8 +125,15 @@ export default async function ServicePage({ params }: Props) {
                   </Button>
                 </div>
               </div>
-              {/* Image */}
-              <div className="w-full h-[260px] md:w-[700px] md:h-auto flex-shrink-0 relative rounded-2xl overflow-hidden">
+              {/* Image
+                  高度鎖死 430px 不跟著文字欄跑。原本是 md:h-auto 搭配外層的
+                  items-stretch，圖會被文字撐高——文字越長裁得越多，四項的裁切
+                  比例因此全不一致（英文版更明顯，最長的一項曾拉到 700×666，
+                  上下各裁掉三成）。
+                  430 是算出來的：原圖 1400×860，700 × (860/1400) = 430，
+                  與外層原本就寫著的 md:min-h-[430px] 吻合，此尺寸完全不裁切。
+                  文字較長時改以 self-center 垂直置中，不再連動。 */}
+              <div className="w-full h-[260px] md:w-[700px] md:h-[430px] md:self-center flex-shrink-0 relative rounded-2xl overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
