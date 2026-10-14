@@ -111,7 +111,11 @@ export default async function ProductDetailPage({ params }: Props) {
               原本手機與桌機各寫一份標題區（lg:hidden / hidden lg:block），
               畫面上只看到一個，但兩份都在 HTML 裡——爬蟲會讀到兩個 h1 與
               重複兩次的產品描述。改為只渲染一份，靠 col/row-start 換位置。 */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[48px] lg:gap-y-7 items-start">
+          {/* lg:grid-rows-[auto_1fr] 是關鍵：左欄的照片區跨兩列，當它比右欄文字高時，
+              瀏覽器會把多出來的高度平均分到兩列——標題與「產品優勢」之間就被撐出一塊
+              空白，照片越多的產品越明顯。把第一列固定為 auto（貼合標題高度）、第二列
+              設為 1fr 吸收剩餘空間後，多的高度會落到說明文字下方，而不是卡在中間。 */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-[auto_1fr] gap-x-[48px] lg:gap-y-7 items-start">
             <div className="mb-6 lg:mb-0 lg:col-start-2 lg:row-start-1">
               <p className="text-body text-[18px] mb-1">{categoryLabel}</p>
               <h1 className="text-[28px] lg:text-[32px] font-bold text-title leading-tight mb-3 lg:mb-4">
