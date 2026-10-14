@@ -3,7 +3,15 @@
 import { Resend } from "resend";
 import { getTranslations } from "next-intl/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Resend 的 constructor 在沒有金鑰時會直接 throw。原本寫在模組最外層，
+// 等於環境變數一旦沒設，整個 action 模組載入就失敗——不是表單送不出，
+// 是整頁掛掉（實測畫面顯示 "This page couldn't load"）。
+// 改成在 action 內部建立，並先檢查金鑰，讓它退回成一則錯誤訊息。
+function createResendClient(): Resend | null {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return null;
+  return new Resend(apiKey);
+}
 
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "tno.tw@msa.hinet.net";
 
@@ -31,6 +39,12 @@ export async function submitContactForm(
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return { success: false, message: t("invalidEmail") };
+  }
+
+  const resend = createResendClient();
+  if (!resend) {
+    console.error("RESEND_API_KEY is not set — 無法寄出詢問信");
+    return { success: false, message: t("errorMessage") };
   }
 
   try {
