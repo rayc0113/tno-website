@@ -35,7 +35,7 @@ function alternatesFor(path: string) {
  * - 列表頁：用底下所有內容中最新的那一天（有新品項才算更新）
  * - 靜態頁（關於、聯絡、服務）：用內容最後整理的日期常數，改文案時一併更新
  */
-const STATIC_PAGE_UPDATED = "2026-09-08";
+const STATIC_PAGE_UPDATED = "2026-10-14";
 
 function latest(dates: string[]): Date {
   const sorted = [...dates].sort();
