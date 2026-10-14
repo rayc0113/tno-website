@@ -54,7 +54,7 @@
       "description1": "From material supply to onboard work, we take part in every stage of ship construction, retrofit, and maintenance,",
       "description2": "delivering complete solutions that safeguard every voyage and stand up to inspection.",
       "items": {
-        "material": { "title": "Material Agency", "description": "Supplying certified insulation, foam, and timber — keeping every build on schedule" },
+        "material": { "title": "Material Agency", "description": "Supplying certified insulation and timber — keeping every build on schedule" },
         "manufacturing": { "title": "Manufacturing", "description": "From metal panels to stainless steel kitchens — durable, precision-made marine components" },
         "design": { "title": "Design & Planning", "description": "2D/3D planning with professional design workflows to ensure every detail works" },
         "processing": { "title": "Custom Fabrication", "description": "Precision machining, bending, and welding — reliable components for any spec" }
@@ -75,7 +75,7 @@
       "categoryDescriptions": {
         "港務工程": "New and replacement slipways and quayside facilities — from workshop prefabrication through on-site assembly and testing.",
         "船舶改裝": "Reconfiguring compartments and onboard systems to upgrade the function and space of existing vessels.",
-        "船舶維修": "From interior refurbishment to component replacement — professional workflows that extend vessel life and boost performance."
+        "船舶維修": "From main engine systems to equipment in the compartments — inspection, overhaul and renewal that extend a vessel's working life."
       }
     },
     "whyChoose": {
@@ -122,7 +122,7 @@
       "material": {
         "category": "Material Agency",
         "title": "Material Supply • Rapid Fulfillment",
-        "description": "We represent a wide range of imported construction materials and raw materials — including thermal insulation, PU foam boards, and engineering timber — ensuring a stable and efficient material supply for your projects.",
+        "description": "We represent a wide range of imported construction materials and raw materials — rock, glass and ceramic wool insulation, and engineering timber — ensuring a stable and efficient material supply for your projects.",
         "cta": "Inquire Now"
       },
       "manufacturing": {
@@ -134,7 +134,7 @@
       "design": {
         "category": "Design & Planning",
         "title": "Tailored Solutions • Precise Execution",
-        "description": "We create custom 2D/3D planning drawings for your project — from requirements analysis to spatial layout — ensuring every detail aligns with real-world operations, whether for ship cabin partitions or stainless steel equipment.",
+        "description": "We create custom 2D/3D planning drawings for your project — from requirements analysis to spatial layout — ensuring every detail aligns with real-world operations, whether for components fitted inside the compartments or stainless steel equipment.",
         "cta": "Inquire Now"
       },
       "processing": {
