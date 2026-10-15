@@ -1,7 +1,7 @@
 import type { CaseProject } from "@/types/case";
 
 /**
- * 發射平台新製與分階段上船安裝
+ * 設備平台新製與分階段上船安裝（原名：發射平台，2026-10-15 依窗口要求更名）
  *
  * 【第三筆依 TNO 正式工單撰寫的案例】2026-10-13
  *
@@ -38,13 +38,13 @@ import type { CaseProject } from "@/types/case";
  */
 const launchPlatformInstall: CaseProject = {
   slug: "launch-platform-install",
-  title: "發射平台新製與分階段上船安裝",
-  titleEn: "Building a Launch Platform and Installing It in Stages",
+  title: "設備平台新製與分階段上船安裝",
+  titleEn: "Building an Equipment Platform and Installing It in Stages",
   category: "船舶改裝",
   shortDescription:
     "承載吊放設備的門型鋼構平台，廠內完成製作後分兩次上船組裝，由船東代表驗收合格",
   shortDescriptionEn:
-    "A portal-frame steel platform for launch and recovery gear — fabricated ashore, assembled on board in two separate visits, and accepted by the owner's representative",
+    "A portal-frame steel platform for equipment that is lifted and lowered in use — fabricated ashore, assembled on board in two separate visits, and accepted by the owner's representative",
   description:
     "船上多出一座平台，要回答的問題不是「放得下嗎」，而是「撐得住嗎」。\n\n" +
     "這座平台承載的設備要被吊起、放下、再收回，荷重會隨著吊掛角度與船身動作改變。欣展要處理的是變動的力，不是靜止的重量。",
@@ -89,7 +89,7 @@ const launchPlatformInstall: CaseProject = {
   // 註：services 目前全站沒有任何頁面渲染（保留欄位）
   services: ["門型架與斜撐製作", "平台甲板開口加工", "現場立設與銲接", "設備吊入定位", "表面處理"],
   completedAt: "2025-04-29",
-  tags: ["發射平台", "門型鋼構", "船上安裝", "分階段施工"],
+  tags: ["設備平台", "門型鋼構", "船上安裝", "分階段施工"],
   publishedAt: "2026-10-13",
   isPublished: true,
   sections: [

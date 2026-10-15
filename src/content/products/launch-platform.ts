@@ -1,16 +1,22 @@
 import type { Product } from "@/types/product";
 
 /**
- * 客製化工程（D 系列）— D-發射平台新製
+ * 客製化工程（D 系列）— D-設備平台新製（原名：發射平台新製）
  *
  * 2026-10-12 依 TNO 窗口 Lucy 的產品調整清單新增。
  *
- * ⚠️ 案名是否適合公開露出待確認（與「彈藥庫改裝」同一類問題）：
- *    「發射平台」四個字放在船舶工程的脈絡下，容易被讀成軍事用途。
- *    - 可以公開 → 維持現名
- *    - 不宜公開 → 改中性名稱（例如「設備承載平台新製」），並一併確認照片
- *      是否也要撤下
- *    此項須在網站正式上線前得到答覆。建議與彈藥庫改裝一起問。
+ * ✅ 2026-10-15 窗口 Lucy 回覆：案名改為「設備平台新製」。
+ *    原名「發射平台」在船舶工程脈絡下容易被讀成軍事用途（此疑慮 2026-10-12
+ *    建檔時即記在這裡），窗口確認改用中性名稱。產品與案例兩邊、以及其他
+ *    檔案裡所有指稱本項的「發射平台」字樣一併更名。
+ *    照片維持不變（窗口未要求撤下）。
+ *
+ *    ⚠️ slug 仍是 launch-platform，URL 與圖檔名未動——要連這些一起改需同步
+ *       重新命名 public/images/products/custom-engineering/ 下的檔案，
+ *       2026-10-15 與珈汶確認後另案處理。
+ *
+ *    ⚠️ TNO 原始工單的名稱就是「發射平台新製」（完工報告寫 LAUNCH PLATFORM），
+ *       檔頭引用報告原文處**刻意保留原名**，那是來源紀錄不是對外文字。
  *
  * 文案基準：與其他 16 支一致——規格書式的客觀陳述，第一段講工項本身（無主詞）、
  * 第二段講施工範圍與設計原則，全段不出現公司名。
@@ -29,8 +35,8 @@ import type { Product } from "@/types/product";
  */
 const launchPlatform: Product = {
   slug: "launch-platform",
-  name: "發射平台新製",
-  nameEn: "Launch Platform Fabrication",
+  name: "設備平台新製",
+  nameEn: "Equipment Platform Fabrication",
   category: "客製化工程",
   shortDescription: "承載設備的門型鋼構平台，含基座、甲板與斜撐的製作與現場組立",
   shortDescriptionEn:
