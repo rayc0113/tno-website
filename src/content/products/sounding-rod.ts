@@ -23,9 +23,9 @@ import type { Product } from "@/types/product";
  *    ⚠️ 仍刻意不寫：測量設備是什麼、量什麼（報告未載，照片也看不出來）、
  *       桿長、重量、材質牌號與樞軸規格。
  *
- *    ⚠️ slug 仍是 sounding-rod（URL 與圖檔名一併沿用）。要正名得連同
- *       public/images/products/custom-engineering/ 下的檔名一起改，
- *       2026-10-14 與珈汶確認後另案處理。
+ *    slug 維持 sounding-rod，URL 與圖檔名不動——同設備平台的處理原則
+ *    （2026-10-15 珈汶：「不影響的就不用改」）。對外顯示的名稱已正確，
+ *    網址沿用不影響閱讀。此事已結案，日後不必再提。
  *
  *    同一個案子另有案例頁 src/content/cases/survey-pole-install.ts，
  *    兩邊文字刻意不重複（避免站內重複內容）。

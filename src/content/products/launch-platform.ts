@@ -11,9 +11,10 @@ import type { Product } from "@/types/product";
  *    檔案裡所有指稱本項的「發射平台」字樣一併更名。
  *    照片維持不變（窗口未要求撤下）。
  *
- *    ⚠️ slug 仍是 launch-platform，URL 與圖檔名未動——要連這些一起改需同步
- *       重新命名 public/images/products/custom-engineering/ 下的檔案，
- *       2026-10-15 與珈汶確認後另案處理。
+ *    slug 維持 launch-platform，URL 與圖檔名不動（2026-10-15 珈汶決定：
+ *    「不影響的就不用改」）。更名的目的是對外顯示的文字，網址不是客戶
+ *    在讀的東西，為它重新命名十張圖與處理轉址不划算。此事已結案，
+ *    日後不必再提。
  *
  *    ⚠️ TNO 原始工單的名稱就是「發射平台新製」（完工報告寫 LAUNCH PLATFORM），
  *       檔頭引用報告原文處**刻意保留原名**，那是來源紀錄不是對外文字。
