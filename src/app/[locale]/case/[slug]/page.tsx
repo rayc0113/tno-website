@@ -59,10 +59,32 @@ export default async function CaseDetailPage({ params }: Props) {
   const tc = await getTranslations("categories");
   const translateCategory = (cat: string) => (tc.has(cat) ? tc(cat) : cat);
 
-  const relatedCases: CaseSummary[] = getPublishedCases()
-    .filter((c) => c.slug !== slug)
-    .sort((a, b) => b.completedAt.localeCompare(a.completedAt))
-    .slice(0, 3)
+  /**
+   * 「更多案例」改為環狀輪替
+   *
+   * 原本是「依完工日排序後取前三筆」，結果六筆案例裡永遠只有最新那幾筆在
+   * 互相推薦——彌陀船台與設備平台因為完工日最舊，一次都不會出現，讀者
+   * 從案例頁一路點下去走不完全部。
+   *
+   * 改為：把所有已發布案例依完工日排成固定順序，從「目前這篇的下一篇」
+   * 開始取三筆，到結尾繞回開頭。於是每一篇底下的三筆都不同，而且一直點
+   * 第一張就能依序把全部案例走過一輪再回到原點。
+   *
+   * 不用真正的亂數：頁面是靜態生成的，build 時抽一次等於從此固定；改在
+   * 前端抽則會造成 hydration 不一致，也會失去「點得完」這個性質。
+   */
+  const caseRing = getPublishedCases().sort((a, b) =>
+    b.completedAt.localeCompare(a.completedAt)
+  );
+  const currentIndex = caseRing.findIndex((c) => c.slug === slug);
+  const relatedCount = Math.min(3, caseRing.length - 1);
+
+  const relatedCases: CaseSummary[] = Array.from({ length: Math.max(relatedCount, 0) }, (_, i) =>
+    currentIndex === -1
+      ? caseRing[i]
+      : caseRing[(currentIndex + 1 + i) % caseRing.length]
+  )
+    .filter((c): c is NonNullable<typeof c> => Boolean(c) && c.slug !== slug)
     .map((c) => {
       const summary: CaseSummary = {
         slug: c.slug,
