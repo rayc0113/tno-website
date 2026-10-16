@@ -1,7 +1,12 @@
 import type { Product } from "@/types/product";
 
 /**
- * 客製化工程（D 系列）— D-空橋鋁欄杆安裝工程
+ * 船舶維修 — 空橋鋁欄杆安裝
+ *
+ * 2026-10-16 依窗口 Lucy 要求自「客製化工程」改列「船舶維修」。
+ * 圖片一併自 products/custom-engineering/ 搬到 products/ship-maintenance/，
+ * 維持「圖片依分類 slug 分子目錄」的規則。slug 與檔名不變。
+ * （TNO 原始工單編在 D 系列，此處僅調整網站上的分類歸屬。）
  *
  * 2026-10-12 依 TNO 窗口 Lucy 的產品調整清單：品名由「船上欄杆安裝」改為
  * 「空橋鋁欄杆安裝」，並補進三張照片。
@@ -38,7 +43,7 @@ const handrailInstallation: Product = {
   slug: "handrail-installation",
   name: "空橋鋁欄杆安裝",
   nameEn: "Aluminium Handrail Installation for Gangways",
-  category: "客製化工程",
+  category: "船舶維修",
   shortDescription: "空橋通道的鋁合金欄杆現場施作，含既有鏽蝕鋼構件的切除與換新",
   shortDescriptionEn:
     "On-site aluminium handrail work on gangway walkways, including cutting out and replacing corroded steelwork",
@@ -48,13 +53,13 @@ const handrailInstallation: Product = {
   descriptionEn:
     "A gangway is a moving structure: it telescopes, slews, and follows the tide and the vessel's draught, so its own weight feeds directly into the loads on its drive machinery and into how the whole assembly is balanced. Handrails are not primary structure, but run the full length of the walkway and add up, which makes the choice of material more than a question of corrosion alone. Aluminium weighs about a third of what steel does, and in a salt-laden environment it does not rust inward from a break in the coating the way steel does — which is why it is the usual choice for structures of this kind.\n\n" +
     "The scope covers cutting out corroded steelwork, assembling and welding aluminium stanchions and rails in place, and making the connections to the existing structure. Aluminium conducts heat quickly and loses strength through the heat-affected zone, so the welding sequence and the placement of joints are planned together to keep distortion in check. The work is mostly at height and over water: welding is screened off, and full-body harnesses are worn throughout.",
-  coverImage: "/images/products/custom-engineering/handrail-installation-cover.webp",
+  coverImage: "/images/products/ship-maintenance/handrail-installation-cover.webp",
   images: [
-    "/images/products/custom-engineering/handrail-installation-cover.webp",
-    "/images/products/custom-engineering/handrail-installation-1.webp",
-    "/images/products/custom-engineering/handrail-installation-2.webp",
-    "/images/products/custom-engineering/handrail-installation-3.webp",
-    "/images/products/custom-engineering/handrail-installation-4.webp",
+    "/images/products/ship-maintenance/handrail-installation-cover.webp",
+    "/images/products/ship-maintenance/handrail-installation-1.webp",
+    "/images/products/ship-maintenance/handrail-installation-2.webp",
+    "/images/products/ship-maintenance/handrail-installation-3.webp",
+    "/images/products/ship-maintenance/handrail-installation-4.webp",
   ],
   specs: [],
   features: [

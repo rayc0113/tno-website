@@ -54,7 +54,6 @@ export const allProducts: Product[] = [
   ductLouverPanel,
   soundingRod,
   hatchOpening,
-  handrailInstallation,
   lighthouseBase,
   accommodationLadderRefit,   // 2026-10-12 依窗口清單新增（D-登艦梯）
   launchPlatform,             // 2026-10-12 依窗口清單新增（案名是否公開待確認）
@@ -66,6 +65,7 @@ export const allProducts: Product[] = [
   slipwayConstruction,
   // 船舶維修（2026-10-12 依窗口清單自客製化工程改列）
   drainageScaffolding,
+  handrailInstallation,      // 2026-10-16 依窗口要求自客製化工程改列
   mainEngineCoolingRepair,    // 2026-10-12 依窗口清單新增
   boilerInsulationReplacement, // 2026-10-12 依窗口清單新增
   // 保留的材料類品項（排列與 PRODUCT_CATEGORY_ORDER 一致，
