@@ -12,6 +12,10 @@
  *    540×540、只有 15KB，直接原樣送出沒有任何代價。
  *
  * qrImage 設為 null 可讓聯絡頁與 footer 的 QR 區塊一起隱藏。
+ *
+ * 註：/contact 會同時出現兩個 QR（頁面中段的 LINE 區塊 + footer），
+ *    2026-10-20 珈汶決定「就重複吧」——footer 本來就每頁都有，不是 bug，
+ *    不用再提出來改。
  */
 export const LINE_ACCOUNT: { qrImage: string | null; id: string; url: string } = {
   qrImage: "/images/common/line-qr.webp",
