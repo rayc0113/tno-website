@@ -4,6 +4,7 @@ import Image from "next/image";
 import { getAllCategories } from "@/content/products";
 import { getAllCaseCategories } from "@/content/cases";
 import { getCategorySlug } from "@/lib/categories";
+import { LINE_ACCOUNT } from "@/lib/lineAccount";
 
 export default async function Footer({ locale }: { locale?: string } = {}) {
   const t = locale
@@ -20,7 +21,7 @@ export default async function Footer({ locale }: { locale?: string } = {}) {
     <footer className="bg-navy text-white/80">
       <div className="w-full px-6 md:px-[60px] py-12 md:py-16">
         <div className="flex flex-col md:flex-row gap-10 justify-between">
-          {/* Brand + Contact */}
+          {/* Brand + Contact + LINE */}
           <div>
             <Link href="/" className="block mb-6">
               <Image
@@ -62,6 +63,60 @@ export default async function Footer({ locale }: { locale?: string } = {}) {
                 <a href="mailto:tno.tw@msa.hinet.net" className="hover:text-white transition-colors">tno.tw@msa.hinet.net</a>
               </div>
             </address>
+
+            {/* LINE 官方帳號
+                疊在聯絡資訊下方、不是並排——白框左緣與 logo、地址 icon 同一條
+                左邊界，讀起來是這一欄的延續而不是插進去的區塊。並排會讓左欄
+                出現第二條邊界，變成 L 形（2026-10-16 比稿後由珈汶定案）。
+
+                欄寬取「地址寬」與「本區塊寬」的最大值，英文長地址本來就比較寬，
+                所以這個版本不會壓縮右側導覽欄——英文導覽欄需要 665px，被壓到
+                就會整排折行。
+
+                QR 本身也是連結：手機掃不了自己螢幕上的 QR，點一下直接開 LINE。
+
+                外層用 bg-black/20 疊在 bg-navy 上做出更深一階的藍，加 white/10
+                細邊框——把 QR 與右側文字收成同一塊，右邊才不會看起來空空的
+                （2026-10-16 珈汶回饋）。
+
+                行動版不出血：左右各留 24px 與外層容器同一條邊界，底色不貼到
+                螢幕邊緣（2026-10-16 珈汶看過滿版後決定留 padding）。
+
+                max-w 只在 md 以上生效——行動版讓它撐滿欄寬（327px），
+                桌機固定 360px（依珈汶 2026-10-20 的 Figma 稿）——不用 max-w 是
+                因為中文內容只撐到 330，兩個語系寬度會不一致；英文則會被長地址
+                撐到 488，兩邊都要靠固定寬度才對得齊。 */}
+            {LINE_ACCOUNT.qrImage && (
+              <div className="mt-8 flex items-center gap-4 rounded-2xl bg-black/25 p-4 md:p-5 md:w-[360px]">
+                <a
+                  href={LINE_ACCOUNT.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 rounded-xl bg-white p-2 transition-transform duration-200 hover:scale-[1.03]"
+                >
+                  <Image
+                    src={LINE_ACCOUNT.qrImage}
+                    unoptimized
+                    alt={t("line")}
+                    width={104}
+                    height={104}
+                    className="rounded-md w-[80px] h-[80px] md:w-[96px] md:h-[96px]"
+                  />
+                </a>
+                <div>
+                  <p className="text-[15px] font-semibold text-white">{t("line")}</p>
+                  <p className="text-sm text-white/70 mt-1.5">{t("lineHint")}</p>
+                  <a
+                    href={LINE_ACCOUNT.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-1.5 text-sm text-brand-light hover:text-white transition-colors duration-200"
+                  >
+                    {LINE_ACCOUNT.id}
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Nav links */}

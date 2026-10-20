@@ -2,22 +2,9 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
+import { LINE_ACCOUNT } from "@/lib/lineAccount";
 
 interface Props { params: Promise<{ locale: string }> }
-
-/**
- * LINE 官方帳號
- *
- * QR Code 供桌機掃碼，lineUrl 供行動裝置直接點擊加好友
- * （手機無法掃自己螢幕上的 QR，兩者都要有）。
- * QR 圖用 lossless webp 保留黑白邊緣，避免有損壓縮影響掃描。
- * 將 qrImage 設為 null 可整塊隱藏。
- */
-const LINE_ACCOUNT: { qrImage: string | null; id: string; url: string } = {
-  qrImage: "/images/contact/line-qr.webp",
-  id: "@252zcdqr",
-  url: "https://line.me/R/ti/p/@252zcdqr",
-};
 
 const CONTACT_INFO = {
   phone: "07-3717521",
@@ -129,6 +116,7 @@ export default async function ContactPage({ params }: Props) {
                   >
                     <Image
                       src={LINE_ACCOUNT.qrImage}
+                      unoptimized
                       alt={t("info.line")}
                       width={120}
                       height={120}
