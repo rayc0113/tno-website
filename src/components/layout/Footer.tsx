@@ -24,9 +24,13 @@ export default async function Footer({ locale }: { locale?: string } = {}) {
           {/* Brand + Contact + LINE */}
           <div>
             <Link href="/" className="block mb-6">
+              {/* alt 用公司全名：這張 SVG 畫的就是 logo 加「欣展金屬工業有限公司」
+                  一行字，但那是圖，爬蟲讀不到。台灣客戶搜的是「欣展金屬」
+                  「欣展金屬工業」，而登記全名原本在全站可讀文字裡一次都沒出現過
+                  （2026-10-21 珈汶指出）。alt 寫全名既符合圖的內容，也補上缺口。 */}
               <Image
                 src="/images/common/logo_fullname.svg"
-                alt="TNO 欣展"
+                alt={t("companyName")}
                 width={149}
                 height={60}
                 className="h-[60px] w-auto"

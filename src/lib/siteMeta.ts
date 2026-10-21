@@ -48,8 +48,25 @@ export function getSiteName(locale: string): string {
   return locale === "en" ? "TNO Inc." : "TNO 欣展船舶";
 }
 
+/**
+ * 登記名稱（結構化資料的 legalName）
+ *
+ * ⚠️ 2026-10-21 更正：中文原本寫「TNO 欣展有限公司」，**那家公司不存在**。
+ *    依經濟部商工登記公示資料，實際登記名稱是「欣展金屬工業有限公司」
+ *    （統編 45908936，109-02-27 由「欣展金屬有限公司」更名而來）。
+ *    legalName 在 schema.org 的定義就是政府登記的正式名稱，寫錯等於向
+ *    Google 宣告一個不存在的法人。
+ *
+ *    這同時是 SEO 缺口：珈汶指出台灣客戶會搜「欣展金屬」「欣展金屬工業」，
+ *    而這兩組字原本在全站的可讀文字裡一次都沒出現過（footer 的公司全名
+ *    是畫在 logo SVG 裡的，爬蟲讀不到）。
+ *
+ * ⚠️ 英文仍是 TNO Inc.（2026-09-08 珈汶確認）。但經濟部記載的「章程所訂
+ *    外文公司名稱」疑似是 **TNO CO., Ltd.**，兩者不一致，待向李總確認後再定。
+ *    在確認之前不動，因為這是對外品牌名稱，不該由實作端自行決定。
+ */
 export function getLegalName(locale: string): string {
-  return locale === "en" ? "TNO Inc." : "TNO 欣展有限公司";
+  return locale === "en" ? "TNO Inc." : "欣展金屬工業有限公司";
 }
 
 export function getSiteTitle(locale: string): string {
