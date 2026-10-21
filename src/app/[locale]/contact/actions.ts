@@ -49,7 +49,12 @@ export async function submitContactForm(
 
   try {
     const { error } = await resend.emails.send({
-      from: "TNO 欣展詢問表單 <onboarding@resend.dev>",
+      // 2026-10-21 正式上線：改用已在 Resend 驗證的自有網域寄件。
+      // 原本的 onboarding@resend.dev 是 Resend 的公用測試寄件者，只能寄給
+      // Resend 帳號本人，寄給欣展信箱會被擋掉——線上等於收不到任何詢問。
+      // 這個位址不需要真的存在信箱：客戶按回覆時會走下面的 replyTo，
+      // 直接回到填表者的信箱，不會寄到 noreply。
+      from: "TNO 欣展詢問表單 <noreply@tno.com.tw>",
       to: TO_EMAIL,
       replyTo: email,
       subject: `【欣展官網詢問】${company ? `${company}・` : ""}${name}`,
