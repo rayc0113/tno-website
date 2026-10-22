@@ -8,6 +8,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { getSiteTitle, getSiteDescription, getSiteName, getLegalName, SITE_URL as siteUrl } from "@/lib/siteMeta";
 import { getOrganizationSchema } from "@/lib/structuredData";
+import { Analytics } from "@vercel/analytics/next";
 import "../globals.css";
 
 const notoSansTC = Noto_Sans_TC({
@@ -93,6 +94,12 @@ export default async function LocaleLayout({ children, params }: Props) {
           {children}
           <Footer locale={locale} />
         </NextIntlClientProvider>
+        {/* Vercel Web Analytics（2026-10-22 上線後加入）
+            無 cookie、不收個資，只統計造訪數與各頁瀏覽量。本機與預覽環境
+            不會送資料，只有 production 會。
+            用途：半年維護期要跟 TNO 回報成效時，講得出「這個月多少人看、
+            最多人看哪一頁」，而不是只有「我更新了什麼」。 */}
+        <Analytics />
       </body>
     </html>
   );
