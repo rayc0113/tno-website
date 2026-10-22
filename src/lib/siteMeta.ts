@@ -69,10 +69,30 @@ export function getLegalName(locale: string): string {
   return locale === "en" ? "TNO Inc." : "欣展金屬工業有限公司";
 }
 
+/**
+ * 首頁標題（透過 title.absolute 覆蓋 layout 的預設）
+ *
+ * 2026-10-22 中文版補上「金屬工業」。原本是「TNO 欣展｜船舶改裝維修的最強後盾」，
+ * 珈汶指出台灣客戶搜的是公司全名——而「欣展金屬」「欣展金屬工業」當時在標題裡
+ * 一個字都沒有，搜這兩組字官網進不了第一頁（對手全是 104、商工登記、台灣公司網
+ * 這類公司資料庫，每個都比新網域資深）。
+ *
+ * 用「欣展金屬工業」而不是「欣展金屬」：前者把後者整個包含在內，兩組查詢都命中。
+ * 不加「有限公司」：對搜尋沒有額外幫助（沒人只搜這四個字），但會讓標題從品牌
+ * 變成公文抬頭。登記全名已在 structuredData 的 legalName 與 footer logo 的 alt。
+ *
+ * 長度不是限制——實際量過，Google 桌機標題約 600px 才截斷，這句 408px，
+ * 連加上「有限公司」的 488px 都還有餘裕。
+ *
+ * 涵蓋珈汶指定的關鍵字：欣展 / 金屬 / 工業 / TNO（搜尋不分大小寫，tno 同樣命中）。
+ *
+ * 內頁後綴維持 getSiteName 的「TNO 欣展船舶」，負責「欣展 船」「欣展 維修」
+ * 那幾組字——全部改成金屬會丟掉船舶的相關性，而船舶才是主要業務。
+ */
 export function getSiteTitle(locale: string): string {
   return locale === "en"
     ? "TNO | Your Strongest Support in Ship Retrofit & Maintenance"
-    : "TNO 欣展｜船舶改裝維修的最強後盾";
+    : "TNO 欣展金屬工業｜船舶改裝維修的最強後盾";
 }
 
 /**
