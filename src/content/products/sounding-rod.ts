@@ -1,7 +1,7 @@
 import type { Product } from "@/types/product";
 
 /**
- * 客製化工程（D 系列）— D-測桿預製及安裝工程
+ * 客製化工程（D 系列）— D-測量桿預製與安裝（工單原名：D-測桿預製及安裝工程）
  *
  * 文案基準（2026-09-02 撰寫）：
  * 採規格書式的客觀陳述——第一段講產品本身（無主詞）、第二段講施工範圍與
@@ -32,14 +32,14 @@ import type { Product } from "@/types/product";
  */
 const soundingRod: Product = {
   slug: "sounding-rod",
-  name: "測桿預製與安裝",
+  name: "測量桿預製與安裝",
   nameEn: "Survey Pole Prefabrication & Installation",
   category: "客製化工程",
-  shortDescription: "承載測量設備的測桿與可收放基座，廠內預製測試後上船安裝",
+  shortDescription: "承載測量設備的測量桿與可收放基座，廠內預製測試後上船安裝",
   shortDescriptionEn:
     "Survey poles and their stowable bases — prefabricated and tested in the workshop, then installed on board",
   description:
-    "測桿是將測量設備支撐至船體之外的桿件結構，以基座固定於甲板。基座設有樞軸，桿體可轉動收放——作業時伸出，不作業時收起，不必長時間占用船舷。樞軸同時是整組結構的受力核心：桿體伸出時所產生的彎矩由此傳入基座，再經甲板的銲道與螺栓傳至船體，因此基座兩側以肋板補強。樞軸的間隙若在反覆收放後走樣，桿體的指向會跟著偏移，而這正是桿上的測量設備最不能接受的。\n\n" +
+    "測量桿是將測量設備支撐至船體之外的桿件結構，以基座固定於甲板。基座設有樞軸，桿體可轉動收放——作業時伸出，不作業時收起，不必長時間占用船舷。樞軸同時是整組結構的受力核心：桿體伸出時所產生的彎矩由此傳入基座，再經甲板的銲道與螺栓傳至船體，因此基座兩側以肋板補強。樞軸的間隙若在反覆收放後走樣，桿體的指向會跟著偏移，而這正是桿上的測量設備最不能接受的。\n\n" +
     "施工範圍涵蓋材料加工、廠內組裝與測試、運送至現場，以及吊裝定位與甲板固定。轉動機構在出廠前即於廠內組裝並實際動作測試，確認無誤才運往現場；接合面的尺寸亦在預製階段控制，減少現場調整。桿長、基座形式與固定方式須依甲板結構與使用需求設計，工程並隨附材質證明。",
   descriptionEn:
     "A survey pole carries measuring equipment out clear of the hull, supported on a base fixed to the deck. The base carries a pivot so that the pole can be deployed and stowed — out when it is working, back in when it is not, rather than permanently occupying the ship\u2019s side. That pivot is also where the structure takes its load: the bending moment of the deployed pole passes through it into the base, and from there into the hull by way of the welds and bolts at the deck, which is why the base is stiffened with gussets on both sides. Should the pivot clearances open up after repeated use, the pole no longer points true — precisely what the equipment mounted on it cannot tolerate.\n\n" +

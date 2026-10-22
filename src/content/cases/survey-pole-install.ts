@@ -1,7 +1,7 @@
 import type { CaseProject } from "@/types/case";
 
 /**
- * 測桿的廠內預製與單日上船安裝
+ * 測量桿的廠內預製與單日上船安裝
  *
  * 【第四筆依 TNO 正式工單撰寫的案例】2026-10-13
  *
@@ -20,7 +20,10 @@ import type { CaseProject } from "@/types/case";
  * 機制寫在報告裡——第 3 段是「廠內組裝**及測試**」，先在廠裡組起來測過，
  * 現場才敢排一天。因此全篇以「為什麼現場只要一天」為軸。
  *
- * ⚠️ 這份報告同時解決了產品頁的一個疑問：「測桿」是 Survey pole（測量桿），
+ * ✅ 品名定案：2026-10-22 窗口 Lucy 轉達客戶意見「需要多一個字」，中文由
+ *    「測桿」改為「測量桿」，與報告的英文原名 Survey pole 一致。
+ *
+ * ⚠️ 這份報告當初解決了產品頁的一個疑問：「測桿」是 Survey pole（測量桿），
  *    不是我們當初從照片推測的測深桿。src/content/products/sounding-rod.ts
  *    的文案需要據此修正，已另列待辦。
  *
@@ -37,7 +40,7 @@ import type { CaseProject } from "@/types/case";
  */
 const surveyPoleInstall: CaseProject = {
   slug: "survey-pole-install",
-  title: "測桿的廠內預製與單日上船安裝",
+  title: "測量桿的廠內預製與單日上船安裝",
   titleEn: "A Survey Pole, Prefabricated Ashore and Fitted in a Single Day",
   category: "船舶改裝",
   shortDescription:
@@ -72,14 +75,14 @@ const surveyPoleInstall: CaseProject = {
   completedAt: "2026-03-25",
   location: "台中港",
   locationEn: "Port of Taichung",
-  tags: ["測桿", "Survey pole", "廠內預製", "單日安裝", "船上設備基座"],
+  tags: ["測量桿", "Survey pole", "廠內預製", "單日安裝", "船上設備基座"],
   publishedAt: "2026-10-13",
   isPublished: true,
   sections: [
     {
       heading: "一個會動的結構",
       paragraphs: [
-        "測桿是把測量設備送到船體之外的支撐結構。它和一般的固定支架不同之處在於：桿體必須能收放——作業時伸出，不作業時收起，不能一直占著船舷。",
+        "測量桿是把測量設備送到船體之外的支撐結構。它和一般的固定支架不同之處在於：桿體必須能收放——作業時伸出，不作業時收起，不能一直占著船舷。",
         "所以基座的核心是樞軸。它要承受桿體伸出時的彎矩，也要在反覆轉動幾百次之後仍然保持間隙不走樣——一旦間隙跑掉，桿體的指向就跟著偏，而裝在上面的測量設備最怕的就是這個。",
         "結構上真正要處理的不是桿子，是這個轉點；而承接這些力的，是基座與甲板之間的那幾道銲道與螺栓。",
       ],
