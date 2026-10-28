@@ -37,6 +37,7 @@ import timber from "./timber";
 import rudderShaftSystem from "./rudder-shaft-system";
 import deckFittings from "./deck-fittings";
 import anchorFittings from "./anchor-fittings";
+import containerFoundation from "./container-foundation";
 
 export const allProducts: Product[] = [
   // 此陣列決定「全部產品」列表內的卡片順序；
@@ -51,6 +52,7 @@ export const allProducts: Product[] = [
   // 註：欣展提供的資料夾共 11 項，其中 D-登艦梯 未單獨開卡——它與 L-登艦梯
   //    是同一種品項，照片併入 accommodation-ladder 的照片牆即可，避免產品頁
   //    出現兩張同名卡片。
+  containerFoundation,        // 2026-10-22 依窗口提供的「貨櫃基座安裝 / H BAR」素材新增
   ductLouverPanel,
   soundingRod,
   hatchOpening,

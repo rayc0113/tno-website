@@ -8,6 +8,7 @@
  */
 
 import type { CaseProject, CaseSummary } from "@/types/case";
+import containerFoundationInstall from "./container-foundation-install";
 import compartmentScaffolding from "./compartment-scaffolding";
 import exhaustPipeRenewal from "./exhaust-pipe-renewal";
 import surveyPoleInstall from "./survey-pole-install";
@@ -28,6 +29,7 @@ import offshorePlatformLiving from "./offshore-platform-living";
 //    待欣展提供 3–5 個代表案例後整批汰換（素材見 materials/04-案例）。
 export const allCases: CaseProject[] = [
   // 依 TNO 正式工單（完工報告 PDF）撰寫的案例
+  containerFoundationInstall,   // 2026-10-22 新增（購案 1150048）
   compartmentScaffolding,
   exhaustPipeRenewal,
   surveyPoleInstall,
