@@ -24,10 +24,10 @@ const thermalInsulation: Product = {
   shortDescriptionEn: "Non-combustible mineral fiber spun from molten rock — for engine rooms and hot pipework",
   description:
     "岩（礦）棉以天然玄武岩、輝綠岩或礦渣經高溫熔融、紡絲成纖後製成，屬不燃性礦物纖維材料，是船舶防火隔熱最常使用的材料之一。其纖維結構同時具備隔熱與吸音效果，在高溫下不助燃、不易變形，適合機艙、鍋爐周邊與高溫管路等部位。\n\n" +
-    "船舶用隔熱材依 SOLAS 公約與 IMO FTP Code 對不燃性與防火試驗有明確要求，實際採用的密度、厚度與適用等級須依安裝部位與船級社要求選定。",
+    "船舶用隔熱材的不燃性與防火試驗，依 SOLAS 公約與 IMO FTP Code 有明確要求。岩（礦）棉的耐溫範圍高於一般玻璃棉，因此多用於需要防火時效的艙壁與甲板，以及高溫設備周邊。實際採用的密度、厚度與適用等級，依安裝部位的溫度條件與船級社要求選定。",
   descriptionEn:
     "Rock (mineral) wool is produced by melting natural basalt, diabase, or mineral slag at high temperature and spinning it into fibers. As a non-combustible mineral fiber, it is one of the most widely used materials for marine fire insulation. Its fiber structure provides both thermal insulation and sound absorption, and it neither supports combustion nor deforms readily at high temperatures — making it well suited to engine rooms, boiler surrounds, and hot pipework.\n\n" +
-    "Marine insulation is subject to clear non-combustibility and fire-test requirements under the SOLAS Convention and the IMO FTP Code. The density, thickness, and rating actually used must be selected according to the installation location and the requirements of the classification society.",
+    "Non-combustibility and fire testing for marine insulation are set out in the SOLAS Convention and the IMO FTP Code. Rock wool's service temperature range runs higher than that of ordinary glass wool, which is why it is the usual choice for fire-rated bulkheads and decks and for the surroundings of hot equipment. Density, thickness and rating are selected for the temperatures at the installation and for what the classification society requires.",
   images: [
     "/images/products/thermal-insulation/thermal-insulation-cover.webp",
     "/images/products/thermal-insulation/thermal-insulation-1.webp",

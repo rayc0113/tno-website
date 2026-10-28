@@ -24,10 +24,10 @@ const glassWool: Product = {
   shortDescriptionEn: "Lightweight inorganic glass-fiber insulation for accommodation, corridors, and pipework",
   description:
     "玻璃棉由玻璃原料經高溫熔融後成纖製成，屬無機纖維隔熱材料，重量輕、施工性佳，是船舶住艙區域常用的隔熱與吸音材料。相較於岩（礦）棉，玻璃棉密度較低、對船體荷重的負擔小，適合壁板、天花與風管等大面積部位。\n\n" +
-    "船舶用隔熱材依 SOLAS 公約與 IMO FTP Code 對不燃性與防火試驗有明確要求，實際採用的密度、厚度與適用等級須依安裝部位與船級社要求選定。",
+    "玻璃棉同樣須符合 SOLAS 公約與 IMO FTP Code 的不燃性與防火試驗要求，但選用時的考量與高溫部位不同：住艙壁板、天花與風管都屬大面積施作，單位重量的差異累積起來會反映在船體荷重上，厚度也受限於艙間可用的空間。實際採用的密度與厚度，依這兩項條件與船級社要求選定。",
   descriptionEn:
     "Glass wool is made by melting glass raw materials at high temperature and forming them into fibers. This inorganic fiber insulation is light and easy to install, making it a common choice for thermal and acoustic insulation in accommodation areas. Compared with rock wool it has a lower density and adds less load to the hull, which suits large areas such as wall panels, ceilings, and ventilation ducting.\n\n" +
-    "Marine insulation is subject to clear non-combustibility and fire-test requirements under the SOLAS Convention and the IMO FTP Code. The density, thickness, and rating actually used must be selected according to the installation location and the requirements of the classification society.",
+    "Glass wool is held to the same non-combustibility and fire-test requirements under the SOLAS Convention and the IMO FTP Code, but what governs the choice differs from the hot areas: accommodation panelling, deckheads and ducting are all large-area work, where small differences in weight per unit area add up against the load on the hull, and where thickness is limited by the space the compartment can spare. Density and thickness are selected against those two constraints and against what the classification society requires.",
   images: [
     "/images/products/thermal-insulation/glass-wool-cover.webp",
     "/images/products/thermal-insulation/glass-wool-1.webp",
