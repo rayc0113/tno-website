@@ -31,15 +31,15 @@ const boilerInsulationReplacement: Product = {
   name: "船上鍋爐隔熱材更換",
   nameEn: "Shipboard Boiler Insulation Replacement",
   category: "船舶維修",
-  shortDescription: "既有鍋爐隔熱層的拆除與汰換，含金屬護皮重做與閥件可拆式護套",
+  shortDescription: "既有鍋爐隔熱層的拆除與汰換，金屬護皮重做、閥件改用可拆式護套——塌陷看不出來，表面溫度會說實話",
   shortDescriptionEn:
-    "Stripping out and renewing boiler insulation, with new metal cladding and removable jackets at valves",
+    "Boiler insulation stripped out and renewed, with new metal cladding and removable jackets at the valves — slumped insulation shows nothing from outside, but the surface temperature tells",
   description:
     "鍋爐外壁的隔熱層同時承擔三件事：把表面溫度降到人員不致燙傷的範圍、減少熱往艙間散失，以及保護周邊的管路與電纜。這層材料長期承受熱循環與船體振動，又可能因洩漏的水氣而受潮，久了會塌陷、粉化或鬆脫。一旦局部塌陷，該處就形成熱橋，表面溫度跟著升高——但從外面的護皮看過去，外觀上不一定看得出來。\n\n" +
-    "更換範圍涵蓋既有隔熱材的拆除、爐壁狀況檢視、新隔熱材的鋪設與固定，以及外覆金屬護皮的裁切、成形與收邊。人孔、閥件與量測點等需要定期拆裝的部位改用可拆式軟質護套，避免每次維護都得破壞護皮。拆除舊材會產生大量纖維粉塵，作業人員全程配戴防護頭罩與口罩，周邊設備先行覆蓋。隔熱材種類與厚度須依該部位的表面溫度與艙間規範選定。",
+    "更換範圍涵蓋既有隔熱材的拆除、爐壁狀況檢視、新隔熱材的鋪設與固定，以及外覆金屬護皮的裁切、成形與收邊。人孔、閥件與量測點等需要定期拆裝的部位改用可拆式軟質護套，避免每次維護都得破壞護皮。拆除舊材會產生大量纖維粉塵，作業人員全程配戴防護頭罩與口罩，周邊設備先行覆蓋。隔熱材的種類與厚度依該部位的表面溫度與艙間規範選定，但真正決定成效的是鋪設時的貼合與固定——日後那些從外面看不出來的塌陷，是在施工當下就決定的。",
   descriptionEn:
     "The insulation on a boiler's outer casing does three things at once: it brings the surface temperature down to where it will not burn anyone, it keeps heat from being lost into the compartment, and it shields the pipework and cabling around it. That material spends its life under thermal cycling and the vibration of the hull, and may take on moisture from a leak, so in time it slumps, breaks down, or works loose. Where it slumps, a thermal bridge forms and the surface temperature over that spot rises — yet from outside the cladding there may be nothing to see.\n\n" +
-    "The work covers stripping out the existing insulation, inspecting the casing beneath, laying and securing the new material, and cutting, forming and finishing the metal cladding over it. Manholes, valves and measuring points — anything that has to come apart regularly — are given removable soft jackets instead, so the cladding need not be broken open at every service. Stripping old material releases a great deal of fibre dust, so protective hoods and masks are worn throughout and the surrounding equipment is covered beforehand. Insulation type and thickness are selected according to the surface temperature at each location and the applicable shipboard requirements.",
+    "The work covers stripping out the existing insulation, inspecting the casing beneath, laying and securing the new material, and cutting, forming and finishing the metal cladding over it. Manholes, valves and measuring points — anything that has to come apart regularly — are given removable soft jackets instead, so the cladding need not be broken open at every service. Stripping old material releases a great deal of fibre dust, so protective hoods and masks are worn throughout and the surrounding equipment is covered beforehand. Insulation type and thickness are selected according to the surface temperature at each location and the applicable shipboard requirements — but what decides the result is how closely the material is fitted and how well it is held: the slump nobody can see from outside begins on the day it is installed.",
   coverImage: "/images/products/ship-maintenance/boiler-insulation-replacement-cover.webp",
   images: [
     "/images/products/ship-maintenance/boiler-insulation-replacement-cover.webp",

@@ -37,15 +37,15 @@ const mainEngineCoolingRepair: Product = {
   name: "主機冷卻系統維修",
   nameEn: "Main Engine Cooling System Repair",
   category: "船舶維修",
-  shortDescription: "主機淡水與海水兩側冷卻迴路的拆檢、熱交換器清洗或更換與管路汰換",
+  shortDescription: "主機淡水與海水兩側冷卻迴路的拆檢、熱交換器清洗或更換與管路汰換——水溫壓不下來，問題多半在海水側",
   shortDescriptionEn:
-    "Inspection and overhaul of both the fresh-water and sea-water sides of main engine cooling, covering heat exchangers and pipework",
+    "Inspection and overhaul of both sides of main engine cooling, from heat exchangers to pipework — when the temperature will not come down, the sea-water side is usually where it starts",
   description:
     "船用主機的冷卻分為兩套迴路：封閉的淡水迴路直接帶走引擎本體的熱，再經熱交換器把這些熱傳給自舷外抽取的海水迴路排放。兩側的劣化方式並不相同——淡水側是封閉循環，問題多來自冷卻液本身的老化；海水側長期接觸海水與其中的雜質，管內容易積垢與腐蝕。海水側的熱傳一旦變差，淡水側的水溫就下不來，最後反映在引擎的工作溫度上。\n\n" +
-    "維修範圍涵蓋兩側迴路的拆解檢查、熱交換器與管件的清洗或更換、軟管與接頭等易劣化件的汰換，以及復原後的運轉確認。拆裝在機艙既有空間內進行，較重的構件須以吊具移至通道處理，作業期間周邊設備與管路先行防護。更換或清洗的判定依各構件的積垢與腐蝕程度決定。",
+    "維修範圍涵蓋兩側迴路的拆解檢查、熱交換器與管件的清洗或更換、軟管與接頭等易劣化件的汰換，以及復原後的運轉確認。拆裝在機艙既有空間內進行，較重的構件須以吊具移至通道處理，作業期間周邊設備與管路先行防護。更換或清洗的判定依各構件的積垢與腐蝕程度決定。冷卻系統的劣化很少以故障的形式出現，多半是水溫一年比一年難壓下來——拖到跳機才處理，付的就不只是一次維修的代價。",
   descriptionEn:
     "Cooling on a marine main engine runs in two circuits. A closed fresh-water circuit takes the heat directly off the engine, and a heat exchanger passes that heat to a sea-water circuit drawn from outboard and discharged again. The two sides fail in different ways: the fresh-water side is a closed loop, where trouble usually traces back to the condition of the coolant itself, while the sea-water side is in constant contact with seawater and what it carries, so its passages foul and corrode. Once heat transfer on the sea-water side falls off, the fresh-water side can no longer shed its heat, and the engine's working temperature rises in consequence.\n\n" +
-    "The work covers stripping and inspecting both circuits, cleaning or replacing heat exchangers and pipework, renewing hoses, couplings and other items that degrade in service, and confirming operation once everything is back together. The work is carried out in the space the engine room already has; heavier components are moved out to the walkway with lifting gear before being worked on, and surrounding equipment and pipework are protected beforehand. Whether a component is cleaned or replaced is decided from how far fouling and corrosion have gone.",
+    "The work covers stripping and inspecting both circuits, cleaning or replacing heat exchangers and pipework, renewing hoses, couplings and other items that degrade in service, and confirming operation once everything is back together. The work is carried out in the space the engine room already has; heavier components are moved out to the walkway with lifting gear before being worked on, and surrounding equipment and pipework are protected beforehand. Whether a component is cleaned or replaced is decided from how far fouling and corrosion have gone. Cooling systems rarely announce their decline as a breakdown; more often the temperature simply becomes harder to hold year on year — and leaving it until the engine shuts down costs a good deal more than the repair itself.",
   coverImage: "/images/products/ship-maintenance/main-engine-cooling-repair-cover.webp",
   images: [
     "/images/products/ship-maintenance/main-engine-cooling-repair-cover.webp",

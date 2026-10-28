@@ -44,15 +44,15 @@ const handrailInstallation: Product = {
   name: "空橋鋁欄杆安裝",
   nameEn: "Aluminium Handrail Installation for Gangways",
   category: "船舶維修",
-  shortDescription: "空橋通道的鋁合金欄杆現場施作，含既有鏽蝕鋼構件的切除與換新",
+  shortDescription: "空橋通道的鋁合金欄杆現場施作，既有鏽蝕鋼構件一併切除換新——鋁的比重約為鋼的三分之一",
   shortDescriptionEn:
-    "On-site aluminium handrail work on gangway walkways, including cutting out and replacing corroded steelwork",
+    "On-site aluminium handrail work on gangway walkways, corroded steelwork cut out and replaced as part of it — aluminium weighs about a third of what steel does",
   description:
     "空橋是活動結構——需要伸縮、旋轉，並隨潮位與船舶吃水調整高度，因此自重會直接反映在驅動機構的負荷與整體配重上。欄杆雖然不是主結構，但沿著整條通道累積起來的長度相當可觀，材料選擇就不只是防蝕的問題。鋁合金的比重約為鋼的三分之一，且在海風環境下不會像鋼材那樣從塗裝破口開始往內鏽蝕，是這類結構常見的選擇。\n\n" +
-    "施工範圍涵蓋既有鏽蝕鋼構件的切除、鋁製立柱與扶手管的現場組立與銲接，以及與既有結構的接合處理。鋁合金導熱快、熱影響區的強度會下降，銲接順序與接點配置須一併控制變形量。作業位置多在高處且臨水，銲接周邊設置防護遮蔽，人員全程配戴全身式安全帶。",
+    "施工範圍涵蓋既有鏽蝕鋼構件的切除、鋁製立柱與扶手管的現場組立與銲接，以及與既有結構的接合處理。鋁合金導熱快、熱影響區的強度會下降，銲接順序與接點配置須一併控制變形量。作業位置多在高處且臨水，銲接周邊設置防護遮蔽，人員全程配戴全身式安全帶。空橋每天都在動，而欄杆是通行的人唯一扶得到的東西——它的重量要算進機構的負荷，強度卻不能因此打折。",
   descriptionEn:
     "A gangway is a moving structure: it telescopes, slews, and follows the tide and the vessel's draught, so its own weight feeds directly into the loads on its drive machinery and into how the whole assembly is balanced. Handrails are not primary structure, but run the full length of the walkway and add up, which makes the choice of material more than a question of corrosion alone. Aluminium weighs about a third of what steel does, and in a salt-laden environment it does not rust inward from a break in the coating the way steel does — which is why it is the usual choice for structures of this kind.\n\n" +
-    "The scope covers cutting out corroded steelwork, assembling and welding aluminium stanchions and rails in place, and making the connections to the existing structure. Aluminium conducts heat quickly and loses strength through the heat-affected zone, so the welding sequence and the placement of joints are planned together to keep distortion in check. The work is mostly at height and over water: welding is screened off, and full-body harnesses are worn throughout.",
+    "The scope covers cutting out corroded steelwork, assembling and welding aluminium stanchions and rails in place, and making the connections to the existing structure. Aluminium conducts heat quickly and loses strength through the heat-affected zone, so the welding sequence and the placement of joints are planned together to keep distortion in check. The work is mostly at height and over water: welding is screened off, and full-body harnesses are worn throughout. A gangway moves every day it is used, and the handrail is the one thing anyone crossing it can hold on to — its weight has to be counted into the machinery's load without its strength being traded away for it.",
   coverImage: "/images/products/ship-maintenance/handrail-installation-cover.webp",
   images: [
     "/images/products/ship-maintenance/handrail-installation-cover.webp",

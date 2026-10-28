@@ -35,15 +35,15 @@ const soundingRod: Product = {
   name: "測量桿預製與安裝",
   nameEn: "Survey Pole Prefabrication & Installation",
   category: "客製化工程",
-  shortDescription: "承載測量設備的測量桿與可收放基座，廠內預製測試後上船安裝",
+  shortDescription: "承載測量設備的測量桿與可收放基座——轉動機構在廠內實際動作測試過才出廠",
   shortDescriptionEn:
-    "Survey poles and their stowable bases — prefabricated and tested in the workshop, then installed on board",
+    "Survey poles and their stowable bases — the pivot assembly actually worked and tested in the workshop before it leaves",
   description:
     "測量桿是將測量設備支撐至船體之外的桿件結構，以基座固定於甲板。基座設有樞軸，桿體可轉動收放——作業時伸出，不作業時收起，不必長時間占用船舷。樞軸同時是整組結構的受力核心：桿體伸出時所產生的彎矩由此傳入基座，再經甲板的銲道與螺栓傳至船體，因此基座兩側以肋板補強。樞軸的間隙若在反覆收放後走樣，桿體的指向會跟著偏移，而這正是桿上的測量設備最不能接受的。\n\n" +
-    "施工範圍涵蓋材料加工、廠內組裝與測試、運送至現場，以及吊裝定位與甲板固定。轉動機構在出廠前即於廠內組裝並實際動作測試，確認無誤才運往現場；接合面的尺寸亦在預製階段控制，減少現場調整。桿長、基座形式與固定方式須依甲板結構與使用需求設計，工程並隨附材質證明。",
+    "施工範圍涵蓋材料加工、廠內組裝與測試、運送至現場，以及吊裝定位與甲板固定。轉動機構在出廠前即於廠內組裝並實際動作測試，確認無誤才運往現場；接合面的尺寸亦在預製階段控制，減少現場調整。桿長、基座形式與固定方式依甲板結構與使用需求設計，工程並隨附材質證明。會動的結構不該等到裝上船才第一次動——廠內那一次測試，換來的是現場不必拆回來重做。",
   descriptionEn:
     "A survey pole carries measuring equipment out clear of the hull, supported on a base fixed to the deck. The base carries a pivot so that the pole can be deployed and stowed — out when it is working, back in when it is not, rather than permanently occupying the ship\u2019s side. That pivot is also where the structure takes its load: the bending moment of the deployed pole passes through it into the base, and from there into the hull by way of the welds and bolts at the deck, which is why the base is stiffened with gussets on both sides. Should the pivot clearances open up after repeated use, the pole no longer points true — precisely what the equipment mounted on it cannot tolerate.\n\n" +
-    "The scope of work covers material preparation, workshop assembly and testing, delivery to site, and lifting into position and securing to the deck. The moving assembly is built up and actually worked in the workshop before it leaves, and the mating faces are dimensioned under workshop control, so little adjustment is needed on site. Pole length, base design and the method of fixing follow from the deck structure and the intended use, and material certificates are supplied with the work.",
+    "The scope of work covers material preparation, workshop assembly and testing, delivery to site, and lifting into position and securing to the deck. The moving assembly is built up and actually worked in the workshop before it leaves, and the mating faces are dimensioned under workshop control, so little adjustment is needed on site. Pole length, base design and the method of fixing follow from the deck structure and the intended use, and material certificates are supplied with the work. A structure that has to move should not be moving for the first time once it is aboard — that one test in the workshop is what keeps the job from having to come back off the ship.",
   coverImage: "/images/products/custom-engineering/sounding-rod-cover.webp",
   images: [
     "/images/products/custom-engineering/sounding-rod-cover.webp",

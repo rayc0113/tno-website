@@ -25,15 +25,15 @@ const slipwayConstruction: Product = {
   name: "船台新製",
   nameEn: "Slipway Construction",
   category: "港務工程",
-  shortDescription: "船台台車的製作與現場組立，供船舶上架維修與下水作業使用",
+  shortDescription: "船台台車的製作與現場組立——船一離開水面，全部的重量就落在這套台車上",
   shortDescriptionEn:
-    "Fabrication and on-site assembly of slipway cradles, for hauling vessels out and launching them",
+    "Slipway cradles fabricated and assembled on site — the moment a hull leaves the water, its whole weight rests on them",
   description:
-    "船台為船舶上架維修與下水作業的基礎設施。船體離水後的全部重量由船台承載，台車的結構強度與輪組、軌道的配合精度，直接決定作業能否安全進行。\n\n" +
-    "台車主體以大斷面木料構成，搭配鋼製輪組、接頭與拖曳吊耳，分節製作後於現場組立，行走於港區軌道。尺寸、節數與承載條件須依船型與既有軌道規格設計。",
+    "船浮在水上的時候，重量由整個船底分攤；一離開水面，這些重量就全部落在台車上。船台是船舶上架維修與下水作業的基礎設施，台車的結構強度，以及輪組與軌道之間的配合精度，直接決定作業能否安全進行。\n\n" +
+    "台車主體以大斷面木料構成，搭配鋼製輪組、接頭與拖曳吊耳，分節製作後於現場組立，行走於港區軌道。尺寸、節數與承載條件依船型與既有軌道規格設計。船台撐住的不只是一艘船，還有在船底下工作的人。",
   descriptionEn:
-    "A slipway is the basic infrastructure for hauling vessels out of the water for repair and for launching them again. Once a hull leaves the water its entire weight rests on the slipway, so the structural strength of the cradle and the fit between its rollers and the rails determine whether the operation can be carried out safely.\n\n" +
-    "The cradle body is built from heavy timber beams, combined with steel roller assemblies, connectors, and towing lugs, fabricated in numbered sections and assembled on site to run on the harbour rails. Dimensions, the number of sections, and load conditions are designed around the vessel type and the existing rail gauge.",
+    "While a vessel floats, her weight is shared across the whole of her bottom. The moment she leaves the water, all of it comes down on the cradle. A slipway is the basic infrastructure for hauling vessels out for repair and launching them again, and the structural strength of the cradle — together with the fit between its rollers and the rails — decides whether that can be done safely.\n\n" +
+    "The cradle body is built from heavy timber beams, combined with steel roller assemblies, connectors and towing lugs, fabricated in numbered sections and assembled on site to run on the harbour rails. Dimensions, the number of sections and load conditions follow from the vessel type and the existing rail gauge. A slipway holds up more than a ship: it holds up the people working underneath her.",
   coverImage: "/images/products/port-engineering/slipway-construction-cover.webp",
   images: [
     "/images/products/port-engineering/slipway-construction-cover.webp",

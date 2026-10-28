@@ -22,15 +22,15 @@ const ductLouverPanel: Product = {
   name: "風管、百葉窗、封板",
   nameEn: "Ducting, Louvers & Blanking Plates",
   category: "客製化工程",
-  shortDescription: "船舶通風風管、通風口與艙壁開口封板的製作與安裝",
+  shortDescription: "船舶通風風管、通風口與艙壁開口封板的製作與安裝——廠內做完才上船，船上只留定位與銲接",
   shortDescriptionEn:
-    "Fabrication and installation of marine ventilation ducting, vent openings, and bulkhead blanking plates",
+    "Fabrication and installation of marine ventilation ducting, vent openings and bulkhead blanking plates — finished ashore, so that only positioning and welding remain on board",
   description:
-    "艙內通風靠風管將空氣送至各艙區，管路須穿越艙壁與甲板，並在舷外設通風口。穿越處的開口在管路變更或設備移除後，須以鋼板封板復原，以維持艙壁的強度與水密。管路本身則須有足夠的支撐吊架，避免航行振動造成鬆動。\n\n" +
-    "施工範圍涵蓋風管與風箱製作、通風口與擋雨彎頭安裝、管路支撐吊架設置，以及艙壁開口的封板銲接與表面處理。管徑、風量與開口位置須依艙區配置與既有結構設計。",
+    "通風管路每穿越一道艙壁，就是在那道艙壁上開一個洞。艙內通風靠風管把空氣送至各艙區，管路必須穿越艙壁與甲板，並在舷外設通風口——而每一個穿越處，都得把艙壁原有的強度與水密在開口周邊補回來。管路變更或設備移除後留下的開口也一樣，須以鋼板封板復原。管路本身則須有足夠的支撐吊架，避免航行振動造成鬆動。\n\n" +
+    "施工範圍涵蓋風管與風箱製作、通風口與擋雨彎頭安裝、管路支撐吊架設置，以及艙壁開口的封板銲接與表面處理。管徑、風量與開口位置依艙區配置與既有結構設計。這類工程的成敗在放樣——尺寸要在廠裡就對，到了船上才發現接不上，不是拆回去重做，就是將就。",
   descriptionEn:
-    "Ventilation air reaches each compartment through ducting that has to pass through bulkheads and decks and terminate in vent openings on the ship's side. Where a run is altered or equipment removed, the resulting opening is closed with a blanking plate so the bulkhead recovers its strength and watertightness. The ducting itself needs adequate supports and hangers so that vibration underway does not work it loose.\n\n" +
-    "The scope of work covers fabrication of ducting and plenum boxes, installation of vent openings and weather elbows, provision of pipe supports and hangers, and the welding and surface treatment of bulkhead blanking plates. Duct sizes, air volumes, and opening positions are designed around the compartment layout and the existing structure.",
+    "Every time a ventilation run crosses a bulkhead, it means an opening cut in that bulkhead. Air reaches each compartment through ducting that has to pass through bulkheads and decks and terminate in vent openings on the ship's side — and at every one of those crossings, the strength and watertightness of the bulkhead have to be restored around the opening. The same goes for openings left behind when a run is altered or equipment removed: they are closed with a blanking plate. The ducting itself needs adequate supports and hangers so that vibration underway does not work it loose.\n\n" +
+    "The scope of work covers fabrication of ducting and plenum boxes, installation of vent openings and weather elbows, provision of pipe supports and hangers, and the welding and surface treatment of bulkhead blanking plates. Duct sizes, air volumes and opening positions follow from the compartment layout and the existing structure. What decides this kind of work is the setting out: the dimensions have to be right in the shop, because finding on board that a section will not meet leaves two choices — take it back and remake it, or make do.",
   coverImage: "/images/products/custom-engineering/duct-louver-panel-cover.webp",
   images: [
     "/images/products/custom-engineering/duct-louver-panel-cover.webp",

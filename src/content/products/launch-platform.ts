@@ -39,15 +39,15 @@ const launchPlatform: Product = {
   name: "設備平台新製",
   nameEn: "Equipment Platform Fabrication",
   category: "客製化工程",
-  shortDescription: "承載設備的門型鋼構平台，含基座、甲板與斜撐的製作與現場組立",
+  shortDescription: "承載設備的門型鋼構平台，基座、甲板與斜撐的製作與現場組立——結構真正在處理的，是力要往哪裡走",
   shortDescriptionEn:
-    "Portal-frame steel platforms for mounted equipment, covering base, deck and bracing fabrication and on-site erection",
+    "Portal-frame steel platforms for mounted equipment: base, deck and bracing fabricated and erected on site — what the structure really handles is where the loads go",
   description:
-    "承載設備的平台，結構上要處理的是力的傳遞路徑：設備的自重與作業荷重先由基座承接，再經由門型架與斜撐傳到平台甲板，最後落到下方的主結構。任一段接合處理不當，整體剛性就會打折，長期使用下來也容易從接點開始出現疲勞。\n\n" +
-    "施工分為廠內與現場兩個階段。廠內完成梁柱與斜撐的下料、組立與銲接，現場則進行平台甲板鋪設、依基座位置的開口加工、門型架立設與銲接，以及表面處理與格柵板鋪裝。構件斷面、斜撐配置與基座固定方式須依承載設備的規格與作業荷重設計。",
+    "平台不是用來放東西的，是用來把力送走的。設備的自重與作業荷重先由基座承接，再經門型架與斜撐傳到平台甲板，最後落到下方的主結構。這條路徑上任何一個接合處理不當，整體剛性就會打折；而長期使用下來，疲勞也會從那個接點開始。\n\n" +
+    "施工分為廠內與現場兩個階段。廠內完成梁柱與斜撐的下料、組立與銲接，現場則進行平台甲板鋪設、依基座位置的開口加工、門型架立設與銲接，以及表面處理與格柵板鋪裝。構件斷面、斜撐配置與基座固定方式依承載設備的規格與作業荷重設計。鋼構的毛病很少一次發作，多半是從某一個接點安靜地開始的。",
   descriptionEn:
-    "For a platform that carries equipment, the structural question is the path the loads take: the weight of the equipment and the loads it generates in use are picked up by the base, passed through the portal frames and their bracing into the platform deck, and from there into the main structure below. Any joint along that path that is not properly handled costs the assembly its stiffness, and over time the connections are where fatigue begins.\n\n" +
-    "The work falls into a workshop stage and a site stage. Beams, columns and bracing are cut, assembled and welded in the shop; on site the platform deck is laid, openings are cut to suit the positions of the bases, the portal frames are erected and welded, and the surfaces are treated and the grating laid. Member sizes, the arrangement of the bracing and the method of fixing the bases are designed around the specification of the equipment carried and the loads it imposes.",
+    "A platform is not there to hold something up; it is there to take the load away. The weight of the equipment and the loads it generates in use are picked up by the base, passed through the portal frames and their bracing into the platform deck, and from there into the main structure below. Any joint along that path that is not properly handled costs the assembly its stiffness — and in time, fatigue begins at that joint.\n\n" +
+    "The work falls into a workshop stage and a site stage. Beams, columns and bracing are cut, assembled and welded in the shop; on site the platform deck is laid, openings are cut to suit the positions of the bases, the portal frames are erected and welded, and the surfaces are treated and the grating laid. Member sizes, the arrangement of the bracing and the method of fixing the bases follow from the specification of the equipment carried and the loads it imposes. Steelwork rarely fails all at once; it usually begins, quietly, at one connection.",
   coverImage: "/images/products/custom-engineering/launch-platform-cover.webp",
   images: [
     "/images/products/custom-engineering/launch-platform-cover.webp",

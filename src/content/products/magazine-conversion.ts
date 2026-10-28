@@ -22,14 +22,15 @@ const magazineConversion: Product = {
   name: "彈藥庫改裝",
   nameEn: "Magazine Conversion",
   category: "海軍艤裝工程",
-  shortDescription: "艙內儲放架系統的設計製作與現場組裝",
-  shortDescriptionEn: "Design, fabrication, and on-site assembly of onboard storage rack systems",
+  shortDescription: "艙內儲放架系統的設計製作與現場組裝——船一直在晃，架子的工作是讓上面的東西不要跟著晃",
+  shortDescriptionEn:
+    "Design, fabrication and on-site assembly of onboard storage racks — the ship never stops moving; the rack's job is to see that its contents do",
   description:
-    "艦艇於航行中持續承受搖晃與振動，艙內儲放架除容納物件外，須確保物件不位移、不碰撞，並維持人員取放的安全空間。架體剛性、固定方式與緩衝設計為主要設計重點。\n\n" +
-    "架體採金屬擠型骨架螺栓組立，適用於既有艙室的有限施工空間；各格位設弧形托座貼合物件外形，並以可調夾具與緩衝元件抑制位移。層數、格距與固定方式須依艙室尺寸與使用需求設計。",
+    "放在陸地上的架子，撐住重量就夠了；放在船上的架子，還得讓東西不要動。艦艇航行中持續承受搖晃與振動，艙內儲放架除了容納物件，必須確保物件不位移、不碰撞，同時維持人員取放的安全空間。架體剛性、固定方式與緩衝設計因此是主要的設計重點。\n\n" +
+    "架體採金屬擠型骨架螺栓組立，適用於既有艙室的有限施工空間；各格位設弧形托座貼合物件外形，並以可調夾具與緩衝元件抑制位移。層數、格距與固定方式依艙室尺寸與使用需求設計。這類架子真正被考驗的時候，不會有人站在旁邊看著。",
   descriptionEn:
-    "A vessel underway is subject to continuous roll and vibration, so onboard storage racks must do more than hold their contents: items have to stay put, avoid contact with one another, and remain safely accessible to the crew. Frame rigidity, the method of restraint, and cushioning are therefore the primary design considerations.\n\n" +
-    "Racks are built from bolted metal extrusion frames, which suits the limited working space of an existing compartment. Each position carries a contoured saddle matched to the shape of its contents, with adjustable clamps and cushioning elements to restrain movement. The number of tiers, spacing, and restraint method are designed around compartment dimensions and how the rack will be used.",
+    "A rack ashore need only carry weight. A rack at sea has to keep its contents from moving as well. A vessel underway is subject to continuous roll and vibration, so onboard storage must do more than hold things: items have to stay put, avoid striking one another, and remain safely within reach of the crew. Frame rigidity, the method of restraint and cushioning are therefore the primary design considerations.\n\n" +
+    "Racks are built from bolted metal extrusion frames, which suits the limited working space of an existing compartment. Each position carries a contoured saddle matched to the shape of its contents, with adjustable clamps and cushioning elements to restrain movement. The number of tiers, the spacing and the method of restraint follow from the compartment dimensions and how the rack will be used. When a rack like this is really tested, there is nobody standing beside it watching.",
   coverImage: "/images/products/naval-outfitting/magazine-conversion-cover.webp",
   images: [
     "/images/products/naval-outfitting/magazine-conversion-cover.webp",

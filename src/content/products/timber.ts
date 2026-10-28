@@ -32,15 +32,15 @@ const timber: Product = {
   name: "原木木料",
   nameEn: "Marine Timber",
   category: "木材",
-  shortDescription: "船用硬木方材與板材的分級與下料供應，依用途與部位規範選定",
+  shortDescription: "船用硬木方材與板材的分級與下料供應——同一根原木鋸出來的料，等級並不相同",
   shortDescriptionEn:
-    "Marine hardwood baulks and boards, graded and cut to size for the intended use and location",
+    "Marine hardwood baulks and boards, graded and cut to size — pieces sawn from one and the same log are not all of one grade",
   description:
     "船上使用的木料多為硬木，取其密度高、耐磨，且含天然油脂而耐候——在潮濕狀態下仍保有一定的摩擦力。但木材終究是有機材料，吸濕後會脹縮，也受蟲蛀與腐朽影響，所以樹種、取材部位與乾燥程度，實際上決定了它在船上能撐多久。\n\n" +
-    "大斷面方材的差異主要在取材：靠近樹心的心材密度高、油脂含量多，耐久性明顯優於外圍的邊材，因此同一根原木鋸出來的料，等級並不相同。供應範圍涵蓋依需求尺寸的下料與分級。實際樹種、等級、斷面與乾燥處理依用途選定；用於船上時，須一併確認該部位的防火與表面材料要求。",
+    "大斷面方材的差異主要在取材：靠近樹心的心材密度高、油脂含量多，耐久性明顯優於外圍的邊材，因此同一根原木鋸出來的料，等級並不相同。供應範圍涵蓋依需求尺寸的下料與分級。樹種、等級、斷面與乾燥處理依用途選定，用於船上時並須確認該部位的防火與表面材料要求。同一批料攤開來看幾乎沒有差別，差別要到上船幾年後才顯現——而選料這一步，沒有辦法事後補救。",
   descriptionEn:
     "Timber used aboard ship is generally hardwood, chosen for its density, resistance to wear, and the natural oils that let it weather well and keep some grip when wet. It remains an organic material, though: it moves as it takes up and gives off moisture, and it is open to insect attack and decay. Species, the part of the log a piece is cut from, and how well it has been dried are what really determine how long it lasts in service.\n\n" +
-    "With large baulks the difference comes down to where in the log they were cut. Heartwood, nearer the centre, is denser and carries more oil, and outlasts the sapwood around it — so pieces sawn from the same log are not all of one grade. Supply covers cutting to the sizes required and grading. Species, grade, section and drying are chosen for the intended use, and where timber goes aboard, the fire and surface-material requirements for that location have to be confirmed alongside.",
+    "With large baulks the difference comes down to where in the log they were cut. Heartwood, nearer the centre, is denser and carries more oil, and outlasts the sapwood around it — so pieces sawn from the same log are not all of one grade. Supply covers cutting to the sizes required and grading. Species, grade, section and drying are chosen for the intended use, and where timber goes aboard, the fire and surface-material requirements for that location are confirmed alongside. Laid out together, a parcel of timber looks much of a muchness; the difference only shows some years into service — and the choosing is not a step that can be put right later.",
   // 2026-10-12 依窗口提供的新照片整批汰換，並補上 coverImage 欄位
   //（原本只有 images，列表卡片取 images[0]）
   coverImage: "/images/products/timber/timber-cover.webp",

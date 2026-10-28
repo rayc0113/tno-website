@@ -22,15 +22,15 @@ const accommodationLadder: Product = {
   name: "登艦梯",
   nameEn: "Accommodation Ladder",
   category: "海軍艤裝工程",
-  shortDescription: "廠內整體預製的登艦梯，含防滑踏面與鋼索扶手",
+  shortDescription: "廠內整體預製的登艦梯，防滑踏面與鋼索扶手一體完成——潮位一直在變，梯子得一直貼得住舷側",
   shortDescriptionEn:
-    "Accommodation ladders prefabricated as complete units, with anti-slip treads and wire rope handrails",
+    "Accommodation ladders prefabricated as complete units, with anti-slip treads and wire rope handrails — the tide keeps moving, and the ladder has to stay seated against the ship's side",
   description:
-    "登艦梯為人員上下船的主要通道，使用頻繁並承受活載重，傾角隨潮位與吃水變動。踏面須具防滑性能，扶手須連續且張力可調，端部與舷側的固定方式則決定梯身在潮位變化下能否保持貼合。\n\n" +
-    "梯體於廠內整體預製後交付現場吊掛安裝，端部設固定與滾動機構。尺寸、階數、載重與傾角範圍須依船型與舷側高度設計。",
+    "潮位每天都在變，船的吃水也在變，而登艦梯得一直跟著。它是人員上下船的主要通道，使用頻繁、承受活載重，傾角卻從來不是固定的。踏面須具防滑性能，扶手須連續且張力可調；而端部與舷側的固定方式，決定梯身在潮位變化下能否保持貼合。\n\n" +
+    "梯體於廠內整體預製後交付現場吊掛安裝，端部設固定與滾動機構。尺寸、階數、載重與傾角範圍依船型與舷側高度設計。一座登艦梯一天要被踩上幾百次，它的安全餘裕不是設計給好天氣的。",
   descriptionEn:
-    "An accommodation ladder is the main route for people boarding and leaving a vessel. It is in constant use, carries live loads, and changes angle with the tide and the vessel's draught. The treads must resist slipping, the handrail must be continuous and adjustable in tension, and the way the ends attach to the ship's side determines whether the ladder stays seated as the water level changes.\n\n" +
-    "Ladders are prefabricated as complete units in the workshop and delivered for lifting into place on site, with fixing and rolling arrangements at the ends. Dimensions, the number of steps, load rating, and the range of working angles are designed around the vessel type and freeboard height.",
+    "The tide moves every day, and so does the vessel's draught — and the accommodation ladder has to follow both. It is the main route for people boarding and leaving, in constant use and carrying live loads, yet its angle is never fixed. The treads must resist slipping and the handrail must be continuous and adjustable in tension; and how the ends attach to the ship's side decides whether the ladder stays seated as the water level changes.\n\n" +
+    "Ladders are prefabricated as complete units in the workshop and delivered for lifting into place on site, with fixing and rolling arrangements at the ends. Dimensions, the number of steps, load rating and the range of working angles follow from the vessel type and the freeboard. A ladder like this is walked several hundred times a day; its margin of safety is not designed for fine weather.",
   coverImage: "/images/products/naval-outfitting/accommodation-ladder-cover.webp",
   images: ["/images/products/naval-outfitting/accommodation-ladder-cover.webp"],
   specs: [],

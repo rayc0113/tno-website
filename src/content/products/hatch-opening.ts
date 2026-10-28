@@ -18,15 +18,15 @@ const hatchOpening: Product = {
   name: "開艙工程",
   nameEn: "Deck Opening & Closing",
   category: "客製化工程",
-  shortDescription: "甲板臨時開口的切割與復原，供大型設備吊運進出",
+  shortDescription: "甲板臨時開口的切割與復原，供大型設備吊運進出——開口是手段，把甲板補回原有的強度才是工程",
   shortDescriptionEn:
-    "Cutting and restoring temporary deck openings so large equipment can be lifted in and out",
+    "Temporary deck openings cut and made good so large equipment can be lifted in and out — cutting it is the means; bringing the deck back to strength is the work",
   description:
-    "機艙內的大型設備更換時，既有通道往往不足以讓設備進出，需在甲板上開設臨時開口。開口會切斷甲板的連續性，因此復原時的封板厚度、加強肋配置與銲接品質，必須讓甲板恢復原有的強度與水密。\n\n" +
-    "施工範圍涵蓋開口位置的放樣與切割、設備吊運進出的配合、封板與加強肋製作，以及銲接復原與表面處理。開口尺寸與補強方式須依設備外型與甲板結構設計。",
+    "要把機艙裡的大型設備換掉，往往得先在甲板上切一個洞——既有通道進不去，設備就只能從上面吊進吊出。問題是甲板本身是連續的受力結構，切開的那一刻它就不再連續。所以真正的工程不在切，在補：封板厚度、加強肋配置與銲接品質，必須讓甲板恢復原有的強度與水密。\n\n" +
+    "施工範圍涵蓋開口位置的放樣與切割、設備吊運進出的配合、封板與加強肋製作，以及銲接復原與表面處理。開口尺寸與補強方式依設備外型與甲板結構設計。一個處理得好的臨時開口，完工之後應該看不出它曾經存在。",
   descriptionEn:
-    "When large equipment in the engine room has to be replaced, the existing accesses are often too small for it to pass through, so a temporary opening is cut in the deck. Cutting the opening interrupts the continuity of the deck, so on closing up, the thickness of the insert plate, the arrangement of stiffeners, and the quality of the welding all have to bring the deck back to its original strength and watertightness.\n\n" +
-    "The scope of work covers marking out and cutting the opening, supporting the lifting operation as equipment passes through, fabrication of the insert plate and stiffeners, and welding up and surface treatment afterwards. Opening size and the method of reinforcement are designed around the equipment's dimensions and the deck structure.",
+    "Replacing a large item of machinery in the engine room usually begins with cutting a hole in the deck — the existing accesses will not take it, so it has to come out from above. The difficulty is that a deck is itself a continuous load-bearing structure, and the moment it is cut it stops being continuous. The work is therefore less about the cutting than the making good: insert-plate thickness, the arrangement of stiffeners and the quality of the welding all have to bring the deck back to its original strength and watertightness.\n\n" +
+    "The scope of work covers marking out and cutting the opening, supporting the lifting operation as equipment passes through, fabrication of the insert plate and stiffeners, and welding up and surface treatment afterwards. Opening size and the method of reinforcement follow from the equipment's dimensions and the deck structure. A temporary opening properly done is one that, afterwards, gives no sign it was ever there.",
   coverImage: "/images/products/custom-engineering/hatch-opening-cover.webp",
   images: [
     "/images/products/custom-engineering/hatch-opening-cover.webp",

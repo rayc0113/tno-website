@@ -25,15 +25,15 @@ const exhaustPipeInsulation: Product = {
   name: "排煙管改裝、保溫材包覆",
   nameEn: "Exhaust Pipe Retrofit & Insulation Cladding",
   category: "海軍艤裝工程",
-  shortDescription: "艦艇排煙管段的更換與改裝，含保溫材包覆及外覆金屬護皮",
+  shortDescription: "艦艇排煙管段的更換與改裝，連同保溫材包覆與外覆金屬護皮——這條管子旁邊就是人、電纜與設備",
   shortDescriptionEn:
-    "Replacement and retrofit of naval exhaust pipe sections, including insulation and metal cladding",
+    "Replacement and retrofit of naval exhaust pipe sections, with insulation and metal cladding — what runs alongside this pipe is people, cabling and equipment",
   description:
-    "排煙管為機艙高溫廢氣的排放通道，管壁溫度高且鄰近人員活動範圍與電纜設備，須以保溫材包覆並外覆金屬護皮，以降低表面溫度、防止燙傷並保護周邊設施。管段長期承受高溫與腐蝕，達使用年限後須進行更換。\n\n" +
-    "施工範圍涵蓋既有管段拆除、新管段製作、現場銲接組立，以及保溫材包覆與護皮收邊。保溫材種類、厚度與護皮材質須依管徑、表面溫度與艦上規範選定。",
+    "排煙管最麻煩的地方，是它很燙，而且旁邊什麼都有。它是機艙高溫廢氣的排放通道，管壁溫度高，而走線的電纜、周邊設備與人員活動範圍往往就在幾十公分之外——所以必須以保溫材包覆、外覆金屬護皮，把表面溫度降到不會燙傷人的範圍，同時保護周邊設施。管段本身長期承受高溫與腐蝕，達使用年限後須整段更換。\n\n" +
+    "施工範圍涵蓋既有管段拆除、新管段製作、現場銲接組立，以及保溫材包覆與護皮收邊。保溫材種類、厚度與護皮材質依管徑、表面溫度與艦上規範選定。包覆做得好不好，平常沒有人會注意；做得不好，碰到的人會先知道。",
   descriptionEn:
-    "Exhaust pipes carry high-temperature gases out of the engine room. Their surfaces run hot and sit close to crew working areas, cabling, and equipment, so they are wrapped with insulation and finished with metal cladding to bring the surface temperature down, prevent burns, and protect nearby installations. The pipe sections themselves are subject to prolonged heat and corrosion and require replacement at the end of their service life.\n\n" +
-    "The scope of work covers removal of existing sections, fabrication of replacements, on-site welding and assembly, and the insulation and cladding that follow. Insulation type, thickness, and cladding material are selected according to pipe diameter, surface temperature, and the applicable shipboard requirements.",
+    "The awkward thing about an exhaust pipe is that it is very hot, and that everything else is right beside it. It carries high-temperature gas out of the engine room, so its wall runs hot — while cable runs, equipment and the spaces where people work are often only a foot or two away. Hence the insulation and the metal cladding over it, bringing the surface temperature down to where it will not burn anyone and shielding what surrounds it. The pipe sections themselves live with that heat and with corrosion, and at the end of their service life the run is replaced.\n\n" +
+    "The scope of work covers removal of existing sections, fabrication of replacements, on-site welding and assembly, and the insulation and cladding that follow. Insulation type, thickness and cladding material are selected according to pipe diameter, surface temperature and the applicable naval requirements. Lagging done well goes unnoticed; lagging done badly is noticed first by whoever touches it.",
   coverImage: "/images/products/naval-outfitting/exhaust-pipe-insulation-cover.webp",
   images: [
     "/images/products/naval-outfitting/exhaust-pipe-insulation-cover.webp",

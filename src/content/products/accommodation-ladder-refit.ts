@@ -30,15 +30,15 @@ const accommodationLadderRefit: Product = {
   name: "登艦梯改修",
   nameEn: "Accommodation Ladder Refit",
   category: "客製化工程",
-  shortDescription: "既有登艦梯的現場切割與鋼構改修，無須將整座梯體拆離",
+  shortDescription: "既有登艦梯的現場切割與鋼構改修——梯體不必整座拆離，在原位置就能處理",
   shortDescriptionEn:
-    "On-site cutting and structural refit of existing accommodation ladders, without removing the whole structure",
+    "On-site cutting and structural refit of existing accommodation ladders — the ladder stays where it stands and is worked in place",
   description:
-    "登艦梯長期暴露在海上環境，桁架管件與扶手承受鹽霧、雨水與反覆踩踏，塗裝一旦破損，鏽蝕就會從破口往管壁內部發展。表面補漆能處理的只是外觀，受力管件的斷面一旦減損，就必須把劣化的部分切除後重新接合。\n\n" +
-    "梯體多為整體銲接的鋼管桁架，無法整座拆離送廠，施工須在梯體所在位置進行。施工範圍涵蓋現場勘查與劣化範圍判定、管件切除、接合與銲道處理，以及切割面的防蝕處理。切除範圍與接點位置須依桁架的受力路徑決定，避免在同一斷面上同時削弱多根構件。",
+    "鏽是從塗裝的破口往管壁裡面長的，等到外觀看得出來，斷面往往已經減損。登艦梯長期暴露在海上環境，桁架管件與扶手承受鹽霧、雨水與反覆踩踏，塗裝破損只是時間問題。表面補漆能處理的只有外觀——受力管件一旦失去斷面，就必須把劣化的部分切除後重新接合。\n\n" +
+    "梯體多為整體銲接的鋼管桁架，無法整座拆離送廠，施工須在梯體所在位置進行。施工範圍涵蓋現場勘查與劣化範圍判定、管件切除、接合與銲道處理，以及切割面的防蝕處理。切除範圍與接點位置依桁架的受力路徑決定，避免在同一斷面上同時削弱多根構件。登艦梯是每個上船的人踩到的第一階——它的狀況不該靠外觀來判斷。",
   descriptionEn:
-    "An accommodation ladder lives outdoors at sea. Its tubular members and handrails take salt spray, rain and constant foot traffic, and once the coating is broken, corrosion works inward from the break into the wall of the tube. Touching up the paint addresses only the surface; once a load-bearing member has lost section, the affected part has to be cut out and the structure made good again.\n\n" +
-    "These ladders are generally welded tubular trusses that cannot be lifted away to the workshop as a unit, so the work is carried out where the ladder stands. The scope covers survey and assessment of the affected extent, cutting out of members, rejoining and treatment of the welds, and corrosion protection of the cut surfaces. How much is cut and where the joints fall are decided from the load paths through the truss, so that several members are not weakened across the same section at once.",
+    "Rust grows inward from a break in the coating, and by the time it shows on the outside the wall of the tube has usually lost section. An accommodation ladder lives outdoors at sea: its tubular members and handrails take salt spray, rain and constant foot traffic, so a break in the coating is only a matter of time. Touching up the paint addresses the surface alone — once a load-bearing member has lost section, the affected part has to be cut out and the structure made good again.\n\n" +
+    "These ladders are generally welded tubular trusses that cannot be lifted away to the workshop as a unit, so the work is carried out where the ladder stands. The scope covers survey and assessment of the affected extent, cutting out of members, rejoining and treatment of the welds, and corrosion protection of the cut surfaces. How much is cut and where the joints fall are decided from the load paths through the truss, so that several members are not weakened across the same section at once. An accommodation ladder is the first step anyone takes coming aboard — its condition is not something to judge by how it looks.",
   coverImage: "/images/products/custom-engineering/accommodation-ladder-refit-cover.webp",
   images: [
     "/images/products/custom-engineering/accommodation-ladder-refit-cover.webp",

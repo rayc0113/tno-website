@@ -25,15 +25,15 @@ const dishAssembly: Product = {
   name: "碟盤",
   nameEn: "Dish Assembly",
   category: "海軍艤裝工程",
-  shortDescription: "大型碟型曲面鈑金件的成形、補強與輪轂組立，含轉動機構的接合介面",
+  shortDescription: "大型碟型曲面鈑金件的成形、補強與輪轂組立——精度在成形階段就決定了，成形之後補不回來",
   shortDescriptionEn:
-    "Forming, stiffening and hub assembly of large dished sheet-metal structures, including the interface to the rotating mechanism",
+    "Forming, stiffening and hub assembly of large dished sheet-metal structures — accuracy is settled at the forming stage, and cannot be recovered after it",
   description:
     "碟盤是大型的曲面鈑金結構，製作上同時受兩個條件牽制。一是曲面的成形精度：碟面只要有局部偏差，整體的聚焦特性就會跟著改變，而這種偏差在成形之後很難補救。二是重量：碟盤安裝在俯仰與迴轉機構上，自重與受風面積都會回頭成為驅動機構的負荷，所以背面的補強不能一味加厚，必須在「夠剛」與「夠輕」之間取捨。\n\n" +
-    "施工範圍涵蓋曲面鈑件的下料與成形、背面補強的組立與銲接、輪轂與法蘭接合面的加工，以及整體表面處理。銲接帶來的熱變形須以銲接順序與夾持方式控制，避免已經成形好的曲面在組立階段走樣。曲面公差、補強配置與輪轂的接合方式須依設備規格與轉動機構的承載能力決定。",
+    "施工範圍涵蓋曲面鈑件的下料與成形、背面補強的組立與銲接、輪轂與法蘭接合面的加工，以及整體表面處理。銲接帶來的熱變形須以銲接順序與夾持方式控制，避免已經成形好的曲面在組立階段走樣。這類結構沒有標準品，曲面公差、補強配置與輪轂接合都得依設備規格與轉動機構的承載能力重新算過——碟面的精度是做出來的，不是事後修出來的。",
   descriptionEn:
     "A dish is a large formed sheet-metal structure, and its fabrication is pulled in two directions at once. The first is the accuracy of the curve: a local deviation anywhere on the face changes how the dish focuses, and once the panel is formed such a deviation is difficult to put right. The second is weight — the dish sits on elevation and slew machinery, so both its mass and the area it presents to the wind come back as load on that machinery. The stiffening on the back cannot simply be made heavier; it has to be traded off between stiffness and weight.\n\n" +
-    "The scope covers cutting and forming the dished panels, assembling and welding the backing structure, machining the hub and flange faces, and the overall surface treatment. Distortion from welding is kept in check through the welding sequence and the way the work is clamped, so that a curve already formed does not go out of shape during assembly. Surface tolerance, the arrangement of the stiffening and the method of connecting the hub are set by the equipment specification and by what the rotating machinery is rated to carry.",
+    "The scope covers cutting and forming the dished panels, assembling and welding the backing structure, machining the hub and flange faces, and the overall surface treatment. Distortion from welding is kept in check through the welding sequence and the way the work is clamped, so that a curve already formed does not go out of shape during assembly. There is no standard article here: surface tolerance, the arrangement of the stiffening and the method of connecting the hub are each worked out afresh from the equipment specification and from what the rotating machinery is rated to carry — the accuracy of a dish face is built into it, not corrected afterwards.",
   coverImage: "/images/products/naval-outfitting/dish-assembly-cover.webp",
   images: [
     "/images/products/naval-outfitting/dish-assembly-cover.webp",

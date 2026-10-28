@@ -34,15 +34,15 @@ const stainlessKitchen: Product = {
   name: "各式不鏽鋼廚具",
   nameEn: "Marine Stainless Steel Galley Equipment",
   category: "不鏽鋼廚具",
-  shortDescription: "依艙間放樣製作的船用不鏽鋼廚具，含檯面、櫃體、壁板與儲物櫃",
+  shortDescription: "船上沒有標準尺寸——檯面、櫃體、壁板與儲物櫃，依艙間實際放樣製作",
   shortDescriptionEn:
-    "Stainless steel galley fit-outs made to each compartment — counters, cabinets, wall panels and storage",
+    "No standard sizes aboard ship — counters, cabinets, wall panels and storage, each set out from the compartment itself",
   description:
     "船上的廚房空間比陸上緊湊，而且整個艙間都隨著船在晃。這使得船用廚具與商用廚具的差別不在材質，而在細節：把手必須嵌入門片，不能凸出到本就狹窄的通道；門片要有栓扣，航行中才不會自己彈開；櫃體要留通風，艙間的濕氣才不會積在裡面。\n\n" +
-    "不鏽鋼在高濕含鹽的環境下耐蝕、表面也容易清潔，是艙間廚房的主要材料。製作範圍涵蓋檯面、水槽、吊櫃、下櫃、壁板與儲物櫃，並以整合的方式施作，減少積水與藏污的縫隙。船上沒有標準尺寸，每一組都須依艙間的實際尺寸與作業動線放樣。不鏽鋼材質等級與表面處理依使用部位選定。",
+    "不鏽鋼在高濕含鹽的環境下耐蝕、表面也容易清潔，是艙間廚房的主要材料。製作範圍涵蓋檯面、水槽、吊櫃、下櫃、壁板與儲物櫃，並以整合的方式施作，減少積水與藏污的縫隙。船上沒有標準尺寸，每一組都須依艙間的實際尺寸與作業動線放樣。材質等級與表面處理依使用部位選定——不過讓一套船用廚具撐得住的，往往是這些不會寫進規格書的細節。",
   descriptionEn:
     "A galley at sea is tighter than one ashore, and the whole compartment moves with the ship. What separates marine galley equipment from commercial kitchen equipment is therefore not the material but the detailing: handles are recessed into the doors so they do not project into an already narrow passage; doors carry latches so they cannot swing open underway; and cabinets are ventilated so the moisture in the compartment does not sit inside them.\n\n" +
-    "Stainless steel resists corrosion in humid, salt-laden air and wipes down easily, which makes it the material of choice for a galley. The work covers counters, sinks, upper and lower cabinets, wall panelling and storage units, built as an integrated fit-out so there are fewer joints for water and soil to collect in. There are no standard sizes aboard ship: every set is laid out from the actual dimensions of the compartment and the way it will be worked in. Stainless grade and surface finish are chosen to suit each location.",
+    "Stainless steel resists corrosion in humid, salt-laden air and wipes down easily, which makes it the material of choice for a galley. The work covers counters, sinks, upper and lower cabinets, wall panelling and storage units, built as an integrated fit-out so there are fewer joints for water and soil to collect in. There are no standard sizes aboard ship: every set is laid out from the actual dimensions of the compartment and the way it will be worked in. Stainless grade and surface finish are chosen to suit each location — though what makes a galley fit-out last at sea is usually the detailing that never reaches a specification.",
   // 2026-10-12 依窗口提供的新照片整批汰換。舊照片是廠內堆放的水槽台半成品，
   // 新的兩張是船上實際完成的廚房與儲物櫃，說服力差很多。
   coverImage: "/images/products/stainless-kitchen/stainless-kitchen-cover.webp",

@@ -27,15 +27,15 @@ const radarMast: Product = {
   name: "雷達桅桿",
   nameEn: "Radar Mast",
   category: "客製化工程",
-  shortDescription: "搭載雷達、天線與航行燈號的桁架桅桿，含分層作業平台與安全護籠爬梯",
+  shortDescription: "搭載雷達、天線與航行燈號的桁架桅桿，設分層作業平台與護籠爬梯——桅體的晃動會直接反映在指向上",
   shortDescriptionEn:
-    "Truss masts carrying radar, antennas and navigation lights, with working platforms at each level and a caged access ladder",
+    "Truss masts carrying radar, antennas and navigation lights, with working platforms at each level and a caged ladder — any sway in the mast shows up in where the equipment points",
   description:
     "雷達、通訊天線與航行燈號必須架設在不受上層結構遮蔽的高度，桅桿因此同時是結構件，也是設備的載台。它承受高處的風壓與航行中的振動，而桅體本身的變形與晃動會直接反映在雷達與天線的指向上——這使得桅桿的剛性要求，比單純用來支撐重量的塔架更高。\n\n" +
-    "桅體以管件組成桁架並配置斜撐，在兼顧剛性的同時控制受風面積；各層設置作業平台與欄杆，讓設備能就近檢修，爬梯則全程配置安全護籠。設備安裝座的位置須一併考量各設備之間的遮蔽與相互干擾，並預留維護時的操作空間。桅體尺寸、平台層數與安裝座配置須依設備組成與船艛結構設計。",
+    "桅體以管件組成桁架並配置斜撐，在兼顧剛性的同時控制受風面積；各層設置作業平台與欄杆，讓設備能就近檢修，爬梯則全程配置安全護籠。設備安裝座的位置須一併考量各設備之間的遮蔽與相互干擾，並預留維護時的操作空間。桅體尺寸、平台層數與安裝座配置依設備組成與船艛結構設計。桅桿的誤差不會停在桅桿上——它會一路傳到雷達指向的那一端。",
   descriptionEn:
     "Radar, communications antennas and navigation lights have to stand clear of the superstructure, which makes a mast both a structural member and a mounting platform. It takes wind load at height and vibration underway, and any deflection or sway in the mast itself shows up directly in where the radar and antennas are pointing — so a mast is held to a higher standard of stiffness than a tower that merely carries weight.\n\n" +
-    "The mast is built up as a braced tubular truss, stiff enough while keeping the area presented to the wind in check. Working platforms and guardrails at each level put the equipment within reach for maintenance, and the access ladder is caged for its full height. Mounting positions are set with an eye to how the equipment items shadow and interfere with one another, and to leaving room to work during servicing. Mast dimensions, the number of platform levels and the arrangement of the mountings are designed around the equipment fit and the structure of the deckhouse below.",
+    "The mast is built up as a braced tubular truss, stiff enough while keeping the area presented to the wind in check. Working platforms and guardrails at each level put the equipment within reach for maintenance, and the access ladder is caged for its full height. Mounting positions are set with an eye to how the equipment items shadow and interfere with one another, and to leaving room to work during servicing. Mast dimensions, the number of platform levels and the arrangement of the mountings are designed around the equipment fit and the structure of the deckhouse below. An error in a mast does not stay in the mast — it carries all the way to where the radar is pointing.",
   coverImage: "/images/products/custom-engineering/radar-mast-cover.webp",
   images: [
     "/images/products/custom-engineering/radar-mast-cover.webp",
