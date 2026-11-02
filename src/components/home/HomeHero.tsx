@@ -144,8 +144,10 @@ export default function HomeHero() {
         loop
         playsInline
       >
-        {/* mp4 排在前面：iOS Safari 會挑第一個宣稱支援的來源，
-            而 webm（VP9, 10.7MB）在手機上大且無硬體解碼，mp4（H.264, 6.1MB）才是可靠的那一個 */}
+        {/* 來源順序即優先序，瀏覽器挑第一個「型別支援且 media 命中」的。
+            手機先給 720p 版（3.3MB，SSIM 與 1080p 版相同），起播時間約減半；
+            mp4 排在 webm 前面，因為 webm（VP9, 10.7MB）在手機上大且無硬體解碼。 */}
+        <source src="/videos/hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
         <source src="/videos/hero.mp4" type="video/mp4" />
         <source src="/videos/hero.webm" type="video/webm" />
       </video>
