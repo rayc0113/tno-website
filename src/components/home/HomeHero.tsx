@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Button from "@/components/ui/Button";
 
@@ -8,6 +9,7 @@ export default function HomeHero() {
   const t = useTranslations("home.hero");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [fading, setFading] = useState(false);
+  const [started, setStarted] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -93,9 +95,47 @@ export default function HomeHero() {
     return cleanup;
   }, []);
 
+  // 靜態首幀何時淡掉，由我們自己決定，不交給 <video poster>。
+  //
+  // iOS 上的實際行為：影片明明已經在播、currentTime 一路前進，poster 卻
+  // 繼續蓋在畫面上，一直要等 loop 繞回去重新 seek（本片 17.3 秒）才被換掉。
+  // 使用者看到的是「靜止十幾秒 → 黑色淡出 → 才變成影片」，而那個黑色淡出
+  // 正是本檔案 FADE_BEFORE 的轉場，等於證明影片一直都在跑。
+  //
+  // 因此改為：自己放一層首幀圖，等 currentTime 真的開始前進才把它淡掉。
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    let kicked = false;
+
+    function onProgress() {
+      if (!video || video.paused || video.currentTime <= 0) return;
+      setStarted(true);
+
+      // 保險：萬一卡住的不是 poster 而是合成層（畫面凍在第一幀），
+      // 補一次極短的 seek 把它推一下——loop 的 seek 能解，這裡就提早做。
+      if (!kicked) {
+        kicked = true;
+        try {
+          video.currentTime = 0.05;
+        } catch {
+          // 還不能 seek 就算了，loop 時仍會自行恢復
+        }
+      }
+    }
+
+    video.addEventListener("playing", onProgress);
+    video.addEventListener("timeupdate", onProgress);
+    return () => {
+      video.removeEventListener("playing", onProgress);
+      video.removeEventListener("timeupdate", onProgress);
+    };
+  }, []);
+
   return (
     <section className="relative h-[80vh] overflow-hidden">
-      {/* 背景影片（桌面 + 行動），poster 為影片第一幀，網速慢時不會空白 */}
+      {/* 背景影片（桌面 + 行動）。刻意不設 poster，改用下方自己控制的首幀圖層 */}
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
@@ -103,13 +143,26 @@ export default function HomeHero() {
         muted
         loop
         playsInline
-        poster="/images/home/hero-frame.jpg"
       >
         {/* mp4 排在前面：iOS Safari 會挑第一個宣稱支援的來源，
             而 webm（VP9, 10.7MB）在手機上大且無硬體解碼，mp4（H.264, 6.1MB）才是可靠的那一個 */}
         <source src="/videos/hero.mp4" type="video/mp4" />
         <source src="/videos/hero.webm" type="video/webm" />
       </video>
+
+      {/* 首幀靜態圖。SSR 就在 HTML 裡，影片還沒好時不會空白；
+          影片真的開始推進後淡出。排在 video 之後，所以蓋在它上面 */}
+      <Image
+        src="/images/home/hero-frame.jpg"
+        alt=""
+        aria-hidden
+        fill
+        priority
+        sizes="100vw"
+        className={`object-cover transition-opacity duration-700 ${
+          started ? "opacity-0" : "opacity-100"
+        }`}
+      />
 
       {/* 全域暗色遮罩 */}
       <div className="absolute inset-0 bg-black/40 z-[1]" />
