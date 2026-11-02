@@ -30,6 +30,11 @@ export default function HomeHero() {
       }
     }
 
+    // 行動版保險：autoplay 屬性在 hydration 後偶爾不生效（尤其 iOS Safari），
+    // 補一次靜音播放。被瀏覽器政策擋下時就讓 poster 留著，不做其他處理。
+    video.muted = true;
+    video.play().catch(() => {});
+
     video.addEventListener("timeupdate", handleTimeUpdate);
     video.addEventListener("seeked", handleSeeked);
     return () => {
@@ -50,8 +55,10 @@ export default function HomeHero() {
         playsInline
         poster="/images/home/hero-frame.jpg"
       >
-        <source src="/videos/hero.webm" type="video/webm" />
+        {/* mp4 排在前面：iOS Safari 會挑第一個宣稱支援的來源，
+            而 webm（VP9, 10.7MB）在手機上大且無硬體解碼，mp4（H.264, 6.1MB）才是可靠的那一個 */}
         <source src="/videos/hero.mp4" type="video/mp4" />
+        <source src="/videos/hero.webm" type="video/webm" />
       </video>
 
       {/* 全域暗色遮罩 */}
