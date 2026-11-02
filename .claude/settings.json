@@ -4,7 +4,13 @@
       "Bash(ffmpeg -i /Users/ray/Documents/tno-website-offical/public/videos/商業運輸影片.mp4 -vframes 1 -q:v 2 /Users/ray/Documents/tno-website-offical/public/images/home/hero.webp -y)",
       "Bash(/opt/homebrew/bin/ffmpeg -i /Users/ray/Documents/tno-website-offical/public/videos/商業運輸影片.mp4 -vframes 1 -q:v 2 /Users/ray/Documents/tno-website-offical/public/images/home/hero.webp -y)",
       "Bash(/opt/homebrew/bin/ffmpeg -i \"商業運輸影片.mp4\" -vframes 1 -q:v 2 /Users/ray/Documents/tno-website-offical/public/images/home/hero.webp -y)",
-      "Bash(/opt/homebrew/bin/ffmpeg -i /Users/ray/Documents/tno-website-offical/public/videos/hero.mp4 -vframes 1 -q:v 2 /Users/ray/Documents/tno-website-offical/public/images/home/hero.webp -y)"
+      "Bash(/opt/homebrew/bin/ffmpeg -i /Users/ray/Documents/tno-website-offical/public/videos/hero.mp4 -vframes 1 -q:v 2 /Users/ray/Documents/tno-website-offical/public/images/home/hero.webp -y)",
+      "Bash(/usr/bin/curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3399/zh/product?category=隔熱絕緣材料\")",
+      "Bash(/usr/bin/curl -s http://localhost:3399/en/about)",
+      "Bash(/usr/bin/grep -oE '<link rel=\"canonical\"[^>]+>')",
+      "Bash(/usr/bin/grep -oE '<meta name=\"twitter:[^\"]+\"[^>]+>')",
+      "Bash(/usr/bin/curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3399/zh/product?category=%E9%9A%94%E7%86%B1%E7%B5%95%E7%B8%81%E6%9D%90%E6%96%99\")",
+      "Bash(/usr/bin/curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3399/zh/product\")"
     ]
   }
 }
