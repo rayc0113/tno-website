@@ -30,11 +30,6 @@ export default function HomeHero() {
       }
     }
 
-    // 行動版保險：autoplay 屬性在 hydration 後偶爾不生效（尤其 iOS Safari），
-    // 補一次靜音播放。被瀏覽器政策擋下時就讓 poster 留著，不做其他處理。
-    video.muted = true;
-    video.play().catch(() => {});
-
     video.addEventListener("timeupdate", handleTimeUpdate);
     video.addEventListener("seeked", handleSeeked);
     return () => {
@@ -42,6 +37,61 @@ export default function HomeHero() {
       video.removeEventListener("seeked", handleSeeked);
     };
   }, [fading]);
+
+  // 行動版自動播放保險。
+  //
+  // iOS 即使 muted + playsInline 也不保證放行：低電力模式會直接全擋，
+  // 省電／低資料模式與冷啟動時機也可能擋下第一次 play()。症狀是永遠停在
+  // poster，而使用者在站內點過幾頁再回首頁就會動——差別不在快取，在於
+  // 那時候已經有過使用者手勢。
+  //
+  // 因此不只試一次：影片備妥時再試、分頁切回前景時再試，並在第一次
+  // 使用者手勢（觸控／點擊／捲動／按鍵）時再試。成功後立刻解除所有監聽。
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const GESTURES = ["touchstart", "pointerdown", "click", "scroll", "keydown"] as const;
+    let settled = false;
+
+    function cleanup() {
+      if (!video) return;
+      video.removeEventListener("loadeddata", attempt);
+      video.removeEventListener("canplay", attempt);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      for (const type of GESTURES) {
+        window.removeEventListener(type, attempt);
+      }
+    }
+
+    function attempt() {
+      if (settled || !video) return;
+      video.muted = true; // 政策要求：非靜音一定會被擋
+      video
+        .play()
+        .then(() => {
+          settled = true;
+          cleanup();
+        })
+        .catch(() => {
+          // still blocked — 保持監聽，等下一個時機
+        });
+    }
+
+    function onVisibilityChange() {
+      if (!document.hidden) attempt();
+    }
+
+    attempt();
+    video.addEventListener("loadeddata", attempt);
+    video.addEventListener("canplay", attempt);
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    for (const type of GESTURES) {
+      window.addEventListener(type, attempt, { passive: true });
+    }
+
+    return cleanup;
+  }, []);
 
   return (
     <section className="relative h-[80vh] overflow-hidden">
